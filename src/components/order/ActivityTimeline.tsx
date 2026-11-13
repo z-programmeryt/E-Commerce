@@ -12,7 +12,7 @@ const STEPS: { key: OrderStatus; label: string; copy: string }[] = [
 export function ActivityTimeline({ status }: { status: OrderStatus }) {
   if (status === "cancelled" || status === "returned") {
     return (
-      <div className="flex items-start gap-3 rounded-lg bg-[#fbf1ee] p-3 text-sm text-[#7e2b1f]">
+      <div className="flex items-start gap-3 rounded-sm bg-[#fbf1ee] p-3 text-[12px] text-[#7e2b1f]">
         <Icon name="alert" size={16} className="mt-0.5 shrink-0" />
         <p>
           This order is marked <strong>{status}</strong>.{" "}
@@ -34,9 +34,9 @@ export function ActivityTimeline({ status }: { status: OrderStatus }) {
           <li key={step.key} className="flex gap-3">
             <div className="flex flex-col items-center">
               <span
-                className={`flex h-7 w-7 shrink-0 items-center justify-center rounded-full border text-[0.625rem] font-bold ${
+                className={`flex h-6 w-6 shrink-0 items-center justify-center rounded-full border text-[10px] font-bold ${
                   done
-                    ? "border-[var(--color-olive-deep)] bg-[var(--color-olive-deep)] text-white"
+                    ? "border-[var(--color-brand)] bg-[var(--color-brand)] text-white"
                     : "border-[var(--color-line-strong)] bg-white text-[var(--color-ink-mute)]"
                 }`}
                 aria-hidden="true"
@@ -44,15 +44,15 @@ export function ActivityTimeline({ status }: { status: OrderStatus }) {
                 {done ? <Icon name="check" size={12} strokeWidth={2.5} /> : i + 1}
               </span>
               {i < STEPS.length - 1 ? (
-                <span className={`w-px flex-1 ${i < currentIndex ? "bg-[var(--color-olive-deep)]" : "bg-[var(--color-line)]"}`} style={{ minHeight: 26 }} />
+                <span className={`w-px flex-1 ${i < currentIndex ? "bg-[var(--color-brand)]" : "bg-[var(--color-line)]"}`} style={{ minHeight: 22 }} />
               ) : null}
             </div>
-            <div className="pb-4">
-              <p className={`text-sm ${active ? "font-semibold text-[var(--color-ink)]" : done ? "font-medium" : "text-[var(--color-ink-mute)]"}`}>
+            <div className="pb-3">
+              <p className={`text-[12.5px] leading-tight ${active ? "font-bold text-[var(--color-ink)]" : done ? "font-medium text-[var(--color-ink)]" : "text-[var(--color-ink-mute)]"}`}>
                 {step.label}
-                {active ? <span className="ml-2 rounded-full bg-[var(--color-paper-2)] px-2 py-0.5 text-[0.5625rem] font-bold uppercase tracking-wide text-[var(--color-olive-deep)]">Current</span> : null}
+                {active ? <span className="ml-1.5 rounded-sm bg-[var(--color-brand-soft)] px-1.5 py-0.5 text-[9.5px] font-bold uppercase tracking-wide text-[var(--color-brand-deep)]">Current</span> : null}
               </p>
-              <p className="text-xs text-[var(--color-ink-mute)]">{step.copy}</p>
+              <p className="text-[11px] text-[var(--color-ink-mute)]">{step.copy}</p>
             </div>
           </li>
         );

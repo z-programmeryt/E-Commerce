@@ -3,7 +3,8 @@ import Link from "next/link";
 import { listCategories, saleProducts, wishlistIds } from "@/lib/repo";
 import { wishlistKeyReadOnly } from "@/lib/session";
 import { ProductGrid } from "@/components/catalog/ProductCard";
-import { SectionHeading } from "@/components/EmptyState";
+import { Countdown } from "@/components/home/Countdown";
+import { Icon } from "@/components/ui/Icon";
 import { formatBdt } from "@/lib/brand";
 
 export const metadata: Metadata = {
@@ -33,51 +34,77 @@ export default async function OffersPage() {
   const savedIds = wkey ? wishlistIds(wkey) : [];
 
   return (
-    <div className="container-page py-10">
-      <p className="eyebrow mb-2">Save more</p>
-      <h1 className="font-display text-2xl md:text-3xl">Offers & discounts</h1>
-      <p className="mt-2 max-w-2xl text-sm text-[var(--color-ink-soft)]">
-        Demo coupons below work at checkout. Discounts reduce the order total; they never change the
-        displayed product price, so what you see on a product page is what you pay.
-      </p>
+    <div className="container-page pb-6">
+      <nav aria-label="Breadcrumb" className="flex flex-wrap items-center gap-1 py-2.5 text-[12px] text-[var(--color-ink-mute)]">
+        <Link href="/" className="hover:text-[var(--color-brand-deep)] hover:underline">Home</Link>
+        <Icon name="chevron-right" size={11} className="text-[var(--color-line-strong)]" />
+        <span className="text-[var(--color-ink-soft)]" aria-current="page">Flash sale</span>
+      </nav>
 
-      <div className="mt-6 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
-        {coupons.map((c) => (
-          <div key={c.code} className={`rounded-[var(--radius-card)] border p-4 ${tones[c.tone]}`}>
-            <p className="font-mono text-sm font-bold tracking-wider">{c.code}</p>
-            <p className="mt-2 text-sm font-semibold leading-snug">{c.title}</p>
-            <p className="mt-1 text-[0.6875rem] opacity-75">{c.detail}</p>
+      {/* flash sale masthead */}
+      <div className="overflow-hidden rounded-[var(--radius-card)] border border-[var(--color-line)] bg-white">
+        <div className="flex flex-wrap items-center justify-between gap-2 bg-gradient-to-r from-[var(--color-brand)] to-[#ff9a3c] px-3 py-3">
+          <div className="flex items-center gap-2 text-white">
+            <Icon name="lightning" size={20} />
+            <div>
+              <h1 className="text-[16px] font-extrabold uppercase tracking-wide">Flash sale</h1>
+              <p className="text-[11.5px] text-white/85">
+                {products.length} products currently below list price
+              </p>
+            </div>
           </div>
-        ))}
+          <Countdown />
+        </div>
+
+        <div className="p-3">
+          <p className="text-[12px] leading-relaxed text-[var(--color-ink-soft)]">
+            Coupons below work at checkout. Discounts reduce the order total; they never change the displayed
+            product price, so what you see on a product page is what you pay.
+          </p>
+
+          <div className="mt-3 grid gap-2 sm:grid-cols-2 lg:grid-cols-4">
+            {coupons.map((c) => (
+              <div key={c.code} className={`rounded-[var(--radius-card)] border p-3 ${tones[c.tone]}`}>
+                <p className="font-mono text-[13px] font-bold tracking-wider">{c.code}</p>
+                <p className="mt-1.5 text-[12px] font-semibold leading-snug">{c.title}</p>
+                <p className="mt-0.5 text-[11px] opacity-75">{c.detail}</p>
+              </div>
+            ))}
+          </div>
+
+          <p className="mt-2.5 rounded-sm bg-[#fff8e1] px-2.5 py-1.5 text-[11px] text-[#6d5211]">
+            Coupons are demo data stored in the local database. No real promotion is running, and usage limits
+            are enforced only inside this demo.
+          </p>
+        </div>
       </div>
 
-      <div className="mt-4 rounded-lg border border-[#f0e2c4] bg-[#fbf6ea] px-4 py-3 text-xs text-[#6d5211]">
-        Coupons are demo data stored in the local database. No real promotion is running, and usage limits are
-        enforced only inside this demo.
+      <div className="mt-3 overflow-hidden rounded-[var(--radius-card)] border border-[var(--color-line)] bg-white">
+        <div className="section-bar">
+          <h2 className="section-bar-title">On sale now</h2>
+          <span className="text-[12px] text-[var(--color-ink-mute)]">{products.length} products</span>
+        </div>
+        <div className="p-2">
+          <ProductGrid products={products} wishlistedIds={savedIds} dense />
+        </div>
       </div>
 
-      <section className="mt-12">
-        <SectionHeading
-          eyebrow="Price drops"
-          title={`${products.length} products on sale`}
-          subtitle="These SKUs have a sale price below their list price in the catalogue."
-        />
-        <ProductGrid products={products} wishlistedIds={savedIds} />
-      </section>
-
-      <section className="mt-12 border-t border-[var(--color-line)] pt-8">
-        <p className="eyebrow mb-3">Shop sale by category</p>
-        <div className="flex flex-wrap gap-2">
+      <div className="mt-3 overflow-hidden rounded-[var(--radius-card)] border border-[var(--color-line)] bg-white">
+        <div className="section-bar">
+          <h2 className="section-bar-title">Shop sale by category</h2>
+        </div>
+        <div className="flex flex-wrap gap-1.5 p-3">
           {categories.map((c) => (
-            <Link key={c.slug} href={`/category/${c.slug}?sale=1`} className="badge hover:border-[var(--color-ink)] hover:text-[var(--color-ink)]">
+            <Link
+              key={c.slug}
+              href={`/category/${c.slug}?sale=1`}
+              className="rounded-sm border border-[var(--color-line)] px-2 py-1 text-[11.5px] text-[var(--color-ink-soft)] hover:border-[var(--color-brand)] hover:text-[var(--color-brand-deep)]"
+            >
               {c.name}
             </Link>
           ))}
         </div>
-        <p className="mt-4 text-xs text-[var(--color-ink-mute)]">
-          Largest current saving: {products[0] ? `${products[0].name} at ${formatBdt(products[0].sale_price ?? 0)}` : "none"}.
-        </p>
-      </section>
+      </div>
     </div>
   );
 }

@@ -75,6 +75,10 @@ Before this touches a real customer, replace authentication entirely — use a m
 
 **No reviews or ratings.** There is no review system, and none was faked. The product page shows no stars because inventing them would be dishonest.
 
+**The dense marketplace layout is verified by markup, not by screenshot.** No browser runtime exists in this build sandbox, so the UI was checked with HTML probes and a CSS token audit rather than visual regression tests. The structure is deterministic and compiles cleanly, but pixel-level polish (small-screen wrapping, unusually long product names) has not been eyeballed in a real browser and should get a pass on a device before anyone calls it launch-ready.
+
+**Density is deliberate.** The storefront packs more products per screen than its earlier boutique layout — smaller type, 1px hairlines, six-column grids on wide screens. That is the marketplace convention being copied, but it trades away breathing room and some largeness of type; the earlier, roomier styling is a real design alternative, not a mistake that was fixed.
+
 **No customer accounts with passwords.** Customers are identified by a cookie-based session, not a login. Order history is tied to that cookie, so clearing cookies loses access to past orders.
 
 **Coupons are demos.** `WELCOME10`, `EID500`, `FREESHIP` and `SUPERZ15` are seeded examples with working validation rules, not live marketing campaigns.

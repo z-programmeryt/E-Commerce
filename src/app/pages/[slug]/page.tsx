@@ -5,6 +5,7 @@ import { getPage, PAGES } from "@/lib/content";
 import { Alert } from "@/components/EmptyState";
 import { BRAND } from "@/lib/brand";
 import { ContactForm } from "@/components/forms/ContactForm";
+import { Icon } from "@/components/ui/Icon";
 
 export const dynamic = "force-static";
 export const dynamicParams = false;
@@ -26,80 +27,94 @@ export default async function ContentPage({ params }: { params: Promise<{ slug: 
   if (!page) notFound();
 
   return (
-    <div className="container-page py-10">
-      <nav aria-label="Breadcrumb" className="mb-4 text-xs text-[var(--color-ink-mute)]">
-        <Link href="/" className="hover:underline">Home</Link>
-        <span className="mx-1.5">/</span>
-        <span className="text-[var(--color-ink)]">{page.title}</span>
+    <div className="container-page pb-6">
+      <nav aria-label="Breadcrumb" className="flex items-center gap-1 py-2.5 text-[12px] text-[var(--color-ink-mute)]">
+        <Link href="/" className="hover:text-[var(--color-brand-deep)] hover:underline">Home</Link>
+        <Icon name="chevron-right" size={11} className="text-[var(--color-line-strong)]" />
+        <span className="text-[var(--color-ink-soft)]" aria-current="page">{page.title}</span>
       </nav>
 
-      <div className="grid gap-10 lg:grid-cols-[1fr_220px]">
-        <article className="max-w-3xl">
-          <p className="eyebrow mb-2">{page.eyebrow}</p>
-          <h1 className="font-display text-[1.9rem] leading-tight md:text-[2.35rem]">{page.title}</h1>
-          <p className="mt-3 text-[0.9375rem] leading-relaxed text-[var(--color-ink-soft)]">{page.description}</p>
-          <p className="mt-2 text-xs text-[var(--color-ink-mute)]">Last updated {page.updated}</p>
-
-          {page.notice ? (
-            <div className="mt-6">
-              <Alert tone="warn">{page.notice}</Alert>
-            </div>
-          ) : null}
-
-          <div className="prose-shop mt-8">
-            {page.sections.map((s) => (
-              <section key={s.heading}>
-                <h2>{s.heading}</h2>
-                {s.body.map((p, i) => (
-                  <p key={i}>{p}</p>
-                ))}
-                {s.list ? (
-                  <ul>
-                    {s.list.map((li, i) => (
-                      <li key={i}>{li}</li>
-                    ))}
-                  </ul>
-                ) : null}
-              </section>
-            ))}
+      <div className="grid gap-3 lg:grid-cols-[minmax(0,1fr)_230px]">
+        <article className="overflow-hidden rounded-[var(--radius-card)] border border-[var(--color-line)] bg-white">
+          <div className="border-b border-[var(--color-line)] px-3 py-3">
+            <p className="text-[10.5px] font-bold uppercase tracking-wide text-[var(--color-brand-deep)]">{page.eyebrow}</p>
+            <h1 className="mt-0.5 text-[19px] font-bold leading-tight text-[var(--color-ink)]">{page.title}</h1>
+            <p className="mt-1 max-w-2xl text-[12.5px] leading-relaxed text-[var(--color-ink-soft)]">{page.description}</p>
+            <p className="mt-1 text-[11px] text-[var(--color-ink-mute)]">Last updated {page.updated}</p>
           </div>
 
-          {slug === "contact-us" ? (
-            <div className="mt-10 rounded-[var(--radius-card)] border border-[var(--color-line)] bg-white p-5">
-              <h2 className="font-display text-xl">Send a message</h2>
-              <p className="mt-1 text-xs text-[var(--color-ink-mute)]">
-                Stored in the local database. Demo only — no email is sent.
-              </p>
-              <div className="mt-4">
-                <ContactForm />
+          <div className="p-3 md:p-4">
+            {page.notice ? (
+              <div className="mb-4">
+                <Alert tone="warn">{page.notice}</Alert>
               </div>
-            </div>
-          ) : null}
+            ) : null}
 
-          <div className="mt-10 border-t border-[var(--color-line)] pt-6 text-sm">
-            <p className="text-[var(--color-ink-mute)]">
-              Still need help? Call {BRAND.phone} or email {BRAND.email} — {BRAND.supportHours}.
-            </p>
-            <p className="mt-2">
-              <Link href="/order/track" className="link-underline font-semibold">Track an order</Link>
-              <span className="mx-2 text-[var(--color-line-strong)]">·</span>
-              <Link href="/pages/faq" className="link-underline font-semibold">Read the FAQ</Link>
-            </p>
+            <div className="prose-shop">
+              {page.sections.map((sct) => (
+                <section key={sct.heading}>
+                  <h2>{sct.heading}</h2>
+                  {sct.body.map((para, i) => (
+                    <p key={i}>{para}</p>
+                  ))}
+                  {sct.list ? (
+                    <ul>
+                      {sct.list.map((li, i) => (
+                        <li key={i}>{li}</li>
+                      ))}
+                    </ul>
+                  ) : null}
+                </section>
+              ))}
+            </div>
+
+            {slug === "contact-us" ? (
+              <div className="mt-6 overflow-hidden rounded-[var(--radius-card)] border border-[var(--color-line)]">
+                <div className="section-bar">
+                  <h2 className="section-bar-title">Send a message</h2>
+                  <span className="text-[11px] text-[var(--color-ink-mute)]">Demo only — no email is sent</span>
+                </div>
+                <div className="p-3">
+                  <ContactForm />
+                </div>
+              </div>
+            ) : null}
+
+            <div className="mt-5 border-t border-[var(--color-line)] pt-3 text-[12px]">
+              <p className="text-[var(--color-ink-mute)]">
+                Still need help? Call {BRAND.phone} or email {BRAND.email} — {BRAND.supportHours}.
+              </p>
+              <p className="mt-1.5 flex flex-wrap items-center gap-2">
+                <Link href="/order/track" className="font-semibold text-[var(--color-brand-deep)] hover:underline">
+                  Track an order
+                </Link>
+                <span className="text-[var(--color-line-strong)]">·</span>
+                <Link href="/pages/faq" className="font-semibold text-[var(--color-brand-deep)] hover:underline">
+                  Read the FAQ
+                </Link>
+              </p>
+            </div>
           </div>
         </article>
 
-        <aside className="lg:sticky lg:top-32 lg:self-start">
-          <div className="card p-4">
-            <p className="eyebrow mb-2">Pages</p>
-            <ul className="space-y-1.5 text-xs">
-              {PAGES.map((p) => (
-                <li key={p.slug}>
+        <aside className="lg:sticky lg:top-[132px] lg:self-start">
+          <div className="overflow-hidden rounded-[var(--radius-card)] border border-[var(--color-line)] bg-white">
+            <div className="section-bar">
+              <h2 className="section-bar-title">Help &amp; policies</h2>
+            </div>
+            <ul className="divide-y divide-[var(--color-line)]">
+              {PAGES.map((pg) => (
+                <li key={pg.slug}>
                   <Link
-                    href={`/pages/${p.slug}`}
-                    className={p.slug === slug ? "font-semibold text-[var(--color-ink)]" : "text-[var(--color-ink-soft)] hover:underline"}
-                    aria-current={p.slug === slug ? "page" : undefined}
+                    href={`/pages/${pg.slug}`}
+                    className={`block px-3 py-1.5 text-[11.5px] leading-snug hover:bg-[#fffbf7] ${
+                      pg.slug === slug
+                        ? "border-l-2 border-[var(--color-brand)] bg-[var(--color-brand-soft)] font-semibold text-[var(--color-brand-deep)]"
+                        : "text-[var(--color-ink-soft)]"
+                    }`}
+                    aria-current={pg.slug === slug ? "page" : undefined}
                   >
-                    {p.title}
+                    {pg.title}
                   </Link>
                 </li>
               ))}

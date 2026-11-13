@@ -1,32 +1,55 @@
 @import "tailwindcss";
 
 /*
-  SUPER Z SHOP design system
-  Palette: warm paper, deep ink, muted olive / clay accents.
-  Deliberately restrained: no gradients except the product illustration assets,
-  no decorative animation beyond 120–200 ms state transitions.
+  SUPER Z SHOP — marketplace design system
+  Reference points: Daraz BD (orange chrome, dense product grid, price-led cards),
+  eBay (categorical clarity, breadcrumb-led browsing), Rokomari (Bangla-first
+  typography, warm accent, trust strip).
+
+  The layout is deliberately dense and price-forward: this is a marketplace
+  pattern, not a boutique one. Colour carries meaning — orange for action and
+  savings, red for genuinely low stock, green for delivery promises.
 */
 @theme {
-  --color-paper: #faf8f4;
-  --color-paper-2: #f3efe7;
-  --color-ink: #1d1c1a;
-  --color-ink-soft: #4a4741;
-  --color-ink-mute: #77726a;
-  --color-line: #e3ddd2;
-  --color-line-strong: #cfc7b8;
-  --color-olive: #5d6a4f;
-  --color-olive-deep: #46513c;
-  --color-clay: #a4553a;
-  --color-sale: #8f3a2c;
-  --color-success: #3f6b4f;
-  --color-warn: #8a6516;
-  --color-danger: #8f2f26;
+  /* chrome */
+  --color-paper: #f5f5f5;
+  --color-surface: #ffffff;
+  --color-ink: #1a1a1a;
+  --color-ink-soft: #424242;
+  --color-ink-mute: #757575;
+  --color-line: #e8e8e8;
+  --color-line-strong: #d5d5d5;
+  /* legacy aliases kept so inner pages never render an undefined colour */
+  --color-paper-2: #fafafa;
+  --color-olive: #0f766e;
+  --color-olive-deep: #0b5d56;
+  --color-clay: #c2410c;
 
-  --font-display: ui-serif, Georgia, "Times New Roman", serif;
-  --font-sans: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  /* brand — marketplace orange (Daraz-family) */
+  --color-brand: #f57224;
+  --color-brand-deep: #e05a10;
+  --color-brand-soft: #fff3ec;
+  --color-brand-ink: #b8480a;
 
-  --radius-card: 0.625rem;
-  --shadow-card: 0 1px 2px rgb(29 28 26 / 0.04), 0 8px 24px -18px rgb(29 28 26 / 0.35);
+  /* accent — Rokomari-family teal for editorial/trust blocks */
+  --color-teal: #0f766e;
+  --color-teal-soft: #ecf6f4;
+
+  /* signals */
+  --color-sale: #d3232f;
+  --color-sale-soft: #fdecec;
+  --color-success: #1a7f37;
+  --color-warn: #b76e00;
+  --color-danger: #c62828;
+  --color-star: #f5a623;
+
+  --font-display: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-sans: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial,
+    "Noto Sans Bengali", "Hind Siliguri", sans-serif;
+
+  --radius-card: 0.5rem;
+  --shadow-card: 0 1px 2px rgb(0 0 0 / 0.06);
+  --shadow-hover: 0 4px 14px -4px rgb(0 0 0 / 0.18);
 }
 
 html {
@@ -38,170 +61,293 @@ body {
   background-color: var(--color-paper);
   color: var(--color-ink);
   font-family: var(--font-sans);
-  font-size: 15px;
-  line-height: 1.6;
+  font-size: 14px;
+  line-height: 1.5;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
 }
 
 ::selection {
-  background: #e6dfd2;
+  background: #ffd9bf;
   color: var(--color-ink);
 }
 
 :focus-visible {
-  outline: 2px solid var(--color-olive-deep);
+  outline: 2px solid var(--color-brand-deep);
   outline-offset: 2px;
 }
 
-/* Typographic defaults */
 h1, h2, h3, h4 {
   font-family: var(--font-display);
-  font-weight: 400;
-  letter-spacing: -0.015em;
-  line-height: 1.15;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  line-height: 1.25;
   text-wrap: balance;
 }
 
 .font-display { font-family: var(--font-display); }
 
-/* Reusable primitives */
+/* ------------------------------------------------------------ layout ---- */
 .container-page {
   width: 100%;
-  max-width: 82rem;
+  max-width: 76rem;
   margin-inline: auto;
-  padding-inline: 1.25rem;
+  padding-inline: 0.75rem;
 }
 @media (min-width: 768px) {
-  .container-page { padding-inline: 2rem; }
+  .container-page { padding-inline: 1.25rem; }
 }
 
 .eyebrow {
   font-size: 0.6875rem;
-  letter-spacing: 0.16em;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
   font-weight: 600;
   color: var(--color-ink-mute);
 }
 
+/* ------------------------------------------------------------- links ---- */
 .link-underline {
   text-decoration: underline;
-  text-underline-offset: 3px;
+  text-underline-offset: 2px;
   text-decoration-thickness: 1px;
-  text-decoration-color: var(--color-line-strong);
-  transition: text-decoration-color 150ms ease;
 }
-.link-underline:hover { text-decoration-color: var(--color-ink); }
+.link-underline:hover { color: var(--color-brand-deep); }
 
+/* ----------------------------------------------------------- buttons ---- */
+/* Flat, rectangular, orange — marketplace chrome, not boutique pills. */
 .btn {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 0.5rem;
-  border-radius: 999px;
+  gap: 0.4rem;
+  border-radius: 0.25rem;
   font-size: 0.8125rem;
   font-weight: 600;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
-  padding: 0.8rem 1.5rem;
-  transition: background-color 150ms ease, color 150ms ease, border-color 150ms ease;
+  letter-spacing: 0;
+  text-transform: none;
+  padding: 0 1rem;
+  transition: background-color 120ms ease, color 120ms ease, border-color 120ms ease, box-shadow 120ms ease;
   border: 1px solid transparent;
   cursor: pointer;
-  min-height: 44px;
+  min-height: 40px;
+  white-space: nowrap;
 }
-.btn-primary { background: var(--color-ink); color: var(--color-paper); }
-.btn-primary:hover { background: #000; }
-.btn-outline { border-color: var(--color-line-strong); color: var(--color-ink); background: transparent; }
-.btn-outline:hover { border-color: var(--color-ink); background: #fff; }
-.btn-olive { background: var(--color-olive-deep); color: #fff; }
-.btn-olive:hover { background: #37402f; }
-.btn-sm { padding: 0.5rem 1rem; font-size: 0.6875rem; min-height: 36px; }
+.btn-primary { background: var(--color-brand); color: #fff; }
+.btn-primary:hover { background: var(--color-brand-deep); }
+.btn-outline { border-color: var(--color-brand); color: var(--color-brand-deep); background: #fff; }
+.btn-outline:hover { background: var(--color-brand-soft); }
+.btn-neutral { border-color: var(--color-line-strong); color: var(--color-ink); background: #fff; }
+.btn-neutral:hover { border-color: var(--color-ink-mute); background: #fafafa; }
+.btn-dark { background: var(--color-ink); color: #fff; }
+.btn-dark:hover { background: #000; }
+.btn-teal { background: var(--color-teal); color: #fff; }
+.btn-teal:hover { background: #0b5d56; }
+.btn-sm { min-height: 32px; padding: 0 0.7rem; font-size: 0.75rem; }
+.btn-lg { min-height: 46px; padding: 0 1.5rem; font-size: 0.875rem; }
+.btn-block { width: 100%; }
 .btn:disabled { opacity: 0.45; cursor: not-allowed; }
 
+/* ------------------------------------------------------------ fields ---- */
 .field {
   width: 100%;
   border: 1px solid var(--color-line-strong);
   background: #fff;
-  border-radius: 0.5rem;
-  padding: 0.65rem 0.8rem;
+  border-radius: 0.25rem;
+  padding: 0.55rem 0.7rem;
   font-size: 0.875rem;
   color: var(--color-ink);
-  min-height: 44px;
-  transition: border-color 150ms ease, box-shadow 150ms ease;
+  min-height: 40px;
+  transition: border-color 120ms ease, box-shadow 120ms ease;
 }
 .field:focus {
   outline: none;
-  border-color: var(--color-olive);
-  box-shadow: 0 0 0 3px rgb(93 106 79 / 0.12);
+  border-color: var(--color-brand);
+  box-shadow: 0 0 0 3px rgb(245 114 36 / 0.15);
 }
 .field[aria-invalid="true"] { border-color: var(--color-danger); }
 .label {
   display: block;
   font-size: 0.75rem;
   font-weight: 600;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
   color: var(--color-ink-soft);
-  margin-bottom: 0.35rem;
+  margin-bottom: 0.3rem;
 }
 .help { font-size: 0.75rem; color: var(--color-ink-mute); }
 .error-text { font-size: 0.75rem; color: var(--color-danger); margin-top: 0.25rem; }
 
+/* ------------------------------------------------------------- cards ---- */
 .card {
-  background: #fff;
+  background: var(--color-surface);
   border: 1px solid var(--color-line);
   border-radius: var(--radius-card);
   box-shadow: var(--shadow-card);
 }
 
+/* Daraz-style section header: orange rule + uppercase label */
+.section-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  background: #fff;
+  border-bottom: 1px solid var(--color-line);
+  padding: 0.65rem 0.85rem;
+}
+/* small numbered step chip used inside section bars */
+.counter {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.05rem;
+  height: 1.05rem;
+  margin-right: 0.35rem;
+  border-radius: 999px;
+  background: var(--color-brand);
+  color: #fff;
+  font-size: 0.625rem;
+  font-weight: 700;
+  line-height: 1;
+  vertical-align: 1px;
+}
+.section-bar-title {
+  font-size: 0.8125rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--color-ink-soft);
+}
+
+/* ------------------------------------------------------------ badges ---- */
 .badge {
   display: inline-flex;
   align-items: center;
-  gap: 0.25rem;
+  gap: 0.2rem;
   font-size: 0.625rem;
   font-weight: 700;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  padding: 0.22rem 0.5rem;
-  border-radius: 999px;
-  background: var(--color-paper-2);
-  color: var(--color-ink-soft);
-  border: 1px solid var(--color-line);
+  letter-spacing: 0.02em;
+  padding: 0.1rem 0.35rem;
+  border-radius: 0.15rem;
+  background: var(--color-brand-soft);
+  color: var(--color-brand-ink);
+  line-height: 1.4;
 }
-.badge-sale { background: #f6e7e2; color: var(--color-sale); border-color: #ecd3cb; }
-.badge-new { background: #eef2ea; color: var(--color-olive-deep); border-color: #dbe3d5; }
-.badge-low { background: #fbf1dd; color: var(--color-warn); border-color: #f0e2c4; }
-.badge-out { background: #f2f1ef; color: #7a7570; border-color: #e2dfda; }
+.badge-sale { background: var(--color-sale); color: #fff; }
+.badge-new { background: var(--color-teal); color: #fff; }
+.badge-low { background: #fff4e5; color: var(--color-warn); border: 1px solid #ffe0b2; }
+.badge-out { background: #eee; color: #757575; }
+.badge-free { background: #e8f5e9; color: var(--color-success); }
 
-.table-base { width: 100%; border-collapse: collapse; font-size: 0.875rem; }
+/* price block — Daraz shows the discounted figure in the brand colour */
+.price-now { font-size: 1rem; font-weight: 700; color: var(--color-brand-ink); }
+.price-was { font-size: 0.75rem; color: var(--color-ink-mute); text-decoration: line-through; }
+.price-off { font-size: 0.75rem; font-weight: 700; color: var(--color-brand-ink); }
+
+/* discount tag riding the top-right corner of a product tile */
+.tile-discount {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: var(--color-brand);
+  color: #fff;
+  font-size: 0.6875rem;
+  font-weight: 700;
+  padding: 0.15rem 0.4rem;
+  border-bottom-left-radius: 0.25rem;
+  z-index: 2;
+}
+
+/* ------------------------------------------------------------- tables --- */
+.table-base { width: 100%; border-collapse: collapse; font-size: 0.8125rem; }
 .table-base th {
   text-align: left;
   font-size: 0.6875rem;
   text-transform: uppercase;
-  letter-spacing: 0.07em;
+  letter-spacing: 0.04em;
   color: var(--color-ink-mute);
   font-weight: 600;
-  padding: 0.6rem 0.75rem;
+  padding: 0.55rem 0.7rem;
   border-bottom: 1px solid var(--color-line);
   white-space: nowrap;
+  background: #fafafa;
 }
-.table-base td { padding: 0.7rem 0.75rem; border-bottom: 1px solid var(--color-line); vertical-align: middle; }
-.table-base tbody tr:hover { background: #fbf9f5; }
+.table-base td { padding: 0.6rem 0.7rem; border-bottom: 1px solid var(--color-line); vertical-align: middle; }
+.table-base tbody tr:hover { background: #fffbf7; }
 
-.prose-shop h2 { font-size: 1.375rem; margin: 2rem 0 0.6rem; }
-.prose-shop h3 { font-size: 1.0625rem; margin: 1.5rem 0 0.4rem; font-family: var(--font-sans); font-weight: 700; }
-.prose-shop p, .prose-shop li { color: var(--color-ink-soft); margin-bottom: 0.7rem; max-width: 68ch; }
-.prose-shop ul { list-style: disc; padding-left: 1.25rem; }
-.prose-shop a { text-decoration: underline; text-underline-offset: 3px; }
+/* policy / long-form content, marketplace density */
+.prose-shop { font-size: 0.8125rem; line-height: 1.65; }
+.prose-shop h2 {
+  font-size: 0.9rem;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  color: var(--color-ink);
+  margin: 1.35rem 0 0.4rem;
+  padding-bottom: 0.3rem;
+  border-bottom: 1px solid var(--color-line);
+}
+.prose-shop h2:first-child { margin-top: 0; }
+.prose-shop h3 { font-size: 0.8125rem; margin: 1rem 0 0.3rem; font-family: var(--font-sans); font-weight: 700; }
+.prose-shop p, .prose-shop li { color: var(--color-ink-soft); margin-bottom: 0.55rem; max-width: 78ch; }
+.prose-shop ul { list-style: disc; padding-left: 1.15rem; }
+.prose-shop ul li::marker { color: var(--color-brand); }
+.prose-shop a { color: var(--color-brand-deep); text-decoration: underline; text-underline-offset: 2px; }
 
 .skeleton {
-  background: linear-gradient(90deg, #f0ece4 25%, #f7f4ee 37%, #f0ece4 63%);
+  background: linear-gradient(90deg, #eeeeee 25%, #f7f7f7 37%, #eeeeee 63%);
   background-size: 400% 100%;
   animation: shimmer 1.4s ease infinite;
 }
 @keyframes shimmer {
   0% { background-position: 100% 50%; }
   100% { background-position: 0 50%; }
+}
+
+/* ---------------------------------------------- marketplace utilities --- */
+/* horizontal scroller for flash-sale / category rails */
+.rail {
+  display: flex;
+  gap: 0.5rem;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: thin;
+  -webkit-overflow-scrolling: touch;
+}
+.rail > * { scroll-snap-align: start; flex: 0 0 auto; }
+.rail::-webkit-scrollbar { height: 6px; }
+.rail::-webkit-scrollbar-thumb { background: var(--color-line-strong); border-radius: 3px; }
+
+/* countdown chip used by the flash-sale rail */
+.countdown {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.15rem;
+  font-variant-numeric: tabular-nums;
+  font-weight: 700;
+  font-size: 0.75rem;
+}
+.countdown span {
+  background: var(--color-ink);
+  color: #fff;
+  border-radius: 0.15rem;
+  padding: 0.05rem 0.25rem;
+}
+
+/* trust strip under the hero */
+.trust-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.75rem;
+  color: var(--color-ink-soft);
+}
+
+/* rating row: stars + count, muted so it reads as metadata not marketing */
+.rating-row {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  font-size: 0.6875rem;
+  color: var(--color-ink-mute);
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -212,7 +358,6 @@ h1, h2, h3, h4 {
   }
 }
 
-/* Print-friendly order receipt */
 @media print {
   .no-print { display: none !important; }
   body { background: #fff; }

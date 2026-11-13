@@ -8,25 +8,25 @@ export function NewsletterForm() {
   return (
     <form action={action} className="space-y-2">
       <label htmlFor="newsletter-email" className="sr-only">Email address</label>
-      <div className="flex gap-2">
+      <div className="flex gap-1.5">
         <input
           id="newsletter-email"
           type="email"
           name="email"
           required
           placeholder="you@example.com"
-          className="field h-11 flex-1 text-sm"
+          className="field h-8 min-h-0 flex-1 text-[12px]"
         />
         <button type="submit" className="btn btn-primary btn-sm shrink-0" disabled={pending}>
           {pending ? "…" : "Join"}
         </button>
       </div>
       {state.message ? (
-        <p className={`text-xs ${state.ok ? "text-[var(--color-success)]" : "text-[var(--color-danger)]"}`} role="status">
+        <p className={`text-[11px] ${state.ok ? "text-[var(--color-success)]" : "text-[var(--color-danger)]"}`} role="status">
           {state.message}
         </p>
       ) : (
-        <p className="text-[0.6875rem] text-[var(--color-ink-mute)]">No spam. Unsubscribe anytime.</p>
+        <p className="text-[10.5px] text-[var(--color-ink-mute)]">No spam. Unsubscribe anytime.</p>
       )}
     </form>
   );

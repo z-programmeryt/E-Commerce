@@ -5,10 +5,23 @@ type IconName =
   | "phone" | "mail" | "pin" | "star" | "grid" | "shirt" | "dress" | "cap" | "gem" | "watch"
   | "phone-case" | "scissors" | "heart-hand" | "gift" | "plane" | "bottle" | "pen" | "home"
   | "sun" | "chart" | "box" | "tag" | "users" | "settings" | "logout" | "download" | "filter"
-  | "facebook" | "instagram" | "youtube" | "tiktok" | "whatsapp" | "arrow-right" | "alert";
+  | "facebook" | "instagram" | "youtube" | "tiktok" | "whatsapp" | "arrow-right" | "alert"
+  | "flame" | "lightning" | "chevron-up" | "location" | "cart-plus" | "sort" | "sliders"
+  | "badge-check" | "cash" | "clock" | "ruler";
 
 const paths: Record<string, string> = {
   search: "M21 21l-4.35-4.35M17 10.5a6.5 6.5 0 11-13 0 6.5 6.5 0 0113 0z",
+  flame: "M12 3c2.5 3 1 4.5 1 4.5s2.5-.5 3.5 1.5c1.2 2.4-.5 4-2 4.5 1.5-2-.5-3.5-.5-3.5S13 12 12 14s-2 3-4 2.5C5 16 5 12 6.5 10c1-1.3 3-1.5 3-1.5S8 6.5 12 3z",
+  lightning: "M13 2L4 14h6l-1 8 9-12h-6l1-8z",
+  "chevron-up": "M6 15l6-6 6 6",
+  location: "M12 21s7-5.5 7-11a7 7 0 10-14 0c0 5.5 7 11 7 11zm0-8.5a2.5 2.5 0 100-5 2.5 2.5 0 000 5z",
+  "cart-plus": "M4 5h2l2.5 10h9L20 8H7M9 20a1 1 0 100-2 1 1 0 000 2zm8 0a1 1 0 100-2 1 1 0 000 2z",
+  sort: "M4 7h10M4 12h7M4 17h4M17 5v14m0 0l3-3m-3 3l-3-3",
+  sliders: "M4 7h9M17 7h3M4 17h3M11 17h9M15 5v4M8 15v4",
+  "badge-check": "M12 3l2.2 1.6 2.7-.2 1 2.5 2.3 1.4-.7 2.6.7 2.6-2.3 1.4-1 2.5-2.7-.2L12 21l-2.2-1.6-2.7.2-1-2.5L3.8 15l.7-2.6-.7-2.6 2.3-1.4 1-2.5 2.7.2L12 3zm-2.5 9l2 2 4-4",
+  cash: "M3 6h18v12H3V6zm9 9a3 3 0 100-6 3 3 0 000 6z",
+  clock: "M12 21a9 9 0 100-18 9 9 0 000 18zm0-13v5l3.5 2",
+  ruler: "M3 9l6-6 12 12-6 6L3 9zm4 0l2 2m1-5l2 2m1-1l2 2m1 1l2 2",
   bag: "M6 8h12l1 12H5L6 8zm3 0V6a3 3 0 016 0v2",
   heart: "M12 20s-7-4.35-7-9a4 4 0 017-2.65A4 4 0 0119 11c0 4.65-7 9-7 9z",
   user: "M12 12a4 4 0 100-8 4 4 0 000 8zm-8 8a8 8 0 0116 0",

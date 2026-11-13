@@ -148,8 +148,8 @@ export function FilterPanel({
   };
 
   const Section = ({ title, children }: { title: string; children: React.ReactNode }) => (
-    <div className="border-b border-[var(--color-line)] py-4 last:border-0">
-      <p className="mb-2 text-[0.6875rem] font-bold uppercase tracking-[0.1em] text-[var(--color-ink-soft)]">{title}</p>
+    <div className="border-b border-[var(--color-line)] px-3 py-3 last:border-0">
+      <p className="mb-2 text-[11px] font-bold uppercase tracking-wide text-[var(--color-ink)]">{title}</p>
       {children}
     </div>
   );
@@ -158,10 +158,10 @@ export function FilterPanel({
     <button
       onClick={onClick}
       aria-pressed={active}
-      className={`rounded-full border px-2.5 py-1 text-[0.6875rem] transition-colors ${
+      className={`rounded-sm border px-2 py-1 text-[11.5px] transition-colors ${
         active
-          ? "border-[var(--color-ink)] bg-[var(--color-ink)] text-white"
-          : "border-[var(--color-line-strong)] bg-white text-[var(--color-ink-soft)] hover:border-[var(--color-ink)]"
+          ? "border-[var(--color-brand)] bg-[var(--color-brand-soft)] font-semibold text-[var(--color-brand-ink)]"
+          : "border-transparent bg-transparent text-[var(--color-ink-soft)] hover:text-[var(--color-brand-deep)]"
       }`}
     >
       {children}
@@ -240,21 +240,21 @@ export function FilterPanel({
   return (
     <>
       <div className="lg:hidden">
-        <button onClick={() => setOpen(true)} className="btn btn-outline btn-sm w-full">
-          <Icon name="filter" size={14} /> Filters
+        <button onClick={() => setOpen(true)} className="btn btn-neutral btn-sm w-full">
+          <Icon name="sliders" size={14} /> Filters &amp; sort
         </button>
         {open ? (
           <div className="fixed inset-0 z-50" role="dialog" aria-modal="true" aria-label="Filters">
             <button className="absolute inset-0 bg-black/40" aria-label="Close filters" onClick={() => setOpen(false)} />
-            <div className="absolute inset-x-0 bottom-0 max-h-[85vh] overflow-y-auto rounded-t-2xl bg-[var(--color-paper)] p-5">
-              <div className="mb-2 flex items-center justify-between">
-                <p className="font-display text-lg">Filters</p>
-                <button onClick={() => setOpen(false)} className="flex h-9 w-9 items-center justify-center rounded-full hover:bg-[var(--color-paper-2)]" aria-label="Close">
-                  <Icon name="close" size={18} />
+            <div className="absolute inset-x-0 bottom-0 max-h-[85vh] overflow-y-auto rounded-t-lg bg-white">
+              <div className="flex items-center justify-between border-b border-[var(--color-line)] px-3 py-2.5">
+                <p className="text-[12.5px] font-bold uppercase tracking-wide text-[var(--color-ink-soft)]">Filters &amp; sort</p>
+                <button onClick={() => setOpen(false)} className="flex h-8 w-8 items-center justify-center rounded-sm text-[var(--color-ink-mute)] hover:bg-[#f5f5f5]" aria-label="Close">
+                  <Icon name="close" size={16} />
                 </button>
               </div>
-              {body}
-              <div className="sticky bottom-0 mt-4 bg-[var(--color-paper)] pt-3">
+              <div className="px-3">{body}</div>
+              <div className="sticky bottom-0 mt-3 border-t border-[var(--color-line)] bg-white px-3 py-2.5">
                 <button onClick={() => setOpen(false)} className="btn btn-primary w-full">Show results</button>
               </div>
             </div>
@@ -263,7 +263,12 @@ export function FilterPanel({
       </div>
 
       <aside className="hidden lg:block" aria-label="Product filters">
-        <div className="sticky top-32">{body}</div>
+        <div className="sticky top-[132px] overflow-hidden rounded-[var(--radius-card)] border border-[var(--color-line)] bg-white">
+          <div className="border-b border-[var(--color-line)] bg-[#fafafa] px-3 py-2">
+            <p className="text-[12px] font-bold uppercase tracking-wide text-[var(--color-ink-soft)]">Filters</p>
+          </div>
+          {body}
+        </div>
       </aside>
     </>
   );

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { wishlistIds, wishlistProducts } from "@/lib/repo";
 import { wishlistKeyReadOnly } from "@/lib/session";
 import { ProductGrid } from "@/components/catalog/ProductCard";
+import { ListingHeader, ListingPanel } from "@/components/catalog/ListingHeader";
 import { EmptyState } from "@/components/EmptyState";
 
 export const metadata: Metadata = { title: "Wishlist", robots: { index: false } };
@@ -13,16 +14,15 @@ export default async function WishlistPage() {
   const products = key ? wishlistProducts(key) : [];
 
   return (
-    <div className="container-page py-10">
-      <p className="eyebrow mb-2">Saved</p>
-      <h1 className="font-display text-2xl md:text-3xl">Your wishlist</h1>
-      <p className="mt-1.5 text-sm text-[var(--color-ink-mute)]">
-        {products.length > 0
-          ? `${products.length} saved product${products.length === 1 ? "" : "s"} — stored in this browser.`
-          : "Products you save are kept in this browser."}
-      </p>
-
-      <div className="mt-7">
+    <div className="container-page pb-6">
+      <ListingHeader
+        title="Your wishlist"
+        count={products.length > 0 ? `${products.length} saved` : undefined}
+        subtitle="Saved products are stored in this browser, so they survive a reload but not a different device."
+        crumb={[{ label: "Wishlist" }]}
+        action={{ label: "Continue shopping →", href: "/shop" }}
+      />
+      <ListingPanel>
         {products.length === 0 ? (
           <EmptyState
             title="Nothing saved yet"
@@ -30,9 +30,9 @@ export default async function WishlistPage() {
             action={{ label: "Browse products", href: "/shop" }}
           />
         ) : (
-          <ProductGrid products={products} wishlistedIds={ids} />
+          <ProductGrid products={products} wishlistedIds={ids} dense />
         )}
-      </div>
+      </ListingPanel>
     </div>
   );
 }

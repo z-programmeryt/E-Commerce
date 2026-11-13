@@ -6,6 +6,7 @@ import type { Order } from "@/lib/types";
 import { formatBdt, formatDate } from "@/lib/brand";
 import { EmptyState } from "@/components/EmptyState";
 import { OrderLookupForm } from "@/components/order/OrderLookupForm";
+import { ListingHeader, ListingPanel } from "@/components/catalog/ListingHeader";
 
 export const metadata: Metadata = { title: "My orders", robots: { index: false } };
 export const dynamic = "force-dynamic";
@@ -27,79 +28,118 @@ export default async function AccountPage({
   const orders: Order[] = customer ? customerOrders(customer.id) : [];
 
   return (
-    <div className="container-page max-w-3xl py-10">
-      <p className="eyebrow mb-2">Account</p>
-      <h1 className="font-display text-2xl md:text-3xl">Order history</h1>
-      <p className="mt-2 max-w-xl text-sm text-[var(--color-ink-soft)]">
-        This local demo has no passwords or accounts. Enter the email you used at checkout to see orders tied to it —
-        clearly a demo-only shortcut, and not how a production store should authenticate users.
-      </p>
+    <div className="container-page pb-6">
+      <ListingHeader
+        title="My orders"
+        count={customer ? `${orders.length} order${orders.length === 1 ? "" : "s"}` : undefined}
+        subtitle="This local demo has no passwords or accounts. Enter the email you used at checkout to see the orders tied to it — a demo-only shortcut, not how a production store should authenticate users."
+        crumb={[{ label: "My orders" }]}
+        action={{ label: "Continue shopping →", href: "/shop" }}
+      />
 
-      <div className="mt-5">
-        <OrderLookupForm defaultValue={email} />
-      </div>
-
-      {email && !customer ? (
-        <div className="mt-6">
-          <EmptyState
-            title={`No account found for ${email}`}
-            subtitle="Try one of the seeded demo emails below, or place a demo order first."
-            action={{ label: "Shop now", href: "/shop" }}
-          />
-        </div>
-      ) : null}
-
-      {customer ? (
-        <>
-          <div className="mt-7 flex items-baseline justify-between border-b border-[var(--color-line)] pb-3">
-            <p className="text-sm">
-              <span className="font-semibold">{customer.name}</span>{" "}
-              <span className="text-[var(--color-ink-mute)]">· {customer.email}</span>
+      <div className="grid gap-3 lg:grid-cols-[minmax(0,1fr)_280px]">
+        <div className="space-y-3">
+          <ListingPanel className="p-3">
+            <p className="mb-2 text-[11px] font-bold uppercase tracking-wide text-[var(--color-ink-mute)]">
+              Find your orders
             </p>
-            <p className="text-xs text-[var(--color-ink-mute)]">{orders.length} order{orders.length === 1 ? "" : "s"}</p>
-          </div>
-          {orders.length === 0 ? (
-            <div className="mt-6">
-              <EmptyState title="No orders yet" subtitle="Orders placed with this email will appear here." action={{ label: "Start shopping", href: "/shop" }} />
-            </div>
-          ) : (
-            <ul className="mt-4 divide-y divide-[var(--color-line)]">
-              {orders.map((o) => (
-                <li key={o.id} className="flex flex-wrap items-center justify-between gap-3 py-4">
-                  <div>
-                    <Link href={`/order/track?order=${o.order_number}`} className="font-mono text-sm font-semibold hover:underline">
-                      {o.order_number}
-                    </Link>
-                    <p className="text-[0.6875rem] text-[var(--color-ink-mute)]">
-                      {formatDate(o.created_at)} · {o.ship_area}, {o.ship_district}
-                    </p>
-                  </div>
-                  <div className="flex items-center gap-3">
-                    <span className={`badge ${o.status === "delivered" ? "badge-new" : o.status === "cancelled" ? "badge-out" : "badge-low"}`}>
-                      {o.status}
-                    </span>
-                    <span className="text-sm font-semibold">{formatBdt(o.total)}</span>
-                    <Link href={`/order/track?order=${o.order_number}`} className="link-underline text-xs">Track</Link>
-                  </div>
-                </li>
-              ))}
-            </ul>
-          )}
-        </>
-      ) : null}
+            <OrderLookupForm defaultValue={email} />
+          </ListingPanel>
 
-      {!email ? (
-        <div className="mt-6 rounded-lg border border-[var(--color-line)] bg-white p-4">
-          <p className="text-xs font-semibold uppercase tracking-wide text-[var(--color-ink-soft)]">Seeded demo emails</p>
-          <div className="mt-2 flex flex-wrap gap-2">
-            {["ayesha.rahman@example.com", "tanvir.hossain@example.com", "nusrat.jahan@example.com"].map((e) => (
-              <Link key={e} href={`/account?email=${encodeURIComponent(e)}`} className="badge hover:border-[var(--color-ink)]">
-                {e}
-              </Link>
-            ))}
-          </div>
+          {email && !customer ? (
+            <ListingPanel className="p-6">
+              <EmptyState
+                title={`No account found for ${email}`}
+                subtitle="Try one of the seeded demo emails on the right, or place a demo order first."
+                action={{ label: "Shop now", href: "/shop" }}
+              />
+            </ListingPanel>
+          ) : null}
+
+          {customer ? (
+            <div className="overflow-hidden rounded-[var(--radius-card)] border border-[var(--color-line)] bg-white">
+              <div className="section-bar">
+                <h2 className="section-bar-title">Order history</h2>
+                <span className="text-[12px] text-[var(--color-ink-mute)]">
+                  {customer.name} · {customer.email}
+                </span>
+              </div>
+              {orders.length === 0 ? (
+                <div className="p-6">
+                  <EmptyState
+                    title="No orders yet"
+                    subtitle="Orders placed with this email will appear here."
+                    action={{ label: "Start shopping", href: "/shop" }}
+                  />
+                </div>
+              ) : (
+                <ul className="divide-y divide-[var(--color-line)]">
+                  {orders.map((o) => (
+                    <li key={o.id} className="flex flex-wrap items-center justify-between gap-2 px-3 py-2.5 hover:bg-[#fffbf7]">
+                      <div className="min-w-0">
+                        <Link
+                          href={`/order/track?order=${o.order_number}`}
+                          className="font-mono text-[12px] font-semibold text-[var(--color-brand-deep)] hover:underline"
+                        >
+                          {o.order_number}
+                        </Link>
+                        <p className="text-[11px] text-[var(--color-ink-mute)]">
+                          {formatDate(o.created_at)} · {o.ship_area}, {o.ship_district}
+                        </p>
+                      </div>
+                      <div className="flex items-center gap-2">
+                        <span className={`badge ${o.status === "delivered" ? "badge-new" : o.status === "cancelled" ? "badge-out" : "badge-low"}`}>
+                          {o.status}
+                        </span>
+                        <span className="text-[12.5px] font-semibold text-[var(--color-brand-ink)]">{formatBdt(o.total)}</span>
+                        <Link
+                          href={`/order/track?order=${o.order_number}`}
+                          className="rounded-sm border border-[var(--color-line)] px-2 py-0.5 text-[11.5px] hover:border-[var(--color-brand)] hover:text-[var(--color-brand-deep)]"
+                        >
+                          Track
+                        </Link>
+                      </div>
+                    </li>
+                  ))}
+                </ul>
+              )}
+            </div>
+          ) : null}
         </div>
-      ) : null}
+
+        <aside className="space-y-3 lg:sticky lg:top-[132px] lg:self-start">
+          <div className="overflow-hidden rounded-[var(--radius-card)] border border-[var(--color-line)] bg-white">
+            <div className="section-bar">
+              <h2 className="section-bar-title">Demo accounts</h2>
+            </div>
+            <div className="space-y-1.5 p-3">
+              <p className="text-[11.5px] leading-relaxed text-[var(--color-ink-soft)]">
+                Seeded sample customers with sample order history:
+              </p>
+              {["ayesha.rahman@example.com", "tanvir.hossain@example.com", "nusrat.jahan@example.com"].map((e) => (
+                <Link
+                  key={e}
+                  href={`/account?email=${encodeURIComponent(e)}`}
+                  className="block truncate rounded-sm border border-[var(--color-line)] px-2 py-1.5 font-mono text-[11px] text-[var(--color-ink-soft)] hover:border-[var(--color-brand)] hover:text-[var(--color-brand-deep)]"
+                >
+                  {e}
+                </Link>
+              ))}
+            </div>
+          </div>
+          <div className="rounded-[var(--radius-card)] border border-[var(--color-line)] bg-white p-3">
+            <p className="mb-1.5 text-[11px] font-bold uppercase tracking-wide text-[var(--color-ink-mute)]">
+              Need help?
+            </p>
+            <p className="text-[11.5px] leading-relaxed text-[var(--color-ink-soft)]">
+              This is a demo build — no real orders ship. Use the order number to check the tracking timeline.
+            </p>
+            <Link href="/pages/contact" className="mt-2 inline-block text-[11.5px] font-semibold text-[var(--color-brand-deep)] hover:underline">
+              Contact page →
+            </Link>
+          </div>
+        </aside>
+      </div>
     </div>
   );
 }

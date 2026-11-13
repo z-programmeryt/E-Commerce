@@ -4,6 +4,7 @@ import { notFound } from "next/navigation";
 import { queryProducts, wishlistIds } from "@/lib/repo";
 import { wishlistKeyReadOnly } from "@/lib/session";
 import { ProductGrid } from "@/components/catalog/ProductCard";
+import { ListingHeader, ListingPanel } from "@/components/catalog/ListingHeader";
 import { EmptyState } from "@/components/EmptyState";
 
 export const dynamic = "force-dynamic";
@@ -92,21 +93,15 @@ export default async function CollectionPage({ params }: { params: Promise<{ slu
   const savedIds = wkey ? wishlistIds(wkey) : [];
 
   return (
-    <div className="container-page py-10">
-      <nav aria-label="Breadcrumb" className="mb-3 text-xs text-[var(--color-ink-mute)]">
-        <Link href="/" className="hover:underline">Home</Link>
-        <span className="mx-1.5">/</span>
-        <Link href="/shop" className="hover:underline">Collections</Link>
-        <span className="mx-1.5">/</span>
-        <span className="text-[var(--color-ink)]">{c.title}</span>
-      </nav>
+    <div className="container-page pb-6">
+      <ListingHeader
+        title={c.title}
+        count={`${rows.length} products`}
+        subtitle={c.description}
+        crumb={[{ label: "Collections", href: "/shop" }, { label: c.title }]}
+      />
 
-      <p className="eyebrow mb-2">{c.eyebrow}</p>
-      <h1 className="font-display text-2xl md:text-3xl">{c.title}</h1>
-      <p className="mt-2 max-w-2xl text-sm text-[var(--color-ink-soft)]">{c.description}</p>
-      <p className="mt-1 text-xs text-[var(--color-ink-mute)]">{rows.length} products</p>
-
-      <div className="mt-7">
+      <ListingPanel>
         {rows.length === 0 ? (
           <EmptyState
             title="This collection is being curated"
@@ -114,15 +109,21 @@ export default async function CollectionPage({ params }: { params: Promise<{ slu
             action={{ label: "Shop all", href: "/shop" }}
           />
         ) : (
-          <ProductGrid products={rows} wishlistedIds={savedIds} />
+          <ProductGrid products={rows} wishlistedIds={savedIds} dense />
         )}
-      </div>
+      </ListingPanel>
 
-      <div className="mt-12 border-t border-[var(--color-line)] pt-6">
-        <p className="eyebrow mb-3">Other collections</p>
-        <div className="flex flex-wrap gap-2">
+      <div className="mt-3 overflow-hidden rounded-[var(--radius-card)] border border-[var(--color-line)] bg-white">
+        <div className="section-bar">
+          <h2 className="section-bar-title">Other collections</h2>
+        </div>
+        <div className="flex flex-wrap gap-1.5 p-3">
           {COLLECTIONS.filter((x) => x.slug !== slug).map((x) => (
-            <Link key={x.slug} href={`/collections/${x.slug}`} className="badge hover:border-[var(--color-ink)] hover:text-[var(--color-ink)]">
+            <Link
+              key={x.slug}
+              href={`/collections/${x.slug}`}
+              className="rounded-sm border border-[var(--color-line)] px-2 py-1 text-[11.5px] text-[var(--color-ink-soft)] hover:border-[var(--color-brand)] hover:text-[var(--color-brand-deep)]"
+            >
               {x.title}
             </Link>
           ))}

@@ -9,14 +9,14 @@ type Props = {
 
 export function EmptyState({ title, subtitle, action }: Props) {
   return (
-    <div className="card flex flex-col items-center px-6 py-14 text-center">
-      <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-[var(--color-paper-2)] text-[var(--color-ink-mute)]">
-        <Icon name="box" size={22} />
+    <div className="flex flex-col items-center px-4 py-10 text-center">
+      <div className="mb-3 flex h-11 w-11 items-center justify-center rounded-full bg-[var(--color-brand-soft)] text-[var(--color-brand)]">
+        <Icon name="box" size={20} />
       </div>
-      <h3 className="font-display text-xl">{title}</h3>
-      {subtitle ? <p className="mt-2 max-w-md text-sm text-[var(--color-ink-mute)]">{subtitle}</p> : null}
+      <h3 className="text-[14px] font-bold text-[var(--color-ink)]">{title}</h3>
+      {subtitle ? <p className="mt-1 max-w-sm text-[12px] leading-relaxed text-[var(--color-ink-mute)]">{subtitle}</p> : null}
       {action ? (
-        <Link href={action.href} className="btn btn-primary mt-5">
+        <Link href={action.href} className="btn btn-primary mt-4">
           {action.label}
         </Link>
       ) : null}

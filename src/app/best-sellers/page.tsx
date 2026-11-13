@@ -3,6 +3,7 @@ import Link from "next/link";
 import { topProducts, wishlistIds } from "@/lib/repo";
 import { wishlistKeyReadOnly } from "@/lib/session";
 import { ProductGrid } from "@/components/catalog/ProductCard";
+import { ListingHeader, ListingPanel } from "@/components/catalog/ListingHeader";
 import { formatBdt } from "@/lib/brand";
 import { Icon } from "@/components/ui/Icon";
 
@@ -19,31 +20,42 @@ export default async function BestSellersPage() {
   const savedIds = wkey ? wishlistIds(wkey) : [];
 
   return (
-    <div className="container-page py-10">
-      <p className="eyebrow mb-2">Customer favourites</p>
-      <h1 className="font-display text-2xl md:text-3xl">Best sellers</h1>
-      <p className="mt-2 max-w-2xl text-sm text-[var(--color-ink-soft)]">
-        Ordered by the best-seller flag set by the buying team. This is a merchandising label, not a claim about
-        sales volume — the demo has no live sales history yet.
-      </p>
+    <div className="container-page pb-6">
+      <ListingHeader
+        title="Best sellers"
+        count={`${best.length} products`}
+        subtitle="Flagged by the buying team as the strongest repeat-purchase candidates. This is a merchandising label, not a sales-volume claim — the demo has no live sales history yet."
+        crumb={[{ label: "Best sellers" }]}
+        action={{ label: "Browse new arrivals →", href: "/new-arrivals" }}
+      />
 
-      <div className="mt-7 grid gap-8 lg:grid-cols-[1fr_280px]">
-        <div>
-          <ProductGrid products={best} wishlistedIds={savedIds} />
-        </div>
-        <aside className="lg:sticky lg:top-32 lg:self-start">
-          <div className="card p-4">
-            <p className="eyebrow mb-2">Trending now</p>
+      <div className="mt-3 grid gap-3 lg:grid-cols-[minmax(0,1fr)_250px]">
+        <ListingPanel>
+          <ProductGrid products={best} wishlistedIds={savedIds} dense />
+        </ListingPanel>
+
+        <aside className="lg:sticky lg:top-[132px] lg:self-start" aria-label="Trending now">
+          <div className="overflow-hidden rounded-[var(--radius-card)] border border-[var(--color-line)] bg-white">
+            <div className="section-bar">
+              <h2 className="section-bar-title">Trending now</h2>
+            </div>
             <ol className="divide-y divide-[var(--color-line)]">
               {trending.slice(0, 8).map((p, i) => (
                 <li key={p.id}>
-                  <Link href={`/product/${p.slug}`} className="flex items-center gap-3 py-2.5 hover:text-[var(--color-olive-deep)]">
-                    <span className="w-4 text-xs text-[var(--color-ink-mute)]">{i + 1}</span>
-                    <span className="min-w-0 flex-1">
-                      <span className="block truncate text-xs font-semibold">{p.name}</span>
-                      <span className="block text-[0.625rem] text-[var(--color-ink-mute)]">{formatBdt(p.sale_price ?? p.retail_price)}</span>
+                  <Link href={`/product/${p.slug}`} className="flex items-center gap-2 p-2 hover:bg-[#fffbf7]">
+                    <span className="w-3.5 shrink-0 text-center text-[11px] font-bold text-[var(--color-brand)]">
+                      {i + 1}
                     </span>
-                    <Icon name="chevron-right" size={12} className="text-[var(--color-ink-mute)]" />
+                    <span className="h-11 w-11 shrink-0 overflow-hidden rounded border border-[var(--color-line)] bg-white">
+                      {/* eslint-disable-next-line @next/next/no-img-element */}
+                      <img src={p.image_url ?? "/placeholder.svg"} alt="" className="h-full w-full object-contain p-0.5" />
+                    </span>
+                    <span className="min-w-0 flex-1">
+                      <span className="block line-clamp-1 text-[11.5px] leading-tight">{p.name}</span>
+                      <span className="block text-[11px] font-semibold text-[var(--color-brand-ink)]">
+                        {formatBdt(p.sale_price ?? p.retail_price)}
+                      </span>
+                    </span>
                   </Link>
                 </li>
               ))}

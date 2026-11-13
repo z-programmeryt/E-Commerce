@@ -51,54 +51,61 @@ export default async function CategoryPage({ params, searchParams }: { params: P
   const savedIds = wkey ? wishlistIds(wkey) : [];
 
   return (
-    <div className="container-page py-8">
-      <nav aria-label="Breadcrumb" className="mb-3 text-xs text-[var(--color-ink-mute)]">
-        <Link href="/" className="hover:underline">Home</Link>
-        <span className="mx-1.5">/</span>
-        <Link href="/shop" className="hover:underline">Shop</Link>
-        <span className="mx-1.5">/</span>
-        <span className="text-[var(--color-ink)]">{cat.name}</span>
+    <div className="container-page pb-6">
+      <nav aria-label="Breadcrumb" className="flex flex-wrap items-center gap-1 py-2.5 text-[12px] text-[var(--color-ink-mute)]">
+        <Link href="/" className="hover:text-[var(--color-brand-deep)] hover:underline">Home</Link>
+        <Icon name="chevron-right" size={11} className="text-[var(--color-line-strong)]" />
+        <Link href="/shop" className="hover:text-[var(--color-brand-deep)] hover:underline">All products</Link>
+        <Icon name="chevron-right" size={11} className="text-[var(--color-line-strong)]" />
+        <span className="text-[var(--color-ink-soft)]" aria-current="page">{cat.name}</span>
       </nav>
 
-      <header className="mb-6 border-b border-[var(--color-line)] pb-6">
-        <div className="flex items-start gap-3">
-          <span className="mt-1 flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-[var(--color-paper-2)] text-[var(--color-olive-deep)]">
+      {/* category masthead */}
+      <div className="overflow-hidden rounded-[var(--radius-card)] border border-[var(--color-line)] bg-white">
+        <div className="flex items-center gap-3 border-b border-[var(--color-line)] px-3 py-3">
+          <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-[var(--color-brand-soft)] text-[var(--color-brand-deep)]">
             <Icon name={cat.icon} size={19} />
           </span>
-          <div>
-            <h1 className="font-display text-[1.9rem] leading-tight md:text-[2.3rem]">{cat.name}</h1>
-            <p className="mt-1.5 max-w-2xl text-sm text-[var(--color-ink-soft)]">{cat.blurb}</p>
-            <p className="mt-1 text-xs text-[var(--color-ink-mute)]">
-              {counts[cat.slug] ?? all.total} products · {subs.length} types
-            </p>
+          <div className="min-w-0">
+            <h1 className="text-[17px] font-bold leading-tight text-[var(--color-ink)]">{cat.name}</h1>
+            <p className="mt-0.5 line-clamp-1 text-[12px] text-[var(--color-ink-mute)]">{cat.blurb}</p>
           </div>
+          <span className="ml-auto shrink-0 text-[12px] text-[var(--color-ink-mute)]">
+            {counts[cat.slug] ?? all.total} products
+          </span>
         </div>
-      </header>
 
-      <div className="mb-5 flex flex-wrap items-center justify-between gap-3">
-        <ActiveChips labels={{ sub: "Type", min: "Min ৳", max: "Max ৳", tag: "Style" }} />
-        <div className="ml-auto flex items-center gap-3">
-          <span className="hidden text-xs text-[var(--color-ink-mute)] sm:inline">Showing {rows.length} of {total}</span>
+        <div className="flex flex-wrap items-center justify-between gap-2 px-3 py-2">
+          <div className="flex min-w-0 flex-wrap items-center gap-2">
+            <span className="text-[12px] text-[var(--color-ink-mute)]">{total} item{total === 1 ? "" : "s"}</span>
+            <div className="min-w-0">
+              <ActiveChips labels={{ sub: "Type", min: "Min ৳", max: "Max ৳", tag: "Style" }} />
+            </div>
+          </div>
           <SortSelect />
         </div>
       </div>
 
-      <div className="grid gap-8 lg:grid-cols-[220px_1fr]">
-        <FilterPanel
-          categories={[{ value: cat.slug, label: cat.name }]}
-          subcategories={subs.map((s) => ({ value: s, label: s }))}
-          tags={[]}
-        />
+      <div className="mt-3 grid gap-3 lg:grid-cols-[210px_minmax(0,1fr)]">
+        <div className="lg:sticky lg:top-[132px] lg:self-start">
+          <FilterPanel
+            categories={[{ value: cat.slug, label: cat.name }]}
+            subcategories={subs.map((s) => ({ value: s, label: s }))}
+            tags={[]}
+          />
+        </div>
         <div>
           {rows.length === 0 ? (
-            <EmptyState
-              title="Nothing here with those filters"
-              subtitle="Clear a filter or browse the full category."
-              action={{ label: "Reset filters", href: `/category/${cat.slug}` }}
-            />
+            <div className="rounded-[var(--radius-card)] border border-[var(--color-line)] bg-white p-8">
+              <EmptyState
+                title="Nothing here with those filters"
+                subtitle="Clear a filter or browse the full category."
+                action={{ label: "Reset filters", href: `/category/${cat.slug}` }}
+              />
+            </div>
           ) : (
             <>
-              <ProductGrid products={rows} wishlistedIds={savedIds} />
+              <ProductGrid products={rows} wishlistedIds={savedIds} dense />
               <Pagination
                 page={page}
                 totalPages={Math.ceil(total / PER_PAGE)}

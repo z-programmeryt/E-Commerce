@@ -5,6 +5,7 @@ import { cartTokenReadOnly, wishlistKeyReadOnly } from "@/lib/session";
 import { Icon } from "@/components/ui/Icon";
 import { MobileNav } from "./MobileNav";
 import { SearchBox } from "./SearchBox";
+import { CategoryBar } from "./CategoryBar";
 
 export async function Header() {
   const categories = listCategories();
@@ -14,96 +15,104 @@ export async function Header() {
   const wkey = await wishlistKeyReadOnly();
   const saved = wkey ? wishlistIds(wkey).length : 0;
 
-  const primary = categories.slice(0, 7);
-
   return (
-    <header className="sticky top-0 z-40 border-b border-[var(--color-line)] bg-[var(--color-paper)]/95 backdrop-blur">
-      <div className="border-b border-[var(--color-line)] bg-[var(--color-ink)] text-[var(--color-paper)]">
-        <div className="container-page flex h-9 items-center justify-between gap-4 text-[0.6875rem] tracking-wide">
-          <p className="truncate">
-            Free delivery over ৳2,500 · Cash on delivery nationwide
-            <span className="ml-2 hidden rounded bg-white/10 px-1.5 py-0.5 text-[0.625rem] uppercase tracking-[0.1em] sm:inline">
-              Local demo
+    <header className="sticky top-0 z-40 shadow-[0_1px_0_rgba(0,0,0,0.08)]">
+      {/* ---------- utility bar ---------- */}
+      <div className="bg-[#2b2b2b] text-[11px] text-white/85">
+        <div className="container-page flex h-8 items-center justify-between gap-3">
+          <div className="flex min-w-0 items-center gap-4">
+            <span className="hidden truncate sm:inline">
+              <span className="text-white/55">Deliver to</span>{" "}
+              <span className="font-semibold text-white">Dhaka, Bangladesh</span>
             </span>
-          </p>
-          <div className="hidden items-center gap-4 sm:flex">
-            <Link href="/order/track" className="hover:underline">Track order</Link>
-            <Link href="/pages/faq" className="hover:underline">Help</Link>
-            <span className="text-white/60">{BRAND.supportHours}</span>
+            <span className="truncate sm:hidden">
+              <span className="font-semibold text-white">Dhaka</span>
+            </span>
+            <Link href="/order/track" className="hidden hover:text-white hover:underline md:inline">
+              Track order
+            </Link>
+            <Link href="/pages/faq" className="hidden hover:text-white hover:underline md:inline">
+              Help
+            </Link>
+            <span className="hidden text-white/45 lg:inline">{BRAND.supportHours}</span>
+          </div>
+          <div className="flex items-center gap-3">
+            <span className="hidden rounded-sm bg-[var(--color-brand)] px-1.5 py-0.5 text-[10px] font-bold uppercase tracking-wide text-white sm:inline">
+              Demo store
+            </span>
+            <Link href="/account" className="hover:text-white hover:underline">
+              Account
+            </Link>
+            <Link href="/wishlist" className="hover:text-white hover:underline">
+              Wishlist{saved ? ` (${saved})` : ""}
+            </Link>
+            <Link href="/admin" className="hidden text-white/60 hover:text-white hover:underline sm:inline">
+              Seller Centre
+            </Link>
           </div>
         </div>
       </div>
 
-      <div className="container-page flex h-16 items-center gap-4">
-        <MobileNav categories={categories} />
+      {/* ---------- brand + search + cart ---------- */}
+      <div className="bg-[var(--color-brand)]">
+        <div className="container-page flex h-[70px] items-center gap-3 md:gap-6">
+          <div className="lg:hidden">
+            <MobileNav categories={categories} />
+          </div>
 
-        <Link href="/" className="shrink-0" aria-label={`${BRAND.name} home`}>
-          <span className="font-display text-[1.15rem] tracking-[0.14em] md:text-[1.3rem]">
-            SUPER Z <span className="text-[var(--color-olive-deep)]">SHOP</span>
-          </span>
-          <span className="mt-0.5 hidden text-[0.5625rem] uppercase tracking-[0.24em] text-[var(--color-ink-mute)] sm:block">
-            {BRAND.tagline}
-          </span>
-        </Link>
-
-        <nav aria-label="Main" className="ml-4 hidden flex-1 items-center gap-5 lg:flex">
-          <Link href="/shop" className="text-[0.8125rem] font-semibold hover:text-[var(--color-olive-deep)]">Shop all</Link>
-          {primary.map((c) => (
-            <Link
-              key={c.slug}
-              href={`/category/${c.slug}`}
-              className="text-[0.8125rem] text-[var(--color-ink-soft)] transition-colors hover:text-[var(--color-ink)]"
-            >
-              {c.name}
-            </Link>
-          ))}
-          <Link href="/offers" className="text-[0.8125rem] font-semibold text-[var(--color-sale)] hover:underline">
-            Offers
+          <Link href="/" className="shrink-0" aria-label={`${BRAND.name} home`}>
+            <span className="flex items-baseline gap-1.5">
+              <span className="text-[22px] font-extrabold leading-none tracking-tight text-white md:text-[26px]">
+                SUPER<span className="text-white/80">Z</span>
+              </span>
+              <span className="hidden text-[11px] font-semibold uppercase tracking-[0.18em] text-white/75 sm:inline">
+                Shop
+              </span>
+            </span>
           </Link>
-        </nav>
 
-        <div className="ml-auto flex items-center gap-1 md:gap-2">
-          <div className="hidden md:block">
+          <div className="min-w-0 flex-1">
             <SearchBox />
           </div>
-          <Link
-            href="/wishlist"
-            className="relative flex h-10 w-10 items-center justify-center rounded-full hover:bg-[var(--color-paper-2)]"
-            aria-label={`Wishlist${saved ? `, ${saved} saved` : ""}`}
-          >
-            <Icon name="heart" size={19} />
-            {saved > 0 ? (
-              <span className="absolute -right-0.5 -top-0.5 flex h-4 min-w-4 items-center justify-center rounded-full bg-[var(--color-clay)] px-1 text-[0.5625rem] font-bold text-white">
-                {saved}
-              </span>
-            ) : null}
-          </Link>
-          <Link
-            href="/account"
-            className="hidden h-10 w-10 items-center justify-center rounded-full hover:bg-[var(--color-paper-2)] sm:flex"
-            aria-label="Account and orders"
-          >
-            <Icon name="user" size={19} />
-          </Link>
-          <Link
-            href="/cart"
-            className="relative flex h-10 items-center gap-2 rounded-full px-2 hover:bg-[var(--color-paper-2)] md:px-3"
-            aria-label={`Cart${count ? `, ${count} items` : ""}`}
-          >
-            <Icon name="bag" size={19} />
-            <span className="hidden text-xs font-semibold md:inline">Cart</span>
-            {count > 0 ? (
-              <span className="flex h-4 min-w-4 items-center justify-center rounded-full bg-[var(--color-ink)] px-1 text-[0.5625rem] font-bold text-white">
-                {count}
-              </span>
-            ) : null}
-          </Link>
+
+          <div className="flex items-center gap-3 md:gap-5">
+            <Link
+              href="/wishlist"
+              className="relative hidden h-9 w-9 items-center justify-center rounded text-white hover:bg-white/15 sm:flex"
+              aria-label={`Wishlist${saved ? `, ${saved} saved` : ""}`}
+            >
+              <Icon name="heart" size={20} />
+              {saved > 0 ? (
+                <span className="absolute right-0 top-0 flex h-4 min-w-4 items-center justify-center rounded-full bg-white px-1 text-[10px] font-bold text-[var(--color-brand-deep)]">
+                  {saved}
+                </span>
+              ) : null}
+            </Link>
+            <Link
+              href="/account"
+              className="hidden h-9 w-9 items-center justify-center rounded text-white hover:bg-white/15 md:flex"
+              aria-label="Account and orders"
+            >
+              <Icon name="user" size={20} />
+            </Link>
+            <Link
+              href="/cart"
+              className="relative flex h-9 items-center gap-1.5 rounded px-1 text-white hover:bg-white/15 md:px-2"
+              aria-label={`Cart${count ? `, ${count} items` : ""}`}
+            >
+              <Icon name="bag" size={22} />
+              {count > 0 ? (
+                <span className="absolute -right-1 -top-1 flex h-[18px] min-w-[18px] items-center justify-center rounded-full bg-white px-1 text-[10px] font-bold text-[var(--color-brand-deep)]">
+                  {count}
+                </span>
+              ) : null}
+            </Link>
+          </div>
         </div>
       </div>
 
-      <div className="container-page pb-3 md:hidden">
-        <SearchBox />
-      </div>
+      {/* ---------- category bar ---------- */}
+      <CategoryBar categories={categories} />
     </header>
   );
 }

@@ -114,6 +114,24 @@ scripts/             seeders, QA harnesses, workbook builder
 
 ---
 
+## Interface: marketplace layout system
+
+The storefront is styled as a dense marketplace — the structure people already know from Daraz and eBay, with the warmer reading rhythm of Rokomari — rather than a boutique catalogue. Everything ships from one small set of primitives so the experience never shifts shape between sections.
+
+| Primitive | Where | What it does |
+|---|---|---|
+| Design tokens (`src/app/globals.css`) | every page | Orange brand ramp (`#f57224` → `#b8480a`), `#f5f5f5` page paper, 14px/1.5 body, 1px `#e8e8e8` hairlines, `--radius-card` 6px. |
+| `.section-bar` / `.section-bar-title` | every white panel | Uppercase 13px panel header on a hairline rule — the repeating unit of the whole layout. |
+| `ListingHeader` / `ListingPanel` / `ListingSkeleton` | `components/catalog/ListingHeader.tsx` | Breadcrumb + title + count + right action, the white grid panel, and the matching loading state. |
+| `ProductGrid` (`dense`) | all listing pages | 2/3/4/6 columns, square `object-contain` tiles, orange price, struck list price, `-N%` tile tag. |
+| `CartLineItem`, `CouponForm`, `CheckoutForm`, `ProductDetailPanel`, `Pagination`, `EmptyState` | shared | Flat 1px controls, 28px steppers, `section-bar` grouping, no rounded-pill chrome. |
+
+Layout constants: sticky offsets `top-[132px]`, listing sidebar `210px`, product buy-box `[400px_1fr_290px]`, cart `[1fr_330px]`, checkout `[1fr_300px]`.
+
+**What the denser UI still refuses to do.** No star ratings, no "sold" counters, no review sections, no countdown urgency beyond the fixed 24-hour flash-sale cycle, no supplier names or phone numbers invented to fill a box. Stock numbers on the product page are the live rows in the database, and placeholder product art says so on the page.
+
+---
+
 ## Design principles applied
 
 - **No invented facts.** Supplier names, phone numbers, wholesale prices and demand figures that could not be verified are written as `NOT VERIFIED` rather than filled in plausibly. The workbook's sources sheet records every external claim with its URL, date and caveat.

@@ -29,10 +29,10 @@ export function AdminNav() {
               <Link
                 href={l.href}
                 aria-current={active ? "page" : undefined}
-                className={`flex items-center gap-2 whitespace-nowrap rounded-md px-3 py-2 text-xs font-medium transition-colors ${
+                className={`flex items-center gap-2 whitespace-nowrap rounded-sm px-2.5 py-1.5 text-[12px] font-medium transition-colors ${
                   active
-                    ? "bg-[var(--color-ink)] text-white"
-                    : "text-[var(--color-ink-soft)] hover:bg-white"
+                    ? "bg-[var(--color-brand)] text-white"
+                    : "text-[var(--color-ink-soft)] hover:bg-white hover:text-[var(--color-brand-deep)]"
                 }`}
               >
                 <Icon name={l.icon} size={14} />
@@ -42,7 +42,7 @@ export function AdminNav() {
           );
         })}
       </ul>
-      <div className="mt-4 hidden rounded-md border border-[#f0e2c4] bg-[#fbf6ea] p-3 text-[0.625rem] leading-relaxed text-[#6d5211] lg:block">
+      <div className="mt-3 hidden rounded-[var(--radius-card)] border border-[#f0e2c4] bg-[#fbf6ea] p-2.5 text-[10.5px] leading-relaxed text-[#6d5211] lg:block">
         <p className="font-bold uppercase tracking-wide">Demo dashboard</p>
         <p className="mt-1">
           Authentication is demonstration-grade. All changes write to the local SQLite file.

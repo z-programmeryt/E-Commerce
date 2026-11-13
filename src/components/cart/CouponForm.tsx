@@ -21,45 +21,43 @@ export function CouponForm({ initial = "" }: { initial?: string }) {
 
   return (
     <div>
-      <label htmlFor="coupon" className="label">Coupon code</label>
-      <div className="flex gap-2">
+      <label htmlFor="coupon" className="mb-1 block text-[11px] font-bold uppercase tracking-wide text-[var(--color-ink-mute)]">
+        Coupon code
+      </label>
+      <div className="flex gap-1.5">
         <input
           id="coupon"
           value={code}
           onChange={(e) => setCode(e.target.value.toUpperCase())}
           placeholder="WELCOME10"
-          className="field h-10 min-h-0 flex-1 font-mono text-xs uppercase"
+          className="field h-8 min-h-0 flex-1 font-mono text-[11.5px] uppercase"
           autoComplete="off"
         />
-        <button
-          type="button"
-          onClick={() => setSaved(code.trim() || null)}
-          className="btn btn-outline btn-sm shrink-0"
-        >
+        <button type="button" onClick={() => setSaved(code.trim() || null)} className="btn btn-outline btn-sm shrink-0">
           Apply
         </button>
       </div>
       {saved ? (
-        <p className="mt-1.5 flex items-center gap-1 text-[0.6875rem] text-[var(--color-success)]">
-          <Icon name="check" size={11} /> {saved} will be applied at checkout
+        <p className="mt-1 flex items-center gap-1 text-[10.5px] text-[var(--color-success)]">
+          <Icon name="check" size={10} /> {saved} will be applied at checkout
         </p>
       ) : null}
       <button
         type="button"
         onClick={() => setOpen((o) => !o)}
-        className="mt-1.5 text-[0.6875rem] text-[var(--color-ink-mute)] underline underline-offset-2"
+        className="mt-1.5 text-[10.5px] text-[var(--color-ink-mute)] underline underline-offset-2 hover:text-[var(--color-brand-deep)]"
         aria-expanded={open}
       >
         {open ? "Hide demo codes" : "Which demo codes work?"}
       </button>
       {open ? (
-        <ul className="mt-2 space-y-1 rounded-md bg-[var(--color-paper-2)] p-2.5">
+        <ul className="mt-1.5 space-y-1 rounded-sm bg-[#fafafa] p-2">
           {DEMO.map((d) => (
-            <li key={d.code} className="flex items-baseline justify-between gap-2 text-[0.6875rem]">
+            <li key={d.code} className="flex items-baseline justify-between gap-2 text-[10.5px]">
               <button
                 type="button"
                 onClick={() => { setCode(d.code); setSaved(d.code); }}
-                className="font-mono font-semibold hover:underline"
+                className="font-mono font-semibold text-[var(--color-brand-deep)] hover:underline"
               >
                 {d.code}
               </button>

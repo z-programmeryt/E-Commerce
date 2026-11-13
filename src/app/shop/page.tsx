@@ -5,7 +5,8 @@ import { wishlistKeyReadOnly } from "@/lib/session";
 import { ProductGrid } from "@/components/catalog/ProductCard";
 import { ActiveChips, FilterPanel, SortSelect } from "@/components/catalog/Filters";
 import { Pagination } from "@/components/catalog/Pagination";
-import { EmptyState, SectionHeading } from "@/components/EmptyState";
+import { EmptyState } from "@/components/EmptyState";
+import { Icon } from "@/components/ui/Icon";
 
 export const metadata: Metadata = {
   title: "Shop all products",
@@ -61,44 +62,54 @@ export default async function ShopPage({ searchParams }: { searchParams: SearchP
   };
 
   return (
-    <div className="container-page py-8">
-      <nav aria-label="Breadcrumb" className="mb-3 text-xs text-[var(--color-ink-mute)]">
-        <Link href="/" className="hover:underline">Home</Link>
-        <span className="mx-1.5">/</span>
-        <span className="text-[var(--color-ink)]">Shop all</span>
+    <div className="container-page pb-6">
+      <nav aria-label="Breadcrumb" className="flex items-center gap-1 py-2.5 text-[12px] text-[var(--color-ink-mute)]">
+        <Link href="/" className="hover:text-[var(--color-brand-deep)] hover:underline">Home</Link>
+        <Icon name="chevron-right" size={11} className="text-[var(--color-line-strong)]" />
+        <span className="text-[var(--color-ink-soft)]">All products</span>
       </nav>
 
-      <SectionHeading
-        eyebrow="Catalogue"
-        title="Shop all products"
-        subtitle={`${total} product${total === 1 ? "" : "s"} across 15 categories. Prices are demo estimates — see each product page for the sourcing note.`}
-      />
-
-      <div className="mb-5 flex flex-wrap items-center justify-between gap-3 border-y border-[var(--color-line)] py-3">
-        <ActiveChips
-          labels={{ category: "Category", sub: "Type", min: "Min ৳", max: "Max ৳", tag: "Style", q: "Search" }}
-        />
-        <div className="ml-auto flex items-center gap-3">
-          <span className="hidden text-xs text-[var(--color-ink-mute)] sm:inline">
-            Showing {rows.length} of {total}
-          </span>
-          <SortSelect />
+      {/* result header: count + active filters + sort, the Daraz toolbar */}
+      <div className="overflow-hidden rounded-[var(--radius-card)] border border-[var(--color-line)] bg-white">
+        <div className="flex flex-wrap items-center justify-between gap-2 px-3 py-2">
+          <div className="flex min-w-0 flex-wrap items-center gap-2">
+            <h1 className="text-[13px] font-bold text-[var(--color-ink)]">All products</h1>
+            <span className="text-[12px] text-[var(--color-ink-mute)]">
+              {total} item{total === 1 ? "" : "s"}
+            </span>
+            <div className="min-w-0">
+              <ActiveChips
+                labels={{ category: "Category", sub: "Type", min: "Min ৳", max: "Max ৳", tag: "Style", q: "Search" }}
+              />
+            </div>
+          </div>
+          <div className="flex items-center gap-2">
+            <span className="hidden text-[11.5px] text-[var(--color-ink-mute)] sm:inline">
+              Showing {rows.length} of {total}
+            </span>
+            <SortSelect />
+          </div>
         </div>
       </div>
 
-      <div className="grid gap-8 lg:grid-cols-[220px_1fr]">
+      <div className="mt-3 grid gap-3 lg:grid-cols-[210px_minmax(0,1fr)]">
         <FilterPanel categories={catOptions} subcategories={subOptions} tags={[]} />
 
         <div>
+          <div className="lg:hidden">
+            <FilterPanel categories={catOptions} subcategories={subOptions} tags={[]} />
+          </div>
           {rows.length === 0 ? (
-            <EmptyState
-              title="No products match those filters"
-              subtitle="Try widening the price range or clearing a filter."
-              action={{ label: "Clear filters", href: "/shop" }}
-            />
+            <div className="rounded-[var(--radius-card)] border border-[var(--color-line)] bg-white p-8">
+              <EmptyState
+                title="No products match those filters"
+                subtitle="Try widening the price range or clearing a filter."
+                action={{ label: "Clear filters", href: "/shop" }}
+              />
+            </div>
           ) : (
             <>
-              <ProductGrid products={rows} wishlistedIds={savedIds} />
+              <ProductGrid products={rows} wishlistedIds={savedIds} dense />
               <Pagination page={page} totalPages={totalPages} basePath="/shop" params={paramRecord} />
             </>
           )}

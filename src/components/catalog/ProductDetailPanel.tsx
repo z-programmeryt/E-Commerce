@@ -59,10 +59,12 @@ export function ProductDetailPanel({
   }
 
   return (
-    <div className="space-y-5">
+    <div className="space-y-3.5">
       <div>
-        <p className="label mb-2">Colour: <span className="font-normal normal-case tracking-normal text-[var(--color-ink)]">{color}</span></p>
-        <div className="flex flex-wrap gap-2" role="radiogroup" aria-label="Colour">
+        <p className="mb-1.5 text-[11px] font-bold uppercase tracking-wide text-[var(--color-ink-mute)]">
+          Colour: <span className="normal-case tracking-normal text-[var(--color-ink)]">{color}</span>
+        </p>
+        <div className="flex flex-wrap gap-1.5" role="radiogroup" aria-label="Colour">
           {colors.map((c) => {
             const stock = variants.filter((v) => v.color === c).reduce((s, v) => s + v.stock, 0);
             return (
@@ -71,11 +73,11 @@ export function ProductDetailPanel({
                 role="radio"
                 aria-checked={c === color}
                 onClick={() => chooseColor(c)}
-                className={`rounded-full border px-3 py-1.5 text-xs transition-colors ${
+                className={`rounded-sm border px-2.5 py-1 text-[11.5px] transition-colors ${
                   c === color
-                    ? "border-[var(--color-ink)] bg-[var(--color-ink)] text-white"
-                    : "border-[var(--color-line-strong)] bg-white hover:border-[var(--color-ink)]"
-                } ${stock === 0 ? "opacity-50" : ""}`}
+                    ? "border-[var(--color-brand)] bg-[var(--color-brand-soft)] font-semibold text-[var(--color-brand-deep)]"
+                    : "border-[var(--color-line)] bg-white text-[var(--color-ink-soft)] hover:border-[var(--color-brand)]"
+                } ${stock === 0 ? "opacity-45" : ""}`}
               >
                 {c}
                 {stock === 0 ? " (sold out)" : ""}
@@ -86,8 +88,8 @@ export function ProductDetailPanel({
       </div>
 
       <div>
-        <p className="label mb-2">Size / variant</p>
-        <div className="flex flex-wrap gap-2" role="radiogroup" aria-label="Size">
+        <p className="mb-1.5 text-[11px] font-bold uppercase tracking-wide text-[var(--color-ink-mute)]">Size / variant</p>
+        <div className="flex flex-wrap gap-1.5" role="radiogroup" aria-label="Size">
           {sizesForColor.map((v) => (
             <button
               key={v.id}
@@ -95,10 +97,10 @@ export function ProductDetailPanel({
               aria-checked={v.size === size}
               onClick={() => { setSize(v.size); setQty(1); setFeedback(null); }}
               disabled={v.stock === 0}
-              className={`min-w-12 rounded-md border px-3 py-2 text-xs transition-colors ${
+              className={`min-w-11 rounded-sm border px-2.5 py-1 text-[11.5px] transition-colors ${
                 v.size === size
-                  ? "border-[var(--color-ink)] bg-[var(--color-ink)] text-white"
-                  : "border-[var(--color-line-strong)] bg-white hover:border-[var(--color-ink)]"
+                  ? "border-[var(--color-brand)] bg-[var(--color-brand-soft)] font-semibold text-[var(--color-brand-deep)]"
+                  : "border-[var(--color-line)] bg-white text-[var(--color-ink-soft)] hover:border-[var(--color-brand)]"
               } ${v.stock === 0 ? "cursor-not-allowed line-through opacity-45" : ""}`}
               title={v.stock === 0 ? "Out of stock" : `${v.stock} in stock`}
             >
@@ -107,10 +109,10 @@ export function ProductDetailPanel({
           ))}
         </div>
         {selected ? (
-          <p className="mt-2 text-xs text-[var(--color-ink-mute)]">
+          <p className="mt-1.5 text-[11px] text-[var(--color-ink-mute)]">
             SKU {selected.variant_sku} ·{" "}
             {selected.stock === 0 ? (
-              <span className="text-[var(--color-danger)]">Out of stock</span>
+              <span className="text-[var(--color-sale)]">Out of stock</span>
             ) : selected.stock <= 5 ? (
               <span className="text-[var(--color-warn)]">Only {selected.stock} left</span>
             ) : (
@@ -122,57 +124,64 @@ export function ProductDetailPanel({
 
       <div className="flex flex-wrap items-end gap-3">
         <div>
-          <p className="label mb-2">Quantity</p>
-          <div className="flex items-center rounded-full border border-[var(--color-line-strong)] bg-white">
+          <p className="mb-1.5 text-[11px] font-bold uppercase tracking-wide text-[var(--color-ink-mute)]">Quantity</p>
+          <div className="flex items-center overflow-hidden rounded-sm border border-[var(--color-line-strong)] bg-white">
             <button
               onClick={() => setQty((q) => Math.max(1, q - 1))}
-              className="flex h-10 w-10 items-center justify-center disabled:opacity-40"
+              className="flex h-8 w-8 items-center justify-center text-[var(--color-ink-soft)] hover:bg-[#f5f5f5] disabled:opacity-30"
               disabled={qty <= 1}
               aria-label="Decrease quantity"
             >
-              <Icon name="minus" size={14} />
+              <Icon name="minus" size={12} />
             </button>
-            <span className="min-w-8 text-center text-sm font-semibold" aria-live="polite">{qty}</span>
+            <span className="min-w-8 border-x border-[var(--color-line)] px-1 text-center text-[12.5px] font-semibold" aria-live="polite">
+              {qty}
+            </span>
             <button
               onClick={() => setQty((q) => Math.min(maxQty || 1, q + 1))}
-              className="flex h-10 w-10 items-center justify-center disabled:opacity-40"
+              className="flex h-8 w-8 items-center justify-center text-[var(--color-ink-soft)] hover:bg-[#f5f5f5] disabled:opacity-30"
               disabled={!maxQty || qty >= maxQty}
               aria-label="Increase quantity"
             >
-              <Icon name="plus" size={14} />
+              <Icon name="plus" size={12} />
             </button>
           </div>
         </div>
-        <div className="flex-1 min-w-40">
-          <p className="label mb-2">Subtotal</p>
-          <p className="text-lg font-semibold">{formatBdt(price * qty)}</p>
+        <div className="min-w-32 flex-1">
+          <p className="mb-1.5 text-[11px] font-bold uppercase tracking-wide text-[var(--color-ink-mute)]">Subtotal</p>
+          <p className="text-[15px] font-bold text-[var(--color-brand-ink)]">{formatBdt(price * qty)}</p>
         </div>
       </div>
 
-      <button
-        onClick={add}
-        disabled={!selected || selected.stock === 0 || pending}
-        className="btn btn-primary w-full"
-      >
-        <Icon name="bag" size={16} />
-        {selected?.stock === 0 ? "Out of stock" : pending ? "Adding…" : "Add to cart"}
-      </button>
+      <div className="flex gap-1.5">
+        <button
+          onClick={add}
+          disabled={!selected || selected.stock === 0 || pending}
+          className="btn btn-primary flex-1"
+        >
+          <Icon name="bag" size={15} />
+          {selected?.stock === 0 ? "Out of stock" : pending ? "Adding…" : "Add to cart"}
+        </button>
+        <Link href="/cart" className="btn btn-outline shrink-0">
+          Buy now
+        </Link>
+      </div>
 
       {feedback ? (
         <p
           role="status"
-          className={`text-xs ${feedback.tone === "ok" ? "text-[var(--color-success)]" : "text-[var(--color-danger)]"}`}
+          className={`text-[11.5px] ${feedback.tone === "ok" ? "text-[var(--color-success)]" : "text-[var(--color-sale)]"}`}
         >
           {feedback.text}{" "}
           {feedback.tone === "ok" ? (
-            <Link href="/cart" className="link-underline font-semibold">View cart →</Link>
+            <Link href="/cart" className="font-semibold underline underline-offset-2">View cart →</Link>
           ) : null}
         </p>
       ) : null}
 
-      <p className="text-[0.6875rem] leading-relaxed text-[var(--color-ink-mute)]">
-        Order today for dispatch in 1–2 working days. Cash on delivery available nationwide.
-        Stock shown is the live figure from the local database.
+      <p className="text-[10.5px] leading-relaxed text-[var(--color-ink-mute)]">
+        Order today for dispatch in 1–2 working days. Cash on delivery available nationwide. Stock shown is the
+        live figure from the local database.
       </p>
     </div>
   );

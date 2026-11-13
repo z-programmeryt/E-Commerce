@@ -22,7 +22,7 @@ export function OrderLookupForm({ defaultValue = "" }: { defaultValue?: string }
         value={email}
         onChange={(e) => setEmail(e.target.value)}
         placeholder="you@example.com"
-        className="field h-11 flex-1"
+        className="field h-9 min-h-0 flex-1"
       />
       <button type="submit" className="btn btn-primary btn-sm shrink-0">Find orders</button>
     </form>

@@ -127,9 +127,27 @@ Each run creates and then deletes its own QA orders, cart rows and wishlist entr
 | Check | Result |
 |---|---|
 | `npm run lint` (`tsc --noEmit`) | clean, exit 0 |
-| `npm run build` | succeeds, 47 routes compiled |
+| `npm run build` | succeeds, 35 route entries compiled (incl. 7 static policy pages) |
 | `npm run db:verify` | 25/25 |
 | `npm run workbook` | regenerates the 17-sheet `.xlsx` |
+
+---
+
+## 5b. Marketplace UI verification
+
+The interface was rebuilt into a dense marketplace layout. Layout changes cannot be screenshot-verified in this sandbox (no browser runtime is installed), so verification was done with HTML string probes against the production server plus a static audit of the styling layer.
+
+| Check | Method | Result |
+|---|---|---|
+| Every page renders after the restyle | `curl` status + byte size on 13 storefront routes + 8 loading routes | all 200; 62–253 KB each |
+| Unknown product / category still 404 | `curl` | HTTP 404 (no soft 404s reintroduced) |
+| No undefined CSS custom properties | `grep -rho "var(--color-*)" src/` vs the tokens declared in `globals.css` | **0 dangling references** |
+| Shared layout primitives in use | `ListingHeader` / `ListingPanel` on shop, category, collections, offers, new arrivals, best sellers, wishlist, search, account | 9 pages |
+| Loading states match the new layout | `ListingSkeleton` in 8 route-level `loading.tsx` files | 8/8 |
+| Product tiles carry no fabricated social proof | probe for star/review/sold markup in card + PDP output | none present |
+| Prices, coupons, stock, orders unchanged by the restyle | full QA run against the rebuilt server | 136/136 |
+
+The restyle touched presentation only: no route, action, query or seed file changed, which the unchanged 136/136 result confirms.
 
 ---
 

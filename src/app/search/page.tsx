@@ -4,6 +4,7 @@ import { listCategories, queryProducts, wishlistIds } from "@/lib/repo";
 import { wishlistKeyReadOnly } from "@/lib/session";
 import { ProductGrid } from "@/components/catalog/ProductCard";
 import { SearchBox } from "@/components/layout/SearchBox";
+import { Icon } from "@/components/ui/Icon";
 import { EmptyState } from "@/components/EmptyState";
 import { SortSelect } from "@/components/catalog/Filters";
 
@@ -29,51 +30,79 @@ export default async function SearchPage({
   const savedIds = wkey ? wishlistIds(wkey) : [];
 
   return (
-    <div className="container-page py-10">
-      <h1 className="font-display text-2xl md:text-3xl">
-        {q ? <>Results for “{q}”</> : "Search the catalogue"}
-      </h1>
-      <p className="mt-1.5 text-sm text-[var(--color-ink-mute)]">
-        {q ? `${total} product${total === 1 ? "" : "s"} matched.` : "Search by product name, Bangla name, SKU, tag or description."}
-      </p>
+    <div className="container-page pb-6">
+      <nav aria-label="Breadcrumb" className="flex items-center gap-1 py-2.5 text-[12px] text-[var(--color-ink-mute)]">
+        <Link href="/" className="hover:text-[var(--color-brand-deep)] hover:underline">Home</Link>
+        <Icon name="chevron-right" size={11} className="text-[var(--color-line-strong)]" />
+        <span className="text-[var(--color-ink-soft)]">Search</span>
+      </nav>
 
-      <div className="mt-5 max-w-2xl">
-        <SearchBox large />
-      </div>
+      <div className="overflow-hidden rounded-[var(--radius-card)] border border-[var(--color-line)] bg-white">
+        <div className="border-b border-[var(--color-line)] p-3">
+          <div className="max-w-2xl">
+            <SearchBox large />
+          </div>
+          <h1 className="mt-2.5 text-[15px] font-bold">
+            {q ? <>Results for “{q}”</> : "Search the catalogue"}
+            {q ? (
+              <span className="ml-2 text-[12px] font-normal text-[var(--color-ink-mute)]">
+                {total} product{total === 1 ? "" : "s"} matched
+              </span>
+            ) : null}
+          </h1>
+          {!q ? (
+            <p className="mt-0.5 text-[12px] text-[var(--color-ink-mute)]">
+              Search by product name, Bangla name, SKU, tag or description.
+            </p>
+          ) : null}
+        </div>
 
-      {!q ? (
-        <div className="mt-8">
-          <p className="eyebrow mb-3">Try a category</p>
-          <div className="flex flex-wrap gap-2">
-            {categories.map((c) => (
-              <Link key={c.slug} href={`/category/${c.slug}`} className="badge hover:border-[var(--color-ink)] hover:text-[var(--color-ink)]">
-                {c.name}
-              </Link>
-            ))}
+        {!q ? (
+          <div className="p-3">
+            <p className="mb-2 text-[11px] font-bold uppercase tracking-wide text-[var(--color-ink-mute)]">
+              Try a category
+            </p>
+            <div className="flex flex-wrap gap-1.5">
+              {categories.map((c) => (
+                <Link
+                  key={c.slug}
+                  href={`/category/${c.slug}`}
+                  className="rounded-sm border border-[var(--color-line)] px-2 py-1 text-[11.5px] text-[var(--color-ink-soft)] hover:border-[var(--color-brand)] hover:text-[var(--color-brand-deep)]"
+                >
+                  {c.name}
+                </Link>
+              ))}
+            </div>
+            <div className="mt-3 flex flex-wrap items-center gap-2 text-[11.5px]">
+              <span className="text-[var(--color-ink-mute)]">Popular searches:</span>
+              {["panjabi", "watch", "jewellery", "gift", "backpack", "bedsheet"].map((t) => (
+                <Link key={t} href={`/search?q=${t}`} className="font-semibold text-[var(--color-brand-deep)] hover:underline">
+                  {t}
+                </Link>
+              ))}
+            </div>
           </div>
-          <div className="mt-6 flex flex-wrap gap-2 text-xs">
-            <span className="text-[var(--color-ink-mute)]">Popular:</span>
-            {["panjabi", "watch", "jewellery", "gift", "backpack", "bedsheet"].map((t) => (
-              <Link key={t} href={`/search?q=${t}`} className="link-underline">{t}</Link>
-            ))}
+        ) : rows.length === 0 ? (
+          <div className="p-8">
+            <EmptyState
+              title={`No products found for “${q}”`}
+              subtitle="Check the spelling, use a shorter word, or browse a category instead."
+              action={{ label: "Browse all products", href: "/shop" }}
+            />
           </div>
-        </div>
-      ) : rows.length === 0 ? (
-        <div className="mt-8">
-          <EmptyState
-            title={`No products found for “${q}”`}
-            subtitle="Check the spelling, use a shorter word, or browse a category instead."
-            action={{ label: "Browse all products", href: "/shop" }}
-          />
-        </div>
-      ) : (
-        <div className="mt-6">
-          <div className="mb-4 flex justify-end border-b border-[var(--color-line)] pb-3">
+        ) : (
+          <div className="flex items-center justify-between gap-2 px-3 py-2">
+            <span className="text-[12px] text-[var(--color-ink-mute)]">Showing {rows.length} of {total}</span>
             <SortSelect />
           </div>
-          <ProductGrid products={rows} wishlistedIds={savedIds} />
+        )}
+      </div>
+
+      {q && rows.length > 0 ? (
+        <div className="mt-3 overflow-hidden rounded-[var(--radius-card)] border border-[var(--color-line)] bg-white p-2">
+          <ProductGrid products={rows} wishlistedIds={savedIds} dense />
         </div>
-      )}
+      ) : null}
     </div>
   );
 }

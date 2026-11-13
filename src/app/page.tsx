@@ -4,333 +4,285 @@ import {
   categoryCounts, getProductBySlug, listCategories, saleProducts, topProducts, wishlistIds,
 } from "@/lib/repo";
 import { wishlistKeyReadOnly } from "@/lib/session";
-import { ProductGrid } from "@/components/catalog/ProductCard";
+import { ProductCard, ProductGrid } from "@/components/catalog/ProductCard";
 import { Icon } from "@/components/ui/Icon";
-import { SectionHeading } from "@/components/EmptyState";
+import { FlashSaleRail } from "@/components/home/FlashSaleRail";
+import { CategoryTiles } from "@/components/home/CategoryTiles";
 import { BRAND, formatBdt } from "@/lib/brand";
 
 export const metadata: Metadata = {
-  title: "Premium everyday essentials, sourced in Dhaka",
+  title: "Online shopping in Bangladesh — SUPER Z SHOP",
   description:
-    "Shop 225 curated essentials at SUPER Z SHOP — fashion, jewellery, watches, bags, tech and gifts. Cash on delivery across Bangladesh.",
+    "Shop 225 products across fashion, jewellery, watches, bags, tech and gifting. Cash on delivery in all 64 districts, free delivery over ৳2,500.",
 };
 
 export const dynamic = "force-dynamic";
 
-const trust = [
-  { icon: "truck", title: "Nationwide delivery", copy: "Pathao, Steadfast and RedX partner routes to all 64 districts." },
-  { icon: "shield", title: "Cash on delivery", copy: "Pay when the parcel reaches you. No card details needed." },
-  { icon: "refresh", title: "7-day replacement", copy: "On selected items, with a written replacement policy." },
-  { icon: "phone", title: "Dhaka-based support", copy: "Sat–Thu, 10:00–19:00 on phone and WhatsApp." },
-] as const;
-
 export default async function HomePage() {
   const categories = listCategories();
   const counts = categoryCounts();
-  const featured = topProducts("featured", 8);
-  const trending = topProducts("trending", 4);
-  const newest = topProducts("newArrival", 8);
-  const best = topProducts("bestseller", 4);
-  const sale = saleProducts(4);
+  const featured = topProducts("featured", 10);
+  const newest = topProducts("newArrival", 10);
+  const best = topProducts("bestseller", 5);
+  const sale = saleProducts(12);
   const wkey = await wishlistKeyReadOnly();
   const savedIds = wkey ? wishlistIds(wkey) : [];
 
   const hero = getProductBySlug("premium-cotton-panjabi");
   const heroSecondary = getProductBySlug("kundan-necklace-set");
-  const heroThird = getProductBySlug("steel-chronograph-watch");
 
   return (
     <>
-      {/* ---------------- Hero ---------------- */}
-      <section className="border-b border-[var(--color-line)] bg-[var(--color-paper-2)]">
-        <div className="container-page grid items-center gap-10 py-12 md:grid-cols-[1.05fr_1fr] md:py-16 lg:py-20">
-          <div>
-            <p className="eyebrow mb-4">Dhaka · Est. 2026 · {counts ? "225 products" : ""}</p>
-            <h1 className="font-display text-[2.1rem] leading-[1.08] sm:text-[2.6rem] lg:text-[3.2rem]">
-              Premium everyday essentials, sourced in Dhaka.
-            </h1>
-            <p className="mt-5 max-w-xl text-[0.9375rem] leading-relaxed text-[var(--color-ink-soft)]">
-              Clothing, jewellery, watches, bags, small tech and gifting — chosen for a Bangladesh
-              climate, checked before dispatch, and delivered to your door with cash on delivery.
-            </p>
-            <div className="mt-7 flex flex-wrap items-center gap-3">
-              <Link href="/shop" className="btn btn-primary">Shop all products <Icon name="arrow-right" size={15} /></Link>
-              <Link href="/collections/eid-edit" className="btn btn-outline">Eid edit</Link>
-            </div>
-            <dl className="mt-9 grid max-w-lg grid-cols-3 gap-4 border-t border-[var(--color-line-strong)] pt-5">
+      {/* ================= hero: promo stack + side deal panel ================= */}
+      <section className="bg-[var(--color-paper)] pt-3">
+        <div className="container-page grid gap-3 lg:grid-cols-[1fr_248px]">
+          {/* main promo band */}
+          <div className="relative overflow-hidden rounded-[var(--radius-card)] bg-gradient-to-r from-[#1f2430] via-[#2d3546] to-[#3d4657]">
+            <div className="relative grid items-center gap-6 p-6 sm:grid-cols-[1.15fr_1fr] md:p-8">
               <div>
-                <dt className="text-[0.625rem] uppercase tracking-[0.12em] text-[var(--color-ink-mute)]">Catalogue</dt>
-                <dd className="font-display text-xl">225 SKUs</dd>
-              </div>
-              <div>
-                <dt className="text-[0.625rem] uppercase tracking-[0.12em] text-[var(--color-ink-mute)]">Delivery</dt>
-                <dd className="font-display text-xl">64 districts</dd>
-              </div>
-              <div>
-                <dt className="text-[0.625rem] uppercase tracking-[0.12em] text-[var(--color-ink-mute)]">Free shipping</dt>
-                <dd className="font-display text-xl">৳2,500+</dd>
-              </div>
-            </dl>
-          </div>
-
-          <div className="grid grid-cols-2 gap-3 sm:gap-4">
-            {[hero, heroSecondary, heroThird].filter(Boolean).map((p, i) => (
-              <Link
-                key={p!.id}
-                href={`/product/${p!.slug}`}
-                className={`group relative overflow-hidden rounded-[var(--radius-card)] border border-[var(--color-line)] bg-white ${
-                  i === 0 ? "col-span-2 aspect-[16/10]" : "aspect-[4/5]"
-                }`}
-              >
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img
-                  src={p!.image_url ?? "/placeholder.svg"}
-                  alt={p!.name}
-                  className={`h-full w-full transition-transform duration-500 group-hover:scale-[1.03] ${
-                    i === 0 ? "object-cover object-center" : "object-cover"
-                  }`}
-                />
-                <div className="absolute inset-x-0 bottom-0 flex items-end justify-between gap-2 bg-gradient-to-t from-black/55 to-transparent p-3">
-                  <div>
-                    <p className="text-[0.5625rem] uppercase tracking-[0.14em] text-white/75">{p!.category_name}</p>
-                    <p className="text-sm font-semibold text-white">{p!.name}</p>
-                  </div>
-                  <span className="rounded-full bg-white px-2.5 py-1 text-[0.6875rem] font-bold text-[var(--color-ink)]">
-                    {formatBdt(p!.sale_price ?? p!.retail_price)}
-                  </span>
+                <span className="inline-flex items-center gap-1 rounded-sm bg-[var(--color-brand)] px-2 py-0.5 text-[11px] font-bold uppercase tracking-wide text-white">
+                  <Icon name="lightning" size={11} /> Mega deals
+                </span>
+                <h1 className="mt-3 text-[26px] font-bold leading-[1.15] text-white sm:text-[32px] md:text-[38px]">
+                  Everything for everyday life,
+                  <span className="text-[var(--color-brand)]"> delivered to your door.</span>
+                </h1>
+                <p className="mt-2.5 max-w-md text-[13px] leading-relaxed text-white/70">
+                  Fashion, jewellery, watches, bags, phone accessories and gifting — cash on delivery
+                  in all 64 districts.
+                </p>
+                <div className="mt-5 flex flex-wrap items-center gap-2">
+                  <Link href="/shop" className="btn btn-primary btn-lg">
+                    Shop all products <Icon name="arrow-right" size={15} />
+                  </Link>
+                  <Link
+                    href="/offers"
+                    className="btn btn-lg border border-white/25 bg-transparent text-white hover:bg-white/10"
+                  >
+                    Today&apos;s deals
+                  </Link>
                 </div>
-              </Link>
-            ))}
-          </div>
-        </div>
-      </section>
+                <p className="mt-4 text-[11px] text-white/45">
+                  Demo storefront — prices are unverified estimates, no real payments are taken.
+                </p>
+              </div>
 
-      {/* ---------------- Trust strip ---------------- */}
-      <section aria-label="Shopping assurances" className="border-b border-[var(--color-line)] bg-white">
-        <div className="container-page grid gap-6 py-7 sm:grid-cols-2 lg:grid-cols-4">
-          {trust.map((t) => (
-            <div key={t.title} className="flex gap-3">
-              <span className="mt-0.5 flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-[var(--color-paper-2)] text-[var(--color-olive-deep)]">
-                <Icon name={t.icon} size={16} />
-              </span>
-              <div>
-                <p className="text-[0.8125rem] font-semibold">{t.title}</p>
-                <p className="text-xs leading-relaxed text-[var(--color-ink-mute)]">{t.copy}</p>
+              <div className="grid grid-cols-2 gap-2">
+                {[hero, heroSecondary].filter(Boolean).map((p) => (
+                  <Link
+                    key={p!.id}
+                    href={`/product/${p!.slug}`}
+                    className="group overflow-hidden rounded-sm bg-white p-2"
+                  >
+                    <span className="block aspect-square overflow-hidden bg-white">
+                      {/* eslint-disable-next-line @next/next/no-img-element */}
+                      <img
+                        src={p!.image_url ?? "/placeholder.svg"}
+                        alt={p!.name}
+                        className="h-full w-full object-contain transition-transform duration-300 group-hover:scale-105"
+                      />
+                    </span>
+                    <span className="mt-1.5 block line-clamp-1 text-[11.5px] text-[var(--color-ink-soft)]">
+                      {p!.name}
+                    </span>
+                    <span className="block text-[13px] font-bold text-[var(--color-brand-ink)]">
+                      {formatBdt(p!.sale_price ?? p!.retail_price)}
+                    </span>
+                  </Link>
+                ))}
               </div>
             </div>
-          ))}
-        </div>
-      </section>
-
-      {/* ---------------- Categories ---------------- */}
-      <section className="container-page py-14">
-        <SectionHeading
-          eyebrow="Browse"
-          title="Shop by category"
-          subtitle="Fifteen categories, curated down to 15 products each — no endless scrolling."
-          action={{ label: "All categories", href: "/shop" }}
-        />
-        <div className="grid grid-cols-2 gap-3 md:grid-cols-3 lg:grid-cols-5">
-          {categories.map((c) => (
-            <Link
-              key={c.slug}
-              href={`/category/${c.slug}`}
-              className="group flex flex-col justify-between rounded-[var(--radius-card)] border border-[var(--color-line)] bg-white p-4 transition-colors hover:border-[var(--color-ink)] hover:bg-[var(--color-paper)]"
-            >
-              <span className="mb-6 flex h-9 w-9 items-center justify-center rounded-full bg-[var(--color-paper-2)] text-[var(--color-olive-deep)] transition-colors group-hover:bg-[var(--color-olive-deep)] group-hover:text-white">
-                <Icon name={c.icon} size={17} />
-              </span>
-              <span>
-                <span className="block text-[0.8125rem] font-semibold leading-snug">{c.name}</span>
-                <span className="mt-0.5 block text-[0.6875rem] text-[var(--color-ink-mute)]">
-                  {counts[c.slug] ?? 0} products
-                </span>
-              </span>
-            </Link>
-          ))}
-        </div>
-      </section>
-
-      {/* ---------------- Featured ---------------- */}
-      <section className="bg-white py-14">
-        <div className="container-page">
-          <SectionHeading
-            eyebrow="Our edit"
-            title="Featured this season"
-            subtitle="Pieces the buying team is confident about — with room for every budget."
-            action={{ label: "Shop featured", href: "/collections/featured" }}
-          />
-          <ProductGrid products={featured} wishlistedIds={savedIds} />
-        </div>
-      </section>
-
-      {/* ---------------- Editorial promo ---------------- */}
-      <section className="border-y border-[var(--color-line)] bg-[var(--color-ink)] text-[var(--color-paper)]">
-        <div className="container-page grid gap-8 py-14 md:grid-cols-2 md:items-center">
-          <div>
-            <p className="eyebrow mb-3 text-white/60">Festive gifting</p>
-            <h2 className="font-display text-[1.9rem] leading-tight md:text-[2.4rem]">
-              Eid, weddings and everything in between.
-            </h2>
-            <p className="mt-4 max-w-lg text-sm leading-relaxed text-white/75">
-              Panjabi, kantha saree, kundan jewellery and pre-packed gift hampers — organised so a
-              single order can cover the whole family. Each piece ships with a 7-day replacement
-              option where stated.
-            </p>
-            <div className="mt-6 flex flex-wrap gap-3">
-              <Link href="/collections/eid-edit" className="btn btn-olive">Eid edit</Link>
-              <Link href="/collections/gifting" className="btn border-white/30 text-white hover:bg-white/10">
-                Gift collections
-              </Link>
-            </div>
-          </div>
-          <div className="grid grid-cols-3 gap-3">
-            {trending.slice(0, 3).map((p) => (
-              <Link key={p.id} href={`/product/${p.slug}`} className="group">
-                <span className="block aspect-[3/4] overflow-hidden rounded-[var(--radius-card)] border border-white/15">
-                  {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img src={p.image_url ?? "/placeholder.svg"} alt={p.name} className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105" />
-                </span>
-                <span className="mt-2 block text-[0.6875rem] text-white/80">{p.name}</span>
-                <span className="block text-[0.6875rem] font-semibold">{formatBdt(p.sale_price ?? p.retail_price)}</span>
-              </Link>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ---------------- New arrivals ---------------- */}
-      <section className="container-page py-14">
-        <SectionHeading
-          eyebrow="Just in"
-          title="New arrivals"
-          subtitle="The latest additions to the catalogue, newest first."
-          action={{ label: "All new arrivals", href: "/new-arrivals" }}
-        />
-        <ProductGrid products={newest} wishlistedIds={savedIds} />
-      </section>
-
-      {/* ---------------- Two column: best sellers / offers ---------------- */}
-      <section className="bg-white py-14">
-        <div className="container-page grid gap-10 lg:grid-cols-[1.15fr_1fr]">
-          <div>
-            <SectionHeading eyebrow="Repeat orders" title="Best sellers" action={{ label: "See all", href: "/best-sellers" }} />
-            <div className="divide-y divide-[var(--color-line)] border-y border-[var(--color-line)]">
-              {best.map((p, i) => (
-                <Link key={p.id} href={`/product/${p.slug}`} className="flex items-center gap-4 py-3 transition-colors hover:bg-[var(--color-paper)]">
-                  <span className="w-5 shrink-0 font-display text-sm text-[var(--color-ink-mute)]">{String(i + 1).padStart(2, "0")}</span>
-                  <span className="h-16 w-14 shrink-0 overflow-hidden rounded border border-[var(--color-line)]">
-                    {/* eslint-disable-next-line @next/next/no-img-element */}
-                    <img src={p.image_url ?? "/placeholder.svg"} alt={p.name} className="h-full w-full object-cover" />
-                  </span>
-                  <span className="min-w-0 flex-1">
-                    <span className="block truncate text-sm font-semibold">{p.name}</span>
-                    <span className="block text-xs text-[var(--color-ink-mute)]">{p.category_name}</span>
-                  </span>
-                  <span className="shrink-0 text-sm font-semibold">{formatBdt(p.sale_price ?? p.retail_price)}</span>
-                </Link>
-              ))}
-            </div>
           </div>
 
-          <div>
-            <SectionHeading eyebrow="Value" title="Offers & discounts" action={{ label: "All offers", href: "/offers" }} />
-            <div className="grid grid-cols-2 gap-4">
-              {sale.map((p) => (
-                <Link key={p.id} href={`/product/${p.slug}`} className="group">
-                  <span className="relative block aspect-[4/5] overflow-hidden rounded-[var(--radius-card)] border border-[var(--color-line)]">
-                    {/* eslint-disable-next-line @next/next/no-img-element */}
-                    <img src={p.image_url ?? "/placeholder.svg"} alt={p.name} className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-[1.03]" />
-                    <span className="absolute left-2 top-2 badge badge-sale">
-                      −{Math.round(((p.retail_price - (p.sale_price ?? p.retail_price)) / p.retail_price) * 100)}%
-                    </span>
-                  </span>
-                  <span className="mt-2 block truncate text-xs font-semibold">{p.name}</span>
-                  <span className="block text-xs">
-                    <span className="font-semibold">{formatBdt(p.sale_price ?? p.retail_price)}</span>{" "}
-                    <span className="text-[var(--color-ink-mute)] line-through">{formatBdt(p.retail_price)}</span>
-                  </span>
-                </Link>
-              ))}
+          {/* side panel: delivery promises + coupon */}
+          <aside className="hidden flex-col gap-3 lg:flex">
+            <div className="rounded-[var(--radius-card)] border border-[var(--color-line)] bg-white p-3">
+              <p className="text-[12px] font-bold text-[var(--color-ink)]">Why shop here</p>
+              <ul className="mt-2 space-y-2">
+                {[
+                  { icon: "cash", text: "Cash on delivery, nationwide" },
+                  { icon: "truck", text: "Free delivery over ৳2,500" },
+                  { icon: "refresh", text: "7-day replacement where stated" },
+                  { icon: "phone", text: "Dhaka-based support, Sat–Thu" },
+                ].map((t) => (
+                  <li key={t.text} className="trust-item">
+                    <Icon name={t.icon as never} size={14} className="shrink-0 text-[var(--color-brand-deep)]" />
+                    <span className="text-[11.5px] leading-snug">{t.text}</span>
+                  </li>
+                ))}
+              </ul>
             </div>
-            <div className="mt-5 rounded-[var(--radius-card)] border border-[var(--color-line)] bg-[var(--color-paper)] p-4">
-              <p className="text-[0.8125rem] font-semibold">Demo coupon codes</p>
-              <p className="mt-1 text-xs text-[var(--color-ink-mute)]">
-                Try <code className="rounded bg-white px-1 py-0.5 font-mono text-[0.6875rem]">WELCOME10</code>,{" "}
-                <code className="rounded bg-white px-1 py-0.5 font-mono text-[0.6875rem]">EID500</code> or{" "}
-                <code className="rounded bg-white px-1 py-0.5 font-mono text-[0.6875rem]">FREESHIP</code> at checkout.
+
+            <div className="rounded-[var(--radius-card)] border border-dashed border-[var(--color-brand)] bg-[var(--color-brand-soft)] p-3">
+              <p className="text-[11px] font-bold uppercase tracking-wide text-[var(--color-brand-ink)]">
+                Demo coupon
+              </p>
+              <p className="mt-1 font-mono text-[15px] font-bold text-[var(--color-ink)]">WELCOME10</p>
+              <p className="mt-0.5 text-[11px] text-[var(--color-ink-soft)]">
+                10% off orders over ৳1,000, capped at ৳300.
               </p>
             </div>
-          </div>
-        </div>
-      </section>
 
-      {/* ---------------- Honest disclosure ---------------- */}
-      <section className="container-page py-14">
-        <div className="grid gap-6 rounded-[var(--radius-card)] border border-[var(--color-line-strong)] bg-[var(--color-paper-2)] p-6 md:grid-cols-[auto_1fr] md:p-8">
-          <span className="flex h-11 w-11 items-center justify-center rounded-full bg-white text-[var(--color-olive-deep)]">
-            <Icon name="alert" size={20} />
-          </span>
-          <div>
-            <h2 className="font-display text-xl">What is real in this demo, and what is not</h2>
-            <div className="mt-3 grid gap-4 text-sm text-[var(--color-ink-soft)] md:grid-cols-2">
-              <div>
-                <p className="mb-1 font-semibold text-[var(--color-ink)]">Working end to end</p>
-                <ul className="list-disc space-y-1 pl-4 text-[0.8125rem]">
-                  <li>225 products with variants, stock and search</li>
-                  <li>Cart, wishlist, coupons and checkout validation</li>
-                  <li>Order creation with automatic stock reduction</li>
-                  <li>Admin dashboard, order status and CSV export</li>
-                </ul>
-              </div>
-              <div>
-                <p className="mb-1 font-semibold text-[var(--color-ink)]">Deliberately not real</p>
-                <ul className="list-disc space-y-1 pl-4 text-[0.8125rem]">
-                  <li>No payment gateway and no courier booking</li>
-                  <li>Wholesale and retail prices are unverified estimates</li>
-                  <li>Product art is studio illustration, not supplier photography</li>
-                  <li>No reviews or testimonials are shown, because none exist yet</li>
-                </ul>
-              </div>
+            <div className="rounded-[var(--radius-card)] border border-[var(--color-line)] bg-white p-3">
+              <p className="text-[12px] font-bold">Delivery charges</p>
+              <dl className="mt-2 space-y-1 text-[11.5px]">
+                <div className="flex justify-between">
+                  <dt className="text-[var(--color-ink-soft)]">Inside Dhaka</dt>
+                  <dd className="font-semibold">৳70</dd>
+                </div>
+                <div className="flex justify-between">
+                  <dt className="text-[var(--color-ink-soft)]">Outside Dhaka</dt>
+                  <dd className="font-semibold">৳130</dd>
+                </div>
+                <div className="flex justify-between">
+                  <dt className="text-[var(--color-ink-soft)]">Free over</dt>
+                  <dd className="font-semibold">৳2,500</dd>
+                </div>
+              </dl>
             </div>
-            <p className="mt-4 text-xs text-[var(--color-ink-mute)]">
-              Full sourcing research and unit economics live in the downloadable business workbook —{" "}
-              <Link href="/pages/business-research" className="link-underline font-semibold text-[var(--color-ink)]">
-                see the research page
-              </Link>.
-            </p>
-          </div>
+          </aside>
         </div>
       </section>
 
-      {/* ---------------- Newsletter ---------------- */}
-      <section className="border-t border-[var(--color-line)] bg-white py-14">
-        <div className="container-page grid items-center gap-8 md:grid-cols-2">
-          <div>
-            <p className="eyebrow mb-2">Newsletter</p>
-            <h2 className="font-display text-2xl">First access to new drops and Eid edits.</h2>
-            <p className="mt-2 max-w-md text-sm text-[var(--color-ink-soft)]">
-              One short email a month. Demo subscription — addresses are stored in the local database only.
-            </p>
+      {/* ================= trust strip ================= */}
+      <div className="container-page mt-3">
+        <ul className="grid grid-cols-2 divide-[var(--color-line)] rounded-[var(--radius-card)] border border-[var(--color-line)] bg-white sm:grid-cols-4 sm:divide-x">
+          {[
+            { icon: "cash", title: "Cash on delivery", sub: "Pay when it arrives" },
+            { icon: "truck", title: "Free over ৳2,500", sub: "64 districts covered" },
+            { icon: "refresh", title: "7-day replacement", sub: "On selected items" },
+            { icon: "shield", title: "Checked before dispatch", sub: "Every order inspected" },
+          ].map((t) => (
+            <li key={t.title} className="flex items-center gap-2.5 px-3 py-2.5">
+              <Icon name={t.icon as never} size={17} className="shrink-0 text-[var(--color-brand-deep)]" />
+              <span className="min-w-0">
+                <span className="block truncate text-[12px] font-semibold text-[var(--color-ink)]">{t.title}</span>
+                <span className="block truncate text-[10.5px] text-[var(--color-ink-mute)]">{t.sub}</span>
+              </span>
+            </li>
+          ))}
+        </ul>
+      </div>
+
+      {/* ================= flash sale ================= */}
+      <section className="container-page mt-3">
+        <FlashSaleRail products={sale.slice(0, 8)} wishlistedIds={savedIds} />
+      </section>
+
+      {/* ================= categories ================= */}
+      <section className="container-page mt-3">
+        <CategoryTiles categories={categories} counts={counts} />
+      </section>
+
+      {/* ================= just for you (main grid) ================= */}
+      <section className="container-page mt-3 pb-6">
+        <div className="overflow-hidden rounded-[var(--radius-card)] border border-[var(--color-line)] bg-white">
+          <div className="section-bar">
+            <h2 className="section-bar-title">Just for you</h2>
+            <Link href="/shop" className="text-[12px] font-semibold text-[var(--color-brand-deep)] hover:underline">
+              View all
+            </Link>
           </div>
-          <div className="md:justify-self-end md:w-full md:max-w-md">
-            <NewsletterInline />
+          <div className="p-2">
+            <ProductGrid products={featured} wishlistedIds={savedIds} dense />
+          </div>
+        </div>
+
+        {/* best sellers + offers side by side */}
+        <div className="mt-3 grid gap-3 lg:grid-cols-2">
+          <div className="overflow-hidden rounded-[var(--radius-card)] border border-[var(--color-line)] bg-white">
+            <div className="section-bar">
+              <h2 className="section-bar-title">Best sellers</h2>
+              <Link href="/best-sellers" className="text-[12px] font-semibold text-[var(--color-brand-deep)] hover:underline">
+                See all
+              </Link>
+            </div>
+            <ul className="divide-y divide-[var(--color-line)]">
+              {best.map((p, i) => (
+                <li key={p.id}>
+                  <Link href={`/product/${p.slug}`} className="flex items-center gap-3 p-2.5 hover:bg-[#fffbf7]">
+                    <span className="w-4 shrink-0 text-center text-[12px] font-bold text-[var(--color-brand)]">
+                      {i + 1}
+                    </span>
+                    <span className="h-14 w-14 shrink-0 overflow-hidden rounded border border-[var(--color-line)] bg-white">
+                      {/* eslint-disable-next-line @next/next/no-img-element */}
+                      <img src={p.image_url ?? "/placeholder.svg"} alt="" className="h-full w-full object-contain p-0.5" />
+                    </span>
+                    <span className="min-w-0 flex-1">
+                      <span className="block line-clamp-1 text-[12.5px]">{p.name}</span>
+                      <span className="block text-[11px] text-[var(--color-ink-mute)]">{p.category_name}</span>
+                    </span>
+                    <span className="shrink-0 text-[13px] font-bold text-[var(--color-brand-ink)]">
+                      {formatBdt(p.sale_price ?? p.retail_price)}
+                    </span>
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <div className="overflow-hidden rounded-[var(--radius-card)] border border-[var(--color-line)] bg-white">
+            <div className="section-bar">
+              <h2 className="section-bar-title">New arrivals</h2>
+              <Link href="/new-arrivals" className="text-[12px] font-semibold text-[var(--color-brand-deep)] hover:underline">
+                See all
+              </Link>
+            </div>
+            <div className="grid grid-cols-2 gap-2 p-2 sm:grid-cols-3">
+              {newest.slice(0, 6).map((p) => (
+                <ProductCard key={p.id} product={p} wishlisted={savedIds.includes(p.id)} compact />
+              ))}
+            </div>
+          </div>
+        </div>
+
+        {/* category rails */}
+        <div className="mt-3 space-y-3">
+          {categories.slice(0, 3).map((c) => {
+            const items = featured.filter((p) => p.category_slug === c.slug).slice(0, 6);
+            if (items.length === 0) return null;
+            return (
+              <div key={c.slug} className="overflow-hidden rounded-[var(--radius-card)] border border-[var(--color-line)] bg-white">
+                <div className="section-bar">
+                  <h2 className="section-bar-title">{c.name}</h2>
+                  <Link href={`/category/${c.slug}`} className="text-[12px] font-semibold text-[var(--color-brand-deep)] hover:underline">
+                    See all
+                  </Link>
+                </div>
+                <div className="grid grid-cols-2 gap-2 p-2 sm:grid-cols-3 lg:grid-cols-6">
+                  {items.map((p) => (
+                    <ProductCard key={p.id} product={p} wishlisted={savedIds.includes(p.id)} compact />
+                  ))}
+                </div>
+              </div>
+            );
+          })}
+        </div>
+      </section>
+
+      {/* ================= honesty notice ================= */}
+      <section className="container-page pb-8">
+        <div className="rounded-[var(--radius-card)] border border-[var(--color-line-strong)] bg-[#fffdf7] p-4">
+          <div className="flex items-start gap-3">
+            <Icon name="alert" size={17} className="mt-0.5 shrink-0 text-[var(--color-warn)]" />
+            <div>
+              <h2 className="text-[13px] font-bold">This is a demo store, and the prices are unverified</h2>
+              <p className="mt-1 max-w-3xl text-[12px] leading-relaxed text-[var(--color-ink-soft)]">
+                Cart, checkout, coupons, stock deduction and the admin area all genuinely work. What is not real:
+                no payment is taken, no courier is booked, and every price is an estimate awaiting supplier
+                quotations. Product art is placeholder illustration, and there are no reviews or ratings anywhere
+                because none exist yet — we would rather show nothing than invent them.
+              </p>
+              <Link
+                href="/pages/business-research"
+                className="mt-2 inline-block text-[12px] font-semibold text-[var(--color-brand-deep)] hover:underline"
+              >
+                Read the sourcing research →
+              </Link>
+            </div>
           </div>
         </div>
       </section>
     </>
-  );
-}
-
-import { NewsletterForm } from "@/components/layout/NewsletterForm";
-
-function NewsletterInline() {
-  return (
-    <div>
-      <NewsletterForm />
-      <p className="mt-3 text-xs text-[var(--color-ink-mute)]">
-        Prefer WhatsApp? Message {BRAND.phone} — {BRAND.supportHours}.
-      </p>
-    </div>
   );
 }
