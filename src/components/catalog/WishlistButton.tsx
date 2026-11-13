@@ -46,7 +46,7 @@ export function WishlistButton({
       disabled={pending}
       aria-pressed={active}
       aria-label={active ? "Remove from wishlist" : "Add to wishlist"}
-      className="flex h-9 w-9 items-center justify-center rounded-full border border-[var(--color-line)] bg-white/95 text-[var(--color-ink-soft)] shadow-sm transition-colors hover:border-[var(--color-ink)] hover:text-[var(--color-ink)]"
+      className="flex h-9 w-9 items-center justify-center rounded-full border border-[var(--color-line)] bg-[var(--color-surface)]/95 text-[var(--color-ink-soft)] shadow-sm transition-colors hover:border-[var(--color-ink)] hover:text-[var(--color-ink)]"
     >
       <Icon name="heart" size={16} strokeWidth={active ? 2.5 : 1.6} className={active ? "fill-[var(--color-sale)] text-[var(--color-sale)]" : ""} />
     </button>

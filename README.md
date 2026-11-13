@@ -114,21 +114,65 @@ scripts/             seeders, QA harnesses, workbook builder
 
 ---
 
-## Interface: marketplace layout system
+## Interface: Rokomari-family retail system
 
-The storefront is styled as a dense marketplace — the structure people already know from Daraz and eBay, with the warmer reading rhythm of Rokomari — rather than a boutique catalogue. Everything ships from one small set of primitives so the experience never shifts shape between sections.
+A dense, blue-and-white storefront built on the Rokomari reading rhythm — generous category browse, price-forward tiles, a persistent trust strip — with eBay's breadcrumb-led clarity. One token set drives every page, in both light and dark themes.
+
+### Colour and theme
+
+| Token group | Light | Dark |
+|---|---|---|
+| Page / surface / surface-2 | `#f2f4f8` / `#ffffff` / `#f6f8fb` | `#0b1120` / `#131c30` / `#1a2438` |
+| Ink / soft / mute | `#14203a` / `#3d4a63` / `#6b7891` | `#eef2fa` / `#b9c4d8` / `#8695ae` |
+| Brand / deep / soft / ink | `#1b4fd8` / `#123bab` / `#eaf0fe` / `#12359d` | `#3d74f2` / `#2a5bd6` / `#1a2b4d` / `#8fb2ff` |
+| Hairlines | `#e2e7f0` / `#cbd4e3` | `#253148` / `#35435e` |
+
+**Dark mode is a real theme, not an inversion filter.** Every surface, hairline and text colour is a CSS variable, so `bg-[var(--color-surface)]` resolves to white in light mode and slate in dark. The OS preference is honoured with no JavaScript at all (`prefers-color-scheme`), and an explicit choice is written to `localStorage` and applied by a tiny inline script *before first paint* — so a dark-mode visitor never sees a white flash. The header control cycles light → dark → system; the mobile drawer exposes all three.
+
+### Primitives
 
 | Primitive | Where | What it does |
 |---|---|---|
-| Design tokens (`src/app/globals.css`) | every page | Orange brand ramp (`#f57224` → `#b8480a`), `#f5f5f5` page paper, 14px/1.5 body, 1px `#e8e8e8` hairlines, `--radius-card` 6px. |
-| `.section-bar` / `.section-bar-title` | every white panel | Uppercase 13px panel header on a hairline rule — the repeating unit of the whole layout. |
-| `ListingHeader` / `ListingPanel` / `ListingSkeleton` | `components/catalog/ListingHeader.tsx` | Breadcrumb + title + count + right action, the white grid panel, and the matching loading state. |
-| `ProductGrid` (`dense`) | all listing pages | 2/3/4/6 columns, square `object-contain` tiles, orange price, struck list price, `-N%` tile tag. |
-| `CartLineItem`, `CouponForm`, `CheckoutForm`, `ProductDetailPanel`, `Pagination`, `EmptyState` | shared | Flat 1px controls, 28px steppers, `section-bar` grouping, no rounded-pill chrome. |
+| `.section-bar` / `.section-bar-title` | every panel | Uppercase 13px panel header on a hairline rule — the repeating unit of the layout. |
+| `ListingHeader` / `ListingPanel` / `ListingSkeleton` | `components/catalog/ListingHeader.tsx` | Breadcrumb + title + count + right action, the grid panel, and the matching loading state. |
+| `HeroSlider` | `components/home/HeroSlider.tsx` | Four-slide carousel: arrow keys, Home/End, swipe, dots, pause on hover/focus, respects `prefers-reduced-motion`. |
+| `ProductGallery` | `components/catalog/ProductGallery.tsx` | Thumbnail + keyboard + swipe gallery on the product page, honestly labelled as one illustration in three framings. |
+| `ProductGrid` (`dense`) | all listing pages | 2/3/4/6 columns, square tiles, brand-blue price, struck list price, `-N%` tag. |
+| `ThemeToggle`, `ServiceWorkerBridge` | `components/layout/` | Theme control, and the offline banner + install prompt. |
 
-Layout constants: sticky offsets `top-[132px]`, listing sidebar `210px`, product buy-box `[400px_1fr_290px]`, cart `[1fr_330px]`, checkout `[1fr_300px]`.
+Layout constants: sticky header offset `top-[132px]`, listing sidebar `210px`, product buy-box `[400px_1fr_290px]`, cart `[1fr_330px]`, checkout `[1fr_300px]`.
 
-**What the denser UI still refuses to do.** No star ratings, no "sold" counters, no review sections, no countdown urgency beyond the fixed 24-hour flash-sale cycle, no supplier names or phone numbers invented to fill a box. Stock numbers on the product page are the live rows in the database, and placeholder product art says so on the page.
+### Imagery
+
+Eight studio photographs were generated for the hero and category banners, each shipped as three pre-cropped widths (1400×612, 860×430, 620×620) as progressive JPEG — 916 KB for all 24 files, served `immutable`. All 225 product images are hand-rendered SVG studio illustrations on a blue-grey cyclorama with a plinth and a soft contact shadow, scaled per family so a pair of earrings fills the tile like a real catalogue crop.
+
+Product art is labelled as placeholder on every product page. It is original generated artwork, not a photograph of any real supplier's goods, and the UI says so rather than implying otherwise.
+
+### Mobile first
+
+Single-column by default and enhanced upward: `grid-cols-2` tiles at 360px, `sm:`/`md:`/`lg:` breakpoints for 3/4/6 columns, a bottom-sheet filter drawer, and a drawer-based mobile menu. Touch targets grow to 44px on coarse pointers via `@media (pointer: coarse)`, and nothing informational drops below 11px on small screens. The hero is fixed-height and crops rather than pushing content down.
+
+### Offline and installable
+
+`public/sw.js` + `manifest.webmanifest` make the store installable and give it a genuine offline mode:
+
+- **Navigations** — network first, cache fallback, then a designed `/offline` page. Orders and stock are never served stale when the network is up.
+- **Static assets** — stale-while-revalidate. Safe because they are content-hashed.
+- **Never cached** — `/api/`, `/admin`, `/checkout`, `/cart`, `/account`, `/order/`. A cached price or a cached POST would be a bug, not a feature.
+- An **offline banner** appears the moment the connection drops, so a cached page is never mistaken for a live one.
+
+### SEO
+
+| Feature | Implementation |
+|---|---|
+| Canonicals | Every indexable route via `alternates.canonical`, absolute through `NEXT_PUBLIC_SITE_URL`. |
+| Sitemap | `src/app/sitemap.ts` — 262 URLs (7 static + 15 categories + 225 products + collections + policy pages) with real `lastModified`. |
+| robots.txt | `src/app/robots.ts` — storefront allowed, admin/cart/checkout/account/order disallowed, sitemap declared. |
+| Social cards | `src/app/opengraph-image.tsx` renders a 1200×630 card at build time; product pages use their own product image. |
+| Structured data | `OnlineStore` (root), `Product` + `Offer` + `BreadcrumbList` (product), `BreadcrumbList` (category, shop), `WebSite` + `SearchAction` (home). |
+| PWA metadata | `manifest`, apple-touch-icon, `theme-color` per colour scheme, `applicationName`, `formatDetection`. |
+
+**No `aggregateRating` and no `review` schema anywhere.** The store has no reviews; emitting rating markup for them would be both dishonest and a Google policy violation. That absence is deliberate, and it is why the meta descriptions talk about delivery and stock instead of "5 stars".
 
 ---
 

@@ -37,7 +37,7 @@ export default async function SearchPage({
         <span className="text-[var(--color-ink-soft)]">Search</span>
       </nav>
 
-      <div className="overflow-hidden rounded-[var(--radius-card)] border border-[var(--color-line)] bg-white">
+      <div className="overflow-hidden rounded-[var(--radius-card)] border border-[var(--color-line)] bg-[var(--color-surface)]">
         <div className="border-b border-[var(--color-line)] p-3">
           <div className="max-w-2xl">
             <SearchBox large />
@@ -99,7 +99,7 @@ export default async function SearchPage({
       </div>
 
       {q && rows.length > 0 ? (
-        <div className="mt-3 overflow-hidden rounded-[var(--radius-card)] border border-[var(--color-line)] bg-white p-2">
+        <div className="mt-3 overflow-hidden rounded-[var(--radius-card)] border border-[var(--color-line)] bg-[var(--color-surface)] p-2">
           <ProductGrid products={rows} wishlistedIds={savedIds} dense />
         </div>
       ) : null}

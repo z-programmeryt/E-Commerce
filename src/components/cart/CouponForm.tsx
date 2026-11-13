@@ -38,22 +38,22 @@ export function CouponForm({ initial = "" }: { initial?: string }) {
         </button>
       </div>
       {saved ? (
-        <p className="mt-1 flex items-center gap-1 text-[10.5px] text-[var(--color-success)]">
+        <p className="mt-1 flex items-center gap-1 text-[11px] sm:text-[10.5px] text-[var(--color-success)]">
           <Icon name="check" size={10} /> {saved} will be applied at checkout
         </p>
       ) : null}
       <button
         type="button"
         onClick={() => setOpen((o) => !o)}
-        className="mt-1.5 text-[10.5px] text-[var(--color-ink-mute)] underline underline-offset-2 hover:text-[var(--color-brand-deep)]"
+        className="mt-1.5 text-[11px] sm:text-[10.5px] text-[var(--color-ink-mute)] underline underline-offset-2 hover:text-[var(--color-brand-deep)]"
         aria-expanded={open}
       >
         {open ? "Hide demo codes" : "Which demo codes work?"}
       </button>
       {open ? (
-        <ul className="mt-1.5 space-y-1 rounded-sm bg-[#fafafa] p-2">
+        <ul className="mt-1.5 space-y-1 rounded-sm bg-[var(--color-surface-2)] p-2">
           {DEMO.map((d) => (
-            <li key={d.code} className="flex items-baseline justify-between gap-2 text-[10.5px]">
+            <li key={d.code} className="flex items-baseline justify-between gap-2 text-[11px] sm:text-[10.5px]">
               <button
                 type="button"
                 onClick={() => { setCode(d.code); setSaved(d.code); }}

@@ -51,7 +51,7 @@ export default async function TrackPage({
           </ListingPanel>
 
           {attempted && !order ? (
-            <div className="rounded-[var(--radius-card)] border border-[#f0e2c4] bg-[#fbf6ea] p-3 text-[12px] text-[#6d5211]" role="alert">
+            <div className="rounded-[var(--radius-card)] border border-[var(--color-warn-line)] bg-[var(--color-warn-soft)] p-3 text-[12px] text-[var(--color-warn-ink)]" role="alert">
               <p className="font-semibold">No order found for “{raw}”.</p>
               <p className="mt-1 leading-relaxed">
                 Check the number and try again. In this demo you can also{" "}
@@ -65,7 +65,7 @@ export default async function TrackPage({
 
           {order ? (
             <>
-              <div className="overflow-hidden rounded-[var(--radius-card)] border border-[var(--color-line)] bg-white">
+              <div className="overflow-hidden rounded-[var(--radius-card)] border border-[var(--color-line)] bg-[var(--color-surface)]">
                 <div className="section-bar">
                   <h2 className="section-bar-title">Order {order.order_number}</h2>
                   <span className={`badge ${order.status === "delivered" ? "badge-new" : order.status === "cancelled" ? "badge-out" : "badge-low"}`}>
@@ -86,7 +86,7 @@ export default async function TrackPage({
                     <ActivityTimeline status={order.status} />
                   </div>
                   {order.tracking_code ? (
-                    <p className="mt-1 flex flex-wrap items-center gap-1.5 rounded-sm bg-[#fafafa] px-2.5 py-2 text-[11px]">
+                    <p className="mt-1 flex flex-wrap items-center gap-1.5 rounded-sm bg-[var(--color-surface-2)] px-2.5 py-2 text-[11px]">
                       <Icon name="truck" size={12} />
                       {order.courier} · tracking <span className="font-mono font-semibold">{order.tracking_code}</span>
                       <span className="ml-auto text-[10px] text-[var(--color-ink-mute)]">Demo code — not a live courier record</span>
@@ -95,7 +95,7 @@ export default async function TrackPage({
                 </div>
               </div>
 
-              <div className="overflow-hidden rounded-[var(--radius-card)] border border-[var(--color-line)] bg-white">
+              <div className="overflow-hidden rounded-[var(--radius-card)] border border-[var(--color-line)] bg-[var(--color-surface)]">
                 <div className="section-bar">
                   <h2 className="section-bar-title">Items in this order</h2>
                   <span className="text-[12px] text-[var(--color-ink-mute)]">{items.length} lines</span>
@@ -123,7 +123,7 @@ export default async function TrackPage({
 
         <aside className="space-y-3 lg:sticky lg:top-[132px] lg:self-start">
           {!attempted ? (
-            <div className="overflow-hidden rounded-[var(--radius-card)] border border-[var(--color-line)] bg-white">
+            <div className="overflow-hidden rounded-[var(--radius-card)] border border-[var(--color-line)] bg-[var(--color-surface)]">
               <div className="section-bar">
                 <h2 className="section-bar-title">Demo orders to try</h2>
               </div>
@@ -143,7 +143,7 @@ export default async function TrackPage({
               </div>
             </div>
           ) : null}
-          <div className="rounded-[var(--radius-card)] border border-[var(--color-line)] bg-white p-3">
+          <div className="rounded-[var(--radius-card)] border border-[var(--color-line)] bg-[var(--color-surface)] p-3">
             <p className="mb-1.5 text-[11px] font-bold uppercase tracking-wide text-[var(--color-ink-mute)]">Need help?</p>
             <p className="text-[11.5px] leading-relaxed text-[var(--color-ink-soft)]">
               Delivery takes 1–2 working days inside Dhaka and 2–4 outside. Cash on delivery only in this demo.

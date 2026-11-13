@@ -7,7 +7,8 @@ type IconName =
   | "sun" | "chart" | "box" | "tag" | "users" | "settings" | "logout" | "download" | "filter"
   | "facebook" | "instagram" | "youtube" | "tiktok" | "whatsapp" | "arrow-right" | "alert"
   | "flame" | "lightning" | "chevron-up" | "location" | "cart-plus" | "sort" | "sliders"
-  | "badge-check" | "cash" | "clock" | "ruler";
+  | "badge-check" | "cash" | "clock" | "ruler" | "moon" | "monitor" | "wifi-off"
+  | "share" | "copy" | "zoom" | "image";
 
 const paths: Record<string, string> = {
   search: "M21 21l-4.35-4.35M17 10.5a6.5 6.5 0 11-13 0 6.5 6.5 0 0113 0z",
@@ -22,6 +23,13 @@ const paths: Record<string, string> = {
   cash: "M3 6h18v12H3V6zm9 9a3 3 0 100-6 3 3 0 000 6z",
   clock: "M12 21a9 9 0 100-18 9 9 0 000 18zm0-13v5l3.5 2",
   ruler: "M3 9l6-6 12 12-6 6L3 9zm4 0l2 2m1-5l2 2m1-1l2 2m1 1l2 2",
+  moon: "M20 14.5A8.5 8.5 0 019.5 4 8.5 8.5 0 1020 14.5z",
+  monitor: "M3 5h18v11H3V5zm5 15h8M12 16v4",
+  "wifi-off": "M3 3l18 18M8.5 12.5a5 5 0 016 0M5 9a10 10 0 013-1.7M2 5.5A15 15 0 0112 3c3.5 0 6.8 1 9.4 2.6M12 19h.01",
+  share: "M12 3v12m0-12l4 4m-4-4L8 7M5 12v8h14v-8",
+  copy: "M9 9h10v12H9V9zm-4 6V3h10",
+  zoom: "M11 18a7 7 0 100-14 7 7 0 000 14zm10 3l-5-5M8 11h6",
+  image: "M3 5h18v14H3V5zm0 10l5-4 4 3 3-3 6 5M8.5 9.5h.01",
   bag: "M6 8h12l1 12H5L6 8zm3 0V6a3 3 0 016 0v2",
   heart: "M12 20s-7-4.35-7-9a4 4 0 017-2.65A4 4 0 0119 11c0 4.65-7 9-7 9z",
   user: "M12 12a4 4 0 100-8 4 4 0 000 8zm-8 8a8 8 0 0116 0",

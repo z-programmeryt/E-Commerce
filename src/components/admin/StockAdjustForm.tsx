@@ -8,7 +8,7 @@ export function StockAdjustForm({ variants }: { variants: { id: number; label: s
   return (
     <form action={action} className="space-y-3">
       {state.message ? (
-        <p className={`rounded-md px-3 py-2 text-xs ${state.ok ? "bg-[#f2f7f1] text-[#2f5539]" : "bg-[#fbf1ee] text-[#7e2b1f]"}`} role="status">
+        <p className={`rounded-md px-3 py-2 text-xs ${state.ok ? "bg-[var(--color-success-soft)] text-[var(--color-success)]" : "bg-[var(--color-danger-soft)] text-[var(--color-danger-ink)]"}`} role="status">
           {state.message}
         </p>
       ) : null}

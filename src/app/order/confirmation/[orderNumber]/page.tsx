@@ -24,7 +24,7 @@ export default async function ConfirmationPage({ params }: { params: Promise<{ o
       </nav>
 
       {/* success banner */}
-      <div className="flex flex-wrap items-center gap-3 rounded-[var(--radius-card)] border border-[#c8e6c9] bg-[#f1f8f2] px-3 py-3">
+      <div className="flex flex-wrap items-center gap-3 rounded-[var(--radius-card)] border border-[var(--color-success-line)] bg-[var(--color-success-soft)] px-3 py-3">
         <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-[var(--color-success)] text-white">
           <Icon name="check" size={18} strokeWidth={2.5} />
         </span>
@@ -51,9 +51,9 @@ export default async function ConfirmationPage({ params }: { params: Promise<{ o
           { label: "Status", value: order.status, note: `Payment: ${order.payment_status}`, cap: true },
           { label: "Delivery to", value: `${order.ship_area}`, note: `${order.ship_district} · ${order.ship_phone}` },
         ].map((c) => (
-          <div key={c.label} className="overflow-hidden rounded-[var(--radius-card)] border border-[var(--color-line)] bg-white">
+          <div key={c.label} className="overflow-hidden rounded-[var(--radius-card)] border border-[var(--color-line)] bg-[var(--color-surface)]">
             <div className="border-b border-[var(--color-line)] px-3 py-1.5">
-              <p className="text-[10.5px] font-bold uppercase tracking-wide text-[var(--color-ink-mute)]">{c.label}</p>
+              <p className="text-[11px] sm:text-[10.5px] font-bold uppercase tracking-wide text-[var(--color-ink-mute)]">{c.label}</p>
             </div>
             <div className="px-3 py-2">
               <p className={`text-[14px] font-bold text-[var(--color-ink)] ${c.cap ? "capitalize" : ""}`}>{c.value}</p>
@@ -65,7 +65,7 @@ export default async function ConfirmationPage({ params }: { params: Promise<{ o
 
       <div className="mt-3 grid gap-3 lg:grid-cols-[minmax(0,1fr)_300px]">
         <div className="space-y-3">
-          <div className="overflow-hidden rounded-[var(--radius-card)] border border-[var(--color-line)] bg-white">
+          <div className="overflow-hidden rounded-[var(--radius-card)] border border-[var(--color-line)] bg-[var(--color-surface)]">
             <div className="section-bar">
               <h2 className="section-bar-title">What happens next</h2>
             </div>
@@ -74,7 +74,7 @@ export default async function ConfirmationPage({ params }: { params: Promise<{ o
             </div>
           </div>
 
-          <div className="overflow-hidden rounded-[var(--radius-card)] border border-[var(--color-line)] bg-white">
+          <div className="overflow-hidden rounded-[var(--radius-card)] border border-[var(--color-line)] bg-[var(--color-surface)]">
             <div className="section-bar">
               <h2 className="section-bar-title">Items in this order</h2>
               <span className="text-[12px] text-[var(--color-ink-mute)]">{items.length} lines</span>
@@ -106,7 +106,7 @@ export default async function ConfirmationPage({ params }: { params: Promise<{ o
         </div>
 
         <aside className="space-y-3 lg:sticky lg:top-[132px] lg:self-start">
-          <div className="overflow-hidden rounded-[var(--radius-card)] border border-[var(--color-line)] bg-white">
+          <div className="overflow-hidden rounded-[var(--radius-card)] border border-[var(--color-line)] bg-[var(--color-surface)]">
             <div className="section-bar">
               <h2 className="section-bar-title">Delivery address</h2>
             </div>
@@ -122,7 +122,7 @@ export default async function ConfirmationPage({ params }: { params: Promise<{ o
             </address>
           </div>
 
-          <div className="rounded-[var(--radius-card)] border border-[var(--color-line)] bg-white p-3">
+          <div className="rounded-[var(--radius-card)] border border-[var(--color-line)] bg-[var(--color-surface)] p-3">
             <p className="mb-1.5 text-[11px] font-bold uppercase tracking-wide text-[var(--color-ink-mute)]">
               Need to change something?
             </p>

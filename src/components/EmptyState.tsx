@@ -34,10 +34,10 @@ export function Alert({
   children: React.ReactNode;
 }) {
   const tones = {
-    info: "border-[var(--color-line-strong)] bg-white text-[var(--color-ink-soft)]",
-    warn: "border-[#f0e2c4] bg-[#fbf6ea] text-[#6d5211]",
-    danger: "border-[#ecd3cb] bg-[#fbf1ee] text-[#7e2b1f]",
-    success: "border-[#d6e3d6] bg-[#f2f7f1] text-[#2f5539]",
+    info: "border-[var(--color-line-strong)] bg-[var(--color-surface)] text-[var(--color-ink-soft)]",
+    warn: "border-[var(--color-warn-line)] bg-[var(--color-warn-soft)] text-[var(--color-warn-ink)]",
+    danger: "border-[var(--color-danger-line)] bg-[var(--color-danger-soft)] text-[var(--color-danger-ink)]",
+    success: "border-[var(--color-success-line)] bg-[var(--color-success-soft)] text-[var(--color-success)]",
   } as const;
   return (
     <div className={`rounded-lg border px-4 py-3 text-sm ${tones[tone]}`} role={tone === "danger" ? "alert" : undefined}>

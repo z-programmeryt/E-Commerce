@@ -181,7 +181,7 @@ export default async function AdminOverviewPage() {
         </p>
       </section>
 
-      <footer className="flex flex-wrap items-center justify-between gap-2 rounded-md bg-white px-4 py-3 text-[0.6875rem] text-[var(--color-ink-mute)]">
+      <footer className="flex flex-wrap items-center justify-between gap-2 rounded-md bg-[var(--color-surface)] px-4 py-3 text-[0.6875rem] text-[var(--color-ink-mute)]">
         <p>Database migrations applied: {migrations.map((x) => x.name).join(", ") || "none"}</p>
         <p>Last migration: {migrations.length ? formatDate(migrations[migrations.length - 1].applied_at) : "—"}</p>
       </footer>

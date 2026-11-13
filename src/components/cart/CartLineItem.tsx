@@ -25,13 +25,13 @@ export function CartLineItem({ line }: { line: CartLine }) {
   }
 
   return (
-    <div className={`flex gap-3 px-3 py-3 hover:bg-[#fffbf7] ${pending ? "opacity-60" : ""}`}>
+    <div className={`flex gap-3 px-3 py-3 hover:bg-[var(--color-surface-2)] ${pending ? "opacity-60" : ""}`}>
       <Link
         href={`/product/${line.slug}`}
-        className="h-[88px] w-[88px] shrink-0 overflow-hidden rounded border border-[var(--color-line)] bg-white"
+        className="h-[88px] w-[88px] shrink-0 overflow-hidden rounded border border-[var(--color-line)] bg-[var(--color-surface)]"
       >
         {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img src={line.image_url ?? "/placeholder.svg"} alt={line.name} className="h-full w-full object-contain p-1" />
+        <img src={line.image_url ?? "/placeholder.svg"} alt={line.name} className="h-full w-full object-contain" />
       </Link>
 
       <div className="min-w-0 flex-1">
@@ -59,12 +59,12 @@ export function CartLineItem({ line }: { line: CartLine }) {
         </div>
 
         <div className="mt-2 flex flex-wrap items-center justify-between gap-2">
-          <div className="flex items-center overflow-hidden rounded-sm border border-[var(--color-line-strong)] bg-white">
+          <div className="flex items-center overflow-hidden rounded-sm border border-[var(--color-line-strong)] bg-[var(--color-surface)]">
             <button
               onClick={() => update(qty - 1)}
               disabled={qty <= 1 || pending}
               aria-label="Decrease quantity"
-              className="flex h-7 w-7 items-center justify-center text-[var(--color-ink-soft)] hover:bg-[#f5f5f5] disabled:opacity-30"
+              className="flex h-7 w-7 items-center justify-center text-[var(--color-ink-soft)] hover:bg-[var(--color-surface-2)] disabled:opacity-30"
             >
               <Icon name="minus" size={11} />
             </button>
@@ -75,7 +75,7 @@ export function CartLineItem({ line }: { line: CartLine }) {
               onClick={() => update(qty + 1)}
               disabled={qty >= max || pending}
               aria-label="Increase quantity"
-              className="flex h-7 w-7 items-center justify-center text-[var(--color-ink-soft)] hover:bg-[#f5f5f5] disabled:opacity-30"
+              className="flex h-7 w-7 items-center justify-center text-[var(--color-ink-soft)] hover:bg-[var(--color-surface-2)] disabled:opacity-30"
             >
               <Icon name="plus" size={11} />
             </button>
@@ -88,9 +88,9 @@ export function CartLineItem({ line }: { line: CartLine }) {
           </div>
         </div>
         {qty >= max ? (
-          <p className="mt-1 text-[10.5px] text-[var(--color-warn)]">Maximum available: {max}</p>
+          <p className="mt-1 text-[11px] sm:text-[10.5px] text-[var(--color-warn)]">Maximum available: {max}</p>
         ) : null}
-        {error ? <p className="mt-1 text-[10.5px] text-[var(--color-sale)]" role="alert">{error}</p> : null}
+        {error ? <p className="mt-1 text-[11px] sm:text-[10.5px] text-[var(--color-sale)]" role="alert">{error}</p> : null}
       </div>
     </div>
   );

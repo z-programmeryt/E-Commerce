@@ -8,7 +8,7 @@ export function CouponForm() {
   return (
     <form action={action} className="space-y-2.5">
       {state.message ? (
-        <p className={`rounded-md px-2.5 py-1.5 text-[0.6875rem] ${state.ok ? "bg-[#f2f7f1] text-[#2f5539]" : "bg-[#fbf1ee] text-[#7e2b1f]"}`} role="status">
+        <p className={`rounded-md px-2.5 py-1.5 text-[0.6875rem] ${state.ok ? "bg-[var(--color-success-soft)] text-[var(--color-success)]" : "bg-[var(--color-danger-soft)] text-[var(--color-danger-ink)]"}`} role="status">
           {state.message}
         </p>
       ) : null}

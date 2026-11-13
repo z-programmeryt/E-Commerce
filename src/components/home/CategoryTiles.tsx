@@ -16,7 +16,7 @@ export function CategoryTiles({
   counts: Record<string, number>;
 }) {
   return (
-    <div className="overflow-hidden rounded-[var(--radius-card)] border border-[var(--color-line)] bg-white">
+    <div className="overflow-hidden rounded-[var(--radius-card)] border border-[var(--color-line)] bg-[var(--color-surface)]">
       <div className="section-bar">
         <h2 className="section-bar-title">Categories</h2>
         <Link href="/shop" className="text-[12px] font-semibold text-[var(--color-brand-deep)] hover:underline">

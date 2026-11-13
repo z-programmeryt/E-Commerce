@@ -6,10 +6,15 @@ import { ProductGrid } from "@/components/catalog/ProductCard";
 import { ListingHeader, ListingPanel } from "@/components/catalog/ListingHeader";
 import { formatBdt } from "@/lib/brand";
 import { Icon } from "@/components/ui/Icon";
+import { absolute, metaDescription } from "@/lib/seo";
 
 export const metadata: Metadata = {
-  title: "Best sellers",
-  description: "The most requested SUPER Z SHOP products.",
+  title: "Best sellers — the buying team's strongest picks",
+  description: metaDescription(
+    "Products flagged by the buying team as the strongest repeat-purchase candidates, alongside what is trending in the catalogue right now.",
+  ),
+  alternates: { canonical: "/best-sellers" },
+  openGraph: { title: "Best sellers — SUPER Z SHOP", description: "The buying team's strongest picks, with live prices and stock.", url: absolute("/best-sellers") },
 };
 export const dynamic = "force-dynamic";
 
@@ -35,20 +40,20 @@ export default async function BestSellersPage() {
         </ListingPanel>
 
         <aside className="lg:sticky lg:top-[132px] lg:self-start" aria-label="Trending now">
-          <div className="overflow-hidden rounded-[var(--radius-card)] border border-[var(--color-line)] bg-white">
+          <div className="overflow-hidden rounded-[var(--radius-card)] border border-[var(--color-line)] bg-[var(--color-surface)]">
             <div className="section-bar">
               <h2 className="section-bar-title">Trending now</h2>
             </div>
             <ol className="divide-y divide-[var(--color-line)]">
               {trending.slice(0, 8).map((p, i) => (
                 <li key={p.id}>
-                  <Link href={`/product/${p.slug}`} className="flex items-center gap-2 p-2 hover:bg-[#fffbf7]">
+                  <Link href={`/product/${p.slug}`} className="flex items-center gap-2 p-2 hover:bg-[var(--color-surface-2)]">
                     <span className="w-3.5 shrink-0 text-center text-[11px] font-bold text-[var(--color-brand)]">
                       {i + 1}
                     </span>
-                    <span className="h-11 w-11 shrink-0 overflow-hidden rounded border border-[var(--color-line)] bg-white">
+                    <span className="h-11 w-11 shrink-0 overflow-hidden rounded border border-[var(--color-line)] bg-[var(--color-surface)]">
                       {/* eslint-disable-next-line @next/next/no-img-element */}
-                      <img src={p.image_url ?? "/placeholder.svg"} alt="" className="h-full w-full object-contain p-0.5" />
+                      <img src={p.image_url ?? "/placeholder.svg"} alt="" className="h-full w-full object-contain" />
                     </span>
                     <span className="min-w-0 flex-1">
                       <span className="block line-clamp-1 text-[11.5px] leading-tight">{p.name}</span>

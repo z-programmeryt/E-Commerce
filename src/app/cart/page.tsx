@@ -24,7 +24,7 @@ export default async function CartPage() {
         <div className="flex items-center gap-1 py-2.5 text-[12px] text-[var(--color-ink-mute)]">
           <span className="text-[var(--color-ink-soft)]">Shopping cart</span>
         </div>
-        <div className="overflow-hidden rounded-[var(--radius-card)] border border-[var(--color-line)] bg-white">
+        <div className="overflow-hidden rounded-[var(--radius-card)] border border-[var(--color-line)] bg-[var(--color-surface)]">
           <div className="section-bar">
             <h1 className="section-bar-title">Shopping cart</h1>
           </div>
@@ -49,7 +49,7 @@ export default async function CartPage() {
       </nav>
 
       <div className="grid gap-3 lg:grid-cols-[minmax(0,1fr)_330px]">
-        <div className="overflow-hidden rounded-[var(--radius-card)] border border-[var(--color-line)] bg-white">
+        <div className="overflow-hidden rounded-[var(--radius-card)] border border-[var(--color-line)] bg-[var(--color-surface)]">
           <div className="section-bar">
             <h1 className="section-bar-title">
               Shopping cart <span className="font-normal text-[var(--color-ink-mute)]">({lines.reduce((s, l) => s + l.qty, 0)} items)</span>
@@ -66,7 +66,7 @@ export default async function CartPage() {
         </div>
 
         <aside className="lg:sticky lg:top-[132px] lg:self-start" aria-label="Order summary">
-          <div className="overflow-hidden rounded-[var(--radius-card)] border border-[var(--color-line)] bg-white">
+          <div className="overflow-hidden rounded-[var(--radius-card)] border border-[var(--color-line)] bg-[var(--color-surface)]">
             <div className="section-bar">
               <h2 className="section-bar-title">Order summary</h2>
             </div>
@@ -111,7 +111,7 @@ export default async function CartPage() {
               <Link href="/checkout" className="btn btn-primary btn-lg btn-block mt-3">
                 Proceed to checkout
               </Link>
-              <p className="mt-1.5 flex items-center justify-center gap-1.5 text-[10.5px] text-[var(--color-ink-mute)]">
+              <p className="mt-1.5 flex items-center justify-center gap-1.5 text-[11px] sm:text-[10.5px] text-[var(--color-ink-mute)]">
                 <Icon name="shield" size={11} /> Demo checkout — no payment is taken
               </p>
 

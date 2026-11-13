@@ -28,7 +28,7 @@ export default async function AdminLoginPage({
             Local demo administration for products, orders, inventory and reports.
           </p>
 
-          <div className="mt-4 rounded-lg border border-[#f0e2c4] bg-[#fbf6ea] p-3 text-xs text-[#6d5211]">
+          <div className="mt-4 rounded-lg border border-[var(--color-warn-line)] bg-[var(--color-warn-soft)] p-3 text-xs text-[var(--color-warn-ink)]">
             <p className="flex items-center gap-1.5 font-semibold">
               <Icon name="alert" size={13} /> Demo authentication
             </p>
@@ -48,7 +48,7 @@ export default async function AdminLoginPage({
           </div>
 
           {error ? (
-            <p className="mt-4 rounded-md bg-[#fbf1ee] px-3 py-2 text-xs text-[#7e2b1f]" role="alert">
+            <p className="mt-4 rounded-md bg-[var(--color-danger-soft)] px-3 py-2 text-xs text-[var(--color-danger-ink)]" role="alert">
               {error === "missing"
                 ? "Enter both your email and password."
                 : "Those credentials do not match an admin account."}

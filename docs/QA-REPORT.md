@@ -151,6 +151,33 @@ The restyle touched presentation only: no route, action, query or seed file chan
 
 ---
 
+## 5c. Theme, offline and SEO verification
+
+Added with the blue/white Rokomari-family rebuild. There is still no browser runtime in this sandbox (Playwright's CDN is unreachable), so these are markup, stylesheet and HTTP-level checks rather than screenshots.
+
+| Check | Method | Result |
+|---|---|---|
+| Both palettes emitted | grep the compiled CSS chunk for `:root[data-theme=dark]` and the `prefers-color-scheme` block | both present, 30+ variables each |
+| No flash of light theme | inline `<script>` in `<head>` reads `localStorage` before first paint | present on every page |
+| Theme defaults to the OS | `prefers-color-scheme: dark` media query in CSS, no JS required | verified in compiled CSS |
+| Theme colour metas | `curl` `/` → two `theme-color` metas, light `#1b4fd8` dark `#0b1120` | 2/2 |
+| Manifest is valid JSON and linked | `curl` + `rel="manifest"` probe | HTTP 200, 1,211 bytes, linked |
+| Service worker served uncached | `/sw.js` → `Cache-Control: max-age=0, must-revalidate` | correct |
+| Offline fallback exists | `/offline` route | HTTP 200 |
+| Sitemap | `/sitemap.xml` | HTTP 200, **262 URLs** |
+| robots.txt | `/robots.txt` | correct disallow list + sitemap line |
+| OG image | `/opengraph-image` | HTTP 200, 1200×630 PNG |
+| Canonicals | product / category / shop / offers | all absolute and self-referential |
+| Product structured data | JSON-LD probe | `Product` + `Offer` + `BreadcrumbList`, **no** `aggregateRating`, **no** `review` |
+| Category & shop structured data | JSON-LD probe | `BreadcrumbList` with correct depth |
+| No dangling CSS variables | `grep -rho "var(--color-*)"` vs declared tokens | 0 undefined |
+| Mobile touch targets | `@media (pointer: coarse)` block | `.btn` 44px, `.field` 44px |
+| Catalogue/behaviour unchanged | full QA re-run after the restyle | **136/136** |
+
+One bug found and fixed during this pass: `sitemap.ts` selected `updated_at` from `categories`, a column that does not exist, which made `/sitemap.xml` return HTTP 500. Discovered by probing the route rather than by the build, because the route is dynamic.
+
+---
+
 ## 6. Workbook verification
 
 The Excel workbook is verified separately because spreadsheet formulas fail silently — a `#REF!` in a business plan looks like a number until someone reads it.

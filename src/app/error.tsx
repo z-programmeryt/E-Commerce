@@ -12,12 +12,12 @@ export default function GlobalError({ error, reset }: { error: Error & { digest?
 
   return (
     <div className="container-page py-8">
-      <div className="mx-auto max-w-xl overflow-hidden rounded-[var(--radius-card)] border border-[var(--color-line)] bg-white">
+      <div className="mx-auto max-w-xl overflow-hidden rounded-[var(--radius-card)] border border-[var(--color-line)] bg-[var(--color-surface)]">
         <div className="section-bar">
           <h2 className="section-bar-title">Something went wrong</h2>
         </div>
         <div className="flex flex-col items-center px-4 py-8 text-center">
-          <span className="flex h-12 w-12 items-center justify-center rounded-full bg-[#fbf1ee] text-[#7e2b1f]">
+          <span className="flex h-12 w-12 items-center justify-center rounded-full bg-[var(--color-danger-soft)] text-[var(--color-danger-ink)]">
             <Icon name="alert" size={22} />
           </span>
           <h1 className="mt-3 text-[17px] font-bold text-[var(--color-ink)]">We could not load that page</h1>
@@ -29,7 +29,7 @@ export default function GlobalError({ error, reset }: { error: Error & { digest?
             <Link href="/" className="btn btn-outline btn-sm">Back to home</Link>
           </div>
           {error.digest ? (
-            <p className="mt-3 font-mono text-[10.5px] text-[var(--color-ink-mute)]">ref: {error.digest}</p>
+            <p className="mt-3 font-mono text-[11px] sm:text-[10.5px] text-[var(--color-ink-mute)]">ref: {error.digest}</p>
           ) : null}
         </div>
       </div>

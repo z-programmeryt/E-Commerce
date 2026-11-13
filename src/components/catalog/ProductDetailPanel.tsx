@@ -76,7 +76,7 @@ export function ProductDetailPanel({
                 className={`rounded-sm border px-2.5 py-1 text-[11.5px] transition-colors ${
                   c === color
                     ? "border-[var(--color-brand)] bg-[var(--color-brand-soft)] font-semibold text-[var(--color-brand-deep)]"
-                    : "border-[var(--color-line)] bg-white text-[var(--color-ink-soft)] hover:border-[var(--color-brand)]"
+                    : "border-[var(--color-line)] bg-[var(--color-surface)] text-[var(--color-ink-soft)] hover:border-[var(--color-brand)]"
                 } ${stock === 0 ? "opacity-45" : ""}`}
               >
                 {c}
@@ -100,7 +100,7 @@ export function ProductDetailPanel({
               className={`min-w-11 rounded-sm border px-2.5 py-1 text-[11.5px] transition-colors ${
                 v.size === size
                   ? "border-[var(--color-brand)] bg-[var(--color-brand-soft)] font-semibold text-[var(--color-brand-deep)]"
-                  : "border-[var(--color-line)] bg-white text-[var(--color-ink-soft)] hover:border-[var(--color-brand)]"
+                  : "border-[var(--color-line)] bg-[var(--color-surface)] text-[var(--color-ink-soft)] hover:border-[var(--color-brand)]"
               } ${v.stock === 0 ? "cursor-not-allowed line-through opacity-45" : ""}`}
               title={v.stock === 0 ? "Out of stock" : `${v.stock} in stock`}
             >
@@ -125,10 +125,10 @@ export function ProductDetailPanel({
       <div className="flex flex-wrap items-end gap-3">
         <div>
           <p className="mb-1.5 text-[11px] font-bold uppercase tracking-wide text-[var(--color-ink-mute)]">Quantity</p>
-          <div className="flex items-center overflow-hidden rounded-sm border border-[var(--color-line-strong)] bg-white">
+          <div className="flex items-center overflow-hidden rounded-sm border border-[var(--color-line-strong)] bg-[var(--color-surface)]">
             <button
               onClick={() => setQty((q) => Math.max(1, q - 1))}
-              className="flex h-8 w-8 items-center justify-center text-[var(--color-ink-soft)] hover:bg-[#f5f5f5] disabled:opacity-30"
+              className="flex h-8 w-8 items-center justify-center text-[var(--color-ink-soft)] hover:bg-[var(--color-surface-2)] disabled:opacity-30"
               disabled={qty <= 1}
               aria-label="Decrease quantity"
             >
@@ -139,7 +139,7 @@ export function ProductDetailPanel({
             </span>
             <button
               onClick={() => setQty((q) => Math.min(maxQty || 1, q + 1))}
-              className="flex h-8 w-8 items-center justify-center text-[var(--color-ink-soft)] hover:bg-[#f5f5f5] disabled:opacity-30"
+              className="flex h-8 w-8 items-center justify-center text-[var(--color-ink-soft)] hover:bg-[var(--color-surface-2)] disabled:opacity-30"
               disabled={!maxQty || qty >= maxQty}
               aria-label="Increase quantity"
             >
@@ -179,7 +179,7 @@ export function ProductDetailPanel({
         </p>
       ) : null}
 
-      <p className="text-[10.5px] leading-relaxed text-[var(--color-ink-mute)]">
+      <p className="text-[11px] sm:text-[10.5px] leading-relaxed text-[var(--color-ink-mute)]">
         Order today for dispatch in 1–2 working days. Cash on delivery available nationwide. Stock shown is the
         live figure from the local database.
       </p>

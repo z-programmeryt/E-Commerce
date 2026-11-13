@@ -1,58 +1,175 @@
-@import "tailwindcss";
-
-/*
-  SUPER Z SHOP — marketplace design system
-  Reference points: Daraz BD (orange chrome, dense product grid, price-led cards),
-  eBay (categorical clarity, breadcrumb-led browsing), Rokomari (Bangla-first
-  typography, warm accent, trust strip).
-
-  The layout is deliberately dense and price-forward: this is a marketplace
-  pattern, not a boutique one. Colour carries meaning — orange for action and
-  savings, red for genuinely low stock, green for delivery promises.
-*/
 @theme {
-  /* chrome */
-  --color-paper: #f5f5f5;
-  --color-surface: #ffffff;
-  --color-ink: #1a1a1a;
-  --color-ink-soft: #424242;
-  --color-ink-mute: #757575;
-  --color-line: #e8e8e8;
-  --color-line-strong: #d5d5d5;
-  /* legacy aliases kept so inner pages never render an undefined colour */
-  --color-paper-2: #fafafa;
-  --color-olive: #0f766e;
-  --color-olive-deep: #0b5d56;
-  --color-clay: #c2410c;
+  /* ---------------------------------------------------------------------
+     SUPER Z SHOP — Rokomari-family retail system, blue and white.
 
-  /* brand — marketplace orange (Daraz-family) */
-  --color-brand: #f57224;
-  --color-brand-deep: #e05a10;
-  --color-brand-soft: #fff3ec;
-  --color-brand-ink: #b8480a;
+     Every surface, hairline and text colour below is a *variable*, because
+     the whole storefront has a true dark mode: the light theme resolves the
+     same class names to white paper and navy ink, the dark theme resolves
+     them to slate. Nothing is hardcoded to #fff except white text that sits
+     on the brand blue.
+     ------------------------------------------------------------------- */
 
-  /* accent — Rokomari-family teal for editorial/trust blocks */
+  /* surfaces */
+  --color-paper: #f2f4f8;        /* page background */
+  --color-surface: #ffffff;      /* cards, panels, header */
+  --color-surface-2: #f6f8fb;    /* subtle fills, table headers, hovers */
+  --color-surface-3: #eaeef5;    /* pressed states, chips */
+  --color-media: #ffffff;        /* the tile behind a product photo */
+
+  /* ink */
+  --color-ink: #14203a;          /* headings and body copy */
+  --color-ink-soft: #3d4a63;     /* secondary copy */
+  --color-ink-mute: #6b7891;     /* metadata, captions */
+
+  /* hairlines */
+  --color-line: #e2e7f0;
+  --color-line-strong: #cbd4e3;
+
+  /* brand — professional navy blue, white chrome */
+  --color-brand: #1b4fd8;        /* primary action */
+  --color-brand-deep: #123bab;   /* hover */
+  --color-brand-soft: #eaf0fe;   /* tinted fills */
+  --color-brand-ink: #12359d;    /* brand-coloured text on light */
+  --color-brand-contrast: #ffffff;
+
+  /* legacy aliases: older components still reference these names */
+  --color-paper-2: var(--color-surface-2);
+  --color-olive: var(--color-brand);
+  --color-olive-deep: var(--color-brand-deep);
+  --color-clay: #d9480f;
+
+  /* accent — warm gold for savings/ratings, used sparingly */
+  --color-accent: #f0a92b;
+  --color-accent-soft: #fdf3e1;
+
   --color-teal: #0f766e;
-  --color-teal-soft: #ecf6f4;
+  --color-teal-soft: #e7f4f2;
 
   /* signals */
-  --color-sale: #d3232f;
-  --color-sale-soft: #fdecec;
-  --color-success: #1a7f37;
-  --color-warn: #b76e00;
-  --color-danger: #c62828;
-  --color-star: #f5a623;
+  --color-sale: #d92d3f;
+  --color-sale-soft: #fdedee;
+  --color-success: #12805c;
+  --color-success-soft: #e8f6f1;
+  --color-success-line: #b8e3d3;
+  --color-warn: #b36b00;
+  --color-warn-soft: #fdf4e3;
+  --color-warn-line: #f0dcb4;
+  --color-warn-ink: #7a4a00;
+  --color-danger: #c32536;
+  --color-danger-soft: #fdeef0;
+  --color-danger-line: #f2cfd4;
+  --color-danger-ink: #8c1c28;
+  --color-star: #f0a92b;
 
   --font-display: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   --font-sans: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial,
     "Noto Sans Bengali", "Hind Siliguri", sans-serif;
 
   --radius-card: 0.5rem;
-  --shadow-card: 0 1px 2px rgb(0 0 0 / 0.06);
-  --shadow-hover: 0 4px 14px -4px rgb(0 0 0 / 0.18);
+  --shadow-card: 0 1px 2px rgb(20 32 58 / 0.05);
+  --shadow-hover: 0 8px 24px -8px rgb(20 32 58 / 0.22);
+  --shadow-lift: 0 12px 32px -12px rgb(20 32 58 / 0.28);
 }
 
+/* ------------------------------------------------------------------ dark
+   Follows the OS by default; the header toggle writes data-theme="dark" or
+   "light" on <html> and wins either way. */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    color-scheme: dark;
+    --color-paper: #0b1120;
+    --color-surface: #131c30;
+    --color-surface-2: #1a2438;
+    --color-surface-3: #232f47;
+    --color-media: #f7f9fc;
+
+    --color-ink: #eef2fa;
+    --color-ink-soft: #b9c4d8;
+    --color-ink-mute: #8695ae;
+
+    --color-line: #253148;
+    --color-line-strong: #35435e;
+
+    --color-brand: #3d74f2;
+    --color-brand-deep: #2a5bd6;
+    --color-brand-soft: #1a2b4d;
+    --color-brand-ink: #8fb2ff;
+    --color-brand-contrast: #ffffff;
+
+    --color-accent: #f7b845;
+    --color-accent-soft: #33290f;
+    --color-teal: #2bb3a3;
+    --color-teal-soft: #10312e;
+
+    --color-sale: #ff6b7a;
+    --color-sale-soft: #3a1820;
+    --color-success: #3fce9b;
+    --color-success-soft: #102c26;
+    --color-success-line: #1f5347;
+    --color-warn: #f0b04a;
+    --color-warn-soft: #302510;
+    --color-warn-line: #4d3d19;
+    --color-warn-ink: #f4c877;
+    --color-danger: #ff7b88;
+    --color-danger-soft: #3a171c;
+    --color-danger-line: #5a2530;
+    --color-danger-ink: #ff9aa4;
+
+    --shadow-card: 0 1px 2px rgb(0 0 0 / 0.5);
+    --shadow-hover: 0 10px 28px -10px rgb(0 0 0 / 0.75);
+    --shadow-lift: 0 16px 40px -14px rgb(0 0 0 / 0.8);
+  }
+}
+
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --color-paper: #0b1120;
+  --color-surface: #131c30;
+  --color-surface-2: #1a2438;
+  --color-surface-3: #232f47;
+  --color-media: #f7f9fc;
+
+  --color-ink: #eef2fa;
+  --color-ink-soft: #b9c4d8;
+  --color-ink-mute: #8695ae;
+
+  --color-line: #253148;
+  --color-line-strong: #35435e;
+
+  --color-brand: #3d74f2;
+  --color-brand-deep: #2a5bd6;
+  --color-brand-soft: #1a2b4d;
+  --color-brand-ink: #8fb2ff;
+  --color-brand-contrast: #ffffff;
+
+  --color-accent: #f7b845;
+  --color-accent-soft: #33290f;
+  --color-teal: #2bb3a3;
+  --color-teal-soft: #10312e;
+
+  --color-sale: #ff6b7a;
+  --color-sale-soft: #3a1820;
+  --color-success: #3fce9b;
+  --color-success-soft: #102c26;
+  --color-success-line: #1f5347;
+  --color-warn: #f0b04a;
+  --color-warn-soft: #302510;
+  --color-warn-line: #4d3d19;
+  --color-warn-ink: #f4c877;
+  --color-danger: #ff7b88;
+  --color-danger-soft: #3a171c;
+  --color-danger-line: #5a2530;
+  --color-danger-ink: #ff9aa4;
+
+  --shadow-card: 0 1px 2px rgb(0 0 0 / 0.5);
+  --shadow-hover: 0 10px 28px -10px rgb(0 0 0 / 0.75);
+  --shadow-lift: 0 16px 40px -14px rgb(0 0 0 / 0.8);
+}
+
+:root[data-theme="light"] { color-scheme: light; }
+
 html {
+  color-scheme: light;
   -webkit-text-size-adjust: 100%;
   scroll-behavior: smooth;
 }
@@ -68,7 +185,7 @@ body {
 }
 
 ::selection {
-  background: #ffd9bf;
+  background: color-mix(in srgb, var(--color-brand) 28%, transparent);
   color: var(--color-ink);
 }
 
@@ -135,10 +252,10 @@ h1, h2, h3, h4 {
 }
 .btn-primary { background: var(--color-brand); color: #fff; }
 .btn-primary:hover { background: var(--color-brand-deep); }
-.btn-outline { border-color: var(--color-brand); color: var(--color-brand-deep); background: #fff; }
+.btn-outline { border-color: var(--color-brand); color: var(--color-brand-deep); background: var(--color-surface); }
 .btn-outline:hover { background: var(--color-brand-soft); }
-.btn-neutral { border-color: var(--color-line-strong); color: var(--color-ink); background: #fff; }
-.btn-neutral:hover { border-color: var(--color-ink-mute); background: #fafafa; }
+.btn-neutral { border-color: var(--color-line-strong); color: var(--color-ink); background: var(--color-surface); }
+.btn-neutral:hover { border-color: var(--color-ink-mute); background: var(--color-surface-2); }
 .btn-dark { background: var(--color-ink); color: #fff; }
 .btn-dark:hover { background: #000; }
 .btn-teal { background: var(--color-teal); color: #fff; }
@@ -148,11 +265,23 @@ h1, h2, h3, h4 {
 .btn-block { width: 100%; }
 .btn:disabled { opacity: 0.45; cursor: not-allowed; }
 
+/* Mobile ergonomics: Apple and Google both recommend ~44px touch targets.
+   Dense desktop chrome stays small; on coarse pointers every control grows. */
+@media (pointer: coarse) {
+  .btn { min-height: 44px; }
+  .btn-sm { min-height: 38px; }
+  .field { min-height: 44px; }
+  .tile-discount { font-size: 0.75rem; padding: 0.2rem 0.45rem; }
+}
+
+/* Horizontal scroll containers should never cause page-level overflow. */
+html, body { overflow-x: hidden; }
+
 /* ------------------------------------------------------------ fields ---- */
 .field {
   width: 100%;
   border: 1px solid var(--color-line-strong);
-  background: #fff;
+  background: var(--color-surface);
   border-radius: 0.25rem;
   padding: 0.55rem 0.7rem;
   font-size: 0.875rem;
@@ -163,7 +292,7 @@ h1, h2, h3, h4 {
 .field:focus {
   outline: none;
   border-color: var(--color-brand);
-  box-shadow: 0 0 0 3px rgb(245 114 36 / 0.15);
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--color-brand) 22%, transparent);
 }
 .field[aria-invalid="true"] { border-color: var(--color-danger); }
 .label {
@@ -184,13 +313,13 @@ h1, h2, h3, h4 {
   box-shadow: var(--shadow-card);
 }
 
-/* Daraz-style section header: orange rule + uppercase label */
+/* section header: hairline rule + uppercase label */
 .section-bar {
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 1rem;
-  background: #fff;
+  background: var(--color-surface);
   border-bottom: 1px solid var(--color-line);
   padding: 0.65rem 0.85rem;
 }
@@ -234,9 +363,9 @@ h1, h2, h3, h4 {
 }
 .badge-sale { background: var(--color-sale); color: #fff; }
 .badge-new { background: var(--color-teal); color: #fff; }
-.badge-low { background: #fff4e5; color: var(--color-warn); border: 1px solid #ffe0b2; }
-.badge-out { background: #eee; color: #757575; }
-.badge-free { background: #e8f5e9; color: var(--color-success); }
+.badge-low { background: var(--color-warn-soft); color: var(--color-warn); border: 1px solid var(--color-warn-line); }
+.badge-out { background: var(--color-surface-3); color: var(--color-ink-mute); }
+.badge-free { background: var(--color-success-soft); color: var(--color-success); }
 
 /* price block — Daraz shows the discounted figure in the brand colour */
 .price-now { font-size: 1rem; font-weight: 700; color: var(--color-brand-ink); }
@@ -269,10 +398,10 @@ h1, h2, h3, h4 {
   padding: 0.55rem 0.7rem;
   border-bottom: 1px solid var(--color-line);
   white-space: nowrap;
-  background: #fafafa;
+  background: var(--color-surface-2);
 }
 .table-base td { padding: 0.6rem 0.7rem; border-bottom: 1px solid var(--color-line); vertical-align: middle; }
-.table-base tbody tr:hover { background: #fffbf7; }
+.table-base tbody tr:hover { background: var(--color-surface-2); }
 
 /* policy / long-form content, marketplace density */
 .prose-shop { font-size: 0.8125rem; line-height: 1.65; }
@@ -293,7 +422,7 @@ h1, h2, h3, h4 {
 .prose-shop a { color: var(--color-brand-deep); text-decoration: underline; text-underline-offset: 2px; }
 
 .skeleton {
-  background: linear-gradient(90deg, #eeeeee 25%, #f7f7f7 37%, #eeeeee 63%);
+  background: linear-gradient(90deg, var(--color-surface-3) 25%, var(--color-surface-2) 37%, var(--color-surface-3) 63%);
   background-size: 400% 100%;
   animation: shimmer 1.4s ease infinite;
 }
@@ -360,5 +489,5 @@ h1, h2, h3, h4 {
 
 @media print {
   .no-print { display: none !important; }
-  body { background: #fff; }
+  body { background: #fff; color: #000; }
 }

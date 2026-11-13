@@ -33,7 +33,7 @@ export default async function CheckoutPage({
         <div className="flex items-center gap-1 py-2.5 text-[12px] text-[var(--color-ink-mute)]">
           <span className="text-[var(--color-ink-soft)]">Checkout</span>
         </div>
-        <div className="overflow-hidden rounded-[var(--radius-card)] border border-[var(--color-line)] bg-white">
+        <div className="overflow-hidden rounded-[var(--radius-card)] border border-[var(--color-line)] bg-[var(--color-surface)]">
           <div className="section-bar">
             <h1 className="section-bar-title">Checkout</h1>
           </div>
@@ -102,7 +102,7 @@ export default async function CheckoutPage({
         </Link>
       </div>
 
-      <div className="overflow-hidden rounded-[var(--radius-card)] border border-[var(--color-line)] bg-white p-3 md:p-4">
+      <div className="overflow-hidden rounded-[var(--radius-card)] border border-[var(--color-line)] bg-[var(--color-surface)] p-3 md:p-4">
         <CheckoutForm
           districts={locations}
           subtotal={totals.subtotal}

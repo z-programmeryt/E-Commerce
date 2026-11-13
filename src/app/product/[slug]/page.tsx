@@ -10,6 +10,8 @@ import { ProductDetailPanel } from "@/components/catalog/ProductDetailPanel";
 import { WishlistButton } from "@/components/catalog/WishlistButton";
 import { ProductGrid } from "@/components/catalog/ProductCard";
 import { Icon } from "@/components/ui/Icon";
+import { ProductGallery } from "@/components/catalog/ProductGallery";
+import { absolute, breadcrumbJsonLd, metaDescription } from "@/lib/seo";
 import { Alert } from "@/components/EmptyState";
 
 export const dynamic = "force-dynamic";
@@ -19,11 +21,33 @@ type Params = Promise<{ slug: string }>;
 export async function generateMetadata({ params }: { params: Params }): Promise<Metadata> {
   const { slug } = await params;
   const product = getProductBySlug(slug);
-  if (!product) return { title: "Product not found" };
+  if (!product) return { title: "Product not found", robots: { index: false, follow: true } };
+
+  const price = effectivePrice(product);
+  const off = discountPercent(product);
+  const title = `${product.name}${off ? ` — ${off}% off` : ""} | ${product.category_name}`;
+  const description = metaDescription(
+    product.short_description ||
+      `Buy ${product.name} online in Bangladesh for ${formatBdt(price)}. Cash on delivery nationwide, free delivery over ৳2,500.`,
+  );
+
   return {
-    title: `${product.name} — ${product.category_name}`,
-    description: product.short_description,
-    openGraph: { title: product.name, description: product.short_description },
+    title,
+    description,
+    alternates: { canonical: `/product/${product.slug}` },
+    openGraph: {
+      type: "website",
+      title: product.name,
+      description,
+      url: absolute(`/product/${product.slug}`),
+      images: [{ url: product.image_url ?? "/og/home.png", width: 800, height: 1000, alt: `${product.name} — placeholder illustration` }],
+    },
+    twitter: { card: "summary_large_image", title: product.name, description },
+    other: {
+      "product:price:amount": String(price),
+      "product:price:currency": "BDT",
+      "product:availability": (product.total_stock ?? 0) > 0 ? "in stock" : "out of stock",
+    },
   };
 }
 
@@ -50,21 +74,32 @@ export default async function ProductPage({ params }: { params: Params }) {
     { href: `/product/${product.slug}`, label: product.name },
   ];
 
-  const jsonLd = {
-    "@context": "https://schema.org",
-    "@type": "Product",
-    name: product.name,
-    sku: product.sku,
-    description: product.short_description,
-    category: product.category_name,
-    brand: { "@type": "Brand", name: BRAND.name },
-    offers: {
-      "@type": "Offer",
-      priceCurrency: "BDT",
-      price,
-      availability: stock > 0 ? "https://schema.org/InStock" : "https://schema.org/OutOfStock",
+  /* Structured data. Deliberately no aggregateRating and no review array:
+     there are no real reviews, and inventing them would be both dishonest
+     and a Google structured-data violation. */
+  const jsonLd = [
+    {
+      "@context": "https://schema.org",
+      "@type": "Product",
+      name: product.name,
+      sku: product.sku,
+      description: product.short_description,
+      category: product.category_name,
+      ...(product.name_bn ? { alternateName: product.name_bn } : {}),
+      brand: { "@type": "Brand", name: BRAND.name },
+      image: [absolute(product.image_url ?? "/og/home.png")],
+      offers: {
+        "@type": "Offer",
+        url: absolute(`/product/${product.slug}`),
+        priceCurrency: "BDT",
+        price,
+        availability: stock > 0 ? "https://schema.org/InStock" : "https://schema.org/OutOfStock",
+        itemCondition: "https://schema.org/NewCondition",
+        seller: { "@type": "Organization", name: BRAND.name },
+      },
     },
-  };
+    breadcrumbJsonLd(crumbs.map((c) => ({ name: c.label, path: c.href }))),
+  ];
 
   return (
     <div className="pb-6">
@@ -93,36 +128,31 @@ export default async function ProductPage({ params }: { params: Params }) {
         </nav>
 
         {/* ============ buy box ============ */}
-        <div className="overflow-hidden rounded-[var(--radius-card)] border border-[var(--color-line)] bg-white">
+        <div className="overflow-hidden rounded-[var(--radius-card)] border border-[var(--color-line)] bg-[var(--color-surface)]">
           <div className="grid gap-0 lg:grid-cols-[minmax(0,400px)_minmax(0,1fr)_290px]">
             {/* gallery */}
             <div className="border-[var(--color-line)] p-3 lg:border-r">
-              <div className="relative overflow-hidden rounded border border-[var(--color-line)] bg-white">
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img
-                  src={product.image_url ?? "/placeholder.svg"}
-                  alt={`${product.name} — placeholder illustration, not a supplier photograph`}
-                  className="aspect-square w-full object-contain p-3"
-                />
-                {off ? <span className="tile-discount text-[12px]">-{off}%</span> : null}
-              </div>
-              <div className="mt-2 flex gap-1.5">
-                {[0, 1, 2].map((i) => (
-                  <span
-                    key={i}
-                    className={`h-11 w-11 overflow-hidden rounded border bg-white ${
-                      i === 0 ? "border-[var(--color-brand)]" : "border-[var(--color-line)]"
-                    }`}
-                  >
-                    {/* eslint-disable-next-line @next/next/no-img-element */}
-                    <img src={product.image_url ?? "/placeholder.svg"} alt="" className="h-full w-full object-contain p-0.5" />
-                  </span>
-                ))}
-              </div>
-              <p className="mt-2 flex items-start gap-1 text-[10.5px] leading-snug text-[var(--color-ink-mute)]">
-                <Icon name="alert" size={11} className="mt-0.5 shrink-0" />
-                Placeholder illustration. No verified supplier photograph has been sourced for this SKU.
-              </p>
+              <ProductGallery
+                name={product.name}
+                discount={off}
+                shots={[
+                  {
+                    src: product.image_url ?? "/placeholder.svg",
+                    label: "Product",
+                    caption: "full studio view (placeholder illustration)",
+                  },
+                  {
+                    src: product.image_url ?? "/placeholder.svg",
+                    label: "Detail",
+                    caption: "detail view (placeholder illustration)",
+                  },
+                  {
+                    src: product.image_url ?? "/placeholder.svg",
+                    label: "Scale",
+                    caption: "scale reference (placeholder illustration)",
+                  },
+                ]}
+              />
             </div>
 
             {/* title, price, variants */}
@@ -234,10 +264,10 @@ export default async function ProductPage({ params }: { params: Params }) {
                 </li>
               </ul>
 
-              <div className="mt-3 rounded border border-[var(--color-line)] bg-[#fafafa] p-2.5">
+              <div className="mt-3 rounded border border-[var(--color-line)] bg-[var(--color-surface-2)] p-2.5">
                 <p className="text-[11px] font-bold text-[var(--color-ink)]">Sold by</p>
                 <p className="mt-0.5 text-[11.5px] text-[var(--color-ink-soft)]">SUPER Z SHOP</p>
-                <p className="text-[10.5px] text-[var(--color-ink-mute)]">Dhanmondi, Dhaka · Since 2026</p>
+                <p className="text-[11px] sm:text-[10.5px] text-[var(--color-ink-mute)]">Dhanmondi, Dhaka · Since 2026</p>
               </div>
 
               <div className="mt-3">
@@ -252,7 +282,7 @@ export default async function ProductPage({ params }: { params: Params }) {
 
         {/* ============ description + specs ============ */}
         <div className="mt-3 grid gap-3 lg:grid-cols-[minmax(0,1fr)_320px]">
-          <div className="overflow-hidden rounded-[var(--radius-card)] border border-[var(--color-line)] bg-white">
+          <div className="overflow-hidden rounded-[var(--radius-card)] border border-[var(--color-line)] bg-[var(--color-surface)]">
             <div className="section-bar">
               <h2 className="section-bar-title">Product details</h2>
             </div>
@@ -266,7 +296,7 @@ export default async function ProductPage({ params }: { params: Params }) {
             </div>
           </div>
 
-          <div className="overflow-hidden rounded-[var(--radius-card)] border border-[var(--color-line)] bg-white">
+          <div className="overflow-hidden rounded-[var(--radius-card)] border border-[var(--color-line)] bg-[var(--color-surface)]">
             <div className="section-bar">
               <h2 className="section-bar-title">Specifications</h2>
             </div>
@@ -299,7 +329,7 @@ export default async function ProductPage({ params }: { params: Params }) {
 
         {/* ============ related ============ */}
         {related.length > 0 ? (
-          <section className="mt-3 overflow-hidden rounded-[var(--radius-card)] border border-[var(--color-line)] bg-white">
+          <section className="mt-3 overflow-hidden rounded-[var(--radius-card)] border border-[var(--color-line)] bg-[var(--color-surface)]">
             <div className="section-bar">
               <h2 className="section-bar-title">You may also like</h2>
               <Link

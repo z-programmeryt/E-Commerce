@@ -35,9 +35,9 @@ export default async function ContentPage({ params }: { params: Promise<{ slug: 
       </nav>
 
       <div className="grid gap-3 lg:grid-cols-[minmax(0,1fr)_230px]">
-        <article className="overflow-hidden rounded-[var(--radius-card)] border border-[var(--color-line)] bg-white">
+        <article className="overflow-hidden rounded-[var(--radius-card)] border border-[var(--color-line)] bg-[var(--color-surface)]">
           <div className="border-b border-[var(--color-line)] px-3 py-3">
-            <p className="text-[10.5px] font-bold uppercase tracking-wide text-[var(--color-brand-deep)]">{page.eyebrow}</p>
+            <p className="text-[11px] sm:text-[10.5px] font-bold uppercase tracking-wide text-[var(--color-brand-deep)]">{page.eyebrow}</p>
             <h1 className="mt-0.5 text-[19px] font-bold leading-tight text-[var(--color-ink)]">{page.title}</h1>
             <p className="mt-1 max-w-2xl text-[12.5px] leading-relaxed text-[var(--color-ink-soft)]">{page.description}</p>
             <p className="mt-1 text-[11px] text-[var(--color-ink-mute)]">Last updated {page.updated}</p>
@@ -98,7 +98,7 @@ export default async function ContentPage({ params }: { params: Promise<{ slug: 
         </article>
 
         <aside className="lg:sticky lg:top-[132px] lg:self-start">
-          <div className="overflow-hidden rounded-[var(--radius-card)] border border-[var(--color-line)] bg-white">
+          <div className="overflow-hidden rounded-[var(--radius-card)] border border-[var(--color-line)] bg-[var(--color-surface)]">
             <div className="section-bar">
               <h2 className="section-bar-title">Help &amp; policies</h2>
             </div>
@@ -107,7 +107,7 @@ export default async function ContentPage({ params }: { params: Promise<{ slug: 
                 <li key={pg.slug}>
                   <Link
                     href={`/pages/${pg.slug}`}
-                    className={`block px-3 py-1.5 text-[11.5px] leading-snug hover:bg-[#fffbf7] ${
+                    className={`block px-3 py-1.5 text-[11.5px] leading-snug hover:bg-[var(--color-surface-2)] ${
                       pg.slug === slug
                         ? "border-l-2 border-[var(--color-brand)] bg-[var(--color-brand-soft)] font-semibold text-[var(--color-brand-deep)]"
                         : "text-[var(--color-ink-soft)]"

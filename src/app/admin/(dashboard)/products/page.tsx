@@ -118,7 +118,7 @@ export default async function AdminProductsPage({
                       </form>
                       <form action={deleteProductAction}>
                         <input type="hidden" name="id" value={r.id} />
-                        <button className="rounded border border-[#ecd3cb] px-2 py-1 text-[0.625rem] text-[var(--color-danger)] hover:border-[var(--color-danger)]">
+                        <button className="rounded border border-[var(--color-danger-line)] px-2 py-1 text-[0.625rem] text-[var(--color-danger)] hover:border-[var(--color-danger)]">
                           Delete
                         </button>
                       </form>
@@ -142,7 +142,7 @@ export default async function AdminProductsPage({
               href={qs(p)}
               aria-current={p === page ? "page" : undefined}
               className={`flex h-8 min-w-8 items-center justify-center rounded-full border px-2 text-xs ${
-                p === page ? "border-[var(--color-ink)] bg-[var(--color-ink)] text-white" : "border-[var(--color-line-strong)] bg-white"
+                p === page ? "border-[var(--color-ink)] bg-[var(--color-ink)] text-white" : "border-[var(--color-line-strong)] bg-[var(--color-surface)]"
               }`}
             >
               {p}

@@ -23,22 +23,22 @@ const companyLinks = [
 export function Footer() {
   const categories = listCategories().slice(0, 8);
   return (
-    <footer className="mt-4 border-t border-[var(--color-line)] bg-white">
+    <footer className="mt-4 border-t border-[var(--color-line)] bg-[var(--color-surface)]">
       {/* payment / service strip — marketplace footer convention */}
       <div className="border-b border-[var(--color-line)]">
         <div className="container-page flex flex-wrap items-center justify-between gap-3 py-3">
           <p className="text-[12px] font-semibold text-[var(--color-ink-soft)]">Payment method</p>
           <div className="flex flex-wrap items-center gap-1.5">
-            <span className="rounded border border-[var(--color-line-strong)] bg-[#fafafa] px-2 py-0.5 text-[11px] font-semibold text-[var(--color-ink-soft)]">
+            <span className="rounded border border-[var(--color-line-strong)] bg-[var(--color-surface-2)] px-2 py-0.5 text-[11px] font-semibold text-[var(--color-ink-soft)]">
               Cash on Delivery
             </span>
-            <span className="rounded border border-[var(--color-line-strong)] bg-[#fafafa] px-2 py-0.5 text-[11px] text-[var(--color-ink-mute)]">
+            <span className="rounded border border-[var(--color-line-strong)] bg-[var(--color-surface-2)] px-2 py-0.5 text-[11px] text-[var(--color-ink-mute)]">
               bKash
             </span>
-            <span className="rounded border border-[var(--color-line-strong)] bg-[#fafafa] px-2 py-0.5 text-[11px] text-[var(--color-ink-mute)]">
+            <span className="rounded border border-[var(--color-line-strong)] bg-[var(--color-surface-2)] px-2 py-0.5 text-[11px] text-[var(--color-ink-mute)]">
               Nagad
             </span>
-            <span className="text-[10.5px] text-[var(--color-ink-mute)]">
+            <span className="text-[11px] sm:text-[10.5px] text-[var(--color-ink-mute)]">
               (bKash / Nagad shown for reference — not enabled in this demo)
             </span>
           </div>
@@ -47,8 +47,11 @@ export function Footer() {
 
       <div className="container-page grid gap-8 py-8 md:grid-cols-2 lg:grid-cols-4">
         <div>
-          <p className="text-[17px] font-extrabold tracking-tight text-[var(--color-brand-deep)]">
-            SUPER<span className="text-[var(--color-ink)]">Z</span> SHOP
+          <p className="flex items-center gap-2">
+            <span className="flex h-9 w-9 items-center justify-center rounded-md bg-[var(--color-brand)] text-[14px] font-extrabold text-white">
+              SZ
+            </span>
+            <span className="text-[16px] font-extrabold tracking-tight text-[var(--color-ink)]">SUPER Z SHOP</span>
           </p>
           <p className="mt-1 text-[11px] text-[var(--color-ink-mute)]">{BRAND.tagline}</p>
           <p className="mt-3 max-w-xs text-[12px] leading-relaxed text-[var(--color-ink-soft)]">
@@ -149,7 +152,7 @@ export function Footer() {
         <div className="container-page flex flex-wrap items-center justify-between gap-2 py-3 text-[11px] text-[var(--color-ink-mute)]">
           <p>© {new Date().getFullYear()} SUPER Z SHOP. Demo storefront — no real payments are processed.</p>
           <p className="flex items-center gap-2">
-            <span className="rounded bg-[var(--color-brand-soft)] px-1.5 py-0.5 font-semibold text-[var(--color-brand-ink)]">
+            <span className="rounded-sm bg-[var(--color-brand-soft)] px-1.5 py-0.5 font-semibold text-[var(--color-brand-ink)]">
               Demo build
             </span>
             <span>All prices unverified pending supplier quotes</span>

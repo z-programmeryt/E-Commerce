@@ -32,20 +32,20 @@ export function ProductCard({ product, wishlisted = false, compact = false }: Pr
   const low = stock > 0 && stock <= 6;
 
   return (
-    <article className="group relative flex h-full flex-col overflow-hidden rounded-[var(--radius-card)] border border-[var(--color-line)] bg-white transition-shadow duration-150 hover:shadow-[var(--shadow-hover)]">
+    <article className="group relative flex h-full flex-col overflow-hidden rounded-[var(--radius-card)] border border-[var(--color-line)] bg-[var(--color-surface)] transition-shadow duration-150 hover:shadow-[var(--shadow-hover)]">
       <div className="relative">
         <Link href={`/product/${product.slug}`} className="block" aria-label={product.name}>
-          <div className="relative aspect-square overflow-hidden bg-white">
+          <div className="relative aspect-square overflow-hidden bg-[var(--color-media)]">
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
               src={product.image_url ?? "/placeholder.svg"}
               alt={`${product.name} — placeholder illustration`}
               loading="lazy"
               decoding="async"
-              className="h-full w-full object-contain p-1.5 transition-transform duration-200 group-hover:scale-[1.04]"
+              className="h-full w-full object-contain transition-transform duration-200 group-hover:scale-[1.04]"
             />
             {soldOut ? (
-              <div className="absolute inset-0 flex items-center justify-center bg-white/72">
+              <div className="absolute inset-0 flex items-center justify-center bg-[var(--color-surface)]/72">
                 <span className="rounded-sm bg-[var(--color-ink)] px-2.5 py-1 text-[11px] font-bold uppercase tracking-wide text-white">
                   Sold out
                 </span>

@@ -12,7 +12,7 @@ const STEPS: { key: OrderStatus; label: string; copy: string }[] = [
 export function ActivityTimeline({ status }: { status: OrderStatus }) {
   if (status === "cancelled" || status === "returned") {
     return (
-      <div className="flex items-start gap-3 rounded-sm bg-[#fbf1ee] p-3 text-[12px] text-[#7e2b1f]">
+      <div className="flex items-start gap-3 rounded-sm bg-[var(--color-danger-soft)] p-3 text-[12px] text-[var(--color-danger-ink)]">
         <Icon name="alert" size={16} className="mt-0.5 shrink-0" />
         <p>
           This order is marked <strong>{status}</strong>.{" "}
@@ -37,7 +37,7 @@ export function ActivityTimeline({ status }: { status: OrderStatus }) {
                 className={`flex h-6 w-6 shrink-0 items-center justify-center rounded-full border text-[10px] font-bold ${
                   done
                     ? "border-[var(--color-brand)] bg-[var(--color-brand)] text-white"
-                    : "border-[var(--color-line-strong)] bg-white text-[var(--color-ink-mute)]"
+                    : "border-[var(--color-line-strong)] bg-[var(--color-surface)] text-[var(--color-ink-mute)]"
                 }`}
                 aria-hidden="true"
               >
@@ -50,7 +50,7 @@ export function ActivityTimeline({ status }: { status: OrderStatus }) {
             <div className="pb-3">
               <p className={`text-[12.5px] leading-tight ${active ? "font-bold text-[var(--color-ink)]" : done ? "font-medium text-[var(--color-ink)]" : "text-[var(--color-ink-mute)]"}`}>
                 {step.label}
-                {active ? <span className="ml-1.5 rounded-sm bg-[var(--color-brand-soft)] px-1.5 py-0.5 text-[9.5px] font-bold uppercase tracking-wide text-[var(--color-brand-deep)]">Current</span> : null}
+                {active ? <span className="ml-1.5 rounded-sm bg-[var(--color-brand-soft)] px-1.5 py-0.5 text-[11px] sm:text-[10.5px] sm:text-[9.5px] font-bold uppercase tracking-wide text-[var(--color-brand-deep)]">Current</span> : null}
               </p>
               <p className="text-[11px] text-[var(--color-ink-mute)]">{step.copy}</p>
             </div>

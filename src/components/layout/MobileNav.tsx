@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 import type { Category } from "@/lib/types";
 import { Icon } from "@/components/ui/Icon";
+import { ThemeToggle } from "./ThemeToggle";
 
 export function MobileNav({ categories }: { categories: Category[] }) {
   const [open, setOpen] = useState(false);
@@ -37,7 +38,7 @@ export function MobileNav({ categories }: { categories: Category[] }) {
       <button
         type="button"
         onClick={() => setOpen(true)}
-        className="flex h-9 w-9 items-center justify-center rounded text-white hover:bg-white/15 lg:hidden"
+        className="flex h-9 w-9 items-center justify-center rounded-sm text-[var(--color-ink-soft)] hover:bg-[var(--color-brand-soft)] hover:text-[var(--color-brand)] lg:hidden"
         aria-label="Open menu"
         aria-expanded={open}
         aria-controls="mobile-menu"
@@ -47,12 +48,17 @@ export function MobileNav({ categories }: { categories: Category[] }) {
 
       {open ? (
         <div className="fixed inset-0 z-50 lg:hidden" role="dialog" aria-modal="true" aria-label="Site menu" id="mobile-menu">
-          <button className="absolute inset-0 bg-[var(--color-ink)]/40" aria-label="Close menu" onClick={() => setOpen(false)} />
-          <div className="absolute inset-y-0 left-0 flex w-[86%] max-w-sm flex-col overflow-y-auto bg-white shadow-2xl">
-            <div className="flex items-center justify-between bg-[var(--color-brand)] px-4 py-3">
-              <span className="text-[16px] font-extrabold text-white">SUPER Z SHOP</span>
-              <button onClick={() => setOpen(false)} className="flex h-9 w-9 items-center justify-center rounded text-white hover:bg-white/15" aria-label="Close menu">
-                <Icon name="close" size={18} />
+          <button className="absolute inset-0 bg-[#050b18]/55 backdrop-blur-[1px]" aria-label="Close menu" onClick={() => setOpen(false)} />
+          <div className="absolute inset-y-0 left-0 flex w-[86%] max-w-sm flex-col overflow-y-auto bg-[var(--color-surface)] shadow-2xl">
+            <div className="flex items-center justify-between border-b border-[var(--color-line)] px-4 py-3">
+              <span className="flex items-center gap-2">
+                <span className="flex h-8 w-8 items-center justify-center rounded-md bg-[var(--color-brand)] text-[13px] font-extrabold text-white">
+                  SZ
+                </span>
+                <span className="text-[14px] font-extrabold text-[var(--color-ink)]">SUPER Z SHOP</span>
+              </span>
+              <button onClick={() => setOpen(false)} className="flex h-8 w-8 items-center justify-center rounded-sm text-[var(--color-ink-soft)] hover:bg-[var(--color-surface-2)]" aria-label="Close menu">
+                <Icon name="close" size={17} />
               </button>
             </div>
             <nav className="flex-1 py-1" aria-label="Mobile">
@@ -82,8 +88,14 @@ export function MobileNav({ categories }: { categories: Category[] }) {
                 ))}
               </ul>
             </nav>
-            <div className="border-t border-[var(--color-line)] bg-[#fafafa] px-4 py-3 text-[11px] text-[var(--color-ink-mute)]">
-              Demo store · Cash on delivery · 7-day replacement on selected items
+            <div className="border-t border-[var(--color-line)] bg-[var(--color-surface-2)] px-4 py-3">
+              <p className="mb-2 text-[11px] sm:text-[10.5px] font-bold uppercase tracking-wide text-[var(--color-ink-mute)]">
+                Appearance
+              </p>
+              <ThemeToggle />
+              <p className="mt-2.5 text-[11px] sm:text-[10.5px] leading-relaxed text-[var(--color-ink-mute)]">
+                Demo store · Cash on delivery · 7-day replacement on selected items
+              </p>
             </div>
           </div>
         </div>

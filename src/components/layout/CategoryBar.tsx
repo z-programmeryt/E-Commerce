@@ -9,7 +9,7 @@ type Cat = { slug: string; name: string; name_bn?: string | null };
  */
 export function CategoryBar({ categories }: { categories: Cat[] }) {
   return (
-    <div className="border-b border-[var(--color-line)] bg-white">
+    <div className="border-b border-[var(--color-line)] bg-[var(--color-surface)]">
       <div className="container-page">
         <nav aria-label="Categories" className="rail items-center gap-0 py-0">
           <Link

@@ -74,7 +74,7 @@ export function ActiveChips({ labels }: { labels: Record<string, string> }) {
         <button
           key={key}
           onClick={() => remove(key)}
-          className="inline-flex items-center gap-1.5 rounded-full border border-[var(--color-line-strong)] bg-white px-2.5 py-1 text-[0.6875rem] hover:border-[var(--color-ink)]"
+          className="inline-flex items-center gap-1.5 rounded-full border border-[var(--color-line-strong)] bg-[var(--color-surface)] px-2.5 py-1 text-[0.6875rem] hover:border-[var(--color-ink)]"
         >
           {label}: <span className="font-semibold">{params.get(key)}</span>
           <Icon name="close" size={11} />
@@ -246,15 +246,15 @@ export function FilterPanel({
         {open ? (
           <div className="fixed inset-0 z-50" role="dialog" aria-modal="true" aria-label="Filters">
             <button className="absolute inset-0 bg-black/40" aria-label="Close filters" onClick={() => setOpen(false)} />
-            <div className="absolute inset-x-0 bottom-0 max-h-[85vh] overflow-y-auto rounded-t-lg bg-white">
+            <div className="absolute inset-x-0 bottom-0 max-h-[85vh] overflow-y-auto rounded-t-lg bg-[var(--color-surface)]">
               <div className="flex items-center justify-between border-b border-[var(--color-line)] px-3 py-2.5">
                 <p className="text-[12.5px] font-bold uppercase tracking-wide text-[var(--color-ink-soft)]">Filters &amp; sort</p>
-                <button onClick={() => setOpen(false)} className="flex h-8 w-8 items-center justify-center rounded-sm text-[var(--color-ink-mute)] hover:bg-[#f5f5f5]" aria-label="Close">
+                <button onClick={() => setOpen(false)} className="flex h-8 w-8 items-center justify-center rounded-sm text-[var(--color-ink-mute)] hover:bg-[var(--color-surface-2)]" aria-label="Close">
                   <Icon name="close" size={16} />
                 </button>
               </div>
               <div className="px-3">{body}</div>
-              <div className="sticky bottom-0 mt-3 border-t border-[var(--color-line)] bg-white px-3 py-2.5">
+              <div className="sticky bottom-0 mt-3 border-t border-[var(--color-line)] bg-[var(--color-surface)] px-3 py-2.5">
                 <button onClick={() => setOpen(false)} className="btn btn-primary w-full">Show results</button>
               </div>
             </div>
@@ -263,8 +263,8 @@ export function FilterPanel({
       </div>
 
       <aside className="hidden lg:block" aria-label="Product filters">
-        <div className="sticky top-[132px] overflow-hidden rounded-[var(--radius-card)] border border-[var(--color-line)] bg-white">
-          <div className="border-b border-[var(--color-line)] bg-[#fafafa] px-3 py-2">
+        <div className="sticky top-[132px] overflow-hidden rounded-[var(--radius-card)] border border-[var(--color-line)] bg-[var(--color-surface)]">
+          <div className="border-b border-[var(--color-line)] bg-[var(--color-surface-2)] px-3 py-2">
             <p className="text-[12px] font-bold uppercase tracking-wide text-[var(--color-ink-soft)]">Filters</p>
           </div>
           {body}

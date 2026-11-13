@@ -57,7 +57,7 @@ export default async function AccountPage({
           ) : null}
 
           {customer ? (
-            <div className="overflow-hidden rounded-[var(--radius-card)] border border-[var(--color-line)] bg-white">
+            <div className="overflow-hidden rounded-[var(--radius-card)] border border-[var(--color-line)] bg-[var(--color-surface)]">
               <div className="section-bar">
                 <h2 className="section-bar-title">Order history</h2>
                 <span className="text-[12px] text-[var(--color-ink-mute)]">
@@ -75,7 +75,7 @@ export default async function AccountPage({
               ) : (
                 <ul className="divide-y divide-[var(--color-line)]">
                   {orders.map((o) => (
-                    <li key={o.id} className="flex flex-wrap items-center justify-between gap-2 px-3 py-2.5 hover:bg-[#fffbf7]">
+                    <li key={o.id} className="flex flex-wrap items-center justify-between gap-2 px-3 py-2.5 hover:bg-[var(--color-surface-2)]">
                       <div className="min-w-0">
                         <Link
                           href={`/order/track?order=${o.order_number}`}
@@ -108,7 +108,7 @@ export default async function AccountPage({
         </div>
 
         <aside className="space-y-3 lg:sticky lg:top-[132px] lg:self-start">
-          <div className="overflow-hidden rounded-[var(--radius-card)] border border-[var(--color-line)] bg-white">
+          <div className="overflow-hidden rounded-[var(--radius-card)] border border-[var(--color-line)] bg-[var(--color-surface)]">
             <div className="section-bar">
               <h2 className="section-bar-title">Demo accounts</h2>
             </div>
@@ -127,7 +127,7 @@ export default async function AccountPage({
               ))}
             </div>
           </div>
-          <div className="rounded-[var(--radius-card)] border border-[var(--color-line)] bg-white p-3">
+          <div className="rounded-[var(--radius-card)] border border-[var(--color-line)] bg-[var(--color-surface)] p-3">
             <p className="mb-1.5 text-[11px] font-bold uppercase tracking-wide text-[var(--color-ink-mute)]">
               Need help?
             </p>

@@ -6,7 +6,7 @@ export default function NotFound() {
   const categories = listCategories().slice(0, 8);
   return (
     <div className="container-page py-8">
-      <div className="mx-auto max-w-2xl overflow-hidden rounded-[var(--radius-card)] border border-[var(--color-line)] bg-white">
+      <div className="mx-auto max-w-2xl overflow-hidden rounded-[var(--radius-card)] border border-[var(--color-line)] bg-[var(--color-surface)]">
         <div className="flex flex-col items-center px-4 py-10 text-center">
           <span className="flex h-12 w-12 items-center justify-center rounded-full bg-[var(--color-brand-soft)] text-[var(--color-brand)]">
             <Icon name="search" size={22} />

@@ -26,7 +26,7 @@ export function NewsletterForm() {
           {state.message}
         </p>
       ) : (
-        <p className="text-[10.5px] text-[var(--color-ink-mute)]">No spam. Unsubscribe anytime.</p>
+        <p className="text-[11px] sm:text-[10.5px] text-[var(--color-ink-mute)]">No spam. Unsubscribe anytime.</p>
       )}
     </form>
   );

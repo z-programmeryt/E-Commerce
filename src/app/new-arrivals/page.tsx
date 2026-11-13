@@ -4,10 +4,15 @@ import { wishlistKeyReadOnly } from "@/lib/session";
 import { ProductGrid } from "@/components/catalog/ProductCard";
 import { ListingHeader, ListingPanel } from "@/components/catalog/ListingHeader";
 import { EmptyState } from "@/components/EmptyState";
+import { absolute, metaDescription } from "@/lib/seo";
 
 export const metadata: Metadata = {
-  title: "New arrivals",
-  description: "The newest additions to the SUPER Z SHOP catalogue.",
+  title: "New arrivals — the latest additions to the catalogue",
+  description: metaDescription(
+    "The newest products added to the SUPER Z SHOP catalogue, newest SKU first. Cash on delivery nationwide, free delivery over ৳2,500.",
+  ),
+  alternates: { canonical: "/new-arrivals" },
+  openGraph: { title: "New arrivals — SUPER Z SHOP", description: "The newest SKUs in the catalogue, updated as items are added.", url: absolute("/new-arrivals") },
 };
 export const dynamic = "force-dynamic";
 

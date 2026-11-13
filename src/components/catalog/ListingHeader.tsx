@@ -38,7 +38,7 @@ export function ListingHeader({
         ))}
       </nav>
 
-      <div className="overflow-hidden rounded-[var(--radius-card)] border border-[var(--color-line)] bg-white">
+      <div className="overflow-hidden rounded-[var(--radius-card)] border border-[var(--color-line)] bg-[var(--color-surface)]">
         <div className="flex flex-wrap items-center justify-between gap-2 px-3 py-2.5">
           <div className="min-w-0">
             <h1 className="text-[17px] font-bold leading-tight text-[var(--color-ink)]">
@@ -68,7 +68,7 @@ export function ListingHeader({
 /** Wraps a product grid in the standard white catalogue panel. */
 export function ListingPanel({ children, className = "" }: { children: React.ReactNode; className?: string }) {
   return (
-    <div className={`mt-3 overflow-hidden rounded-[var(--radius-card)] border border-[var(--color-line)] bg-white p-2 ${className}`}>
+    <div className={`mt-3 overflow-hidden rounded-[var(--radius-card)] border border-[var(--color-line)] bg-[var(--color-surface)] p-2 ${className}`}>
       {children}
     </div>
   );
@@ -81,7 +81,7 @@ export function ListingSkeleton({ label = "Loading…" }: { label?: string }) {
       <div className="py-2.5">
         <div className="skeleton h-3 w-28 rounded-sm" />
       </div>
-      <div className="overflow-hidden rounded-[var(--radius-card)] border border-[var(--color-line)] bg-white">
+      <div className="overflow-hidden rounded-[var(--radius-card)] border border-[var(--color-line)] bg-[var(--color-surface)]">
         <div className="border-b border-[var(--color-line)] px-3 py-2.5">
           <div className="skeleton h-4 w-40 rounded-sm" />
           <div className="skeleton mt-2 h-3 w-2/3 rounded-sm" />
@@ -91,7 +91,7 @@ export function ListingSkeleton({ label = "Loading…" }: { label?: string }) {
         <div className="hidden lg:block">
           <div className="skeleton h-64 rounded-[var(--radius-card)]" />
         </div>
-        <div className="overflow-hidden rounded-[var(--radius-card)] border border-[var(--color-line)] bg-white p-2">
+        <div className="overflow-hidden rounded-[var(--radius-card)] border border-[var(--color-line)] bg-[var(--color-surface)] p-2">
           <div className="grid grid-cols-2 gap-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6">
             {Array.from({ length: 12 }).map((_, i) => (
               <div key={i} className="border border-[var(--color-line)]">

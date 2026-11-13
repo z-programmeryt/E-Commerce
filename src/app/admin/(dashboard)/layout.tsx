@@ -18,7 +18,7 @@ export default async function AdminLayout({ children }: { children: React.ReactN
         <div className="container-page flex h-14 items-center justify-between gap-4">
           <div className="flex items-center gap-3">
             <Link href="/admin" className="text-[13px] font-extrabold tracking-[0.1em]">SUPER Z SHOP</Link>
-            <span className="rounded bg-white/12 px-1.5 py-0.5 text-[0.5625rem] uppercase tracking-[0.14em]">Admin</span>
+            <span className="rounded bg-[var(--color-surface)]/12 px-1.5 py-0.5 text-[0.5625rem] uppercase tracking-[0.14em]">Admin</span>
             <span className="hidden rounded bg-[#8a6516]/30 px-1.5 py-0.5 text-[0.5625rem] uppercase tracking-[0.1em] text-[#f0d9a8] sm:inline">
               Demo auth
             </span>
@@ -29,7 +29,7 @@ export default async function AdminLayout({ children }: { children: React.ReactN
               <Icon name="arrow-right" size={12} /> View store
             </Link>
             <form action={logoutAction}>
-              <button type="submit" className="flex items-center gap-1 rounded-sm border border-white/25 px-2.5 py-1 text-[11px] hover:bg-white/10">
+              <button type="submit" className="flex items-center gap-1 rounded-sm border border-white/25 px-2.5 py-1 text-[11px] hover:bg-[var(--color-surface)]/10">
                 <Icon name="logout" size={12} /> Sign out
               </button>
             </form>

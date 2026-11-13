@@ -7,10 +7,20 @@ import { ActiveChips, FilterPanel, SortSelect } from "@/components/catalog/Filte
 import { Pagination } from "@/components/catalog/Pagination";
 import { EmptyState } from "@/components/EmptyState";
 import { Icon } from "@/components/ui/Icon";
+import { absolute, metaDescription } from "@/lib/seo";
+import { breadcrumbJsonLd } from "@/lib/seo";
 
 export const metadata: Metadata = {
-  title: "Shop all products",
-  description: "Browse all 225 SUPER Z SHOP products across 15 categories with filters and sorting.",
+  title: "Shop all products — 225 items across 15 categories",
+  description: metaDescription(
+    "Browse all 225 SUPER Z SHOP products across 15 categories — fashion, jewellery, watches, bags, tech accessories, home and gifting. Filter by category, price and availability, cash on delivery nationwide.",
+  ),
+  alternates: { canonical: "/shop" },
+  openGraph: {
+    title: "Shop all products — SUPER Z SHOP",
+    description: "225 products across 15 categories. Cash on delivery in all 64 districts.",
+    url: absolute("/shop"),
+  },
 };
 
 export const dynamic = "force-dynamic";
@@ -61,8 +71,14 @@ export default async function ShopPage({ searchParams }: { searchParams: SearchP
     stock: first(sp.stock),
   };
 
+  const ld = breadcrumbJsonLd([
+    { name: "Home", path: "/" },
+    { name: "Shop all products", path: "/shop" },
+  ]);
+
   return (
     <div className="container-page pb-6">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(ld) }} />
       <nav aria-label="Breadcrumb" className="flex items-center gap-1 py-2.5 text-[12px] text-[var(--color-ink-mute)]">
         <Link href="/" className="hover:text-[var(--color-brand-deep)] hover:underline">Home</Link>
         <Icon name="chevron-right" size={11} className="text-[var(--color-line-strong)]" />
@@ -70,7 +86,7 @@ export default async function ShopPage({ searchParams }: { searchParams: SearchP
       </nav>
 
       {/* result header: count + active filters + sort, the Daraz toolbar */}
-      <div className="overflow-hidden rounded-[var(--radius-card)] border border-[var(--color-line)] bg-white">
+      <div className="overflow-hidden rounded-[var(--radius-card)] border border-[var(--color-line)] bg-[var(--color-surface)]">
         <div className="flex flex-wrap items-center justify-between gap-2 px-3 py-2">
           <div className="flex min-w-0 flex-wrap items-center gap-2">
             <h1 className="text-[13px] font-bold text-[var(--color-ink)]">All products</h1>
@@ -100,7 +116,7 @@ export default async function ShopPage({ searchParams }: { searchParams: SearchP
             <FilterPanel categories={catOptions} subcategories={subOptions} tags={[]} />
           </div>
           {rows.length === 0 ? (
-            <div className="rounded-[var(--radius-card)] border border-[var(--color-line)] bg-white p-8">
+            <div className="rounded-[var(--radius-card)] border border-[var(--color-line)] bg-[var(--color-surface)] p-8">
               <EmptyState
                 title="No products match those filters"
                 subtitle="Try widening the price range or clearing a filter."

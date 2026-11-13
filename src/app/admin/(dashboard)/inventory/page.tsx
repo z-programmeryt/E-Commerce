@@ -108,7 +108,7 @@ export default async function InventoryPage({
               {Array.from({ length: Math.min(pages, 12) }, (_, i) => i + 1).map((p) => (
                 <Link key={p} href={`/admin/inventory?filter=${filter}&page=${p}${q ? `&q=${encodeURIComponent(q)}` : ""}`}
                   aria-current={p === page ? "page" : undefined}
-                  className={`flex h-8 min-w-8 items-center justify-center rounded-full border px-2 text-xs ${p === page ? "border-[var(--color-ink)] bg-[var(--color-ink)] text-white" : "border-[var(--color-line-strong)] bg-white"}`}>
+                  className={`flex h-8 min-w-8 items-center justify-center rounded-full border px-2 text-xs ${p === page ? "border-[var(--color-ink)] bg-[var(--color-ink)] text-white" : "border-[var(--color-line-strong)] bg-[var(--color-surface)]"}`}>
                   {p}
                 </Link>
               ))}

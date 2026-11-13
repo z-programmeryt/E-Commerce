@@ -59,12 +59,12 @@ export function CheckoutForm({
     <form action={action} className="grid gap-3 lg:grid-cols-[minmax(0,1fr)_300px]" noValidate>
       <div className="space-y-3">
         {state.message && !state.ok ? (
-          <div className="rounded-sm border border-[#ecd3cb] bg-[#fbf1ee] px-3 py-2 text-[12px] text-[#7e2b1f]" role="alert">
+          <div className="rounded-sm border border-[var(--color-danger-line)] bg-[var(--color-danger-soft)] px-3 py-2 text-[12px] text-[var(--color-danger-ink)]" role="alert">
             {state.message}
           </div>
         ) : null}
 
-        <section className="overflow-hidden rounded-[var(--radius-card)] border border-[var(--color-line)] bg-white">
+        <section className="overflow-hidden rounded-[var(--radius-card)] border border-[var(--color-line)] bg-[var(--color-surface)]">
           <div className="section-bar">
             <h2 className="section-bar-title">
               <span className="counter">1</span> Contact details
@@ -89,7 +89,7 @@ export function CheckoutForm({
           </div>
         </section>
 
-        <section className="overflow-hidden rounded-[var(--radius-card)] border border-[var(--color-line)] bg-white">
+        <section className="overflow-hidden rounded-[var(--radius-card)] border border-[var(--color-line)] bg-[var(--color-surface)]">
           <div className="section-bar">
             <h2 className="section-bar-title">
               <span className="counter">2</span> Delivery address
@@ -151,7 +151,7 @@ export function CheckoutForm({
           </div>
         </section>
 
-        <section className="overflow-hidden rounded-[var(--radius-card)] border border-[var(--color-line)] bg-white">
+        <section className="overflow-hidden rounded-[var(--radius-card)] border border-[var(--color-line)] bg-[var(--color-surface)]">
           <div className="section-bar">
             <h2 className="section-bar-title">
               <span className="counter">3</span> Payment
@@ -189,7 +189,7 @@ export function CheckoutForm({
       </div>
 
       <aside className="lg:sticky lg:top-[132px] lg:self-start">
-        <div className="overflow-hidden rounded-[var(--radius-card)] border border-[var(--color-line)] bg-white">
+        <div className="overflow-hidden rounded-[var(--radius-card)] border border-[var(--color-line)] bg-[var(--color-surface)]">
           <div className="section-bar">
             <h2 className="section-bar-title">Order summary</h2>
           </div>
@@ -215,14 +215,14 @@ export function CheckoutForm({
           </dl>
 
           <div className="px-3 pb-3">
-            <p className="rounded-sm bg-[#fafafa] px-2 py-1.5 text-[10.5px] leading-relaxed text-[var(--color-ink-mute)]">
+            <p className="rounded-sm bg-[var(--color-surface-2)] px-2 py-1.5 text-[11px] sm:text-[10.5px] leading-relaxed text-[var(--color-ink-mute)]">
               Preview only. The server recalculates discounts, delivery and stock when you place the order.
             </p>
 
             <button type="submit" className="btn btn-primary btn-lg btn-block mt-2.5" disabled={pending}>
               {pending ? "Placing order…" : `Place order · ${formatBdt(total)}`}
             </button>
-            <p className="mt-1.5 flex items-center justify-center gap-1.5 text-[10.5px] text-[var(--color-ink-mute)]">
+            <p className="mt-1.5 flex items-center justify-center gap-1.5 text-[11px] sm:text-[10.5px] text-[var(--color-ink-mute)]">
               <Icon name="shield" size={11} /> Demo order — nothing is charged or shipped
             </p>
           </div>

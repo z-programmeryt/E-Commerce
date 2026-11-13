@@ -5,11 +5,16 @@ import { wishlistKeyReadOnly } from "@/lib/session";
 import { ProductGrid } from "@/components/catalog/ProductCard";
 import { Countdown } from "@/components/home/Countdown";
 import { Icon } from "@/components/ui/Icon";
+import { absolute, metaDescription } from "@/lib/seo";
 import { formatBdt } from "@/lib/brand";
 
 export const metadata: Metadata = {
-  title: "Offers & discounts",
-  description: "Current demo offers, coupon codes and discounted products at SUPER Z SHOP.",
+  title: "Flash sale — offers, coupon codes and price drops",
+  description: metaDescription(
+    "Every product currently below list price, plus the demo coupon codes that work at checkout: WELCOME10, EID500, FREESHIP and SUPERZ15.",
+  ),
+  alternates: { canonical: "/offers" },
+  openGraph: { title: "Flash sale — SUPER Z SHOP", description: "Price drops and working coupon codes, updated live from the catalogue.", url: absolute("/offers") },
 };
 export const dynamic = "force-dynamic";
 
@@ -22,7 +27,7 @@ const coupons = [
 
 const tones: Record<string, string> = {
   olive: "bg-[#eef2ea] border-[#dbe3d5] text-[var(--color-olive-deep)]",
-  clay: "bg-[#f8ece7] border-[#ecd3cb] text-[var(--color-clay)]",
+  clay: "bg-[var(--color-danger-soft)] border-[var(--color-danger-line)] text-[var(--color-clay)]",
   ink: "bg-[var(--color-ink)] border-[var(--color-ink)] text-white",
   sand: "bg-[var(--color-paper-2)] border-[var(--color-line-strong)] text-[var(--color-ink)]",
 };
@@ -42,7 +47,7 @@ export default async function OffersPage() {
       </nav>
 
       {/* flash sale masthead */}
-      <div className="overflow-hidden rounded-[var(--radius-card)] border border-[var(--color-line)] bg-white">
+      <div className="overflow-hidden rounded-[var(--radius-card)] border border-[var(--color-line)] bg-[var(--color-surface)]">
         <div className="flex flex-wrap items-center justify-between gap-2 bg-gradient-to-r from-[var(--color-brand)] to-[#ff9a3c] px-3 py-3">
           <div className="flex items-center gap-2 text-white">
             <Icon name="lightning" size={20} />
@@ -72,14 +77,14 @@ export default async function OffersPage() {
             ))}
           </div>
 
-          <p className="mt-2.5 rounded-sm bg-[#fff8e1] px-2.5 py-1.5 text-[11px] text-[#6d5211]">
+          <p className="mt-2.5 rounded-sm bg-[var(--color-warn-soft)] px-2.5 py-1.5 text-[11px] text-[var(--color-warn-ink)]">
             Coupons are demo data stored in the local database. No real promotion is running, and usage limits
             are enforced only inside this demo.
           </p>
         </div>
       </div>
 
-      <div className="mt-3 overflow-hidden rounded-[var(--radius-card)] border border-[var(--color-line)] bg-white">
+      <div className="mt-3 overflow-hidden rounded-[var(--radius-card)] border border-[var(--color-line)] bg-[var(--color-surface)]">
         <div className="section-bar">
           <h2 className="section-bar-title">On sale now</h2>
           <span className="text-[12px] text-[var(--color-ink-mute)]">{products.length} products</span>
@@ -89,7 +94,7 @@ export default async function OffersPage() {
         </div>
       </div>
 
-      <div className="mt-3 overflow-hidden rounded-[var(--radius-card)] border border-[var(--color-line)] bg-white">
+      <div className="mt-3 overflow-hidden rounded-[var(--radius-card)] border border-[var(--color-line)] bg-[var(--color-surface)]">
         <div className="section-bar">
           <h2 className="section-bar-title">Shop sale by category</h2>
         </div>

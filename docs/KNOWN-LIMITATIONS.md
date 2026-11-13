@@ -75,6 +75,14 @@ Before this touches a real customer, replace authentication entirely — use a m
 
 **No reviews or ratings.** There is no review system, and none was faked. The product page shows no stars because inventing them would be dishonest.
 
+**Dark mode is untested on real hardware.** The theme resolves through CSS variables and the compiled stylesheet was inspected to confirm both palettes are emitted, but with no browser runtime in this sandbox the dark palette has not been eyeballed on a device. Contrast ratios were chosen to clear WCAG AA for body text (`#eef2fa` on `#131c30` is ~15:1), but tinted badges and the flash-sale rail deserve a visual pass before launch.
+
+**Offline mode is honest about its limits.** Pages you have already visited open from the cache; anything else falls back to `/offline`. Placing an order needs a connection because stock is checked and written server-side. Cart and wishlist survive offline because they live in this browser, but a cached product page can show a price or a stock figure that has since changed — the offline banner says exactly that.
+
+**The service worker caches per browser, not per user.** On a shared device, `/account` and `/order/` are excluded from caching for that reason, but `/cart` content is hydrated from the cookie, so it is never served from a static cache entry.
+
+**Banner photography is generic stock-style studio art.** The eight hero/category images are AI-generated studio photographs of *product categories*, not of this catalogue's specific SKUs, and they are used as decorative banners only — never as a product's own image. Product tiles and the product gallery continue to use clearly-labelled illustrations.
+
 **The dense marketplace layout is verified by markup, not by screenshot.** No browser runtime exists in this build sandbox, so the UI was checked with HTML probes and a CSS token audit rather than visual regression tests. The structure is deterministic and compiles cleanly, but pixel-level polish (small-screen wrapping, unusually long product names) has not been eyeballed in a real browser and should get a pass on a device before anyone calls it launch-ready.
 
 **Density is deliberate.** The storefront packs more products per screen than its earlier boutique layout — smaller type, 1px hairlines, six-column grids on wide screens. That is the marketplace convention being copied, but it trades away breathing room and some largeness of type; the earlier, roomier styling is a real design alternative, not a mistake that was fixed.

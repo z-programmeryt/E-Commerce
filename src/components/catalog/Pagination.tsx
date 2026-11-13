@@ -24,7 +24,7 @@ export function Pagination({
 
   return (
     <nav
-      className="mt-3 flex items-center justify-center gap-1 rounded-[var(--radius-card)] border border-[var(--color-line)] bg-white px-3 py-2.5"
+      className="mt-3 flex items-center justify-center gap-1 rounded-[var(--radius-card)] border border-[var(--color-line)] bg-[var(--color-surface)] px-3 py-2.5"
       aria-label="Pagination"
     >
       {page > 1 ? (
@@ -43,7 +43,7 @@ export function Pagination({
             className={`flex h-7 min-w-7 items-center justify-center rounded-sm border px-1.5 text-[11.5px] font-semibold ${
               p === page
                 ? "border-[var(--color-brand)] bg-[var(--color-brand)] text-white"
-                : "border-[var(--color-line)] bg-white text-[var(--color-ink-soft)] hover:border-[var(--color-brand)] hover:text-[var(--color-brand-deep)]"
+                : "border-[var(--color-line)] bg-[var(--color-surface)] text-[var(--color-ink-soft)] hover:border-[var(--color-brand)] hover:text-[var(--color-brand-deep)]"
             }`}
           >
             {p}

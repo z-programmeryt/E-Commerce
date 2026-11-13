@@ -279,30 +279,86 @@ def shape(family, variant, a, b):
 <path d="M400 700 Q356 706 356 668" stroke="{b}" stroke-width="10" fill="none" stroke-linecap="round"/>'''
 
 
+# Studio backdrops, one per family, so a category's tiles feel like one shoot
+# rather than 15 unrelated illustrations. Cool blue-grey throughout: the
+# storefront chrome is blue and white, and a warm cream backdrop fought it.
+BACKDROPS = {
+    "apparel": ("#F4F7FC", "#E3EAF5"),
+    "jewellery": ("#F6F7FB", "#E6E9F3"),
+    "tech": ("#F5F8FD", "#E1E9F6"),
+    "home": ("#F7F8FA", "#E7EAF0"),
+    "beauty": ("#F6F8FB", "#E4EBF4"),
+    "default": ("#F5F7FB", "#E5EAF3"),
+}
+
+# Per-family zoom: small objects (earrings, rings) need to fill the tile the
+# way a real catalogue crops them; garments are already large in frame.
+FAMILY_SCALE = {
+    "shirt": 1.16, "dress": 1.14, "cap": 1.22, "gem": 1.62, "watch": 1.20,
+    "bag": 1.18, "phone": 1.28, "beauty": 1.34, "pair": 1.30, "gift": 1.20,
+    "case": 1.24, "bottle": 1.30, "pen": 1.26, "vase": 1.20, "parasol": 1.14,
+}
+
+FAMILY_BACKDROP = {
+    "shirt": "apparel", "dress": "apparel", "cap": "apparel", "pair": "apparel",
+    "gem": "jewellery", "watch": "jewellery",
+    "phone": "tech", "pen": "tech", "bottle": "tech",
+    "vase": "home", "parasol": "home", "gift": "home",
+    "beauty": "beauty", "case": "beauty", "bag": "apparel",
+}
+
+
 def svg_for(product):
     family = FAMILY[product["categorySlug"]]
     color = product["colors"][0] if product["colors"] else "Charcoal"
     a, b = attrs(color)
-    bg1, bg2 = "#F8F5F0", "#EDE7DD"
+    bg1, bg2 = BACKDROPS[FAMILY_BACKDROP.get(family, "default")]
     body = shape(family, product["id"] % 3, a, b)
+    scale = FAMILY_SCALE.get(family, 1.15)
     label = TITLES[family]
     return f'''<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1000" width="800" height="1000" role="img" aria-label="{product['name']} — studio illustration">
   <defs>
-    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+    <linearGradient id="bg" x1="0.1" y1="0" x2="0.9" y2="1">
       <stop offset="0" stop-color="{bg1}"/><stop offset="1" stop-color="{bg2}"/>
     </linearGradient>
-    <radialGradient id="glow" cx="50%" cy="42%" r="52%">
-      <stop offset="0" stop-color="#FFFFFF" stop-opacity=".95"/>
+    <radialGradient id="spot" cx="46%" cy="30%" r="66%">
+      <stop offset="0" stop-color="#FFFFFF" stop-opacity="1"/>
+      <stop offset="0.55" stop-color="#FFFFFF" stop-opacity=".45"/>
       <stop offset="1" stop-color="#FFFFFF" stop-opacity="0"/>
     </radialGradient>
+    <radialGradient id="vig" cx="50%" cy="50%" r="72%">
+      <stop offset="0.55" stop-color="#0B1B33" stop-opacity="0"/>
+      <stop offset="1" stop-color="#0B1B33" stop-opacity=".10"/>
+    </radialGradient>
+    <linearGradient id="sheen" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#FFFFFF" stop-opacity=".22"/>
+      <stop offset="0.5" stop-color="#FFFFFF" stop-opacity="0"/>
+    </linearGradient>
+    <filter id="soft" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="18"/>
+    </filter>
   </defs>
+
+  <!-- seamless studio sweep -->
   <rect width="800" height="1000" fill="url(#bg)"/>
-  <rect width="800" height="1000" fill="url(#glow)"/>
-  <circle cx="400" cy="470" r="240" fill="#FFFFFF" opacity=".5"/>
-  <ellipse cx="400" cy="776" rx="196" ry="26" fill="#000000" opacity=".07"/>
-  <g>{body}</g>
-  <text x="64" y="892" font-family="Georgia, 'Times New Roman', serif" font-size="19" letter-spacing="4.5" fill="#8A8377">{label}</text>
-  <text x="64" y="926" font-family="Helvetica, Arial, sans-serif" font-size="14" letter-spacing="3" fill="#A9A296">SUPER Z SHOP</text>
+  <rect width="800" height="1000" fill="url(#spot)"/>
+  <rect width="800" height="1000" fill="url(#vig)"/>
+
+  <!-- cyclorama floor line + contact shadow -->
+  <path d="M0 800 Q400 758 800 800 L800 1000 L0 1000 Z" fill="#0B1B33" opacity=".03"/>
+  <ellipse cx="400" cy="806" rx="204" ry="26" fill="#0B1B33" opacity=".18" filter="url(#soft)"/>
+
+  <!-- plinth the product stands on -->
+  <ellipse cx="400" cy="802" rx="228" ry="52" fill="#FFFFFF" opacity=".8"/>
+  <ellipse cx="400" cy="802" rx="228" ry="52" fill="none" stroke="#0B1B33" stroke-opacity=".06" stroke-width="2"/>
+  <ellipse cx="400" cy="798" rx="160" ry="30" fill="#FFFFFF" opacity=".55"/>
+
+  <!-- product, enlarged to fill the tile as a catalogue would -->
+  <g transform="translate(400 486) scale({scale}) translate(-400 -500)">{body}</g>
+  <rect width="800" height="1000" fill="url(#sheen)"/>
+
+  <text x="56" y="916" font-family="Georgia, 'Times New Roman', serif" font-size="17" letter-spacing="4.5" fill="#6E7B93">{label}</text>
+  <text x="56" y="944" font-family="Helvetica, Arial, sans-serif" font-size="13" letter-spacing="3" fill="#93A0B6">SUPER Z SHOP</text>
 </svg>'''
 
 
