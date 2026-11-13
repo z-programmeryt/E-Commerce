@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1000" width="800" height="1000" role="img" aria-label="Utility Cargo Jogger — studio illustration">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#F8F5F0"/><stop offset="1" stop-color="#EDE7DD"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="50%" cy="42%" r="52%">
+      <stop offset="0" stop-color="#FFFFFF" stop-opacity=".95"/>
+      <stop offset="1" stop-color="#FFFFFF" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="800" height="1000" fill="url(#bg)"/>
+  <rect width="800" height="1000" fill="url(#glow)"/>
+  <circle cx="400" cy="470" r="240" fill="#FFFFFF" opacity=".5"/>
+  <ellipse cx="400" cy="776" rx="196" ry="26" fill="#000000" opacity=".07"/>
+  <g><path d="M318 316 L382 282 Q400 316 418 282 L482 316 L540 372 L500 424 L470 402 L470 690 Q400 710 330 690 L330 402 L300 424 L260 372 Z" fill="#2C2B29"/>
+<path d="M382 282 Q400 322 418 282" stroke="#454340" stroke-width="7" fill="none"/>
+<path d="M330 676 Q400 696 470 676" stroke="#454340" stroke-width="6" fill="none" opacity=".65"/>
+<path d="M400 344 L400 660" stroke="#454340" stroke-width="3" opacity=".28"/></g>
+  <text x="64" y="892" font-family="Georgia, 'Times New Roman', serif" font-size="19" letter-spacing="4.5" fill="#8A8377">Apparel study</text>
+  <text x="64" y="926" font-family="Helvetica, Arial, sans-serif" font-size="14" letter-spacing="3" fill="#A9A296">SUPER Z SHOP</text>
+</svg>

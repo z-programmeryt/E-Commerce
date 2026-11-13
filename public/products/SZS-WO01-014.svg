@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1000" width="800" height="1000" role="img" aria-label="Pleated Midi Skirt — studio illustration">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#F8F5F0"/><stop offset="1" stop-color="#EDE7DD"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="50%" cy="42%" r="52%">
+      <stop offset="0" stop-color="#FFFFFF" stop-opacity=".95"/>
+      <stop offset="1" stop-color="#FFFFFF" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="800" height="1000" fill="url(#bg)"/>
+  <rect width="800" height="1000" fill="url(#glow)"/>
+  <circle cx="400" cy="470" r="240" fill="#FFFFFF" opacity=".5"/>
+  <ellipse cx="400" cy="776" rx="196" ry="26" fill="#000000" opacity=".07"/>
+  <g><path d="M352 292 L400 268 L448 292 L488 338 L456 372 L470 500 Q496 646 516 706 Q400 740 284 706 Q304 646 330 500 L344 372 L312 338 Z" fill="#5A6244"/>
+<path d="M344 372 L400 406 L456 372" stroke="#77805E" stroke-width="6" fill="none" opacity=".85"/>
+<path d="M330 500 Q400 528 470 500" stroke="#77805E" stroke-width="6" fill="none" opacity=".6"/></g>
+  <text x="64" y="892" font-family="Georgia, 'Times New Roman', serif" font-size="19" letter-spacing="4.5" fill="#8A8377">Drape study</text>
+  <text x="64" y="926" font-family="Helvetica, Arial, sans-serif" font-size="14" letter-spacing="3" fill="#A9A296">SUPER Z SHOP</text>
+</svg>

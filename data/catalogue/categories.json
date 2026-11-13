@@ -1,0 +1,648 @@
+[
+ {
+  "slug": "mens-fashion",
+  "name": "Men's Fashion",
+  "nameBn": "পুরুষদের ফ্যাশন",
+  "blurb": "Shirts, panjabi, denim and tailoring built for Bangladeshi weather.",
+  "icon": "shirt",
+  "sortOrder": 0,
+  "subcategories": [
+   {
+    "slug": "shirts",
+    "name": "Shirts"
+   },
+   {
+    "slug": "panjabi",
+    "name": "Panjabi"
+   },
+   {
+    "slug": "trousers",
+    "name": "Trousers"
+   },
+   {
+    "slug": "t-shirts",
+    "name": "T-Shirts"
+   },
+   {
+    "slug": "polo-shirts",
+    "name": "Polo Shirts"
+   },
+   {
+    "slug": "jackets",
+    "name": "Jackets"
+   },
+   {
+    "slug": "suits",
+    "name": "Suits"
+   },
+   {
+    "slug": "hoodies",
+    "name": "Hoodies"
+   },
+   {
+    "slug": "kurta-sets",
+    "name": "Kurta Sets"
+   },
+   {
+    "slug": "innerwear",
+    "name": "Innerwear"
+   },
+   {
+    "slug": "winter-wear",
+    "name": "Winter Wear"
+   },
+   {
+    "slug": "waistcoats",
+    "name": "Waistcoats"
+   }
+  ]
+ },
+ {
+  "slug": "womens-fashion",
+  "name": "Women's Fashion",
+  "nameBn": "মহিলাদের ফ্যাশন",
+  "blurb": "Saree, three-piece, kurti and modern ready-to-wear.",
+  "icon": "dress",
+  "sortOrder": 1,
+  "subcategories": [
+   {
+    "slug": "three-piece",
+    "name": "Three-Piece"
+   },
+   {
+    "slug": "saree",
+    "name": "Saree"
+   },
+   {
+    "slug": "kurti",
+    "name": "Kurti"
+   },
+   {
+    "slug": "dresses",
+    "name": "Dresses"
+   },
+   {
+    "slug": "bottoms",
+    "name": "Bottoms"
+   },
+   {
+    "slug": "nightwear",
+    "name": "Nightwear"
+   },
+   {
+    "slug": "dupatta",
+    "name": "Dupatta"
+   },
+   {
+    "slug": "shawls",
+    "name": "Shawls"
+   },
+   {
+    "slug": "tops",
+    "name": "Tops"
+   },
+   {
+    "slug": "co-ord-sets",
+    "name": "Co-ord Sets"
+   },
+   {
+    "slug": "bridal",
+    "name": "Bridal"
+   }
+  ]
+ },
+ {
+  "slug": "unisex-accessories",
+  "name": "Unisex Accessories",
+  "nameBn": "ইউনিসেক্স অ্যাক্সেসরিজ",
+  "blurb": "Caps, belts, eyewear and daily carry essentials.",
+  "icon": "cap",
+  "sortOrder": 2,
+  "subcategories": [
+   {
+    "slug": "caps-and-hats",
+    "name": "Caps & Hats"
+   },
+   {
+    "slug": "eyewear",
+    "name": "Eyewear"
+   },
+   {
+    "slug": "scarves",
+    "name": "Scarves"
+   },
+   {
+    "slug": "socks",
+    "name": "Socks"
+   },
+   {
+    "slug": "belts",
+    "name": "Belts"
+   },
+   {
+    "slug": "everyday-wear",
+    "name": "Everyday Wear"
+   },
+   {
+    "slug": "gloves",
+    "name": "Gloves"
+   },
+   {
+    "slug": "umbrella",
+    "name": "Umbrella"
+   },
+   {
+    "slug": "rainwear",
+    "name": "Rainwear"
+   },
+   {
+    "slug": "sport",
+    "name": "Sport"
+   }
+  ]
+ },
+ {
+  "slug": "jewellery",
+  "name": "Jewellery",
+  "nameBn": "গহনা",
+  "blurb": "Gold-plated, kundan and oxidised pieces for everyday and weddings.",
+  "icon": "gem",
+  "sortOrder": 3,
+  "subcategories": [
+   {
+    "slug": "necklace-sets",
+    "name": "Necklace Sets"
+   },
+   {
+    "slug": "earrings",
+    "name": "Earrings"
+   },
+   {
+    "slug": "rings",
+    "name": "Rings"
+   },
+   {
+    "slug": "bangles",
+    "name": "Bangles"
+   },
+   {
+    "slug": "necklaces",
+    "name": "Necklaces"
+   },
+   {
+    "slug": "bridal",
+    "name": "Bridal"
+   },
+   {
+    "slug": "everyday",
+    "name": "Everyday"
+   },
+   {
+    "slug": "anklets",
+    "name": "Anklets"
+   },
+   {
+    "slug": "brooches",
+    "name": "Brooches"
+   }
+  ]
+ },
+ {
+  "slug": "watches",
+  "name": "Watches",
+  "nameBn": "ঘড়ি",
+  "blurb": "Minimal, classic and sport watches with local warranty support.",
+  "icon": "watch",
+  "sortOrder": 4,
+  "subcategories": [
+   {
+    "slug": "classic",
+    "name": "Classic"
+   },
+   {
+    "slug": "chronograph",
+    "name": "Chronograph"
+   },
+   {
+    "slug": "women",
+    "name": "Women"
+   },
+   {
+    "slug": "minimal",
+    "name": "Minimal"
+   },
+   {
+    "slug": "sport",
+    "name": "Sport"
+   },
+   {
+    "slug": "couple",
+    "name": "Couple"
+   },
+   {
+    "slug": "automatic",
+    "name": "Automatic"
+   },
+   {
+    "slug": "eco",
+    "name": "Eco"
+   },
+   {
+    "slug": "kids",
+    "name": "Kids"
+   },
+   {
+    "slug": "vintage",
+    "name": "Vintage"
+   },
+   {
+    "slug": "smart",
+    "name": "Smart"
+   },
+   {
+    "slug": "gift-set",
+    "name": "Gift Set"
+   }
+  ]
+ },
+ {
+  "slug": "bags-wallets",
+  "name": "Bags & Wallets",
+  "nameBn": "ব্যাগ ও ওয়ালেট",
+  "blurb": "Leather wallets, backpacks, sling bags and laptop carry.",
+  "icon": "bag",
+  "sortOrder": 5,
+  "subcategories": [
+   {
+    "slug": "wallets",
+    "name": "Wallets"
+   },
+   {
+    "slug": "sling-and-crossbody",
+    "name": "Sling & Crossbody"
+   },
+   {
+    "slug": "tote",
+    "name": "Tote"
+   },
+   {
+    "slug": "backpacks",
+    "name": "Backpacks"
+   },
+   {
+    "slug": "messenger",
+    "name": "Messenger"
+   },
+   {
+    "slug": "clutch",
+    "name": "Clutch"
+   },
+   {
+    "slug": "duffle",
+    "name": "Duffle"
+   },
+   {
+    "slug": "laptop-bags",
+    "name": "Laptop Bags"
+   },
+   {
+    "slug": "travel",
+    "name": "Travel"
+   }
+  ]
+ },
+ {
+  "slug": "phone-tech",
+  "name": "Phone & Tech Accessories",
+  "nameBn": "ফোন ও টেক অ্যাক্সেসরিজ",
+  "blurb": "Chargers, audio, cases and desk tech.",
+  "icon": "phone",
+  "sortOrder": 6,
+  "subcategories": [
+   {
+    "slug": "phone-cases",
+    "name": "Phone Cases"
+   },
+   {
+    "slug": "screen-protection",
+    "name": "Screen Protection"
+   },
+   {
+    "slug": "power",
+    "name": "Power"
+   },
+   {
+    "slug": "cables",
+    "name": "Cables"
+   },
+   {
+    "slug": "audio",
+    "name": "Audio"
+   },
+   {
+    "slug": "mounts-and-holders",
+    "name": "Mounts & Holders"
+   },
+   {
+    "slug": "desk-tech",
+    "name": "Desk Tech"
+   },
+   {
+    "slug": "wearables",
+    "name": "Wearables"
+   },
+   {
+    "slug": "content-creation",
+    "name": "Content Creation"
+   }
+  ]
+ },
+ {
+  "slug": "hair-beauty",
+  "name": "Hair & Beauty Accessories",
+  "nameBn": "চুল ও বিউটি",
+  "blurb": "Styling tools, clips and beauty rituals.",
+  "icon": "scissors",
+  "sortOrder": 7,
+  "subcategories": [
+   {
+    "slug": "hair-ties",
+    "name": "Hair Ties"
+   },
+   {
+    "slug": "clips",
+    "name": "Clips"
+   },
+   {
+    "slug": "pins",
+    "name": "Pins"
+   },
+   {
+    "slug": "styling-tools",
+    "name": "Styling Tools"
+   },
+   {
+    "slug": "grooming",
+    "name": "Grooming"
+   },
+   {
+    "slug": "brushes",
+    "name": "Brushes"
+   },
+   {
+    "slug": "combs",
+    "name": "Combs"
+   },
+   {
+    "slug": "hair-care",
+    "name": "Hair Care"
+   },
+   {
+    "slug": "skincare-tools",
+    "name": "Skincare Tools"
+   }
+  ]
+ },
+ {
+  "slug": "couple-collections",
+  "name": "Couple Collections",
+  "nameBn": "কাপল কালেকশন",
+  "blurb": "Matching sets made for two.",
+  "icon": "heart",
+  "sortOrder": 8,
+  "subcategories": [
+   {
+    "slug": "couple-apparel",
+    "name": "Couple Apparel"
+   },
+   {
+    "slug": "couple-jewellery",
+    "name": "Couple Jewellery"
+   },
+   {
+    "slug": "couple-gifts",
+    "name": "Couple Gifts"
+   }
+  ]
+ },
+ {
+  "slug": "gifts",
+  "name": "Gifts",
+  "nameBn": "গিফট",
+  "blurb": "Ready-to-give boxes with cards and wrapping.",
+  "icon": "gift",
+  "sortOrder": 9,
+  "subcategories": [
+   {
+    "slug": "hampers",
+    "name": "Hampers"
+   },
+   {
+    "slug": "curated-boxes",
+    "name": "Curated Boxes"
+   },
+   {
+    "slug": "occasion",
+    "name": "Occasion"
+   },
+   {
+    "slug": "corporate",
+    "name": "Corporate"
+   },
+   {
+    "slug": "everyday-gifts",
+    "name": "Everyday Gifts"
+   },
+   {
+    "slug": "gift-cards",
+    "name": "Gift Cards"
+   },
+   {
+    "slug": "seasonal-gifts",
+    "name": "Seasonal Gifts"
+   }
+  ]
+ },
+ {
+  "slug": "travel-accessories",
+  "name": "Travel Accessories",
+  "nameBn": "ট্রাভেল অ্যাক্সেসরিজ",
+  "blurb": "Luggage, organisers and travel comfort.",
+  "icon": "plane",
+  "sortOrder": 10,
+  "subcategories": [
+   {
+    "slug": "luggage",
+    "name": "Luggage"
+   },
+   {
+    "slug": "organisers",
+    "name": "Organisers"
+   },
+   {
+    "slug": "comfort",
+    "name": "Comfort"
+   },
+   {
+    "slug": "documents",
+    "name": "Documents"
+   },
+   {
+    "slug": "liquids",
+    "name": "Liquids"
+   },
+   {
+    "slug": "gadgets",
+    "name": "Gadgets"
+   }
+  ]
+ },
+ {
+  "slug": "lifestyle",
+  "name": "Lifestyle",
+  "nameBn": "লাইফস্টাইল",
+  "blurb": "Fitness, hydration and everyday wellness.",
+  "icon": "bottle",
+  "sortOrder": 11,
+  "subcategories": [
+   {
+    "slug": "fitness",
+    "name": "Fitness"
+   },
+   {
+    "slug": "hydration",
+    "name": "Hydration"
+   },
+   {
+    "slug": "wellness",
+    "name": "Wellness"
+   },
+   {
+    "slug": "home-fitness",
+    "name": "Home Fitness"
+   }
+  ]
+ },
+ {
+  "slug": "desk-stationery",
+  "name": "Desk & Stationery",
+  "nameBn": "ডেস্ক ও স্টেশনারি",
+  "blurb": "Journals, pens and workspace order.",
+  "icon": "pen",
+  "sortOrder": 12,
+  "subcategories": [
+   {
+    "slug": "notebooks",
+    "name": "Notebooks"
+   },
+   {
+    "slug": "pens",
+    "name": "Pens"
+   },
+   {
+    "slug": "desk",
+    "name": "Desk"
+   },
+   {
+    "slug": "paper",
+    "name": "Paper"
+   }
+  ]
+ },
+ {
+  "slug": "home-decor",
+  "name": "Home & Decor",
+  "nameBn": "হোম ও ডেকোর",
+  "blurb": "Bedsheets, cushions and small decor.",
+  "icon": "home",
+  "sortOrder": 13,
+  "subcategories": [
+   {
+    "slug": "bedding",
+    "name": "Bedding"
+   },
+   {
+    "slug": "cushions",
+    "name": "Cushions"
+   },
+   {
+    "slug": "wall-decor",
+    "name": "Wall Decor"
+   },
+   {
+    "slug": "decor",
+    "name": "Decor"
+   },
+   {
+    "slug": "dining",
+    "name": "Dining"
+   },
+   {
+    "slug": "fragrance",
+    "name": "Fragrance"
+   },
+   {
+    "slug": "floor",
+    "name": "Floor"
+   },
+   {
+    "slug": "kitchen",
+    "name": "Kitchen"
+   },
+   {
+    "slug": "prayer",
+    "name": "Prayer"
+   },
+   {
+    "slug": "lighting",
+    "name": "Lighting"
+   },
+   {
+    "slug": "window",
+    "name": "Window"
+   },
+   {
+    "slug": "storage",
+    "name": "Storage"
+   }
+  ]
+ },
+ {
+  "slug": "seasonal-collections",
+  "name": "Seasonal Collections",
+  "nameBn": "সিজনাল কালেকশন",
+  "blurb": "Eid, winter, monsoon and festive edits.",
+  "icon": "sun",
+  "sortOrder": 14,
+  "subcategories": [
+   {
+    "slug": "winter",
+    "name": "Winter"
+   },
+   {
+    "slug": "summer",
+    "name": "Summer"
+   },
+   {
+    "slug": "eid",
+    "name": "Eid"
+   },
+   {
+    "slug": "festive",
+    "name": "Festive"
+   },
+   {
+    "slug": "autumn",
+    "name": "Autumn"
+   },
+   {
+    "slug": "monsoon",
+    "name": "Monsoon"
+   },
+   {
+    "slug": "wedding",
+    "name": "Wedding"
+   }
+  ]
+ }
+]

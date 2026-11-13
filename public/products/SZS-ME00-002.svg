@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1000" width="800" height="1000" role="img" aria-label="Premium Cotton Panjabi — studio illustration">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#F8F5F0"/><stop offset="1" stop-color="#EDE7DD"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="50%" cy="42%" r="52%">
+      <stop offset="0" stop-color="#FFFFFF" stop-opacity=".95"/>
+      <stop offset="1" stop-color="#FFFFFF" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="800" height="1000" fill="url(#bg)"/>
+  <rect width="800" height="1000" fill="url(#glow)"/>
+  <circle cx="400" cy="470" r="240" fill="#FFFFFF" opacity=".5"/>
+  <ellipse cx="400" cy="776" rx="196" ry="26" fill="#000000" opacity=".07"/>
+  <g><path d="M320 314 L384 280 L416 280 L480 314 L540 370 L500 422 L470 400 L470 566 L330 566 L330 400 L300 422 L260 370 Z" fill="#2C2B29"/>
+<path d="M330 566 L326 736 Q400 756 474 736 L470 566" fill="#454340" opacity=".9"/>
+<path d="M384 286 L400 330 L416 286" stroke="#454340" stroke-width="6" fill="none"/>
+<path d="M400 566 L400 738" stroke="#F6F3EE" stroke-width="4" opacity=".5"/>
+<path d="M356 470 L444 470" stroke="#454340" stroke-width="5" opacity=".5"/></g>
+  <text x="64" y="892" font-family="Georgia, 'Times New Roman', serif" font-size="19" letter-spacing="4.5" fill="#8A8377">Apparel study</text>
+  <text x="64" y="926" font-family="Helvetica, Arial, sans-serif" font-size="14" letter-spacing="3" fill="#A9A296">SUPER Z SHOP</text>
+</svg>

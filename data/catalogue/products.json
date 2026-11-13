@@ -1,0 +1,6893 @@
+[
+ {
+  "id": 1,
+  "sku": "SZS-ME00-001",
+  "slug": "classic-oxford-cotton-shirt",
+  "name": "Classic Oxford Cotton Shirt",
+  "nameBn": "ক্লাসিক অক্সফোর্ড কটন শার্ট",
+  "categorySlug": "mens-fashion",
+  "subcategory": "Shirts",
+  "shortDescription": "Yarn-dyed cotton oxford with a soft roll collar and a clean, tapered body.",
+  "wholesaleCost": 1150,
+  "retailPrice": 2190,
+  "salePrice": null,
+  "priceStatus": "unverified",
+  "moq": 6,
+  "colors": [
+   "Black",
+   "White"
+  ],
+  "sizes": [
+   "S",
+   "M",
+   "L",
+   "XL",
+   "XXL"
+  ],
+  "tags": [
+   "office",
+   "cotton",
+   "solid"
+  ],
+  "flags": [
+   "featured"
+  ],
+  "warranty": "7-day replacement"
+ },
+ {
+  "id": 2,
+  "sku": "SZS-ME00-002",
+  "slug": "premium-cotton-panjabi",
+  "name": "Premium Cotton Panjabi",
+  "nameBn": "প্রিমিয়াম কটন পাঞ্জাবি",
+  "categorySlug": "mens-fashion",
+  "subcategory": "Panjabi",
+  "shortDescription": "Hand-finished placket and mandarin collar in breathable slub cotton for Eid and Fridays.",
+  "wholesaleCost": 1450,
+  "retailPrice": 2990,
+  "salePrice": null,
+  "priceStatus": "unverified",
+  "moq": 6,
+  "colors": [
+   "Black",
+   "Off-White",
+   "Mustard"
+  ],
+  "sizes": [
+   "S",
+   "M",
+   "L",
+   "XL",
+   "XXL"
+  ],
+  "tags": [
+   "eid",
+   "festive",
+   "cotton"
+  ],
+  "flags": [
+   "trending"
+  ],
+  "warranty": "7-day replacement"
+ },
+ {
+  "id": 3,
+  "sku": "SZS-ME00-003",
+  "slug": "slim-fit-stretch-chino",
+  "name": "Slim Fit Stretch Chino",
+  "nameBn": "স্লিম ফিট স্ট্রেচ চিনো",
+  "categorySlug": "mens-fashion",
+  "subcategory": "Trousers",
+  "shortDescription": "Cotton-twill chino with 2% elastane so it holds shape through a full workday.",
+  "wholesaleCost": 1050,
+  "retailPrice": 1990,
+  "salePrice": null,
+  "priceStatus": "unverified",
+  "moq": 6,
+  "colors": [
+   "Black",
+   "Tan",
+   "Brown",
+   "Charcoal"
+  ],
+  "sizes": [
+   "S",
+   "M",
+   "L",
+   "XL",
+   "XXL"
+  ],
+  "tags": [
+   "office",
+   "casual"
+  ],
+  "flags": [],
+  "warranty": "7-day replacement"
+ },
+ {
+  "id": 4,
+  "sku": "SZS-ME00-004",
+  "slug": "oversized-heavyweight-tee",
+  "name": "Oversized Heavyweight Tee",
+  "nameBn": "ওভারসাইজড হেভিওয়েট টি-শার্ট",
+  "categorySlug": "mens-fashion",
+  "subcategory": "T-Shirts",
+  "shortDescription": "240 GSM combed cotton with a boxy drop-shoulder cut and ribbed neck tape.",
+  "wholesaleCost": 520,
+  "retailPrice": 1190,
+  "salePrice": 1010,
+  "priceStatus": "unverified",
+  "moq": 6,
+  "colors": [
+   "Maroon",
+   "Beige"
+  ],
+  "sizes": [
+   "S",
+   "M",
+   "L",
+   "XL",
+   "XXL"
+  ],
+  "tags": [
+   "streetwear",
+   "cotton"
+  ],
+  "flags": [
+   "featured"
+  ],
+  "warranty": "3-day replacement"
+ },
+ {
+  "id": 5,
+  "sku": "SZS-ME00-005",
+  "slug": "drop-shoulder-pique-polo",
+  "name": "Drop-Shoulder Pique Polo",
+  "nameBn": "ড্রপ-শোল্ডার পিকে পোলো",
+  "categorySlug": "mens-fashion",
+  "subcategory": "Polo Shirts",
+  "shortDescription": "Breathable pique knit polo with a two-button placket and side vents.",
+  "wholesaleCost": 640,
+  "retailPrice": 1290,
+  "salePrice": null,
+  "priceStatus": "unverified",
+  "moq": 6,
+  "colors": [
+   "Black",
+   "White",
+   "Navy"
+  ],
+  "sizes": [
+   "S",
+   "M",
+   "L",
+   "XL",
+   "XXL"
+  ],
+  "tags": [
+   "casual",
+   "summer"
+  ],
+  "flags": [
+   "trending"
+  ],
+  "warranty": "3-day replacement"
+ },
+ {
+  "id": 6,
+  "sku": "SZS-ME00-006",
+  "slug": "washed-denim-trucker-jacket",
+  "name": "Washed Denim Trucker Jacket",
+  "nameBn": "ওয়াশড ডেনিম ট্রাকার জ্যাকেট",
+  "categorySlug": "mens-fashion",
+  "subcategory": "Jackets",
+  "shortDescription": "Mid-weight 12 oz denim, stone-washed with copper rivets and twin chest pockets.",
+  "wholesaleCost": 1750,
+  "retailPrice": 3490,
+  "salePrice": null,
+  "priceStatus": "unverified",
+  "moq": 3,
+  "colors": [
+   "Black",
+   "Tan",
+   "Brown",
+   "Charcoal"
+  ],
+  "sizes": [
+   "S",
+   "M",
+   "L",
+   "XL",
+   "XXL"
+  ],
+  "tags": [
+   "winter",
+   "denim"
+  ],
+  "flags": [
+   "bestseller"
+  ],
+  "warranty": "7-day replacement"
+ },
+ {
+  "id": 7,
+  "sku": "SZS-ME00-007",
+  "slug": "two-piece-formal-suit",
+  "name": "Two-Piece Formal Suit",
+  "nameBn": "টু-পিস ফরমাল স্যুট",
+  "categorySlug": "mens-fashion",
+  "subcategory": "Suits",
+  "shortDescription": "Poly-viscose suiting with a half-canvas front, satin lining and matching trousers.",
+  "wholesaleCost": 4200,
+  "retailPrice": 7990,
+  "salePrice": null,
+  "priceStatus": "unverified",
+  "moq": 3,
+  "colors": [
+   "Black",
+   "Tan"
+  ],
+  "sizes": [
+   "S",
+   "M",
+   "L",
+   "XL",
+   "XXL"
+  ],
+  "tags": [
+   "wedding",
+   "formal"
+  ],
+  "flags": [],
+  "warranty": "7-day replacement"
+ },
+ {
+  "id": 8,
+  "sku": "SZS-ME00-008",
+  "slug": "brushed-fleece-hoodie",
+  "name": "Brushed Fleece Hoodie",
+  "nameBn": "ব্রাশড ফ্লিস হুডি",
+  "categorySlug": "mens-fashion",
+  "subcategory": "Hoodies",
+  "shortDescription": "320 GSM brushed fleece with kangaroo pocket and double-layer hood.",
+  "wholesaleCost": 950,
+  "retailPrice": 1890,
+  "salePrice": null,
+  "priceStatus": "unverified",
+  "moq": 6,
+  "colors": [
+   "Olive",
+   "Maroon",
+   "Beige"
+  ],
+  "sizes": [
+   "S",
+   "M",
+   "L",
+   "XL",
+   "XXL"
+  ],
+  "tags": [
+   "winter",
+   "streetwear"
+  ],
+  "flags": [],
+  "warranty": "7-day replacement"
+ },
+ {
+  "id": 9,
+  "sku": "SZS-ME00-009",
+  "slug": "utility-cargo-jogger",
+  "name": "Utility Cargo Jogger",
+  "nameBn": "ইউটিলিটি কার্গো জগার",
+  "categorySlug": "mens-fashion",
+  "subcategory": "Trousers",
+  "shortDescription": "Tapered jogger in ripstop cotton with six pockets and elastic cuffs.",
+  "wholesaleCost": 890,
+  "retailPrice": 1690,
+  "salePrice": null,
+  "priceStatus": "unverified",
+  "moq": 6,
+  "colors": [
+   "Black",
+   "White",
+   "Navy",
+   "Olive"
+  ],
+  "sizes": [
+   "S",
+   "M",
+   "L",
+   "XL",
+   "XXL"
+  ],
+  "tags": [
+   "casual",
+   "streetwear"
+  ],
+  "flags": [
+   "featured"
+  ],
+  "warranty": "7-day replacement"
+ },
+ {
+  "id": 10,
+  "sku": "SZS-ME00-010",
+  "slug": "cotton-kurta-set",
+  "name": "Cotton Kurta Set",
+  "nameBn": "কটন কুর্তা সেট",
+  "categorySlug": "mens-fashion",
+  "subcategory": "Kurta Sets",
+  "shortDescription": "Straight-cut kurta with matching pyjama in soft cotton cambric.",
+  "wholesaleCost": 1350,
+  "retailPrice": 2690,
+  "salePrice": null,
+  "priceStatus": "unverified",
+  "moq": 6,
+  "colors": [
+   "Off-White",
+   "Mustard"
+  ],
+  "sizes": [
+   "S",
+   "M",
+   "L",
+   "XL",
+   "XXL"
+  ],
+  "tags": [
+   "festive",
+   "eid"
+  ],
+  "flags": [
+   "bestseller"
+  ],
+  "warranty": "7-day replacement"
+ },
+ {
+  "id": 11,
+  "sku": "SZS-ME00-011",
+  "slug": "leather-trim-bomber-jacket",
+  "name": "Leather-Trim Bomber Jacket",
+  "nameBn": "লেদার-ট্রিম বোম্বার জ্যাকেট",
+  "categorySlug": "mens-fashion",
+  "subcategory": "Jackets",
+  "shortDescription": "Water-resistant shell with faux-leather trims and quilted lining.",
+  "wholesaleCost": 2400,
+  "retailPrice": 4590,
+  "salePrice": 3900,
+  "priceStatus": "unverified",
+  "moq": 3,
+  "colors": [
+   "Black",
+   "Tan",
+   "Brown"
+  ],
+  "sizes": [
+   "S",
+   "M",
+   "L",
+   "XL",
+   "XXL"
+  ],
+  "tags": [
+   "winter",
+   "premium"
+  ],
+  "flags": [],
+  "warranty": "7-day replacement"
+ },
+ {
+  "id": 12,
+  "sku": "SZS-ME00-012",
+  "slug": "linen-blend-summer-shirt",
+  "name": "Linen Blend Summer Shirt",
+  "nameBn": "লিনেন ব্লেন্ড সামার শার্ট",
+  "categorySlug": "mens-fashion",
+  "subcategory": "Shirts",
+  "shortDescription": "55% linen blend that breathes in Dhaka humidity and softens with every wash.",
+  "wholesaleCost": 980,
+  "retailPrice": 1890,
+  "salePrice": null,
+  "priceStatus": "unverified",
+  "moq": 6,
+  "colors": [
+   "Navy",
+   "Olive",
+   "Maroon",
+   "Beige"
+  ],
+  "sizes": [
+   "S",
+   "M",
+   "L",
+   "XL",
+   "XXL"
+  ],
+  "tags": [
+   "summer",
+   "office"
+  ],
+  "flags": [
+   "trending"
+  ],
+  "warranty": "7-day replacement"
+ },
+ {
+  "id": 13,
+  "sku": "SZS-ME00-013",
+  "slug": "combed-cotton-boxer-brief-3-pack",
+  "name": "Combed Cotton Boxer Brief (3-Pack)",
+  "nameBn": "কটন বক্সার ব্রিফ (৩ প্যাক)",
+  "categorySlug": "mens-fashion",
+  "subcategory": "Innerwear",
+  "shortDescription": "Tagless waistband, moisture-wicking combed cotton, three colours per pack.",
+  "wholesaleCost": 480,
+  "retailPrice": 990,
+  "salePrice": null,
+  "priceStatus": "unverified",
+  "moq": 12,
+  "colors": [
+   "Black",
+   "White"
+  ],
+  "sizes": [
+   "S",
+   "M",
+   "L",
+   "XL",
+   "XXL"
+  ],
+  "tags": [
+   "innerwear",
+   "cotton"
+  ],
+  "flags": [],
+  "warranty": "3-day replacement"
+ },
+ {
+  "id": 14,
+  "sku": "SZS-ME00-014",
+  "slug": "wool-blend-winter-muffler",
+  "name": "Wool-Blend Winter Muffler",
+  "nameBn": "উল-ব্লেন্ড শীতের মাফলার",
+  "categorySlug": "mens-fashion",
+  "subcategory": "Winter Wear",
+  "shortDescription": "Soft wool-blend muffler with fringed ends; light enough for a Dhaka winter.",
+  "wholesaleCost": 420,
+  "retailPrice": 890,
+  "salePrice": null,
+  "priceStatus": "unverified",
+  "moq": 12,
+  "colors": [
+   "Tan",
+   "Brown",
+   "Charcoal"
+  ],
+  "sizes": [
+   "One Size"
+  ],
+  "tags": [
+   "winter",
+   "gift"
+  ],
+  "flags": [
+   "bestseller",
+   "newArrival"
+  ],
+  "warranty": "3-day replacement"
+ },
+ {
+  "id": 15,
+  "sku": "SZS-ME00-015",
+  "slug": "ethnic-nehru-waistcoat",
+  "name": "Ethnic Nehru Waistcoat",
+  "nameBn": "এথনিক নেহরু ওয়েস্টকোট",
+  "categorySlug": "mens-fashion",
+  "subcategory": "Waistcoats",
+  "shortDescription": "Jacquard waistcoat that layers over any panjabi for weddings and Eid.",
+  "wholesaleCost": 1250,
+  "retailPrice": 2490,
+  "salePrice": null,
+  "priceStatus": "unverified",
+  "moq": 6,
+  "colors": [
+   "Maroon",
+   "Deep Green",
+   "Royal Blue",
+   "Black"
+  ],
+  "sizes": [
+   "S",
+   "M",
+   "L",
+   "XL",
+   "XXL"
+  ],
+  "tags": [
+   "wedding",
+   "festive"
+  ],
+  "flags": [
+   "newArrival"
+  ],
+  "warranty": "7-day replacement"
+ },
+ {
+  "id": 16,
+  "sku": "SZS-WO01-001",
+  "slug": "muslin-cotton-three-piece",
+  "name": "Muslin Cotton Three-Piece",
+  "nameBn": "মসলিন কটন থ্রি-পিস",
+  "categorySlug": "womens-fashion",
+  "subcategory": "Three-Piece",
+  "shortDescription": "Unstitched-feel printed muslin set with kameez, salwar and dupatta.",
+  "wholesaleCost": 1650,
+  "retailPrice": 3290,
+  "salePrice": null,
+  "priceStatus": "unverified",
+  "moq": 3,
+  "colors": [
+   "Maroon",
+   "Deep Green"
+  ],
+  "sizes": [
+   "XS",
+   "S",
+   "M",
+   "L",
+   "XL"
+  ],
+  "tags": [
+   "festive",
+   "cotton"
+  ],
+  "flags": [
+   "featured"
+  ],
+  "warranty": "7-day replacement"
+ },
+ {
+  "id": 17,
+  "sku": "SZS-WO01-002",
+  "slug": "kantha-stitch-cotton-saree",
+  "name": "Kantha-Stitch Cotton Saree",
+  "nameBn": "কাঁথা স্টিচ কটন শাড়ি",
+  "categorySlug": "womens-fashion",
+  "subcategory": "Saree",
+  "shortDescription": "Hand kantha-stitched cotton saree with a contrast woven border.",
+  "wholesaleCost": 1250,
+  "retailPrice": 2790,
+  "salePrice": null,
+  "priceStatus": "unverified",
+  "moq": 6,
+  "colors": [
+   "Black",
+   "Off-White",
+   "Mustard"
+  ],
+  "sizes": [
+   "One Size"
+  ],
+  "tags": [
+   "handloom",
+   "festive"
+  ],
+  "flags": [
+   "trending"
+  ],
+  "warranty": "7-day replacement"
+ },
+ {
+  "id": 18,
+  "sku": "SZS-WO01-003",
+  "slug": "georgette-party-saree",
+  "name": "Georgette Party Saree",
+  "nameBn": "জর্জেট পার্টি শাড়ি",
+  "categorySlug": "womens-fashion",
+  "subcategory": "Saree",
+  "shortDescription": "Fluid georgette with sequin scattered border and matching blouse piece.",
+  "wholesaleCost": 2100,
+  "retailPrice": 4290,
+  "salePrice": null,
+  "priceStatus": "unverified",
+  "moq": 3,
+  "colors": [
+   "Maroon",
+   "Deep Green",
+   "Royal Blue",
+   "Black"
+  ],
+  "sizes": [
+   "One Size"
+  ],
+  "tags": [
+   "party",
+   "wedding"
+  ],
+  "flags": [],
+  "warranty": "7-day replacement"
+ },
+ {
+  "id": 19,
+  "sku": "SZS-WO01-004",
+  "slug": "embroidered-cotton-kurti",
+  "name": "Embroidered Cotton Kurti",
+  "nameBn": "এমব্রয়ডারি কটন কুর্তি",
+  "categorySlug": "womens-fashion",
+  "subcategory": "Kurti",
+  "shortDescription": "Straight kurti with thread embroidery at the yoke and side slits.",
+  "wholesaleCost": 890,
+  "retailPrice": 1790,
+  "salePrice": 1520,
+  "priceStatus": "unverified",
+  "moq": 6,
+  "colors": [
+   "Off-White",
+   "Mustard"
+  ],
+  "sizes": [
+   "XS",
+   "S",
+   "M",
+   "L",
+   "XL"
+  ],
+  "tags": [
+   "casual",
+   "office"
+  ],
+  "flags": [
+   "featured"
+  ],
+  "warranty": "7-day replacement"
+ },
+ {
+  "id": 20,
+  "sku": "SZS-WO01-005",
+  "slug": "floral-print-maxi-dress",
+  "name": "Floral Print Maxi Dress",
+  "nameBn": "ফ্লোরাল ম্যাক্সি ড্রেস",
+  "categorySlug": "womens-fashion",
+  "subcategory": "Dresses",
+  "shortDescription": "Flowy viscose maxi with smocked waist and adjustable straps.",
+  "wholesaleCost": 1150,
+  "retailPrice": 2390,
+  "salePrice": null,
+  "priceStatus": "unverified",
+  "moq": 6,
+  "colors": [
+   "Black",
+   "White",
+   "Navy"
+  ],
+  "sizes": [
+   "XS",
+   "S",
+   "M",
+   "L",
+   "XL"
+  ],
+  "tags": [
+   "summer",
+   "party"
+  ],
+  "flags": [
+   "trending"
+  ],
+  "warranty": "7-day replacement"
+ },
+ {
+  "id": 21,
+  "sku": "SZS-WO01-006",
+  "slug": "wide-leg-palazzo-pants",
+  "name": "Wide-Leg Palazzo Pants",
+  "nameBn": "ওয়াইড-লেগ পালাজো",
+  "categorySlug": "womens-fashion",
+  "subcategory": "Bottoms",
+  "shortDescription": "Crepe palazzo with drawstring waist; pairs with kurti or shirt.",
+  "wholesaleCost": 640,
+  "retailPrice": 1390,
+  "salePrice": null,
+  "priceStatus": "unverified",
+  "moq": 6,
+  "colors": [
+   "Royal Blue",
+   "Black",
+   "Off-White",
+   "Mustard"
+  ],
+  "sizes": [
+   "XS",
+   "S",
+   "M",
+   "L",
+   "XL"
+  ],
+  "tags": [
+   "casual",
+   "comfort"
+  ],
+  "flags": [
+   "bestseller"
+  ],
+  "warranty": "3-day replacement"
+ },
+ {
+  "id": 22,
+  "sku": "SZS-WO01-007",
+  "slug": "cotton-nightwear-set",
+  "name": "Cotton Nightwear Set",
+  "nameBn": "কটন নাইটওয়্যার সেট",
+  "categorySlug": "womens-fashion",
+  "subcategory": "Nightwear",
+  "shortDescription": "Two-piece night set in printed cotton lawn with elastic waist.",
+  "wholesaleCost": 780,
+  "retailPrice": 1590,
+  "salePrice": null,
+  "priceStatus": "unverified",
+  "moq": 6,
+  "colors": [
+   "Black",
+   "White"
+  ],
+  "sizes": [
+   "XS",
+   "S",
+   "M",
+   "L",
+   "XL"
+  ],
+  "tags": [
+   "comfort",
+   "cotton"
+  ],
+  "flags": [],
+  "warranty": "7-day replacement"
+ },
+ {
+  "id": 23,
+  "sku": "SZS-WO01-008",
+  "slug": "denim-shirt-dress",
+  "name": "Denim Shirt Dress",
+  "nameBn": "ডেনিম শার্ট ড্রেস",
+  "categorySlug": "womens-fashion",
+  "subcategory": "Dresses",
+  "shortDescription": "Belted shirt dress in washed denim with roll-up sleeves.",
+  "wholesaleCost": 1350,
+  "retailPrice": 2690,
+  "salePrice": null,
+  "priceStatus": "unverified",
+  "moq": 6,
+  "colors": [
+   "Tan",
+   "Brown",
+   "Charcoal"
+  ],
+  "sizes": [
+   "XS",
+   "S",
+   "M",
+   "L",
+   "XL"
+  ],
+  "tags": [
+   "casual",
+   "denim"
+  ],
+  "flags": [],
+  "warranty": "7-day replacement"
+ },
+ {
+  "id": 24,
+  "sku": "SZS-WO01-009",
+  "slug": "chiffon-dupatta",
+  "name": "Chiffon Dupatta",
+  "nameBn": "শিফন ওড়না",
+  "categorySlug": "womens-fashion",
+  "subcategory": "Dupatta",
+  "shortDescription": "Lightweight chiffon dupatta with hand-finished scalloped edges.",
+  "wholesaleCost": 380,
+  "retailPrice": 890,
+  "salePrice": null,
+  "priceStatus": "unverified",
+  "moq": 12,
+  "colors": [
+   "Maroon",
+   "Deep Green",
+   "Royal Blue",
+   "Black"
+  ],
+  "sizes": [
+   "One Size"
+  ],
+  "tags": [
+   "festive",
+   "everyday"
+  ],
+  "flags": [
+   "featured"
+  ],
+  "warranty": "3-day replacement"
+ },
+ {
+  "id": 25,
+  "sku": "SZS-WO01-010",
+  "slug": "silk-blend-winter-shawl",
+  "name": "Silk-Blend Winter Shawl",
+  "nameBn": "সিল্ক-ব্লেন্ড শাল",
+  "categorySlug": "womens-fashion",
+  "subcategory": "Shawls",
+  "shortDescription": "Woven silk-blend shawl with a soft fall and reversible two-tone border.",
+  "wholesaleCost": 1450,
+  "retailPrice": 2990,
+  "salePrice": null,
+  "priceStatus": "unverified",
+  "moq": 6,
+  "colors": [
+   "Off-White",
+   "Mustard"
+  ],
+  "sizes": [
+   "One Size"
+  ],
+  "tags": [
+   "winter",
+   "gift"
+  ],
+  "flags": [
+   "bestseller"
+  ],
+  "warranty": "7-day replacement"
+ },
+ {
+  "id": 26,
+  "sku": "SZS-WO01-011",
+  "slug": "ruffle-neck-blouse",
+  "name": "Ruffle Neck Blouse",
+  "nameBn": "রাফল নেক ব্লাউজ",
+  "categorySlug": "womens-fashion",
+  "subcategory": "Tops",
+  "shortDescription": "Satin-finish blouse with ruffle neckline and covered buttons.",
+  "wholesaleCost": 950,
+  "retailPrice": 1990,
+  "salePrice": 1690,
+  "priceStatus": "unverified",
+  "moq": 6,
+  "colors": [
+   "Black",
+   "White",
+   "Navy"
+  ],
+  "sizes": [
+   "XS",
+   "S",
+   "M",
+   "L",
+   "XL"
+  ],
+  "tags": [
+   "office",
+   "party"
+  ],
+  "flags": [],
+  "warranty": "7-day replacement"
+ },
+ {
+  "id": 27,
+  "sku": "SZS-WO01-012",
+  "slug": "printed-cotton-co-ord-set",
+  "name": "Printed Cotton Co-ord Set",
+  "nameBn": "প্রিন্টেড কটন কো-অর্ড সেট",
+  "categorySlug": "womens-fashion",
+  "subcategory": "Co-ord Sets",
+  "shortDescription": "Relaxed shirt and trouser set cut from the same print for effortless styling.",
+  "wholesaleCost": 1250,
+  "retailPrice": 2590,
+  "salePrice": null,
+  "priceStatus": "unverified",
+  "moq": 6,
+  "colors": [
+   "Navy",
+   "Olive",
+   "Maroon",
+   "Beige"
+  ],
+  "sizes": [
+   "XS",
+   "S",
+   "M",
+   "L",
+   "XL"
+  ],
+  "tags": [
+   "casual",
+   "summer"
+  ],
+  "flags": [
+   "trending"
+  ],
+  "warranty": "7-day replacement"
+ },
+ {
+  "id": 28,
+  "sku": "SZS-WO01-013",
+  "slug": "semi-formal-lehenga",
+  "name": "Semi-Formal Lehenga",
+  "nameBn": "সেমি-ফরমাল লেহেঙ্গা",
+  "categorySlug": "womens-fashion",
+  "subcategory": "Bridal",
+  "shortDescription": "Net lehenga with hand work on the bodice and a soft kanchan-style flare.",
+  "wholesaleCost": 6500,
+  "retailPrice": 12900,
+  "salePrice": null,
+  "priceStatus": "unverified",
+  "moq": 3,
+  "colors": [
+   "Maroon",
+   "Deep Green"
+  ],
+  "sizes": [
+   "XS",
+   "S",
+   "M",
+   "L",
+   "XL"
+  ],
+  "tags": [
+   "wedding",
+   "bridal"
+  ],
+  "flags": [],
+  "warranty": "7-day replacement"
+ },
+ {
+  "id": 29,
+  "sku": "SZS-WO01-014",
+  "slug": "pleated-midi-skirt",
+  "name": "Pleated Midi Skirt",
+  "nameBn": "প্লিটেড মিডি স্কার্ট",
+  "categorySlug": "womens-fashion",
+  "subcategory": "Bottoms",
+  "shortDescription": "Knife-pleated midi with elasticated waist and matte finish.",
+  "wholesaleCost": 890,
+  "retailPrice": 1890,
+  "salePrice": null,
+  "priceStatus": "unverified",
+  "moq": 6,
+  "colors": [
+   "Olive",
+   "Maroon",
+   "Beige"
+  ],
+  "sizes": [
+   "XS",
+   "S",
+   "M",
+   "L",
+   "XL"
+  ],
+  "tags": [
+   "office",
+   "party"
+  ],
+  "flags": [
+   "bestseller",
+   "newArrival"
+  ],
+  "warranty": "7-day replacement"
+ },
+ {
+  "id": 30,
+  "sku": "SZS-WO01-015",
+  "slug": "embroidered-salwar-kameez",
+  "name": "Embroidered Salwar Kameez",
+  "nameBn": "এমব্রয়ডারি সালোয়ার কামিজ",
+  "categorySlug": "womens-fashion",
+  "subcategory": "Three-Piece",
+  "shortDescription": "Kameez with mirror-work yoke, matching salwar and printed dupatta.",
+  "wholesaleCost": 1850,
+  "retailPrice": 3690,
+  "salePrice": null,
+  "priceStatus": "unverified",
+  "moq": 3,
+  "colors": [
+   "Maroon",
+   "Deep Green",
+   "Royal Blue",
+   "Black"
+  ],
+  "sizes": [
+   "XS",
+   "S",
+   "M",
+   "L",
+   "XL"
+  ],
+  "tags": [
+   "festive",
+   "eid"
+  ],
+  "flags": [
+   "newArrival"
+  ],
+  "warranty": "7-day replacement"
+ },
+ {
+  "id": 31,
+  "sku": "SZS-UN02-001",
+  "slug": "cotton-twill-baseball-cap",
+  "name": "Cotton Twill Baseball Cap",
+  "nameBn": "কটন বেসবল ক্যাপ",
+  "categorySlug": "unisex-accessories",
+  "subcategory": "Caps & Hats",
+  "shortDescription": "Six-panel cotton cap with brass slider and curved visor.",
+  "wholesaleCost": 320,
+  "retailPrice": 690,
+  "salePrice": null,
+  "priceStatus": "unverified",
+  "moq": 12,
+  "colors": [
+   "Black",
+   "White"
+  ],
+  "sizes": [
+   "One Size"
+  ],
+  "tags": [
+   "summer",
+   "everyday"
+  ],
+  "flags": [
+   "featured"
+  ],
+  "warranty": "3-day replacement"
+ },
+ {
+  "id": 32,
+  "sku": "SZS-UN02-002",
+  "slug": "ribbed-knit-beanie",
+  "name": "Ribbed Knit Beanie",
+  "nameBn": "রিবড নিট বিনি",
+  "categorySlug": "unisex-accessories",
+  "subcategory": "Caps & Hats",
+  "shortDescription": "Stretch acrylic-wool beanie with folded cuff; fits all head sizes.",
+  "wholesaleCost": 290,
+  "retailPrice": 650,
+  "salePrice": null,
+  "priceStatus": "unverified",
+  "moq": 12,
+  "colors": [
+   "Tan",
+   "Brown",
+   "Charcoal"
+  ],
+  "sizes": [
+   "One Size"
+  ],
+  "tags": [
+   "winter"
+  ],
+  "flags": [
+   "trending"
+  ],
+  "warranty": "3-day replacement"
+ },
+ {
+  "id": 33,
+  "sku": "SZS-UN02-003",
+  "slug": "uv400-aviator-sunglasses",
+  "name": "UV400 Aviator Sunglasses",
+  "nameBn": "ইউভি৪০০ এভিয়েটর সানগ্লাস",
+  "categorySlug": "unisex-accessories",
+  "subcategory": "Eyewear",
+  "shortDescription": "Metal-frame aviators with polarised UV400 lenses and spring hinges.",
+  "wholesaleCost": 450,
+  "retailPrice": 1090,
+  "salePrice": null,
+  "priceStatus": "unverified",
+  "moq": 6,
+  "colors": [
+   "Gold",
+   "Silver",
+   "Rose Gold"
+  ],
+  "sizes": [
+   "One Size"
+  ],
+  "tags": [
+   "summer",
+   "uv"
+  ],
+  "flags": [],
+  "warranty": "3-day replacement"
+ },
+ {
+  "id": 34,
+  "sku": "SZS-UN02-004",
+  "slug": "classic-wayfarer-sunglasses",
+  "name": "Classic Wayfarer Sunglasses",
+  "nameBn": "ওয়েফেয়ারার সানগ্লাস",
+  "categorySlug": "unisex-accessories",
+  "subcategory": "Eyewear",
+  "shortDescription": "Acetate-look wayfarer with scratch-resistant grey lenses.",
+  "wholesaleCost": 380,
+  "retailPrice": 890,
+  "salePrice": 760,
+  "priceStatus": "unverified",
+  "moq": 12,
+  "colors": [
+   "White",
+   "Navy"
+  ],
+  "sizes": [
+   "One Size"
+  ],
+  "tags": [
+   "summer",
+   "everyday"
+  ],
+  "flags": [
+   "featured"
+  ],
+  "warranty": "3-day replacement"
+ },
+ {
+  "id": 35,
+  "sku": "SZS-UN02-005",
+  "slug": "bandana-print-cotton-scarf",
+  "name": "Bandana Print Cotton Scarf",
+  "nameBn": "ব্যান্ডানা কটন স্কার্ফ",
+  "categorySlug": "unisex-accessories",
+  "subcategory": "Scarves",
+  "shortDescription": "Square cotton scarf that works as head tie, bandana or neck wear.",
+  "wholesaleCost": 280,
+  "retailPrice": 690,
+  "salePrice": null,
+  "priceStatus": "unverified",
+  "moq": 12,
+  "colors": [
+   "Black",
+   "White",
+   "Navy"
+  ],
+  "sizes": [
+   "One Size"
+  ],
+  "tags": [
+   "summer"
+  ],
+  "flags": [
+   "trending"
+  ],
+  "warranty": "3-day replacement"
+ },
+ {
+  "id": 36,
+  "sku": "SZS-UN02-006",
+  "slug": "cushioned-ankle-socks-5-pack",
+  "name": "Cushioned Ankle Socks (5-Pack)",
+  "nameBn": "কুশনড অ্যাঙ্কল সকস (৫ প্যাক)",
+  "categorySlug": "unisex-accessories",
+  "subcategory": "Socks",
+  "shortDescription": "Combed cotton socks with reinforced heel, five pairs per pack.",
+  "wholesaleCost": 320,
+  "retailPrice": 750,
+  "salePrice": null,
+  "priceStatus": "unverified",
+  "moq": 12,
+  "colors": [
+   "Navy",
+   "Olive",
+   "Maroon",
+   "Beige"
+  ],
+  "sizes": [
+   "One Size"
+  ],
+  "tags": [
+   "everyday"
+  ],
+  "flags": [
+   "bestseller"
+  ],
+  "warranty": "3-day replacement"
+ },
+ {
+  "id": 37,
+  "sku": "SZS-UN02-007",
+  "slug": "full-grain-leather-belt",
+  "name": "Full-Grain Leather Belt",
+  "nameBn": "ফুল-গ্রেইন লেদার বেল্ট",
+  "categorySlug": "unisex-accessories",
+  "subcategory": "Belts",
+  "shortDescription": "Full-grain leather belt with brushed pin buckle; trim-to-fit.",
+  "wholesaleCost": 620,
+  "retailPrice": 1390,
+  "salePrice": null,
+  "priceStatus": "unverified",
+  "moq": 6,
+  "colors": [
+   "Black",
+   "Tan"
+  ],
+  "sizes": [
+   "One Size"
+  ],
+  "tags": [
+   "office",
+   "leather"
+  ],
+  "flags": [],
+  "warranty": "3-day replacement"
+ },
+ {
+  "id": 38,
+  "sku": "SZS-UN02-008",
+  "slug": "reusable-cotton-face-mask-3-pack",
+  "name": "Reusable Cotton Face Mask (3-Pack)",
+  "nameBn": "কটন ফেস মাস্ক (৩ প্যাক)",
+  "categorySlug": "unisex-accessories",
+  "subcategory": "Everyday Wear",
+  "shortDescription": "Three-layer cotton mask with adjustable ear loops; machine washable.",
+  "wholesaleCost": 180,
+  "retailPrice": 450,
+  "salePrice": null,
+  "priceStatus": "unverified",
+  "moq": 12,
+  "colors": [
+   "Olive",
+   "Maroon",
+   "Beige"
+  ],
+  "sizes": [
+   "One Size"
+  ],
+  "tags": [
+   "health"
+  ],
+  "flags": [],
+  "warranty": "3-day replacement"
+ },
+ {
+  "id": 39,
+  "sku": "SZS-UN02-009",
+  "slug": "touchscreen-knit-gloves",
+  "name": "Touchscreen Knit Gloves",
+  "nameBn": "টাচস্ক্রিন নিট গ্লাভস",
+  "categorySlug": "unisex-accessories",
+  "subcategory": "Gloves",
+  "shortDescription": "Conductive fingertips for phone use, thermal knit back.",
+  "wholesaleCost": 260,
+  "retailPrice": 590,
+  "salePrice": null,
+  "priceStatus": "unverified",
+  "moq": 12,
+  "colors": [
+   "Black",
+   "Tan",
+   "Brown",
+   "Charcoal"
+  ],
+  "sizes": [
+   "One Size"
+  ],
+  "tags": [
+   "winter"
+  ],
+  "flags": [
+   "featured"
+  ],
+  "warranty": "3-day replacement"
+ },
+ {
+  "id": 40,
+  "sku": "SZS-UN02-010",
+  "slug": "auto-open-compact-umbrella",
+  "name": "Auto-Open Compact Umbrella",
+  "nameBn": "অটো-ওপেন আম্ব্রেলা",
+  "categorySlug": "unisex-accessories",
+  "subcategory": "Umbrella",
+  "shortDescription": "Windproof eight-rib frame with auto-open and a 95 cm canopy.",
+  "wholesaleCost": 620,
+  "retailPrice": 1390,
+  "salePrice": null,
+  "priceStatus": "unverified",
+  "moq": 6,
+  "colors": [
+   "White",
+   "Navy"
+  ],
+  "sizes": [
+   "One Size"
+  ],
+  "tags": [
+   "monsoon"
+  ],
+  "flags": [
+   "bestseller"
+  ],
+  "warranty": "3-day replacement"
+ },
+ {
+  "id": 41,
+  "sku": "SZS-UN02-011",
+  "slug": "packable-rain-poncho",
+  "name": "Packable Rain Poncho",
+  "nameBn": "প্যাকেবল রেইন পঞ্চো",
+  "categorySlug": "unisex-accessories",
+  "subcategory": "Rainwear",
+  "shortDescription": "Reusable EVA poncho that folds into its own pouch bag.",
+  "wholesaleCost": 340,
+  "retailPrice": 790,
+  "salePrice": 670,
+  "priceStatus": "unverified",
+  "moq": 12,
+  "colors": [
+   "Black",
+   "White",
+   "Navy"
+  ],
+  "sizes": [
+   "One Size"
+  ],
+  "tags": [
+   "monsoon"
+  ],
+  "flags": [],
+  "warranty": "3-day replacement"
+ },
+ {
+  "id": 42,
+  "sku": "SZS-UN02-012",
+  "slug": "unisex-bucket-hat",
+  "name": "Unisex Bucket Hat",
+  "nameBn": "ইউনিসেক্স বাকেট হ্যাট",
+  "categorySlug": "unisex-accessories",
+  "subcategory": "Caps & Hats",
+  "shortDescription": "Washed cotton bucket hat with a soft, packable brim.",
+  "wholesaleCost": 360,
+  "retailPrice": 790,
+  "salePrice": null,
+  "priceStatus": "unverified",
+  "moq": 12,
+  "colors": [
+   "Navy",
+   "Olive",
+   "Maroon",
+   "Beige"
+  ],
+  "sizes": [
+   "One Size"
+  ],
+  "tags": [
+   "summer",
+   "streetwear"
+  ],
+  "flags": [
+   "trending"
+  ],
+  "warranty": "3-day replacement"
+ },
+ {
+  "id": 43,
+  "sku": "SZS-UN02-013",
+  "slug": "sport-wrist-sweatband",
+  "name": "Sport Wrist Sweatband",
+  "nameBn": "স্পোর্ট রিস্টব্যান্ড",
+  "categorySlug": "unisex-accessories",
+  "subcategory": "Sport",
+  "shortDescription": "Terry-cotton sweatband pair with four-way stretch.",
+  "wholesaleCost": 150,
+  "retailPrice": 390,
+  "salePrice": null,
+  "priceStatus": "unverified",
+  "moq": 12,
+  "colors": [
+   "Black",
+   "White"
+  ],
+  "sizes": [
+   "One Size"
+  ],
+  "tags": [
+   "fitness"
+  ],
+  "flags": [],
+  "warranty": "3-day replacement"
+ },
+ {
+  "id": 44,
+  "sku": "SZS-UN02-014",
+  "slug": "lanyard-with-card-holder",
+  "name": "Lanyard with Card Holder",
+  "nameBn": "ল্যানিয়ার্ড সহ কার্ড হোল্ডার",
+  "categorySlug": "unisex-accessories",
+  "subcategory": "Everyday Wear",
+  "shortDescription": "Printed lanyard with a retractable badge clip for office ID cards.",
+  "wholesaleCost": 220,
+  "retailPrice": 490,
+  "salePrice": null,
+  "priceStatus": "unverified",
+  "moq": 12,
+  "colors": [
+   "Black",
+   "White",
+   "Navy"
+  ],
+  "sizes": [
+   "One Size"
+  ],
+  "tags": [
+   "office"
+  ],
+  "flags": [
+   "bestseller",
+   "newArrival"
+  ],
+  "warranty": "3-day replacement"
+ },
+ {
+  "id": 45,
+  "sku": "SZS-UN02-015",
+  "slug": "cotton-handloom-stole",
+  "name": "Cotton Handloom Stole",
+  "nameBn": "হ্যান্ডলুম কটন স্টোল",
+  "categorySlug": "unisex-accessories",
+  "subcategory": "Scarves",
+  "shortDescription": "Handwoven stole from Bangladeshi handloom weavers with fringed ends.",
+  "wholesaleCost": 420,
+  "retailPrice": 990,
+  "salePrice": null,
+  "priceStatus": "unverified",
+  "moq": 12,
+  "colors": [
+   "Maroon",
+   "Deep Green",
+   "Royal Blue",
+   "Black"
+  ],
+  "sizes": [
+   "One Size"
+  ],
+  "tags": [
+   "handloom",
+   "gift"
+  ],
+  "flags": [
+   "newArrival"
+  ],
+  "warranty": "3-day replacement"
+ },
+ {
+  "id": 46,
+  "sku": "SZS-JE03-001",
+  "slug": "gold-plated-choker-set",
+  "name": "Gold-Plated Choker Set",
+  "nameBn": "গোল্ড-প্লেটেড চোকার সেট",
+  "categorySlug": "jewellery",
+  "subcategory": "Necklace Sets",
+  "shortDescription": "Gold-plated choker with matching earrings in an anti-tarnish finish.",
+  "wholesaleCost": 820,
+  "retailPrice": 1990,
+  "salePrice": null,
+  "priceStatus": "unverified",
+  "moq": 6,
+  "colors": [
+   "Gold",
+   "Silver"
+  ],
+  "sizes": [
+   "One Size"
+  ],
+  "tags": [
+   "wedding",
+   "party"
+  ],
+  "flags": [
+   "featured"
+  ],
+  "warranty": "7-day replacement"
+ },
+ {
+  "id": 47,
+  "sku": "SZS-JE03-002",
+  "slug": "kundan-necklace-set",
+  "name": "Kundan Necklace Set",
+  "nameBn": "কুন্দন নেকলেস সেট",
+  "categorySlug": "jewellery",
+  "subcategory": "Necklace Sets",
+  "shortDescription": "Kundan-work choker with pearl drops, earrings and maang tikka.",
+  "wholesaleCost": 1450,
+  "retailPrice": 3490,
+  "salePrice": null,
+  "priceStatus": "unverified",
+  "moq": 3,
+  "colors": [
+   "Gold",
+   "Silver",
+   "Rose Gold"
+  ],
+  "sizes": [
+   "One Size"
+  ],
+  "tags": [
+   "bridal",
+   "wedding"
+  ],
+  "flags": [
+   "trending"
+  ],
+  "warranty": "7-day replacement"
+ },
+ {
+  "id": 48,
+  "sku": "SZS-JE03-003",
+  "slug": "pearl-drop-earrings",
+  "name": "Pearl Drop Earrings",
+  "nameBn": "পার্ল ড্রপ ইয়ারিংস",
+  "categorySlug": "jewellery",
+  "subcategory": "Earrings",
+  "shortDescription": "Freshwater-look pearl drops on gold-tone hooks.",
+  "wholesaleCost": 320,
+  "retailPrice": 790,
+  "salePrice": null,
+  "priceStatus": "unverified",
+  "moq": 12,
+  "colors": [
+   "Gold",
+   "Silver",
+   "Rose Gold"
+  ],
+  "sizes": [
+   "One Size"
+  ],
+  "tags": [
+   "office",
+   "gift"
+  ],
+  "flags": [],
+  "warranty": "3-day replacement"
+ },
+ {
+  "id": 49,
+  "sku": "SZS-JE03-004",
+  "slug": "oxidised-silver-jhumka",
+  "name": "Oxidised Silver Jhumka",
+  "nameBn": "অক্সিডাইজড সিলভার ঝুমকা",
+  "categorySlug": "jewellery",
+  "subcategory": "Earrings",
+  "shortDescription": "Oxidised silver-finish jhumka with light ghungroo detail.",
+  "wholesaleCost": 380,
+  "retailPrice": 890,
+  "salePrice": 760,
+  "priceStatus": "unverified",
+  "moq": 12,
+  "colors": [
+   "Silver",
+   "Rose Gold"
+  ],
+  "sizes": [
+   "One Size"
+  ],
+  "tags": [
+   "festive",
+   "ethnic"
+  ],
+  "flags": [
+   "featured"
+  ],
+  "warranty": "3-day replacement"
+ },
+ {
+  "id": 50,
+  "sku": "SZS-JE03-005",
+  "slug": "adjustable-ring-set-5-piece",
+  "name": "Adjustable Ring Set (5-Piece)",
+  "nameBn": "অ্যাডজাস্টেবল রিং সেট (৫ পিস)",
+  "categorySlug": "jewellery",
+  "subcategory": "Rings",
+  "shortDescription": "Five stacking rings in mixed metals; free-size bands.",
+  "wholesaleCost": 260,
+  "retailPrice": 650,
+  "salePrice": null,
+  "priceStatus": "unverified",
+  "moq": 12,
+  "colors": [
+   "Gold",
+   "Silver",
+   "Rose Gold"
+  ],
+  "sizes": [
+   "One Size"
+  ],
+  "tags": [
+   "gift",
+   "everyday"
+  ],
+  "flags": [
+   "trending"
+  ],
+  "warranty": "3-day replacement"
+ },
+ {
+  "id": 51,
+  "sku": "SZS-JE03-006",
+  "slug": "meenakari-bangle-set",
+  "name": "Meenakari Bangle Set",
+  "nameBn": "মিনাকারি বাঙ্গল সেট",
+  "categorySlug": "jewellery",
+  "subcategory": "Bangles",
+  "shortDescription": "Hand-painted enamel bangles, set of six with a velvet pouch.",
+  "wholesaleCost": 540,
+  "retailPrice": 1290,
+  "salePrice": null,
+  "priceStatus": "unverified",
+  "moq": 6,
+  "colors": [
+   "Gold",
+   "Silver",
+   "Rose Gold"
+  ],
+  "sizes": [
+   "One Size"
+  ],
+  "tags": [
+   "festive",
+   "gift"
+  ],
+  "flags": [
+   "bestseller"
+  ],
+  "warranty": "3-day replacement"
+ },
+ {
+  "id": 52,
+  "sku": "SZS-JE03-007",
+  "slug": "sterling-silver-chain-pendant",
+  "name": "Sterling Silver Chain Pendant",
+  "nameBn": "স্টার্লিং সিলভার চেইন পেন্ডেন্ট",
+  "categorySlug": "jewellery",
+  "subcategory": "Necklaces",
+  "shortDescription": "92.5 silver-plated chain with a cubic zirconia pendant.",
+  "wholesaleCost": 690,
+  "retailPrice": 1590,
+  "salePrice": null,
+  "priceStatus": "unverified",
+  "moq": 6,
+  "colors": [
+   "Gold",
+   "Silver"
+  ],
+  "sizes": [
+   "One Size"
+  ],
+  "tags": [
+   "gift",
+   "minimal"
+  ],
+  "flags": [],
+  "warranty": "7-day replacement"
+ },
+ {
+  "id": 53,
+  "sku": "SZS-JE03-008",
+  "slug": "american-diamond-studs",
+  "name": "American Diamond Studs",
+  "nameBn": "আমেরিকান ডায়মন্ড স্টাডস",
+  "categorySlug": "jewellery",
+  "subcategory": "Earrings",
+  "shortDescription": "AD studs with screw-back closure for all-day comfort.",
+  "wholesaleCost": 420,
+  "retailPrice": 990,
+  "salePrice": null,
+  "priceStatus": "unverified",
+  "moq": 12,
+  "colors": [
+   "Gold",
+   "Silver",
+   "Rose Gold"
+  ],
+  "sizes": [
+   "One Size"
+  ],
+  "tags": [
+   "office",
+   "party"
+  ],
+  "flags": [],
+  "warranty": "3-day replacement"
+ },
+ {
+  "id": 54,
+  "sku": "SZS-JE03-009",
+  "slug": "terracotta-handpainted-earrings",
+  "name": "Terracotta Handpainted Earrings",
+  "nameBn": "টেরাকোটা ইয়ারিংস",
+  "categorySlug": "jewellery",
+  "subcategory": "Earrings",
+  "shortDescription": "Handpainted terracotta earrings made by local artisan clusters.",
+  "wholesaleCost": 220,
+  "retailPrice": 590,
+  "salePrice": null,
+  "priceStatus": "unverified",
+  "moq": 12,
+  "colors": [
+   "Ivory",
+   "Sage",
+   "Terracotta",
+   "Grey"
+  ],
+  "sizes": [
+   "One Size"
+  ],
+  "tags": [
+   "handmade",
+   "gift"
+  ],
+  "flags": [
+   "featured"
+  ],
+  "warranty": "3-day replacement"
+ },
+ {
+  "id": 55,
+  "sku": "SZS-JE03-010",
+  "slug": "bridal-maang-tikka",
+  "name": "Bridal Maang Tikka",
+  "nameBn": "ব্রাইডাল মাং টিকা",
+  "categorySlug": "jewellery",
+  "subcategory": "Bridal",
+  "shortDescription": "Kundan maang tikka with adjustable chain for bridal styling.",
+  "wholesaleCost": 720,
+  "retailPrice": 1790,
+  "salePrice": null,
+  "priceStatus": "unverified",
+  "moq": 6,
+  "colors": [
+   "Silver",
+   "Rose Gold"
+  ],
+  "sizes": [
+   "One Size"
+  ],
+  "tags": [
+   "bridal"
+  ],
+  "flags": [
+   "bestseller"
+  ],
+  "warranty": "7-day replacement"
+ },
+ {
+  "id": 56,
+  "sku": "SZS-JE03-011",
+  "slug": "nose-pin-set-3-piece",
+  "name": "Nose Pin Set (3-Piece)",
+  "nameBn": "নোজ পিন সেট",
+  "categorySlug": "jewellery",
+  "subcategory": "Everyday",
+  "shortDescription": "Hypoallergenic nose pins in three sizes with screw backs.",
+  "wholesaleCost": 180,
+  "retailPrice": 450,
+  "salePrice": 380,
+  "priceStatus": "unverified",
+  "moq": 12,
+  "colors": [
+   "Gold",
+   "Silver",
+   "Rose Gold"
+  ],
+  "sizes": [
+   "One Size"
+  ],
+  "tags": [
+   "everyday",
+   "gift"
+  ],
+  "flags": [],
+  "warranty": "3-day replacement"
+ },
+ {
+  "id": 57,
+  "sku": "SZS-JE03-012",
+  "slug": "silver-finish-anklet-pair",
+  "name": "Silver-Finish Anklet Pair",
+  "nameBn": "সিলভার অ্যাঙ্কলেট পেয়ার",
+  "categorySlug": "jewellery",
+  "subcategory": "Anklets",
+  "shortDescription": "Adjustable anklet pair with tiny bell charms.",
+  "wholesaleCost": 340,
+  "retailPrice": 790,
+  "salePrice": null,
+  "priceStatus": "unverified",
+  "moq": 12,
+  "colors": [
+   "Gold",
+   "Silver",
+   "Rose Gold"
+  ],
+  "sizes": [
+   "One Size"
+  ],
+  "tags": [
+   "festive"
+  ],
+  "flags": [
+   "trending"
+  ],
+  "warranty": "3-day replacement"
+ },
+ {
+  "id": 58,
+  "sku": "SZS-JE03-013",
+  "slug": "crystal-brooch-pin",
+  "name": "Crystal Brooch Pin",
+  "nameBn": "ক্রিস্টাল ব্রোচ পিন",
+  "categorySlug": "jewellery",
+  "subcategory": "Brooches",
+  "shortDescription": "Crystal brooch that finishes a saree, blazer or panjabi.",
+  "wholesaleCost": 380,
+  "retailPrice": 890,
+  "salePrice": null,
+  "priceStatus": "unverified",
+  "moq": 12,
+  "colors": [
+   "Gold",
+   "Silver"
+  ],
+  "sizes": [
+   "One Size"
+  ],
+  "tags": [
+   "wedding",
+   "gift"
+  ],
+  "flags": [],
+  "warranty": "3-day replacement"
+ },
+ {
+  "id": 59,
+  "sku": "SZS-JE03-014",
+  "slug": "layered-coin-necklace",
+  "name": "Layered Coin Necklace",
+  "nameBn": "লেয়ারড কয়েন নেকলেস",
+  "categorySlug": "jewellery",
+  "subcategory": "Necklaces",
+  "shortDescription": "Two-layer coin necklace in antique-gold finish.",
+  "wholesaleCost": 460,
+  "retailPrice": 1090,
+  "salePrice": null,
+  "priceStatus": "unverified",
+  "moq": 6,
+  "colors": [
+   "Gold",
+   "Silver",
+   "Rose Gold"
+  ],
+  "sizes": [
+   "One Size"
+  ],
+  "tags": [
+   "trending",
+   "party"
+  ],
+  "flags": [
+   "bestseller",
+   "newArrival"
+  ],
+  "warranty": "3-day replacement"
+ },
+ {
+  "id": 60,
+  "sku": "SZS-JE03-015",
+  "slug": "resin-floral-earrings",
+  "name": "Resin Floral Earrings",
+  "nameBn": "রেজিন ফ্লোরাল ইয়ারিংস",
+  "categorySlug": "jewellery",
+  "subcategory": "Earrings",
+  "shortDescription": "Hand-cast resin florals with hypoallergenic posts.",
+  "wholesaleCost": 240,
+  "retailPrice": 590,
+  "salePrice": null,
+  "priceStatus": "unverified",
+  "moq": 12,
+  "colors": [
+   "Ivory",
+   "Sage",
+   "Terracotta",
+   "Grey"
+  ],
+  "sizes": [
+   "One Size"
+  ],
+  "tags": [
+   "summer",
+   "handmade"
+  ],
+  "flags": [
+   "newArrival"
+  ],
+  "warranty": "3-day replacement"
+ },
+ {
+  "id": 61,
+  "sku": "SZS-WA04-001",
+  "slug": "minimal-leather-strap-watch",
+  "name": "Minimal Leather Strap Watch",
+  "nameBn": "মিনিমাল লেদার স্ট্র্যাপ ওয়াচ",
+  "categorySlug": "watches",
+  "subcategory": "Classic",
+  "shortDescription": "36 mm case, Japanese quartz movement and a genuine leather strap.",
+  "wholesaleCost": 1150,
+  "retailPrice": 2690,
+  "salePrice": null,
+  "priceStatus": "unverified",
+  "moq": 6,
+  "colors": [
+   "Black",
+   "Tan"
+  ],
+  "sizes": [
+   "One Size"
+  ],
+  "tags": [
+   "office",
+   "minimal"
+  ],
+  "flags": [
+   "featured"
+  ],
+  "warranty": "7-day replacement"
+ },
+ {
+  "id": 62,
+  "sku": "SZS-WA04-002",
+  "slug": "steel-chronograph-watch",
+  "name": "Steel Chronograph Watch",
+  "nameBn": "স্টিল ক্রোনোগ্রাফ ওয়াচ",
+  "categorySlug": "watches",
+  "subcategory": "Chronograph",
+  "shortDescription": "42 mm stainless-steel chronograph with luminous hands and 5 ATM splash resistance.",
+  "wholesaleCost": 2350,
+  "retailPrice": 4990,
+  "salePrice": null,
+  "priceStatus": "unverified",
+  "moq": 3,
+  "colors": [
+   "Gold",
+   "Silver",
+   "Rose Gold"
+  ],
+  "sizes": [
+   "One Size"
+  ],
+  "tags": [
+   "premium",
+   "gift"
+  ],
+  "flags": [
+   "trending"
+  ],
+  "warranty": "7-day replacement"
+ },
+ {
+  "id": 63,
+  "sku": "SZS-WA04-003",
+  "slug": "ceramic-bracelet-womens-watch",
+  "name": "Ceramic Bracelet Women's Watch",
+  "nameBn": "সিরামিক ব্রেসলেট ওয়াচ",
+  "categorySlug": "watches",
+  "subcategory": "Women",
+  "shortDescription": "Ceramic-link bracelet watch with mother-of-pearl dial.",
+  "wholesaleCost": 1650,
+  "retailPrice": 3590,
+  "salePrice": null,
+  "priceStatus": "unverified",
+  "moq": 3,
+  "colors": [
+   "Black",
+   "Tan",
+   "Brown",
+   "Charcoal"
+  ],
+  "sizes": [
+   "One Size"
+  ],
+  "tags": [
+   "party",
+   "gift"
+  ],
+  "flags": [],
+  "warranty": "7-day replacement"
+ },
+ {
+  "id": 64,
+  "sku": "SZS-WA04-004",
+  "slug": "milanese-mesh-watch",
+  "name": "Milanese Mesh Watch",
+  "nameBn": "মিলানিজ মেশ ওয়াচ",
+  "categorySlug": "watches",
+  "subcategory": "Minimal",
+  "shortDescription": "Slim mesh-bracelet watch with magnetic clasp and 38 mm dial.",
+  "wholesaleCost": 1250,
+  "retailPrice": 2790,
+  "salePrice": 2370,
+  "priceStatus": "unverified",
+  "moq": 6,
+  "colors": [
+   "Silver",
+   "Rose Gold"
+  ],
+  "sizes": [
+   "One Size"
+  ],
+  "tags": [
+   "office",
+   "minimal"
+  ],
+  "flags": [
+   "featured"
+  ],
+  "warranty": "7-day replacement"
+ },
+ {
+  "id": 65,
+  "sku": "SZS-WA04-005",
+  "slug": "digital-sports-watch",
+  "name": "Digital Sports Watch",
+  "nameBn": "ডিজিটাল স্পোর্টস ওয়াচ",
+  "categorySlug": "watches",
+  "subcategory": "Sport",
+  "shortDescription": "Water-resistant digital watch with stopwatch, alarm and backlight.",
+  "wholesaleCost": 620,
+  "retailPrice": 1390,
+  "salePrice": null,
+  "priceStatus": "unverified",
+  "moq": 6,
+  "colors": [
+   "Black",
+   "White",
+   "Navy"
+  ],
+  "sizes": [
+   "One Size"
+  ],
+  "tags": [
+   "fitness",
+   "everyday"
+  ],
+  "flags": [
+   "trending"
+  ],
+  "warranty": "3-day replacement"
+ },
+ {
+  "id": 66,
+  "sku": "SZS-WA04-006",
+  "slug": "couple-watch-pair",
+  "name": "Couple Watch Pair",
+  "nameBn": "কাপল ওয়াচ পেয়ার",
+  "categorySlug": "watches",
+  "subcategory": "Couple",
+  "shortDescription": "Matched his-and-hers pair in a gift box with a card.",
+  "wholesaleCost": 2450,
+  "retailPrice": 5290,
+  "salePrice": null,
+  "priceStatus": "unverified",
+  "moq": 3,
+  "colors": [
+   "Gold",
+   "Silver",
+   "Rose Gold"
+  ],
+  "sizes": [
+   "One Size"
+  ],
+  "tags": [
+   "gift",
+   "couple"
+  ],
+  "flags": [
+   "bestseller"
+  ],
+  "warranty": "7-day replacement"
+ },
+ {
+  "id": 67,
+  "sku": "SZS-WA04-007",
+  "slug": "rose-gold-slim-watch",
+  "name": "Rose Gold Slim Watch",
+  "nameBn": "রোজ গোল্ড স্লিম ওয়াচ",
+  "categorySlug": "watches",
+  "subcategory": "Women",
+  "shortDescription": "Rose-gold case on a fine link bracelet with a clean dial.",
+  "wholesaleCost": 1450,
+  "retailPrice": 3190,
+  "salePrice": null,
+  "priceStatus": "unverified",
+  "moq": 3,
+  "colors": [
+   "Gold",
+   "Silver"
+  ],
+  "sizes": [
+   "One Size"
+  ],
+  "tags": [
+   "party",
+   "gift"
+  ],
+  "flags": [],
+  "warranty": "7-day replacement"
+ },
+ {
+  "id": 68,
+  "sku": "SZS-WA04-008",
+  "slug": "skeleton-automatic-watch",
+  "name": "Skeleton Automatic Watch",
+  "nameBn": "স্কেলেটন অটোমেটিক ওয়াচ",
+  "categorySlug": "watches",
+  "subcategory": "Automatic",
+  "shortDescription": "Open-heart automatic with exhibition caseback and leather strap.",
+  "wholesaleCost": 3600,
+  "retailPrice": 7490,
+  "salePrice": null,
+  "priceStatus": "unverified",
+  "moq": 3,
+  "colors": [
+   "Tan",
+   "Brown",
+   "Charcoal"
+  ],
+  "sizes": [
+   "One Size"
+  ],
+  "tags": [
+   "premium",
+   "collector"
+  ],
+  "flags": [],
+  "warranty": "7-day replacement"
+ },
+ {
+  "id": 69,
+  "sku": "SZS-WA04-009",
+  "slug": "bamboo-wooden-watch",
+  "name": "Bamboo Wooden Watch",
+  "nameBn": "বাঁশ কাঠের ওয়াচ",
+  "categorySlug": "watches",
+  "subcategory": "Eco",
+  "shortDescription": "Bamboo-wood case and link band; lightweight and vegan.",
+  "wholesaleCost": 1350,
+  "retailPrice": 2990,
+  "salePrice": null,
+  "priceStatus": "unverified",
+  "moq": 6,
+  "colors": [
+   "Black",
+   "Tan",
+   "Brown",
+   "Charcoal"
+  ],
+  "sizes": [
+   "One Size"
+  ],
+  "tags": [
+   "eco",
+   "gift"
+  ],
+  "flags": [
+   "featured"
+  ],
+  "warranty": "7-day replacement"
+ },
+ {
+  "id": 70,
+  "sku": "SZS-WA04-010",
+  "slug": "kids-cartoon-watch",
+  "name": "Kids Cartoon Watch",
+  "nameBn": "কিডস কার্টুন ওয়াচ",
+  "categorySlug": "watches",
+  "subcategory": "Kids",
+  "shortDescription": "Soft silicone strap kids watch with easy-read dial.",
+  "wholesaleCost": 280,
+  "retailPrice": 690,
+  "salePrice": null,
+  "priceStatus": "unverified",
+  "moq": 12,
+  "colors": [
+   "White",
+   "Navy"
+  ],
+  "sizes": [
+   "One Size"
+  ],
+  "tags": [
+   "kids",
+   "gift"
+  ],
+  "flags": [
+   "bestseller"
+  ],
+  "warranty": "3-day replacement"
+ },
+ {
+  "id": 71,
+  "sku": "SZS-WA04-011",
+  "slug": "square-dial-vintage-watch",
+  "name": "Square Dial Vintage Watch",
+  "nameBn": "স্কয়ার ডায়াল ভিন্টেজ ওয়াচ",
+  "categorySlug": "watches",
+  "subcategory": "Vintage",
+  "shortDescription": "Square cushion case with a domed crystal and vintage leather strap.",
+  "wholesaleCost": 980,
+  "retailPrice": 2190,
+  "salePrice": 1860,
+  "priceStatus": "unverified",
+  "moq": 6,
+  "colors": [
+   "Black",
+   "Tan",
+   "Brown"
+  ],
+  "sizes": [
+   "One Size"
+  ],
+  "tags": [
+   "vintage",
+   "gift"
+  ],
+  "flags": [],
+  "warranty": "7-day replacement"
+ },
+ {
+  "id": 72,
+  "sku": "SZS-WA04-012",
+  "slug": "fitness-tracker-band",
+  "name": "Fitness Tracker Band",
+  "nameBn": "ফিটনেস ট্র্যাকার ব্যান্ড",
+  "categorySlug": "watches",
+  "subcategory": "Smart",
+  "shortDescription": "Step, heart-rate and sleep tracking with a 7-day battery.",
+  "wholesaleCost": 1150,
+  "retailPrice": 2490,
+  "salePrice": null,
+  "priceStatus": "unverified",
+  "moq": 6,
+  "colors": [
+   "Black",
+   "White",
+   "Navy"
+  ],
+  "sizes": [
+   "One Size"
+  ],
+  "tags": [
+   "fitness",
+   "tech"
+  ],
+  "flags": [
+   "trending"
+  ],
+  "warranty": "7-day replacement"
+ },
+ {
+  "id": 73,
+  "sku": "SZS-WA04-013",
+  "slug": "diver-style-rubber-strap-watch",
+  "name": "Diver-Style Rubber Strap Watch",
+  "nameBn": "ডাইভার স্টাইল রাবার স্ট্র্যাপ ওয়াচ",
+  "categorySlug": "watches",
+  "subcategory": "Sport",
+  "shortDescription": "Rotating bezel, screw-down crown look and a soft rubber strap.",
+  "wholesaleCost": 1550,
+  "retailPrice": 3290,
+  "salePrice": null,
+  "priceStatus": "unverified",
+  "moq": 3,
+  "colors": [
+   "Black",
+   "White"
+  ],
+  "sizes": [
+   "One Size"
+  ],
+  "tags": [
+   "sport",
+   "everyday"
+  ],
+  "flags": [],
+  "warranty": "7-day replacement"
+ },
+ {
+  "id": 74,
+  "sku": "SZS-WA04-014",
+  "slug": "calendar-moonphase-watch",
+  "name": "Calendar Moonphase Watch",
+  "nameBn": "ক্যালেন্ডার মুনফেজ ওয়াচ",
+  "categorySlug": "watches",
+  "subcategory": "Classic",
+  "shortDescription": "Day-date and moonphase display on a textured leather strap.",
+  "wholesaleCost": 2650,
+  "retailPrice": 5590,
+  "salePrice": null,
+  "priceStatus": "unverified",
+  "moq": 3,
+  "colors": [
+   "Tan",
+   "Brown",
+   "Charcoal"
+  ],
+  "sizes": [
+   "One Size"
+  ],
+  "tags": [
+   "premium",
+   "office"
+  ],
+  "flags": [
+   "bestseller",
+   "newArrival"
+  ],
+  "warranty": "7-day replacement"
+ },
+ {
+  "id": 75,
+  "sku": "SZS-WA04-015",
+  "slug": "interchangeable-strap-watch-set",
+  "name": "Interchangeable Strap Watch Set",
+  "nameBn": "ইন্টারচেঞ্জেবল স্ট্র্যাপ ওয়াচ সেট",
+  "categorySlug": "watches",
+  "subcategory": "Gift Set",
+  "shortDescription": "One watch head with three quick-release straps in a travel case.",
+  "wholesaleCost": 1750,
+  "retailPrice": 3790,
+  "salePrice": null,
+  "priceStatus": "unverified",
+  "moq": 3,
+  "colors": [
+   "Gold",
+   "Silver",
+   "Rose Gold"
+  ],
+  "sizes": [
+   "One Size"
+  ],
+  "tags": [
+   "gift",
+   "versatile"
+  ],
+  "flags": [
+   "newArrival"
+  ],
+  "warranty": "7-day replacement"
+ },
+ {
+  "id": 76,
+  "sku": "SZS-BA05-001",
+  "slug": "bifold-leather-wallet",
+  "name": "Bifold Leather Wallet",
+  "nameBn": "বাইফোল্ড লেদার ওয়ালেট",
+  "categorySlug": "bags-wallets",
+  "subcategory": "Wallets",
+  "shortDescription": "Full-grain leather bifold with eight card slots and RFID lining.",
+  "wholesaleCost": 480,
+  "retailPrice": 1090,
+  "salePrice": null,
+  "priceStatus": "unverified",
+  "moq": 6,
+  "colors": [
+   "Black",
+   "Tan"
+  ],
+  "sizes": [
+   "One Size"
+  ],
+  "tags": [
+   "gift",
+   "leather"
+  ],
+  "flags": [
+   "featured"
+  ],
+  "warranty": "3-day replacement"
+ },
+ {
+  "id": 77,
+  "sku": "SZS-BA05-002",
+  "slug": "slim-rfid-card-holder",
+  "name": "Slim RFID Card Holder",
+  "nameBn": "স্লিম আরএফআইডি কার্ড হোল্ডার",
+  "categorySlug": "bags-wallets",
+  "subcategory": "Wallets",
+  "shortDescription": "Pop-up aluminium card case with RFID blocking.",
+  "wholesaleCost": 290,
+  "retailPrice": 690,
+  "salePrice": null,
+  "priceStatus": "unverified",
+  "moq": 12,
+  "colors": [
+   "Black",
+   "White",
+   "Navy"
+  ],
+  "sizes": [
+   "One Size"
+  ],
+  "tags": [
+   "minimal",
+   "office"
+  ],
+  "flags": [
+   "trending"
+  ],
+  "warranty": "3-day replacement"
+ },
+ {
+  "id": 78,
+  "sku": "SZS-BA05-003",
+  "slug": "ladies-mini-sling-bag",
+  "name": "Ladies Mini Sling Bag",
+  "nameBn": "লেডিস মিনি স্লিং ব্যাগ",
+  "categorySlug": "bags-wallets",
+  "subcategory": "Sling & Crossbody",
+  "shortDescription": "Structured mini sling with detachable chain strap.",
+  "wholesaleCost": 890,
+  "retailPrice": 1990,
+  "salePrice": null,
+  "priceStatus": "unverified",
+  "moq": 6,
+  "colors": [
+   "Black",
+   "Tan",
+   "Brown",
+   "Charcoal"
+  ],
+  "sizes": [
+   "One Size"
+  ],
+  "tags": [
+   "party",
+   "gift"
+  ],
+  "flags": [],
+  "warranty": "7-day replacement"
+ },
+ {
+  "id": 79,
+  "sku": "SZS-BA05-004",
+  "slug": "canvas-tote-shoulder-bag",
+  "name": "Canvas Tote Shoulder Bag",
+  "nameBn": "ক্যানভাস টোট ব্যাগ",
+  "categorySlug": "bags-wallets",
+  "subcategory": "Tote",
+  "shortDescription": "Heavy cotton-canvas tote with inner zip pocket; fits a 14-inch laptop.",
+  "wholesaleCost": 650,
+  "retailPrice": 1490,
+  "salePrice": 1270,
+  "priceStatus": "unverified",
+  "moq": 6,
+  "colors": [
+   "Brown",
+   "Charcoal"
+  ],
+  "sizes": [
+   "One Size"
+  ],
+  "tags": [
+   "everyday",
+   "office"
+  ],
+  "flags": [
+   "featured"
+  ],
+  "warranty": "3-day replacement"
+ },
+ {
+  "id": 80,
+  "sku": "SZS-BA05-005",
+  "slug": "156-inch-laptop-backpack",
+  "name": "15.6-inch Laptop Backpack",
+  "nameBn": "১৫.৬ ইঞ্চি ল্যাপটপ ব্যাকপ্যাক",
+  "categorySlug": "bags-wallets",
+  "subcategory": "Backpacks",
+  "shortDescription": "Padded 15.6-inch laptop sleeve, USB pass-through and water-resistant shell.",
+  "wholesaleCost": 1250,
+  "retailPrice": 2690,
+  "salePrice": null,
+  "priceStatus": "unverified",
+  "moq": 6,
+  "colors": [
+   "Black",
+   "White",
+   "Navy"
+  ],
+  "sizes": [
+   "One Size"
+  ],
+  "tags": [
+   "office",
+   "travel"
+  ],
+  "flags": [
+   "trending"
+  ],
+  "warranty": "7-day replacement"
+ },
+ {
+  "id": 81,
+  "sku": "SZS-BA05-006",
+  "slug": "anti-theft-backpack",
+  "name": "Anti-Theft Backpack",
+  "nameBn": "অ্যান্টি-থেফট ব্যাকপ্যাক",
+  "categorySlug": "bags-wallets",
+  "subcategory": "Backpacks",
+  "shortDescription": "Hidden zip compartments and a built-in combination lock.",
+  "wholesaleCost": 1450,
+  "retailPrice": 3090,
+  "salePrice": null,
+  "priceStatus": "unverified",
+  "moq": 3,
+  "colors": [
+   "Black",
+   "White",
+   "Navy"
+  ],
+  "sizes": [
+   "One Size"
+  ],
+  "tags": [
+   "travel",
+   "security"
+  ],
+  "flags": [
+   "bestseller"
+  ],
+  "warranty": "7-day replacement"
+ },
+ {
+  "id": 82,
+  "sku": "SZS-BA05-007",
+  "slug": "canvas-messenger-bag",
+  "name": "Canvas Messenger Bag",
+  "nameBn": "ক্যানভাস মেসেঞ্জার ব্যাগ",
+  "categorySlug": "bags-wallets",
+  "subcategory": "Messenger",
+  "shortDescription": "Crossbody messenger with adjustable webbing strap and magnetic flap.",
+  "wholesaleCost": 950,
+  "retailPrice": 2090,
+  "salePrice": null,
+  "priceStatus": "unverified",
+  "moq": 6,
+  "colors": [
+   "Black",
+   "Tan"
+  ],
+  "sizes": [
+   "One Size"
+  ],
+  "tags": [
+   "casual",
+   "campus"
+  ],
+  "flags": [],
+  "warranty": "7-day replacement"
+ },
+ {
+  "id": 83,
+  "sku": "SZS-BA05-008",
+  "slug": "kids-school-backpack",
+  "name": "Kids School Backpack",
+  "nameBn": "কিডস স্কুল ব্যাকপ্যাক",
+  "categorySlug": "bags-wallets",
+  "subcategory": "Backpacks",
+  "shortDescription": "Lightweight school bag with reflective strips and bottle pocket.",
+  "wholesaleCost": 780,
+  "retailPrice": 1690,
+  "salePrice": null,
+  "priceStatus": "unverified",
+  "moq": 6,
+  "colors": [
+   "Black",
+   "White",
+   "Navy"
+  ],
+  "sizes": [
+   "One Size"
+  ],
+  "tags": [
+   "kids",
+   "school"
+  ],
+  "flags": [],
+  "warranty": "7-day replacement"
+ },
+ {
+  "id": 84,
+  "sku": "SZS-BA05-009",
+  "slug": "evening-clutch",
+  "name": "Evening Clutch",
+  "nameBn": "ইভিনিং ক্লাচ",
+  "categorySlug": "bags-wallets",
+  "subcategory": "Clutch",
+  "shortDescription": "Satin clutch with detachable wrist strap and magnetic closure.",
+  "wholesaleCost": 720,
+  "retailPrice": 1690,
+  "salePrice": null,
+  "priceStatus": "unverified",
+  "moq": 6,
+  "colors": [
+   "Black",
+   "Tan",
+   "Brown",
+   "Charcoal"
+  ],
+  "sizes": [
+   "One Size"
+  ],
+  "tags": [
+   "party",
+   "wedding"
+  ],
+  "flags": [
+   "featured"
+  ],
+  "warranty": "7-day replacement"
+ },
+ {
+  "id": 85,
+  "sku": "SZS-BA05-010",
+  "slug": "weekend-travel-duffle",
+  "name": "Weekend Travel Duffle",
+  "nameBn": "উইকেন্ড ট্রাভেল ডাফল",
+  "categorySlug": "bags-wallets",
+  "subcategory": "Duffle",
+  "shortDescription": "45 L duffle with shoe compartment and trolley sleeve.",
+  "wholesaleCost": 1650,
+  "retailPrice": 3490,
+  "salePrice": null,
+  "priceStatus": "unverified",
+  "moq": 3,
+  "colors": [
+   "Brown",
+   "Charcoal"
+  ],
+  "sizes": [
+   "One Size"
+  ],
+  "tags": [
+   "travel",
+   "gym"
+  ],
+  "flags": [
+   "bestseller"
+  ],
+  "warranty": "7-day replacement"
+ },
+ {
+  "id": 86,
+  "sku": "SZS-BA05-011",
+  "slug": "crossbody-mini-camera-bag",
+  "name": "Crossbody Mini Camera Bag",
+  "nameBn": "ক্রসবডি মিনি ক্যামেরা ব্যাগ",
+  "categorySlug": "bags-wallets",
+  "subcategory": "Sling & Crossbody",
+  "shortDescription": "Compact camera-style crossbody with adjustable wide strap.",
+  "wholesaleCost": 980,
+  "retailPrice": 2190,
+  "salePrice": 1860,
+  "priceStatus": "unverified",
+  "moq": 6,
+  "colors": [
+   "Black",
+   "Tan",
+   "Brown"
+  ],
+  "sizes": [
+   "One Size"
+  ],
+  "tags": [
+   "casual",
+   "trending"
+  ],
+  "flags": [],
+  "warranty": "7-day replacement"
+ },
+ {
+  "id": 87,
+  "sku": "SZS-BA05-012",
+  "slug": "14-inch-laptop-sleeve",
+  "name": "14-inch Laptop Sleeve",
+  "nameBn": "১৪ ইঞ্চি ল্যাপটপ স্লিভ",
+  "categorySlug": "bags-wallets",
+  "subcategory": "Laptop Bags",
+  "shortDescription": "Felt-lined sleeve with a padded lip and accessory pocket.",
+  "wholesaleCost": 560,
+  "retailPrice": 1290,
+  "salePrice": null,
+  "priceStatus": "unverified",
+  "moq": 6,
+  "colors": [
+   "Black",
+   "White",
+   "Navy"
+  ],
+  "sizes": [
+   "One Size"
+  ],
+  "tags": [
+   "office"
+  ],
+  "flags": [
+   "trending"
+  ],
+  "warranty": "3-day replacement"
+ },
+ {
+  "id": 88,
+  "sku": "SZS-BA05-013",
+  "slug": "wristlet-purse",
+  "name": "Wristlet Purse",
+  "nameBn": "রিস্টলেট পার্স",
+  "categorySlug": "bags-wallets",
+  "subcategory": "Wallets",
+  "shortDescription": "Zip wristlet that holds a phone, cards and keys.",
+  "wholesaleCost": 420,
+  "retailPrice": 990,
+  "salePrice": null,
+  "priceStatus": "unverified",
+  "moq": 12,
+  "colors": [
+   "Black",
+   "Tan"
+  ],
+  "sizes": [
+   "One Size"
+  ],
+  "tags": [
+   "party",
+   "minimal"
+  ],
+  "flags": [],
+  "warranty": "3-day replacement"
+ },
+ {
+  "id": 89,
+  "sku": "SZS-BA05-014",
+  "slug": "hanging-toiletry-pouch",
+  "name": "Hanging Toiletry Pouch",
+  "nameBn": "হ্যান্ডিং টয়লেট্রি পাউচ",
+  "categorySlug": "bags-wallets",
+  "subcategory": "Travel",
+  "shortDescription": "Water-resistant pouch with a hook for bathroom hanging.",
+  "wholesaleCost": 390,
+  "retailPrice": 890,
+  "salePrice": null,
+  "priceStatus": "unverified",
+  "moq": 12,
+  "colors": [
+   "Black",
+   "White",
+   "Navy"
+  ],
+  "sizes": [
+   "One Size"
+  ],
+  "tags": [
+   "travel"
+  ],
+  "flags": [
+   "bestseller",
+   "newArrival"
+  ],
+  "warranty": "3-day replacement"
+ },
+ {
+  "id": 90,
+  "sku": "SZS-BA05-015",
+  "slug": "belt-bag--bum-bag",
+  "name": "Belt Bag / Bum Bag",
+  "nameBn": "বেল্ট ব্যাগ",
+  "categorySlug": "bags-wallets",
+  "subcategory": "Sling & Crossbody",
+  "shortDescription": "Hands-free belt bag with a wide strap and rear slip pocket.",
+  "wholesaleCost": 620,
+  "retailPrice": 1390,
+  "salePrice": null,
+  "priceStatus": "unverified",
+  "moq": 6,
+  "colors": [
+   "Black",
+   "White",
+   "Navy"
+  ],
+  "sizes": [
+   "One Size"
+  ],
+  "tags": [
+   "travel",
+   "streetwear"
+  ],
+  "flags": [
+   "newArrival"
+  ],
+  "warranty": "3-day replacement"
+ },
+ {
+  "id": 91,
+  "sku": "SZS-PH06-001",
+  "slug": "silicone-protective-phone-case",
+  "name": "Silicone Protective Phone Case",
+  "nameBn": "সিলিকন ফোন কেস",
+  "categorySlug": "phone-tech",
+  "subcategory": "Phone Cases",
+  "shortDescription": "Liquid-silicone case with microfibre lining and raised camera lip.",
+  "wholesaleCost": 180,
+  "retailPrice": 490,
+  "salePrice": null,
+  "priceStatus": "unverified",
+  "moq": 12,
+  "colors": [
+   "Black",
+   "White"
+  ],
+  "sizes": [
+   "One Size"
+  ],
+  "tags": [
+   "everyday"
+  ],
+  "flags": [
+   "featured"
+  ],
+  "warranty": "3-day replacement"
+ },
+ {
+  "id": 92,
+  "sku": "SZS-PH06-002",
+  "slug": "9h-tempered-glass-protector",
+  "name": "9H Tempered Glass Protector",
+  "nameBn": "৯এইচ টেম্পারড গ্লাস",
+  "categorySlug": "phone-tech",
+  "subcategory": "Screen Protection",
+  "shortDescription": "9H hardness tempered glass with oleophobic coating and install frame.",
+  "wholesaleCost": 90,
+  "retailPrice": 290,
+  "salePrice": null,
+  "priceStatus": "unverified",
+  "moq": 12,
+  "colors": [
+   "Black",
+   "White",
+   "Navy"
+  ],
+  "sizes": [
+   "One Size"
+  ],
+  "tags": [
+   "everyday"
+  ],
+  "flags": [
+   "trending"
+  ],
+  "warranty": "3-day replacement"
+ },
+ {
+  "id": 93,
+  "sku": "SZS-PH06-003",
+  "slug": "10000mah-power-bank",
+  "name": "10000mAh Power Bank",
+  "nameBn": "১০০০০ এমএএইচ পাওয়ার ব্যাংক",
+  "categorySlug": "phone-tech",
+  "subcategory": "Power",
+  "shortDescription": "Dual-output power bank with USB-C input and digital charge display.",
+  "wholesaleCost": 950,
+  "retailPrice": 2190,
+  "salePrice": null,
+  "priceStatus": "unverified",
+  "moq": 6,
+  "colors": [
+   "Black",
+   "White",
+   "Navy"
+  ],
+  "sizes": [
+   "One Size"
+  ],
+  "tags": [
+   "travel",
+   "everyday"
+  ],
+  "flags": [],
+  "warranty": "7-day replacement"
+ },
+ {
+  "id": 94,
+  "sku": "SZS-PH06-004",
+  "slug": "3-in-1-braided-charging-cable",
+  "name": "3-in-1 Braided Charging Cable",
+  "nameBn": "৩-ইন-১ চার্জিং কেবল",
+  "categorySlug": "phone-tech",
+  "subcategory": "Cables",
+  "shortDescription": "Nylon-braided cable with Lightning, USB-C and micro-USB heads.",
+  "wholesaleCost": 220,
+  "retailPrice": 590,
+  "salePrice": 500,
+  "priceStatus": "unverified",
+  "moq": 12,
+  "colors": [
+   "White",
+   "Navy"
+  ],
+  "sizes": [
+   "One Size"
+  ],
+  "tags": [
+   "travel"
+  ],
+  "flags": [
+   "featured"
+  ],
+  "warranty": "3-day replacement"
+ },
+ {
+  "id": 95,
+  "sku": "SZS-PH06-005",
+  "slug": "20w-fast-charger-adapter",
+  "name": "20W Fast Charger Adapter",
+  "nameBn": "২০ডব্লিউ ফাস্ট চার্জার",
+  "categorySlug": "phone-tech",
+  "subcategory": "Power",
+  "shortDescription": "Compact 20W PD adapter with over-current protection.",
+  "wholesaleCost": 380,
+  "retailPrice": 890,
+  "salePrice": null,
+  "priceStatus": "unverified",
+  "moq": 12,
+  "colors": [
+   "Black",
+   "White",
+   "Navy"
+  ],
+  "sizes": [
+   "One Size"
+  ],
+  "tags": [
+   "everyday"
+  ],
+  "flags": [
+   "trending"
+  ],
+  "warranty": "3-day replacement"
+ },
+ {
+  "id": 96,
+  "sku": "SZS-PH06-006",
+  "slug": "tws-wireless-earbuds",
+  "name": "TWS Wireless Earbuds",
+  "nameBn": "টিডব্লিউএস ইয়ারবাডস",
+  "categorySlug": "phone-tech",
+  "subcategory": "Audio",
+  "shortDescription": "Bluetooth 5.3 earbuds with touch controls and a 24-hour charging case.",
+  "wholesaleCost": 1150,
+  "retailPrice": 2590,
+  "salePrice": null,
+  "priceStatus": "unverified",
+  "moq": 6,
+  "colors": [
+   "Black",
+   "White",
+   "Navy"
+  ],
+  "sizes": [
+   "One Size"
+  ],
+  "tags": [
+   "audio",
+   "commute"
+  ],
+  "flags": [
+   "bestseller"
+  ],
+  "warranty": "7-day replacement"
+ },
+ {
+  "id": 97,
+  "sku": "SZS-PH06-007",
+  "slug": "portable-bluetooth-speaker",
+  "name": "Portable Bluetooth Speaker",
+  "nameBn": "পোর্টেবল ব্লুটুথ স্পিকার",
+  "categorySlug": "phone-tech",
+  "subcategory": "Audio",
+  "shortDescription": "10 W speaker with IPX5 splash resistance and 12-hour playtime.",
+  "wholesaleCost": 1350,
+  "retailPrice": 2990,
+  "salePrice": null,
+  "priceStatus": "unverified",
+  "moq": 6,
+  "colors": [
+   "Black",
+   "White"
+  ],
+  "sizes": [
+   "One Size"
+  ],
+  "tags": [
+   "audio",
+   "travel"
+  ],
+  "flags": [],
+  "warranty": "7-day replacement"
+ },
+ {
+  "id": 98,
+  "sku": "SZS-PH06-008",
+  "slug": "finger-ring-phone-holder",
+  "name": "Finger Ring Phone Holder",
+  "nameBn": "ফিঙ্গার রিং হোল্ডার",
+  "categorySlug": "phone-tech",
+  "subcategory": "Mounts & Holders",
+  "shortDescription": "Metal ring grip that doubles as a kickstand.",
+  "wholesaleCost": 80,
+  "retailPrice": 250,
+  "salePrice": null,
+  "priceStatus": "unverified",
+  "moq": 12,
+  "colors": [
+   "Black",
+   "White",
+   "Navy"
+  ],
+  "sizes": [
+   "One Size"
+  ],
+  "tags": [
+   "everyday"
+  ],
+  "flags": [],
+  "warranty": "3-day replacement"
+ },
+ {
+  "id": 99,
+  "sku": "SZS-PH06-009",
+  "slug": "adjustable-laptop-stand",
+  "name": "Adjustable Laptop Stand",
+  "nameBn": "অ্যাডজাস্টেবল ল্যাপটপ স্ট্যান্ড",
+  "categorySlug": "phone-tech",
+  "subcategory": "Desk Tech",
+  "shortDescription": "Aluminium stand with six height levels and silicone pads.",
+  "wholesaleCost": 750,
+  "retailPrice": 1650,
+  "salePrice": null,
+  "priceStatus": "unverified",
+  "moq": 6,
+  "colors": [
+   "Gold",
+   "Silver",
+   "Rose Gold"
+  ],
+  "sizes": [
+   "One Size"
+  ],
+  "tags": [
+   "office"
+  ],
+  "flags": [
+   "featured"
+  ],
+  "warranty": "7-day replacement"
+ },
+ {
+  "id": 100,
+  "sku": "SZS-PH06-010",
+  "slug": "6-in-1-usb-c-hub",
+  "name": "6-in-1 USB-C Hub",
+  "nameBn": "৬-ইন-১ ইউএসবি-সি হাব",
+  "categorySlug": "phone-tech",
+  "subcategory": "Desk Tech",
+  "shortDescription": "HDMI 4K, two USB 3.0, SD, microSD and 100 W PD pass-through.",
+  "wholesaleCost": 1350,
+  "retailPrice": 2990,
+  "salePrice": null,
+  "priceStatus": "unverified",
+  "moq": 6,
+  "colors": [
+   "Silver",
+   "Rose Gold"
+  ],
+  "sizes": [
+   "One Size"
+  ],
+  "tags": [
+   "office"
+  ],
+  "flags": [
+   "bestseller"
+  ],
+  "warranty": "7-day replacement"
+ },
+ {
+  "id": 101,
+  "sku": "SZS-PH06-011",
+  "slug": "smartwatch-replacement-strap",
+  "name": "Smartwatch Replacement Strap",
+  "nameBn": "স্মার্টওয়াচ স্ট্র্যাপ",
+  "categorySlug": "phone-tech",
+  "subcategory": "Wearables",
+  "shortDescription": "Quick-release silicone strap in 20 mm and 22 mm sizes.",
+  "wholesaleCost": 250,
+  "retailPrice": 650,
+  "salePrice": 550,
+  "priceStatus": "unverified",
+  "moq": 12,
+  "colors": [
+   "Black",
+   "White",
+   "Navy"
+  ],
+  "sizes": [
+   "One Size"
+  ],
+  "tags": [
+   "everyday"
+  ],
+  "flags": [],
+  "warranty": "3-day replacement"
+ },
+ {
+  "id": 102,
+  "sku": "SZS-PH06-012",
+  "slug": "magnetic-car-phone-mount",
+  "name": "Magnetic Car Phone Mount",
+  "nameBn": "ম্যাগনেটিক কার ফোন মাউন্ট",
+  "categorySlug": "phone-tech",
+  "subcategory": "Mounts & Holders",
+  "shortDescription": "Vent-clip magnetic mount with N52 magnets and a metal plate.",
+  "wholesaleCost": 320,
+  "retailPrice": 790,
+  "salePrice": null,
+  "priceStatus": "unverified",
+  "moq": 12,
+  "colors": [
+   "Black",
+   "White",
+   "Navy"
+  ],
+  "sizes": [
+   "One Size"
+  ],
+  "tags": [
+   "car"
+  ],
+  "flags": [
+   "trending"
+  ],
+  "warranty": "3-day replacement"
+ },
+ {
+  "id": 103,
+  "sku": "SZS-PH06-013",
+  "slug": "cable-organiser-kit",
+  "name": "Cable Organiser Kit",
+  "nameBn": "কেবল অর্গানাইজার কিট",
+  "categorySlug": "phone-tech",
+  "subcategory": "Desk Tech",
+  "shortDescription": "Silicone clips, ties and a pouch to stop desk cable clutter.",
+  "wholesaleCost": 240,
+  "retailPrice": 590,
+  "salePrice": null,
+  "priceStatus": "unverified",
+  "moq": 12,
+  "colors": [
+   "Black",
+   "White"
+  ],
+  "sizes": [
+   "One Size"
+  ],
+  "tags": [
+   "office",
+   "travel"
+  ],
+  "flags": [],
+  "warranty": "3-day replacement"
+ },
+ {
+  "id": 104,
+  "sku": "SZS-PH06-014",
+  "slug": "phone-tripod-with-remote",
+  "name": "Phone Tripod with Remote",
+  "nameBn": "ফোন ট্রাইপড রিমোট সহ",
+  "categorySlug": "phone-tech",
+  "subcategory": "Content Creation",
+  "shortDescription": "Extendable tripod with a Bluetooth shutter for content creators.",
+  "wholesaleCost": 480,
+  "retailPrice": 1150,
+  "salePrice": null,
+  "priceStatus": "unverified",
+  "moq": 6,
+  "colors": [
+   "Black",
+   "White",
+   "Navy"
+  ],
+  "sizes": [
+   "One Size"
+  ],
+  "tags": [
+   "creator"
+  ],
+  "flags": [
+   "bestseller",
+   "newArrival"
+  ],
+  "warranty": "3-day replacement"
+ },
+ {
+  "id": 105,
+  "sku": "SZS-PH06-015",
+  "slug": "phone-grip-card-wallet",
+  "name": "Phone Grip Card Wallet",
+  "nameBn": "ফোন গ্রিপ কার্ড ওয়ালেট",
+  "categorySlug": "phone-tech",
+  "subcategory": "Phone Cases",
+  "shortDescription": "Stick-on grip holding two cards, doubling as a stand.",
+  "wholesaleCost": 190,
+  "retailPrice": 490,
+  "salePrice": null,
+  "priceStatus": "unverified",
+  "moq": 12,
+  "colors": [
+   "Black",
+   "White",
+   "Navy"
+  ],
+  "sizes": [
+   "One Size"
+  ],
+  "tags": [
+   "everyday"
+  ],
+  "flags": [
+   "newArrival"
+  ],
+  "warranty": "3-day replacement"
+ },
+ {
+  "id": 106,
+  "sku": "SZS-HA07-001",
+  "slug": "silk-scrunchies-3-pack",
+  "name": "Silk Scrunchies (3-Pack)",
+  "nameBn": "সিল্ক স্ক্রাঞ্চি (৩ প্যাক)",
+  "categorySlug": "hair-beauty",
+  "subcategory": "Hair Ties",
+  "shortDescription": "Mulberry-satin scrunchies that hold hair without creasing.",
+  "wholesaleCost": 180,
+  "retailPrice": 490,
+  "salePrice": null,
+  "priceStatus": "unverified",
+  "moq": 12,
+  "colors": [
+   "Black",
+   "White"
+  ],
+  "sizes": [
+   "One Size"
+  ],
+  "tags": [
+   "gift",
+   "everyday"
+  ],
+  "flags": [
+   "featured"
+  ],
+  "warranty": "3-day replacement"
+ },
+ {
+  "id": 107,
+  "sku": "SZS-HA07-002",
+  "slug": "large-claw-clip",
+  "name": "Large Claw Clip",
+  "nameBn": "বড় ক্লো ক্লিপ",
+  "categorySlug": "hair-beauty",
+  "subcategory": "Clips",
+  "shortDescription": "Matte acetate claw clip with strong spring for thick hair.",
+  "wholesaleCost": 140,
+  "retailPrice": 390,
+  "salePrice": null,
+  "priceStatus": "unverified",
+  "moq": 12,
+  "colors": [
+   "Tan",
+   "Brown",
+   "Charcoal"
+  ],
+  "sizes": [
+   "One Size"
+  ],
+  "tags": [
+   "everyday",
+   "trending"
+  ],
+  "flags": [
+   "trending"
+  ],
+  "warranty": "3-day replacement"
+ },
+ {
+  "id": 108,
+  "sku": "SZS-HA07-003",
+  "slug": "pearl-hair-pins-set",
+  "name": "Pearl Hair Pins Set",
+  "nameBn": "পার্ল হেয়ার পিন সেট",
+  "categorySlug": "hair-beauty",
+  "subcategory": "Pins",
+  "shortDescription": "Set of six pearl-tipped pins for bridal and party styling.",
+  "wholesaleCost": 160,
+  "retailPrice": 450,
+  "salePrice": null,
+  "priceStatus": "unverified",
+  "moq": 12,
+  "colors": [
+   "Gold",
+   "Silver",
+   "Rose Gold"
+  ],
+  "sizes": [
+   "One Size"
+  ],
+  "tags": [
+   "wedding",
+   "party"
+  ],
+  "flags": [],
+  "warranty": "3-day replacement"
+ },
+ {
+  "id": 109,
+  "sku": "SZS-HA07-004",
+  "slug": "ceramic-hair-straightener",
+  "name": "Ceramic Hair Straightener",
+  "nameBn": "সিরামিক হেয়ার স্ট্রেইটনার",
+  "categorySlug": "hair-beauty",
+  "subcategory": "Styling Tools",
+  "shortDescription": "Ceramic plates with adjustable 150–230 °C heat and auto shut-off.",
+  "wholesaleCost": 1250,
+  "retailPrice": 2790,
+  "salePrice": 2370,
+  "priceStatus": "unverified",
+  "moq": 6,
+  "colors": [
+   "White",
+   "Navy"
+  ],
+  "sizes": [
+   "One Size"
+  ],
+  "tags": [
+   "styling"
+  ],
+  "flags": [
+   "featured"
+  ],
+  "warranty": "7-day replacement"
+ },
+ {
+  "id": 110,
+  "sku": "SZS-HA07-005",
+  "slug": "compact-travel-hair-dryer",
+  "name": "Compact Travel Hair Dryer",
+  "nameBn": "কম্প্যাক্ট হেয়ার ড্রায়ার",
+  "categorySlug": "hair-beauty",
+  "subcategory": "Styling Tools",
+  "shortDescription": "1200 W folding dryer with two heat and two speed settings.",
+  "wholesaleCost": 950,
+  "retailPrice": 2190,
+  "salePrice": null,
+  "priceStatus": "unverified",
+  "moq": 6,
+  "colors": [
+   "Black",
+   "White",
+   "Navy"
+  ],
+  "sizes": [
+   "One Size"
+  ],
+  "tags": [
+   "travel",
+   "styling"
+  ],
+  "flags": [
+   "trending"
+  ],
+  "warranty": "7-day replacement"
+ },
+ {
+  "id": 111,
+  "sku": "SZS-HA07-006",
+  "slug": "ceramic-curling-wand",
+  "name": "Ceramic Curling Wand",
+  "nameBn": "সিরামিক কার্লিং ওয়ান্ড",
+  "categorySlug": "hair-beauty",
+  "subcategory": "Styling Tools",
+  "shortDescription": "25 mm barrel that creates defined curls with even heat.",
+  "wholesaleCost": 1150,
+  "retailPrice": 2490,
+  "salePrice": null,
+  "priceStatus": "unverified",
+  "moq": 6,
+  "colors": [
+   "Black",
+   "White",
+   "Navy"
+  ],
+  "sizes": [
+   "One Size"
+  ],
+  "tags": [
+   "styling"
+  ],
+  "flags": [
+   "bestseller"
+  ],
+  "warranty": "7-day replacement"
+ },
+ {
+  "id": 112,
+  "sku": "SZS-HA07-007",
+  "slug": "beard-trimmer",
+  "name": "Beard Trimmer",
+  "nameBn": "বিয়ার্ড ট্রিমার",
+  "categorySlug": "hair-beauty",
+  "subcategory": "Grooming",
+  "shortDescription": "Cordless trimmer with four guide combs and USB-C charging.",
+  "wholesaleCost": 1350,
+  "retailPrice": 2990,
+  "salePrice": null,
+  "priceStatus": "unverified",
+  "moq": 6,
+  "colors": [
+   "Black",
+   "White"
+  ],
+  "sizes": [
+   "One Size"
+  ],
+  "tags": [
+   "grooming",
+   "gift"
+  ],
+  "flags": [],
+  "warranty": "7-day replacement"
+ },
+ {
+  "id": 113,
+  "sku": "SZS-HA07-008",
+  "slug": "makeup-brush-set-12-piece",
+  "name": "Makeup Brush Set (12-Piece)",
+  "nameBn": "মেকআপ ব্রাশ সেট (১২ পিস)",
+  "categorySlug": "hair-beauty",
+  "subcategory": "Brushes",
+  "shortDescription": "Twelve synthetic brushes with a vegan leather roll.",
+  "wholesaleCost": 780,
+  "retailPrice": 1790,
+  "salePrice": null,
+  "priceStatus": "unverified",
+  "moq": 6,
+  "colors": [
+   "Tan",
+   "Brown",
+   "Charcoal"
+  ],
+  "sizes": [
+   "One Size"
+  ],
+  "tags": [
+   "gift",
+   "beauty"
+  ],
+  "flags": [],
+  "warranty": "7-day replacement"
+ },
+ {
+  "id": 114,
+  "sku": "SZS-HA07-009",
+  "slug": "bamboo-detangling-comb",
+  "name": "Bamboo Detangling Comb",
+  "nameBn": "বাঁশের চিরুনি",
+  "categorySlug": "hair-beauty",
+  "subcategory": "Combs",
+  "shortDescription": "Anti-static bamboo comb with wide teeth for wet hair.",
+  "wholesaleCost": 120,
+  "retailPrice": 350,
+  "salePrice": null,
+  "priceStatus": "unverified",
+  "moq": 12,
+  "colors": [
+   "Black",
+   "Tan",
+   "Brown",
+   "Charcoal"
+  ],
+  "sizes": [
+   "One Size"
+  ],
+  "tags": [
+   "eco"
+  ],
+  "flags": [
+   "featured"
+  ],
+  "warranty": "3-day replacement"
+ },
+ {
+  "id": 115,
+  "sku": "SZS-HA07-010",
+  "slug": "satin-sleep-bonnet",
+  "name": "Satin Sleep Bonnet",
+  "nameBn": "সাটিন স্লিপ বনেট",
+  "categorySlug": "hair-beauty",
+  "subcategory": "Hair Care",
+  "shortDescription": "Adjustable satin bonnet that reduces friction while sleeping.",
+  "wholesaleCost": 220,
+  "retailPrice": 550,
+  "salePrice": null,
+  "priceStatus": "unverified",
+  "moq": 12,
+  "colors": [
+   "Maroon",
+   "Beige"
+  ],
+  "sizes": [
+   "One Size"
+  ],
+  "tags": [
+   "haircare"
+  ],
+  "flags": [
+   "bestseller"
+  ],
+  "warranty": "3-day replacement"
+ },
+ {
+  "id": 116,
+  "sku": "SZS-HA07-011",
+  "slug": "bamboo-scalp-massager",
+  "name": "Bamboo Scalp Massager",
+  "nameBn": "বাঁশের স্ক্যাল্প ম্যাসাজার",
+  "categorySlug": "hair-beauty",
+  "subcategory": "Hair Care",
+  "shortDescription": "Soft silicone-tip massager to lift product and stimulate the scalp.",
+  "wholesaleCost": 160,
+  "retailPrice": 450,
+  "salePrice": 380,
+  "priceStatus": "unverified",
+  "moq": 12,
+  "colors": [
+   "Black",
+   "Tan",
+   "Brown"
+  ],
+  "sizes": [
+   "One Size"
+  ],
+  "tags": [
+   "haircare",
+   "eco"
+  ],
+  "flags": [],
+  "warranty": "3-day replacement"
+ },
+ {
+  "id": 117,
+  "sku": "SZS-HA07-012",
+  "slug": "jade-face-roller",
+  "name": "Jade Face Roller",
+  "nameBn": "জেড ফেস রোলার",
+  "categorySlug": "hair-beauty",
+  "subcategory": "Skincare Tools",
+  "shortDescription": "Natural jade roller for a cool morning facial massage.",
+  "wholesaleCost": 240,
+  "retailPrice": 650,
+  "salePrice": null,
+  "priceStatus": "unverified",
+  "moq": 12,
+  "colors": [
+   "Ivory",
+   "Sage",
+   "Terracotta",
+   "Grey"
+  ],
+  "sizes": [
+   "One Size"
+  ],
+  "tags": [
+   "skincare",
+   "gift"
+  ],
+  "flags": [
+   "trending"
+  ],
+  "warranty": "3-day replacement"
+ },
+ {
+  "id": 118,
+  "sku": "SZS-HA07-013",
+  "slug": "nail-care-kit-7-piece",
+  "name": "Nail Care Kit (7-Piece)",
+  "nameBn": "নেইল কেয়ার কিট (৭ পিস)",
+  "categorySlug": "hair-beauty",
+  "subcategory": "Grooming",
+  "shortDescription": "Stainless steel clipper, scissors, file and cuticle tools in a case.",
+  "wholesaleCost": 190,
+  "retailPrice": 490,
+  "salePrice": null,
+  "priceStatus": "unverified",
+  "moq": 12,
+  "colors": [
+   "Gold",
+   "Silver"
+  ],
+  "sizes": [
+   "One Size"
+  ],
+  "tags": [
+   "grooming"
+  ],
+  "flags": [],
+  "warranty": "3-day replacement"
+ },
+ {
+  "id": 119,
+  "sku": "SZS-HA07-014",
+  "slug": "waterproof-shower-cap",
+  "name": "Waterproof Shower Cap",
+  "nameBn": "ওয়াটারপ্রুফ শাওয়ার ক্যাপ",
+  "categorySlug": "hair-beauty",
+  "subcategory": "Hair Care",
+  "shortDescription": "Reusable waterproof cap with a soft elastic band.",
+  "wholesaleCost": 110,
+  "retailPrice": 320,
+  "salePrice": null,
+  "priceStatus": "unverified",
+  "moq": 12,
+  "colors": [
+   "Olive",
+   "Maroon",
+   "Beige"
+  ],
+  "sizes": [
+   "One Size"
+  ],
+  "tags": [
+   "haircare"
+  ],
+  "flags": [
+   "bestseller",
+   "newArrival"
+  ],
+  "warranty": "3-day replacement"
+ },
+ {
+  "id": 120,
+  "sku": "SZS-HA07-015",
+  "slug": "heatless-curling-ribbon",
+  "name": "Heatless Curling Ribbon",
+  "nameBn": "হিটলেস কার্লিং রিবন",
+  "categorySlug": "hair-beauty",
+  "subcategory": "Styling Tools",
+  "shortDescription": "Satin ribbon set that curls hair overnight without heat.",
+  "wholesaleCost": 170,
+  "retailPrice": 450,
+  "salePrice": null,
+  "priceStatus": "unverified",
+  "moq": 12,
+  "colors": [
+   "Black",
+   "White",
+   "Navy",
+   "Olive"
+  ],
+  "sizes": [
+   "One Size"
+  ],
+  "tags": [
+   "haircare",
+   "trending"
+  ],
+  "flags": [
+   "newArrival"
+  ],
+  "warranty": "3-day replacement"
+ },
+ {
+  "id": 121,
+  "sku": "SZS-CO08-001",
+  "slug": "matching-couple-t-shirt-set",
+  "name": "Matching Couple T-Shirt Set",
+  "nameBn": "ম্যাচিং কাপল টি-শার্ট",
+  "categorySlug": "couple-collections",
+  "subcategory": "Couple Apparel",
+  "shortDescription": "Two heavyweight tees with a paired chest print.",
+  "wholesaleCost": 780,
+  "retailPrice": 1790,
+  "salePrice": null,
+  "priceStatus": "unverified",
+  "moq": 6,
+  "colors": [
+   "Black",
+   "White"
+  ],
+  "sizes": [
+   "S",
+   "M",
+   "L",
+   "XL",
+   "XXL"
+  ],
+  "tags": [
+   "couple",
+   "valentine"
+  ],
+  "flags": [
+   "featured"
+  ],
+  "warranty": "7-day replacement"
+ },
+ {
+  "id": 122,
+  "sku": "SZS-CO08-002",
+  "slug": "couple-bracelet-pair",
+  "name": "Couple Bracelet Pair",
+  "nameBn": "কাপল ব্রেসলেট পেয়ার",
+  "categorySlug": "couple-collections",
+  "subcategory": "Couple Jewellery",
+  "shortDescription": "Magnetic half-heart bracelet pair in gift packaging.",
+  "wholesaleCost": 420,
+  "retailPrice": 1090,
+  "salePrice": null,
+  "priceStatus": "unverified",
+  "moq": 6,
+  "colors": [
+   "Gold",
+   "Silver",
+   "Rose Gold"
+  ],
+  "sizes": [
+   "One Size"
+  ],
+  "tags": [
+   "couple",
+   "gift"
+  ],
+  "flags": [
+   "trending"
+  ],
+  "warranty": "3-day replacement"
+ },
+ {
+  "id": 123,
+  "sku": "SZS-CO08-003",
+  "slug": "couple-ceramic-mug-set",
+  "name": "Couple Ceramic Mug Set",
+  "nameBn": "কাপল মগ সেট",
+  "categorySlug": "couple-collections",
+  "subcategory": "Couple Gifts",
+  "shortDescription": "Two 330 ml ceramic mugs with a shared design.",
+  "wholesaleCost": 380,
+  "retailPrice": 950,
+  "salePrice": null,
+  "priceStatus": "unverified",
+  "moq": 12,
+  "colors": [
+   "Ivory",
+   "Sage",
+   "Terracotta",
+   "Grey"
+  ],
+  "sizes": [
+   "One Size"
+  ],
+  "tags": [
+   "couple",
+   "gift"
+  ],
+  "flags": [],
+  "warranty": "3-day replacement"
+ },
+ {
+  "id": 124,
+  "sku": "SZS-CO08-004",
+  "slug": "couple-keychain-pair",
+  "name": "Couple Keychain Pair",
+  "nameBn": "কাপল কীচেইন পেয়ার",
+  "categorySlug": "couple-collections",
+  "subcategory": "Couple Gifts",
+  "shortDescription": "Brass keychain pair that fits together as one piece.",
+  "wholesaleCost": 180,
+  "retailPrice": 490,
+  "salePrice": 420,
+  "priceStatus": "unverified",
+  "moq": 12,
+  "colors": [
+   "Silver",
+   "Rose Gold"
+  ],
+  "sizes": [
+   "One Size"
+  ],
+  "tags": [
+   "couple",
+   "gift"
+  ],
+  "flags": [
+   "featured"
+  ],
+  "warranty": "3-day replacement"
+ },
+ {
+  "id": 125,
+  "sku": "SZS-CO08-005",
+  "slug": "matching-couple-hoodie",
+  "name": "Matching Couple Hoodie",
+  "nameBn": "ম্যাচিং কাপল হুডি",
+  "categorySlug": "couple-collections",
+  "subcategory": "Couple Apparel",
+  "shortDescription": "Brushed-fleece hoodies in matching cut and colour.",
+  "wholesaleCost": 1650,
+  "retailPrice": 3590,
+  "salePrice": null,
+  "priceStatus": "unverified",
+  "moq": 3,
+  "colors": [
+   "Black",
+   "White",
+   "Navy"
+  ],
+  "sizes": [
+   "S",
+   "M",
+   "L",
+   "XL",
+   "XXL"
+  ],
+  "tags": [
+   "couple",
+   "winter"
+  ],
+  "flags": [
+   "trending"
+  ],
+  "warranty": "7-day replacement"
+ },
+ {
+  "id": 126,
+  "sku": "SZS-CO08-006",
+  "slug": "couple-promise-ring-pair",
+  "name": "Couple Promise Ring Pair",
+  "nameBn": "কাপল প্রমিজ রিং পেয়ার",
+  "categorySlug": "couple-collections",
+  "subcategory": "Couple Jewellery",
+  "shortDescription": "Titanium-steel band pair with an inner engraved line.",
+  "wholesaleCost": 590,
+  "retailPrice": 1390,
+  "salePrice": null,
+  "priceStatus": "unverified",
+  "moq": 6,
+  "colors": [
+   "Gold",
+   "Silver",
+   "Rose Gold"
+  ],
+  "sizes": [
+   "One Size"
+  ],
+  "tags": [
+   "couple",
+   "gift"
+  ],
+  "flags": [
+   "bestseller"
+  ],
+  "warranty": "3-day replacement"
+ },
+ {
+  "id": 127,
+  "sku": "SZS-CO08-007",
+  "slug": "couple-photo-frame",
+  "name": "Couple Photo Frame",
+  "nameBn": "কাপল ফটো ফ্রেম",
+  "categorySlug": "couple-collections",
+  "subcategory": "Couple Gifts",
+  "shortDescription": "Two-slot wooden frame for a shared photo.",
+  "wholesaleCost": 340,
+  "retailPrice": 850,
+  "salePrice": null,
+  "priceStatus": "unverified",
+  "moq": 12,
+  "colors": [
+   "Ivory",
+   "Sage"
+  ],
+  "sizes": [
+   "One Size"
+  ],
+  "tags": [
+   "couple",
+   "home"
+  ],
+  "flags": [],
+  "warranty": "3-day replacement"
+ },
+ {
+  "id": 128,
+  "sku": "SZS-CO08-008",
+  "slug": "couple-pendant-necklace-set",
+  "name": "Couple Pendant Necklace Set",
+  "nameBn": "কাপল পেন্ডেন্ট নেকলেস",
+  "categorySlug": "couple-collections",
+  "subcategory": "Couple Jewellery",
+  "shortDescription": "Half-heart pendant pair on adjustable chains.",
+  "wholesaleCost": 520,
+  "retailPrice": 1290,
+  "salePrice": null,
+  "priceStatus": "unverified",
+  "moq": 6,
+  "colors": [
+   "Gold",
+   "Silver",
+   "Rose Gold"
+  ],
+  "sizes": [
+   "One Size"
+  ],
+  "tags": [
+   "couple",
+   "gift"
+  ],
+  "flags": [],
+  "warranty": "3-day replacement"
+ },
+ {
+  "id": 129,
+  "sku": "SZS-CO08-009",
+  "slug": "couple-socks-set",
+  "name": "Couple Socks Set",
+  "nameBn": "কাপল সকস সেট",
+  "categorySlug": "couple-collections",
+  "subcategory": "Couple Gifts",
+  "shortDescription": "Two pairs of combed-cotton socks with a matching print.",
+  "wholesaleCost": 220,
+  "retailPrice": 590,
+  "salePrice": null,
+  "priceStatus": "unverified",
+  "moq": 12,
+  "colors": [
+   "Black",
+   "White",
+   "Navy",
+   "Olive"
+  ],
+  "sizes": [
+   "One Size"
+  ],
+  "tags": [
+   "couple",
+   "gift"
+  ],
+  "flags": [
+   "featured"
+  ],
+  "warranty": "3-day replacement"
+ },
+ {
+  "id": 130,
+  "sku": "SZS-CO08-010",
+  "slug": "couple-passport-holder",
+  "name": "Couple Passport Holder",
+  "nameBn": "কাপল পাসপোর্ট হোল্ডার",
+  "categorySlug": "couple-collections",
+  "subcategory": "Couple Gifts",
+  "shortDescription": "Two leather passport covers for a shared trip.",
+  "wholesaleCost": 580,
+  "retailPrice": 1390,
+  "salePrice": null,
+  "priceStatus": "unverified",
+  "moq": 6,
+  "colors": [
+   "Brown",
+   "Charcoal"
+  ],
+  "sizes": [
+   "One Size"
+  ],
+  "tags": [
+   "couple",
+   "travel"
+  ],
+  "flags": [
+   "bestseller"
+  ],
+  "warranty": "3-day replacement"
+ },
+ {
+  "id": 131,
+  "sku": "SZS-CO08-011",
+  "slug": "couple-anniversary-gift-hamper",
+  "name": "Couple Anniversary Gift Hamper",
+  "nameBn": "কাপল অ্যানিভার্সারি হ্যাম্পার",
+  "categorySlug": "couple-collections",
+  "subcategory": "Couple Gifts",
+  "shortDescription": "Mug pair, photo frame, card and chocolate in one keepsake box.",
+  "wholesaleCost": 1290,
+  "retailPrice": 2890,
+  "salePrice": 2460,
+  "priceStatus": "unverified",
+  "moq": 6,
+  "colors": [
+   "Ivory",
+   "Sage",
+   "Terracotta"
+  ],
+  "sizes": [
+   "One Size"
+  ],
+  "tags": [
+   "couple",
+   "gift"
+  ],
+  "flags": [],
+  "warranty": "7-day replacement"
+ },
+ {
+  "id": 132,
+  "sku": "SZS-CO08-012",
+  "slug": "couple-winter-scarf-pair",
+  "name": "Couple Winter Scarf Pair",
+  "nameBn": "কাপল শীতের স্কার্ফ",
+  "categorySlug": "couple-collections",
+  "subcategory": "Couple Apparel",
+  "shortDescription": "Two matching scarves in a soft wool blend.",
+  "wholesaleCost": 480,
+  "retailPrice": 1190,
+  "salePrice": null,
+  "priceStatus": "unverified",
+  "moq": 6,
+  "colors": [
+   "Navy",
+   "Olive",
+   "Maroon",
+   "Beige"
+  ],
+  "sizes": [
+   "One Size"
+  ],
+  "tags": [
+   "couple",
+   "winter"
+  ],
+  "flags": [
+   "trending"
+  ],
+  "warranty": "3-day replacement"
+ },
+ {
+  "id": 133,
+  "sku": "SZS-CO08-013",
+  "slug": "couple-beach-towel-set",
+  "name": "Couple Beach Towel Set",
+  "nameBn": "কাপল বিচ টাওয়েল সেট",
+  "categorySlug": "couple-collections",
+  "subcategory": "Couple Gifts",
+  "shortDescription": "Two quick-dry cotton towels with a coordinating border.",
+  "wholesaleCost": 620,
+  "retailPrice": 1490,
+  "salePrice": null,
+  "priceStatus": "unverified",
+  "moq": 6,
+  "colors": [
+   "Ivory",
+   "Sage"
+  ],
+  "sizes": [
+   "One Size"
+  ],
+  "tags": [
+   "couple",
+   "summer"
+  ],
+  "flags": [],
+  "warranty": "3-day replacement"
+ },
+ {
+  "id": 134,
+  "sku": "SZS-CO08-014",
+  "slug": "couple-nightwear-set",
+  "name": "Couple Nightwear Set",
+  "nameBn": "কাপল নাইটওয়্যার সেট",
+  "categorySlug": "couple-collections",
+  "subcategory": "Couple Apparel",
+  "shortDescription": "Matching cotton night set for two in breathable lawn.",
+  "wholesaleCost": 1180,
+  "retailPrice": 2590,
+  "salePrice": null,
+  "priceStatus": "unverified",
+  "moq": 6,
+  "colors": [
+   "Olive",
+   "Maroon",
+   "Beige"
+  ],
+  "sizes": [
+   "XS",
+   "S",
+   "M",
+   "L",
+   "XL"
+  ],
+  "tags": [
+   "couple",
+   "comfort"
+  ],
+  "flags": [
+   "bestseller",
+   "newArrival"
+  ],
+  "warranty": "7-day replacement"
+ },
+ {
+  "id": 135,
+  "sku": "SZS-CO08-015",
+  "slug": "couple-anniversary-card-set",
+  "name": "Couple Anniversary Card Set",
+  "nameBn": "কাপল কার্ড সেট",
+  "categorySlug": "couple-collections",
+  "subcategory": "Couple Gifts",
+  "shortDescription": "Two hand-lettered cards and envelopes for anniversaries.",
+  "wholesaleCost": 120,
+  "retailPrice": 380,
+  "salePrice": null,
+  "priceStatus": "unverified",
+  "moq": 12,
+  "colors": [
+   "Ivory",
+   "Sage",
+   "Terracotta",
+   "Grey"
+  ],
+  "sizes": [
+   "One Size"
+  ],
+  "tags": [
+   "couple",
+   "stationery"
+  ],
+  "flags": [
+   "newArrival"
+  ],
+  "warranty": "3-day replacement"
+ },
+ {
+  "id": 136,
+  "sku": "SZS-GI09-001",
+  "slug": "premium-gift-hamper",
+  "name": "Premium Gift Hamper",
+  "nameBn": "প্রিমিয়াম গিফট হ্যাম্পার",
+  "categorySlug": "gifts",
+  "subcategory": "Hampers",
+  "shortDescription": "Curated hamper with mug, candle, notebook and card in a rigid box.",
+  "wholesaleCost": 1150,
+  "retailPrice": 2590,
+  "salePrice": null,
+  "priceStatus": "unverified",
+  "moq": 6,
+  "colors": [
+   "Ivory",
+   "Sage"
+  ],
+  "sizes": [
+   "One Size"
+  ],
+  "tags": [
+   "gift",
+   "premium"
+  ],
+  "flags": [
+   "featured"
+  ],
+  "warranty": "7-day replacement"
+ },
+ {
+  "id": 137,
+  "sku": "SZS-GI09-002",
+  "slug": "gift-box-for-him",
+  "name": "Gift Box for Him",
+  "nameBn": "তার জন্য গিফট বক্স",
+  "categorySlug": "gifts",
+  "subcategory": "Curated Boxes",
+  "shortDescription": "Wallet, socks and grooming trio in a black magnetic box.",
+  "wholesaleCost": 890,
+  "retailPrice": 1990,
+  "salePrice": null,
+  "priceStatus": "unverified",
+  "moq": 6,
+  "colors": [
+   "Tan",
+   "Brown",
+   "Charcoal"
+  ],
+  "sizes": [
+   "One Size"
+  ],
+  "tags": [
+   "gift",
+   "men"
+  ],
+  "flags": [
+   "trending"
+  ],
+  "warranty": "7-day replacement"
+ },
+ {
+  "id": 138,
+  "sku": "SZS-GI09-003",
+  "slug": "gift-box-for-her",
+  "name": "Gift Box for Her",
+  "nameBn": "তার জন্য গিফট বক্স",
+  "categorySlug": "gifts",
+  "subcategory": "Curated Boxes",
+  "shortDescription": "Scrunchie set, hair clip, candle and card in a blush box.",
+  "wholesaleCost": 950,
+  "retailPrice": 2190,
+  "salePrice": null,
+  "priceStatus": "unverified",
+  "moq": 6,
+  "colors": [
+   "Ivory",
+   "Sage",
+   "Terracotta",
+   "Grey"
+  ],
+  "sizes": [
+   "One Size"
+  ],
+  "tags": [
+   "gift",
+   "women"
+  ],
+  "flags": [],
+  "warranty": "7-day replacement"
+ },
+ {
+  "id": 139,
+  "sku": "SZS-GI09-004",
+  "slug": "birthday-gift-bundle",
+  "name": "Birthday Gift Bundle",
+  "nameBn": "জন্মদিনের গিফট বান্ডেল",
+  "categorySlug": "gifts",
+  "subcategory": "Occasion",
+  "shortDescription": "Mug, photo frame and confetti card for a birthday drop.",
+  "wholesaleCost": 790,
+  "retailPrice": 1790,
+  "salePrice": 1520,
+  "priceStatus": "unverified",
+  "moq": 6,
+  "colors": [
+   "Terracotta",
+   "Grey"
+  ],
+  "sizes": [
+   "One Size"
+  ],
+  "tags": [
+   "gift",
+   "birthday"
+  ],
+  "flags": [
+   "featured"
+  ],
+  "warranty": "7-day replacement"
+ },
+ {
+  "id": 140,
+  "sku": "SZS-GI09-005",
+  "slug": "anniversary-gift-bundle",
+  "name": "Anniversary Gift Bundle",
+  "nameBn": "অ্যানিভার্সারি গিফট বান্ডেল",
+  "categorySlug": "gifts",
+  "subcategory": "Occasion",
+  "shortDescription": "Candle, frame and card set for anniversaries.",
+  "wholesaleCost": 980,
+  "retailPrice": 2290,
+  "salePrice": null,
+  "priceStatus": "unverified",
+  "moq": 6,
+  "colors": [
+   "Ivory",
+   "Sage",
+   "Terracotta"
+  ],
+  "sizes": [
+   "One Size"
+  ],
+  "tags": [
+   "gift",
+   "anniversary"
+  ],
+  "flags": [
+   "trending"
+  ],
+  "warranty": "7-day replacement"
+ },
+ {
+  "id": 141,
+  "sku": "SZS-GI09-006",
+  "slug": "corporate-pen-gift-set",
+  "name": "Corporate Pen Gift Set",
+  "nameBn": "কর্পোরেট পেন গিফট সেট",
+  "categorySlug": "gifts",
+  "subcategory": "Corporate",
+  "shortDescription": "Metal ballpoint and notebook in a presentation box.",
+  "wholesaleCost": 620,
+  "retailPrice": 1490,
+  "salePrice": null,
+  "priceStatus": "unverified",
+  "moq": 6,
+  "colors": [
+   "Gold",
+   "Silver",
+   "Rose Gold"
+  ],
+  "sizes": [
+   "One Size"
+  ],
+  "tags": [
+   "corporate",
+   "gift"
+  ],
+  "flags": [
+   "bestseller"
+  ],
+  "warranty": "3-day replacement"
+ },
+ {
+  "id": 142,
+  "sku": "SZS-GI09-007",
+  "slug": "gift-mug-with-coaster",
+  "name": "Gift Mug with Coaster",
+  "nameBn": "মগ উইথ কোস্টার",
+  "categorySlug": "gifts",
+  "subcategory": "Everyday Gifts",
+  "shortDescription": "Ceramic mug with a matching cork coaster.",
+  "wholesaleCost": 290,
+  "retailPrice": 750,
+  "salePrice": null,
+  "priceStatus": "unverified",
+  "moq": 12,
+  "colors": [
+   "Ivory",
+   "Sage"
+  ],
+  "sizes": [
+   "One Size"
+  ],
+  "tags": [
+   "gift",
+   "office"
+  ],
+  "flags": [],
+  "warranty": "3-day replacement"
+ },
+ {
+  "id": 143,
+  "sku": "SZS-GI09-008",
+  "slug": "scented-candle-gift-set",
+  "name": "Scented Candle Gift Set",
+  "nameBn": "সুগন্ধি ক্যান্ডেল সেট",
+  "categorySlug": "gifts",
+  "subcategory": "Everyday Gifts",
+  "shortDescription": "Three soy-wax votives in sandalwood, lemongrass and rose.",
+  "wholesaleCost": 540,
+  "retailPrice": 1290,
+  "salePrice": null,
+  "priceStatus": "unverified",
+  "moq": 6,
+  "colors": [
+   "Sage",
+   "Terracotta",
+   "Grey"
+  ],
+  "sizes": [
+   "One Size"
+  ],
+  "tags": [
+   "gift",
+   "home"
+  ],
+  "flags": [],
+  "warranty": "3-day replacement"
+ },
+ {
+  "id": 144,
+  "sku": "SZS-GI09-009",
+  "slug": "gift-card-demo",
+  "name": "Gift Card (Demo)",
+  "nameBn": "গিফট কার্ড (ডেমো)",
+  "categorySlug": "gifts",
+  "subcategory": "Gift Cards",
+  "shortDescription": "Demo gift card redeemed by code at checkout. Not a real payment instrument.",
+  "wholesaleCost": 0,
+  "retailPrice": 1000,
+  "salePrice": null,
+  "priceStatus": "unverified",
+  "moq": 6,
+  "colors": [
+   "Black",
+   "White",
+   "Navy"
+  ],
+  "sizes": [
+   "One Size"
+  ],
+  "tags": [
+   "gift",
+   "demo"
+  ],
+  "flags": [
+   "featured"
+  ],
+  "warranty": "3-day replacement"
+ },
+ {
+  "id": 145,
+  "sku": "SZS-GI09-010",
+  "slug": "eid-gift-box",
+  "name": "Eid Gift Box",
+  "nameBn": "ঈদ গিফট বক্স",
+  "categorySlug": "gifts",
+  "subcategory": "Seasonal Gifts",
+  "shortDescription": "Panjabi-inspired keepsake box with prayer beads and a card.",
+  "wholesaleCost": 1050,
+  "retailPrice": 2390,
+  "salePrice": null,
+  "priceStatus": "unverified",
+  "moq": 6,
+  "colors": [
+   "Off-White",
+   "Mustard"
+  ],
+  "sizes": [
+   "One Size"
+  ],
+  "tags": [
+   "eid",
+   "gift"
+  ],
+  "flags": [
+   "bestseller"
+  ],
+  "warranty": "7-day replacement"
+ },
+ {
+  "id": 146,
+  "sku": "SZS-GI09-011",
+  "slug": "thank-you-gift-box",
+  "name": "Thank-You Gift Box",
+  "nameBn": "থ্যাংক-ইউ গিফট বক্স",
+  "categorySlug": "gifts",
+  "subcategory": "Curated Boxes",
+  "shortDescription": "Notebook, pen and tea sachets for a thoughtful thank-you.",
+  "wholesaleCost": 490,
+  "retailPrice": 1190,
+  "salePrice": 1010,
+  "priceStatus": "unverified",
+  "moq": 6,
+  "colors": [
+   "Ivory",
+   "Sage",
+   "Terracotta"
+  ],
+  "sizes": [
+   "One Size"
+  ],
+  "tags": [
+   "gift",
+   "corporate"
+  ],
+  "flags": [],
+  "warranty": "3-day replacement"
+ },
+ {
+  "id": 147,
+  "sku": "SZS-GI09-012",
+  "slug": "newborn-gift-set",
+  "name": "Newborn Gift Set",
+  "nameBn": "নবজাতকের গিফট সেট",
+  "categorySlug": "gifts",
+  "subcategory": "Occasion",
+  "shortDescription": "Cotton romper, mittens and a soft muslin wrap.",
+  "wholesaleCost": 720,
+  "retailPrice": 1690,
+  "salePrice": null,
+  "priceStatus": "unverified",
+  "moq": 6,
+  "colors": [
+   "Ivory",
+   "Sage",
+   "Terracotta",
+   "Grey"
+  ],
+  "sizes": [
+   "One Size"
+  ],
+  "tags": [
+   "baby",
+   "gift"
+  ],
+  "flags": [
+   "trending"
+  ],
+  "warranty": "7-day replacement"
+ },
+ {
+  "id": 148,
+  "sku": "SZS-GI09-013",
+  "slug": "graduation-gift-bundle",
+  "name": "Graduation Gift Bundle",
+  "nameBn": "গ্র্যাজুয়েশন গিফট বান্ডেল",
+  "categorySlug": "gifts",
+  "subcategory": "Occasion",
+  "shortDescription": "Journal, pen and a printed congratulations card.",
+  "wholesaleCost": 690,
+  "retailPrice": 1590,
+  "salePrice": null,
+  "priceStatus": "unverified",
+  "moq": 6,
+  "colors": [
+   "Ivory",
+   "Sage"
+  ],
+  "sizes": [
+   "One Size"
+  ],
+  "tags": [
+   "gift",
+   "graduation"
+  ],
+  "flags": [],
+  "warranty": "7-day replacement"
+ },
+ {
+  "id": 149,
+  "sku": "SZS-GI09-014",
+  "slug": "chocolate-gift-hamper-demo",
+  "name": "Chocolate Gift Hamper (Demo)",
+  "nameBn": "চকোলেট হ্যাম্পার (ডেমো)",
+  "categorySlug": "gifts",
+  "subcategory": "Hampers",
+  "shortDescription": "Display-only hamper used for layout demonstration; food items are not stocked.",
+  "wholesaleCost": 850,
+  "retailPrice": 1990,
+  "salePrice": null,
+  "priceStatus": "unverified",
+  "moq": 6,
+  "colors": [
+   "Sage",
+   "Terracotta",
+   "Grey"
+  ],
+  "sizes": [
+   "One Size"
+  ],
+  "tags": [
+   "demo",
+   "gift"
+  ],
+  "flags": [
+   "bestseller",
+   "newArrival"
+  ],
+  "warranty": "7-day replacement"
+ },
+ {
+  "id": 150,
+  "sku": "SZS-GI09-015",
+  "slug": "festive-gift-basket",
+  "name": "Festive Gift Basket",
+  "nameBn": "উৎসব গিফট বাস্কেট",
+  "categorySlug": "gifts",
+  "subcategory": "Hampers",
+  "shortDescription": "Woven basket with candle, mug, dry-flower sachet and card.",
+  "wholesaleCost": 1350,
+  "retailPrice": 2990,
+  "salePrice": null,
+  "priceStatus": "unverified",
+  "moq": 6,
+  "colors": [
+   "Ivory",
+   "Sage",
+   "Terracotta",
+   "Grey"
+  ],
+  "sizes": [
+   "One Size"
+  ],
+  "tags": [
+   "festive",
+   "gift"
+  ],
+  "flags": [
+   "newArrival"
+  ],
+  "warranty": "7-day replacement"
+ },
+ {
+  "id": 151,
+  "sku": "SZS-TR10-001",
+  "slug": "cabin-trolley-20-inch",
+  "name": "Cabin Trolley 20-inch",
+  "nameBn": "কেবিন ট্রলি ২০ ইঞ্চি",
+  "categorySlug": "travel-accessories",
+  "subcategory": "Luggage",
+  "shortDescription": "Polycarbonate cabin case with 360° wheels and TSA-style lock.",
+  "wholesaleCost": 3450,
+  "retailPrice": 7290,
+  "salePrice": null,
+  "priceStatus": "unverified",
+  "moq": 3,
+  "colors": [
+   "Black",
+   "White"
+  ],
+  "sizes": [
+   "One Size"
+  ],
+  "tags": [
+   "travel",
+   "premium"
+  ],
+  "flags": [
+   "featured"
+  ],
+  "warranty": "7-day replacement"
+ },
+ {
+  "id": 152,
+  "sku": "SZS-TR10-002",
+  "slug": "packing-cubes-3-set",
+  "name": "Packing Cubes (3-Set)",
+  "nameBn": "প্যাকিং কিউব (৩ সেট)",
+  "categorySlug": "travel-accessories",
+  "subcategory": "Organisers",
+  "shortDescription": "Three compression cubes that keep a suitcase ordered.",
+  "wholesaleCost": 480,
+  "retailPrice": 1150,
+  "salePrice": null,
+  "priceStatus": "unverified",
+  "moq": 6,
+  "colors": [
+   "Black",
+   "White",
+   "Navy"
+  ],
+  "sizes": [
+   "One Size"
+  ],
+  "tags": [
+   "travel",
+   "organiser"
+  ],
+  "flags": [
+   "trending"
+  ],
+  "warranty": "3-day replacement"
+ },
+ {
+  "id": 153,
+  "sku": "SZS-TR10-003",
+  "slug": "memory-foam-neck-pillow",
+  "name": "Memory Foam Neck Pillow",
+  "nameBn": "মেমোরি ফোম নেক পিলো",
+  "categorySlug": "travel-accessories",
+  "subcategory": "Comfort",
+  "shortDescription": "Contoured memory-foam pillow with a washable velour cover.",
+  "wholesaleCost": 620,
+  "retailPrice": 1490,
+  "salePrice": null,
+  "priceStatus": "unverified",
+  "moq": 6,
+  "colors": [
+   "Black",
+   "White",
+   "Navy"
+  ],
+  "sizes": [
+   "One Size"
+  ],
+  "tags": [
+   "travel",
+   "comfort"
+  ],
+  "flags": [],
+  "warranty": "3-day replacement"
+ },
+ {
+  "id": 154,
+  "sku": "SZS-TR10-004",
+  "slug": "eye-mask-and-earplug-set",
+  "name": "Eye Mask & Earplug Set",
+  "nameBn": "আই মাস্ক ও ইয়ারপ্লাগ সেট",
+  "categorySlug": "travel-accessories",
+  "subcategory": "Comfort",
+  "shortDescription": "Contoured sleep mask with mouldable nose bridge and foam earplugs.",
+  "wholesaleCost": 190,
+  "retailPrice": 550,
+  "salePrice": 470,
+  "priceStatus": "unverified",
+  "moq": 12,
+  "colors": [
+   "Maroon",
+   "Beige"
+  ],
+  "sizes": [
+   "One Size"
+  ],
+  "tags": [
+   "travel",
+   "sleep"
+  ],
+  "flags": [
+   "featured"
+  ],
+  "warranty": "3-day replacement"
+ },
+ {
+  "id": 155,
+  "sku": "SZS-TR10-005",
+  "slug": "leather-passport-holder",
+  "name": "Leather Passport Holder",
+  "nameBn": "লেদার পাসপোর্ট হোল্ডার",
+  "categorySlug": "travel-accessories",
+  "subcategory": "Documents",
+  "shortDescription": "Leather cover with slots for passport, tickets and two cards.",
+  "wholesaleCost": 420,
+  "retailPrice": 990,
+  "salePrice": null,
+  "priceStatus": "unverified",
+  "moq": 12,
+  "colors": [
+   "Black",
+   "Tan",
+   "Brown"
+  ],
+  "sizes": [
+   "One Size"
+  ],
+  "tags": [
+   "travel",
+   "gift"
+  ],
+  "flags": [
+   "trending"
+  ],
+  "warranty": "3-day replacement"
+ },
+ {
+  "id": 156,
+  "sku": "SZS-TR10-006",
+  "slug": "travel-bottle-set-4-piece",
+  "name": "Travel Bottle Set (4-Piece)",
+  "nameBn": "ট্রাভেল বোতল সেট",
+  "categorySlug": "travel-accessories",
+  "subcategory": "Liquids",
+  "shortDescription": "Leak-proof 60 ml silicone bottles in a clear TSA pouch.",
+  "wholesaleCost": 240,
+  "retailPrice": 650,
+  "salePrice": null,
+  "priceStatus": "unverified",
+  "moq": 12,
+  "colors": [
+   "Black",
+   "White",
+   "Navy"
+  ],
+  "sizes": [
+   "One Size"
+  ],
+  "tags": [
+   "travel"
+  ],
+  "flags": [
+   "bestseller"
+  ],
+  "warranty": "3-day replacement"
+ },
+ {
+  "id": 157,
+  "sku": "SZS-TR10-007",
+  "slug": "digital-luggage-scale",
+  "name": "Digital Luggage Scale",
+  "nameBn": "ডিজিটাল লাগেজ স্কেল",
+  "categorySlug": "travel-accessories",
+  "subcategory": "Gadgets",
+  "shortDescription": "Handheld scale up to 50 kg with tare function and backlight.",
+  "wholesaleCost": 380,
+  "retailPrice": 890,
+  "salePrice": null,
+  "priceStatus": "unverified",
+  "moq": 12,
+  "colors": [
+   "Black",
+   "White"
+  ],
+  "sizes": [
+   "One Size"
+  ],
+  "tags": [
+   "travel"
+  ],
+  "flags": [],
+  "warranty": "3-day replacement"
+ },
+ {
+  "id": 158,
+  "sku": "SZS-TR10-008",
+  "slug": "hanging-toiletry-organiser",
+  "name": "Hanging Toiletry Organiser",
+  "nameBn": "হ্যান্ডিং টয়লেট্রি অর্গানাইজার",
+  "categorySlug": "travel-accessories",
+  "subcategory": "Organisers",
+  "shortDescription": "Fold-out organiser with four zip compartments and a steel hook.",
+  "wholesaleCost": 520,
+  "retailPrice": 1250,
+  "salePrice": null,
+  "priceStatus": "unverified",
+  "moq": 6,
+  "colors": [
+   "Black",
+   "White",
+   "Navy"
+  ],
+  "sizes": [
+   "One Size"
+  ],
+  "tags": [
+   "travel",
+   "organiser"
+  ],
+  "flags": [],
+  "warranty": "3-day replacement"
+ },
+ {
+  "id": 159,
+  "sku": "SZS-TR10-009",
+  "slug": "compression-travel-socks",
+  "name": "Compression Travel Socks",
+  "nameBn": "কম্প্রেশন ট্রাভেল সকস",
+  "categorySlug": "travel-accessories",
+  "subcategory": "Comfort",
+  "shortDescription": "Graduated-compression socks for long bus and flight legs.",
+  "wholesaleCost": 260,
+  "retailPrice": 650,
+  "salePrice": null,
+  "priceStatus": "unverified",
+  "moq": 12,
+  "colors": [
+   "Black",
+   "White",
+   "Navy",
+   "Olive"
+  ],
+  "sizes": [
+   "One Size"
+  ],
+  "tags": [
+   "travel",
+   "health"
+  ],
+  "flags": [
+   "featured"
+  ],
+  "warranty": "3-day replacement"
+ },
+ {
+  "id": 160,
+  "sku": "SZS-TR10-010",
+  "slug": "universal-travel-adapter",
+  "name": "Universal Travel Adapter",
+  "nameBn": "ইউনিভার্সাল ট্রাভেল অ্যাডাপ্টার",
+  "categorySlug": "travel-accessories",
+  "subcategory": "Gadgets",
+  "shortDescription": "Works in 150+ countries with two USB ports and a safety shutter.",
+  "wholesaleCost": 620,
+  "retailPrice": 1490,
+  "salePrice": null,
+  "priceStatus": "unverified",
+  "moq": 6,
+  "colors": [
+   "White",
+   "Navy"
+  ],
+  "sizes": [
+   "One Size"
+  ],
+  "tags": [
+   "travel",
+   "tech"
+  ],
+  "flags": [
+   "bestseller"
+  ],
+  "warranty": "3-day replacement"
+ },
+ {
+  "id": 161,
+  "sku": "SZS-TR10-011",
+  "slug": "laptop-trolley-bag",
+  "name": "Laptop Trolley Bag",
+  "nameBn": "ল্যাপটপ ট্রলি ব্যাগ",
+  "categorySlug": "travel-accessories",
+  "subcategory": "Luggage",
+  "shortDescription": "Rolling briefcase that fits a 15.6-inch laptop and two days of clothes.",
+  "wholesaleCost": 2950,
+  "retailPrice": 6290,
+  "salePrice": 5350,
+  "priceStatus": "unverified",
+  "moq": 3,
+  "colors": [
+   "Black",
+   "Tan",
+   "Brown"
+  ],
+  "sizes": [
+   "One Size"
+  ],
+  "tags": [
+   "travel",
+   "office"
+  ],
+  "flags": [],
+  "warranty": "7-day replacement"
+ },
+ {
+  "id": 162,
+  "sku": "SZS-TR10-012",
+  "slug": "shoe-bag-pair",
+  "name": "Shoe Bag Pair",
+  "nameBn": "শু ব্যাগ পেয়ার",
+  "categorySlug": "travel-accessories",
+  "subcategory": "Organisers",
+  "shortDescription": "Water-resistant shoe bags that keep clothes clean.",
+  "wholesaleCost": 180,
+  "retailPrice": 490,
+  "salePrice": null,
+  "priceStatus": "unverified",
+  "moq": 12,
+  "colors": [
+   "Black",
+   "White",
+   "Navy"
+  ],
+  "sizes": [
+   "One Size"
+  ],
+  "tags": [
+   "travel",
+   "organiser"
+  ],
+  "flags": [
+   "trending"
+  ],
+  "warranty": "3-day replacement"
+ },
+ {
+  "id": 163,
+  "sku": "SZS-TR10-013",
+  "slug": "compact-travel-umbrella",
+  "name": "Compact Travel Umbrella",
+  "nameBn": "কম্প্যাক্ট ট্রাভেল আম্ব্রেলা",
+  "categorySlug": "travel-accessories",
+  "subcategory": "Comfort",
+  "shortDescription": "230 g umbrella that fits a day bag and opens with one hand.",
+  "wholesaleCost": 420,
+  "retailPrice": 990,
+  "salePrice": null,
+  "priceStatus": "unverified",
+  "moq": 12,
+  "colors": [
+   "Black",
+   "White"
+  ],
+  "sizes": [
+   "One Size"
+  ],
+  "tags": [
+   "monsoon",
+   "travel"
+  ],
+  "flags": [],
+  "warranty": "3-day replacement"
+ },
+ {
+  "id": 164,
+  "sku": "SZS-TR10-014",
+  "slug": "waterproof-dry-pouch",
+  "name": "Waterproof Dry Pouch",
+  "nameBn": "ওয়াটারপ্রুফ ড্রাই পাউচ",
+  "categorySlug": "travel-accessories",
+  "subcategory": "Organisers",
+  "shortDescription": "Roll-top dry bag for phones and documents near water.",
+  "wholesaleCost": 320,
+  "retailPrice": 790,
+  "salePrice": null,
+  "priceStatus": "unverified",
+  "moq": 12,
+  "colors": [
+   "Black",
+   "White",
+   "Navy"
+  ],
+  "sizes": [
+   "One Size"
+  ],
+  "tags": [
+   "travel",
+   "monsoon"
+  ],
+  "flags": [
+   "bestseller",
+   "newArrival"
+  ],
+  "warranty": "3-day replacement"
+ },
+ {
+  "id": 165,
+  "sku": "SZS-TR10-015",
+  "slug": "traveller-duffel-40l",
+  "name": "Traveller Duffel 40L",
+  "nameBn": "ট্রাভেলার ডাফল ৪০ লিটার",
+  "categorySlug": "travel-accessories",
+  "subcategory": "Luggage",
+  "shortDescription": "40 L duffle with a separate shoe base and detachable shoulder strap.",
+  "wholesaleCost": 1950,
+  "retailPrice": 4190,
+  "salePrice": null,
+  "priceStatus": "unverified",
+  "moq": 3,
+  "colors": [
+   "Black",
+   "Tan",
+   "Brown",
+   "Charcoal"
+  ],
+  "sizes": [
+   "One Size"
+  ],
+  "tags": [
+   "travel",
+   "gym"
+  ],
+  "flags": [
+   "newArrival"
+  ],
+  "warranty": "7-day replacement"
+ },
+ {
+  "id": 166,
+  "sku": "SZS-LI11-001",
+  "slug": "yoga-mat-6-mm",
+  "name": "Yoga Mat 6 mm",
+  "nameBn": "যোগা ম্যাট ৬ মিমি",
+  "categorySlug": "lifestyle",
+  "subcategory": "Fitness",
+  "shortDescription": "Non-slip TPE mat with alignment lines and a carry strap.",
+  "wholesaleCost": 780,
+  "retailPrice": 1790,
+  "salePrice": null,
+  "priceStatus": "unverified",
+  "moq": 6,
+  "colors": [
+   "Ivory",
+   "Sage"
+  ],
+  "sizes": [
+   "One Size"
+  ],
+  "tags": [
+   "fitness",
+   "home"
+  ],
+  "flags": [
+   "featured"
+  ],
+  "warranty": "7-day replacement"
+ },
+ {
+  "id": 167,
+  "sku": "SZS-LI11-002",
+  "slug": "resistance-band-set",
+  "name": "Resistance Band Set",
+  "nameBn": "রেজিস্ট্যান্স ব্যান্ড সেট",
+  "categorySlug": "lifestyle",
+  "subcategory": "Fitness",
+  "shortDescription": "Five latex bands from light to extra-heavy with a mesh bag.",
+  "wholesaleCost": 420,
+  "retailPrice": 990,
+  "salePrice": null,
+  "priceStatus": "unverified",
+  "moq": 12,
+  "colors": [
+   "Black",
+   "White",
+   "Navy"
+  ],
+  "sizes": [
+   "One Size"
+  ],
+  "tags": [
+   "fitness"
+  ],
+  "flags": [
+   "trending"
+  ],
+  "warranty": "3-day replacement"
+ },
+ {
+  "id": 168,
+  "sku": "SZS-LI11-003",
+  "slug": "insulated-steel-bottle-750-ml",
+  "name": "Insulated Steel Bottle 750 ml",
+  "nameBn": "ইনসুলেটেড স্টিল বোতল ৭৫০ মিলি",
+  "categorySlug": "lifestyle",
+  "subcategory": "Hydration",
+  "shortDescription": "Double-wall steel bottle: 18 hours cold, 8 hours hot.",
+  "wholesaleCost": 620,
+  "retailPrice": 1490,
+  "salePrice": null,
+  "priceStatus": "unverified",
+  "moq": 6,
+  "colors": [
+   "Gold",
+   "Silver",
+   "Rose Gold"
+  ],
+  "sizes": [
+   "One Size"
+  ],
+  "tags": [
+   "fitness",
+   "eco"
+  ],
+  "flags": [],
+  "warranty": "3-day replacement"
+ },
+ {
+  "id": 169,
+  "sku": "SZS-LI11-004",
+  "slug": "menstrual-cup-size-guide",
+  "name": "Menstrual Cup (Size Guide)",
+  "nameBn": "মেনস্ট্রুয়াল কাপ",
+  "categorySlug": "lifestyle",
+  "subcategory": "Wellness",
+  "shortDescription": "Medical-grade silicone cup in two sizes with a storage pouch.",
+  "wholesaleCost": 380,
+  "retailPrice": 950,
+  "salePrice": 810,
+  "priceStatus": "unverified",
+  "moq": 12,
+  "colors": [
+   "Terracotta",
+   "Grey"
+  ],
+  "sizes": [
+   "One Size"
+  ],
+  "tags": [
+   "wellness"
+  ],
+  "flags": [
+   "featured"
+  ],
+  "warranty": "3-day replacement"
+ },
+ {
+  "id": 170,
+  "sku": "SZS-LI11-005",
+  "slug": "bamboo-toothbrush-4-pack",
+  "name": "Bamboo Toothbrush (4-Pack)",
+  "nameBn": "বাঁশের টুথব্রাশ (৪ প্যাক)",
+  "categorySlug": "lifestyle",
+  "subcategory": "Wellness",
+  "shortDescription": "Biodegradable bamboo handles with soft charcoal bristles.",
+  "wholesaleCost": 180,
+  "retailPrice": 490,
+  "salePrice": null,
+  "priceStatus": "unverified",
+  "moq": 12,
+  "colors": [
+   "Ivory",
+   "Sage",
+   "Terracotta"
+  ],
+  "sizes": [
+   "One Size"
+  ],
+  "tags": [
+   "eco",
+   "wellness"
+  ],
+  "flags": [
+   "trending"
+  ],
+  "warranty": "3-day replacement"
+ },
+ {
+  "id": 171,
+  "sku": "SZS-LI11-006",
+  "slug": "weekly-pill-organiser",
+  "name": "Weekly Pill Organiser",
+  "nameBn": "সাপ্তাহিক পিল অর্গানাইজার",
+  "categorySlug": "lifestyle",
+  "subcategory": "Wellness",
+  "shortDescription": "Seven-day AM/PM case with a push-button release.",
+  "wholesaleCost": 230,
+  "retailPrice": 590,
+  "salePrice": null,
+  "priceStatus": "unverified",
+  "moq": 12,
+  "colors": [
+   "Black",
+   "White",
+   "Navy"
+  ],
+  "sizes": [
+   "One Size"
+  ],
+  "tags": [
+   "health"
+  ],
+  "flags": [
+   "bestseller"
+  ],
+  "warranty": "3-day replacement"
+ },
+ {
+  "id": 172,
+  "sku": "SZS-LI11-007",
+  "slug": "digital-kitchen-scale",
+  "name": "Digital Kitchen Scale",
+  "nameBn": "ডিজিটাল কিচেন স্কেল",
+  "categorySlug": "lifestyle",
+  "subcategory": "Home Fitness",
+  "shortDescription": "1 g precision up to 5 kg with tare and unit switching.",
+  "wholesaleCost": 520,
+  "retailPrice": 1190,
+  "salePrice": null,
+  "priceStatus": "unverified",
+  "moq": 6,
+  "colors": [
+   "Black",
+   "White"
+  ],
+  "sizes": [
+   "One Size"
+  ],
+  "tags": [
+   "kitchen",
+   "health"
+  ],
+  "flags": [],
+  "warranty": "3-day replacement"
+ },
+ {
+  "id": 173,
+  "sku": "SZS-LI11-008",
+  "slug": "dumbbell-pair-5-kg",
+  "name": "Dumbbell Pair 5 kg",
+  "nameBn": "ডাম্বেল পেয়ার ৫ কেজি",
+  "categorySlug": "lifestyle",
+  "subcategory": "Fitness",
+  "shortDescription": "Neoprene-coated dumbbells that protect floors and grip well.",
+  "wholesaleCost": 1450,
+  "retailPrice": 3190,
+  "salePrice": null,
+  "priceStatus": "unverified",
+  "moq": 3,
+  "colors": [
+   "Black",
+   "White",
+   "Navy"
+  ],
+  "sizes": [
+   "One Size"
+  ],
+  "tags": [
+   "fitness"
+  ],
+  "flags": [],
+  "warranty": "7-day replacement"
+ },
+ {
+  "id": 174,
+  "sku": "SZS-LI11-009",
+  "slug": "gym-gloves",
+  "name": "Gym Gloves",
+  "nameBn": "জিম গ্লাভস",
+  "categorySlug": "lifestyle",
+  "subcategory": "Fitness",
+  "shortDescription": "Padded palm gloves with wrist wrap and pull tabs.",
+  "wholesaleCost": 320,
+  "retailPrice": 790,
+  "salePrice": null,
+  "priceStatus": "unverified",
+  "moq": 12,
+  "colors": [
+   "Black",
+   "White",
+   "Navy"
+  ],
+  "sizes": [
+   "One Size"
+  ],
+  "tags": [
+   "fitness"
+  ],
+  "flags": [
+   "featured"
+  ],
+  "warranty": "3-day replacement"
+ },
+ {
+  "id": 175,
+  "sku": "SZS-LI11-010",
+  "slug": "speed-jump-rope",
+  "name": "Speed Jump Rope",
+  "nameBn": "স্পিড জাম্প রোপ",
+  "categorySlug": "lifestyle",
+  "subcategory": "Fitness",
+  "shortDescription": "Ball-bearing speed rope with adjustable steel cable.",
+  "wholesaleCost": 220,
+  "retailPrice": 590,
+  "salePrice": null,
+  "priceStatus": "unverified",
+  "moq": 12,
+  "colors": [
+   "White",
+   "Navy"
+  ],
+  "sizes": [
+   "One Size"
+  ],
+  "tags": [
+   "fitness"
+  ],
+  "flags": [
+   "bestseller"
+  ],
+  "warranty": "3-day replacement"
+ },
+ {
+  "id": 176,
+  "sku": "SZS-LI11-011",
+  "slug": "cooling-sports-towel",
+  "name": "Cooling Sports Towel",
+  "nameBn": "কুলিং স্পোর্টস টাওয়েল",
+  "categorySlug": "lifestyle",
+  "subcategory": "Fitness",
+  "shortDescription": "Evaporative cooling towel that stays damp for hours.",
+  "wholesaleCost": 260,
+  "retailPrice": 650,
+  "salePrice": 550,
+  "priceStatus": "unverified",
+  "moq": 12,
+  "colors": [
+   "Black",
+   "White",
+   "Navy"
+  ],
+  "sizes": [
+   "One Size"
+  ],
+  "tags": [
+   "fitness",
+   "summer"
+  ],
+  "flags": [],
+  "warranty": "3-day replacement"
+ },
+ {
+  "id": 177,
+  "sku": "SZS-LI11-012",
+  "slug": "waist-support-belt",
+  "name": "Waist Support Belt",
+  "nameBn": "ওয়েস্ট সাপোর্ট বেল্ট",
+  "categorySlug": "lifestyle",
+  "subcategory": "Wellness",
+  "shortDescription": "Breathable lumbar support with adjustable double strap.",
+  "wholesaleCost": 480,
+  "retailPrice": 1150,
+  "salePrice": null,
+  "priceStatus": "unverified",
+  "moq": 6,
+  "colors": [
+   "Black",
+   "White",
+   "Navy"
+  ],
+  "sizes": [
+   "One Size"
+  ],
+  "tags": [
+   "health"
+  ],
+  "flags": [
+   "trending"
+  ],
+  "warranty": "3-day replacement"
+ },
+ {
+  "id": 178,
+  "sku": "SZS-LI11-013",
+  "slug": "posture-corrector",
+  "name": "Posture Corrector",
+  "nameBn": "পশ্চার কারেক্টর",
+  "categorySlug": "lifestyle",
+  "subcategory": "Wellness",
+  "shortDescription": "Soft posture brace for desk posture awareness.",
+  "wholesaleCost": 390,
+  "retailPrice": 950,
+  "salePrice": null,
+  "priceStatus": "unverified",
+  "moq": 12,
+  "colors": [
+   "Black",
+   "White"
+  ],
+  "sizes": [
+   "One Size"
+  ],
+  "tags": [
+   "health",
+   "office"
+  ],
+  "flags": [],
+  "warranty": "3-day replacement"
+ },
+ {
+  "id": 179,
+  "sku": "SZS-LI11-014",
+  "slug": "kettlebell-4-kg",
+  "name": "Kettlebell 4 kg",
+  "nameBn": "কেটলবেল ৪ কেজি",
+  "categorySlug": "lifestyle",
+  "subcategory": "Fitness",
+  "shortDescription": "Vinyl-coated kettlebell with a wide, comfortable handle.",
+  "wholesaleCost": 980,
+  "retailPrice": 2190,
+  "salePrice": null,
+  "priceStatus": "unverified",
+  "moq": 6,
+  "colors": [
+   "Black",
+   "White",
+   "Navy"
+  ],
+  "sizes": [
+   "One Size"
+  ],
+  "tags": [
+   "fitness"
+  ],
+  "flags": [
+   "bestseller",
+   "newArrival"
+  ],
+  "warranty": "7-day replacement"
+ },
+ {
+  "id": 180,
+  "sku": "SZS-LI11-015",
+  "slug": "rechargeable-eye-massager",
+  "name": "Rechargeable Eye Massager",
+  "nameBn": "রিচার্জেবল আই ম্যাসাজার",
+  "categorySlug": "lifestyle",
+  "subcategory": "Wellness",
+  "shortDescription": "Heated air-pressure eye massager with Bluetooth audio.",
+  "wholesaleCost": 1150,
+  "retailPrice": 2590,
+  "salePrice": null,
+  "priceStatus": "unverified",
+  "moq": 6,
+  "colors": [
+   "Black",
+   "White",
+   "Navy"
+  ],
+  "sizes": [
+   "One Size"
+  ],
+  "tags": [
+   "wellness",
+   "gift"
+  ],
+  "flags": [
+   "newArrival"
+  ],
+  "warranty": "7-day replacement"
+ },
+ {
+  "id": 181,
+  "sku": "SZS-DE12-001",
+  "slug": "a5-hardcover-journal",
+  "name": "A5 Hardcover Journal",
+  "nameBn": "এ৫ হার্ডকভার জার্নাল",
+  "categorySlug": "desk-stationery",
+  "subcategory": "Notebooks",
+  "shortDescription": "160 pages of 100 GSM paper with a lay-flat binding.",
+  "wholesaleCost": 320,
+  "retailPrice": 790,
+  "salePrice": null,
+  "priceStatus": "unverified",
+  "moq": 12,
+  "colors": [
+   "Black",
+   "Tan"
+  ],
+  "sizes": [
+   "One Size"
+  ],
+  "tags": [
+   "office",
+   "gift"
+  ],
+  "flags": [
+   "featured"
+  ],
+  "warranty": "3-day replacement"
+ },
+ {
+  "id": 182,
+  "sku": "SZS-DE12-002",
+  "slug": "gel-pen-set-6-piece",
+  "name": "Gel Pen Set (6-Piece)",
+  "nameBn": "জেল পেন সেট (৬ পিস)",
+  "categorySlug": "desk-stationery",
+  "subcategory": "Pens",
+  "shortDescription": "Quick-dry 0.5 mm gel pens in six ink colours.",
+  "wholesaleCost": 180,
+  "retailPrice": 490,
+  "salePrice": null,
+  "priceStatus": "unverified",
+  "moq": 12,
+  "colors": [
+   "Black",
+   "White",
+   "Navy"
+  ],
+  "sizes": [
+   "One Size"
+  ],
+  "tags": [
+   "school",
+   "office"
+  ],
+  "flags": [
+   "trending"
+  ],
+  "warranty": "3-day replacement"
+ },
+ {
+  "id": 183,
+  "sku": "SZS-DE12-003",
+  "slug": "desk-organiser-tray",
+  "name": "Desk Organiser Tray",
+  "nameBn": "ডেস্ক অর্গানাইজার ট্রে",
+  "categorySlug": "desk-stationery",
+  "subcategory": "Desk",
+  "shortDescription": "Stackable metal tray for stationery, cables and notes.",
+  "wholesaleCost": 420,
+  "retailPrice": 990,
+  "salePrice": null,
+  "priceStatus": "unverified",
+  "moq": 12,
+  "colors": [
+   "Gold",
+   "Silver",
+   "Rose Gold"
+  ],
+  "sizes": [
+   "One Size"
+  ],
+  "tags": [
+   "office"
+  ],
+  "flags": [],
+  "warranty": "3-day replacement"
+ },
+ {
+  "id": 184,
+  "sku": "SZS-DE12-004",
+  "slug": "sticky-note-set",
+  "name": "Sticky Note Set",
+  "nameBn": "স্টিকি নোট সেট",
+  "categorySlug": "desk-stationery",
+  "subcategory": "Paper",
+  "shortDescription": "Five pads in muted tones with a reusable holder.",
+  "wholesaleCost": 150,
+  "retailPrice": 420,
+  "salePrice": 360,
+  "priceStatus": "unverified",
+  "moq": 12,
+  "colors": [
+   "Terracotta",
+   "Grey"
+  ],
+  "sizes": [
+   "One Size"
+  ],
+  "tags": [
+   "office"
+  ],
+  "flags": [
+   "featured"
+  ],
+  "warranty": "3-day replacement"
+ },
+ {
+  "id": 185,
+  "sku": "SZS-DE12-005",
+  "slug": "premium-fountain-pen",
+  "name": "Premium Fountain Pen",
+  "nameBn": "প্রিমিয়াম ফাউন্টেন পেন",
+  "categorySlug": "desk-stationery",
+  "subcategory": "Pens",
+  "shortDescription": "Brass-barrel fountain pen with a converter and two cartridges.",
+  "wholesaleCost": 620,
+  "retailPrice": 1490,
+  "salePrice": null,
+  "priceStatus": "unverified",
+  "moq": 6,
+  "colors": [
+   "Gold",
+   "Silver",
+   "Rose Gold"
+  ],
+  "sizes": [
+   "One Size"
+  ],
+  "tags": [
+   "gift",
+   "office"
+  ],
+  "flags": [
+   "trending"
+  ],
+  "warranty": "3-day replacement"
+ },
+ {
+  "id": 186,
+  "sku": "SZS-DE12-006",
+  "slug": "mechanical-pencil-set",
+  "name": "Mechanical Pencil Set",
+  "nameBn": "মেকানিক্যাল পেন্সিল সেট",
+  "categorySlug": "desk-stationery",
+  "subcategory": "Pens",
+  "shortDescription": "0.5 mm and 0.7 mm pencils with 40 spare leads.",
+  "wholesaleCost": 220,
+  "retailPrice": 590,
+  "salePrice": null,
+  "priceStatus": "unverified",
+  "moq": 12,
+  "colors": [
+   "Gold",
+   "Silver",
+   "Rose Gold"
+  ],
+  "sizes": [
+   "One Size"
+  ],
+  "tags": [
+   "school",
+   "office"
+  ],
+  "flags": [
+   "bestseller"
+  ],
+  "warranty": "3-day replacement"
+ },
+ {
+  "id": 187,
+  "sku": "SZS-DE12-007",
+  "slug": "document-file-folder",
+  "name": "Document File Folder",
+  "nameBn": "ডকুমেন্ট ফাইল ফোল্ডার",
+  "categorySlug": "desk-stationery",
+  "subcategory": "Paper",
+  "shortDescription": "Expanding folder with 12 indexed pockets.",
+  "wholesaleCost": 190,
+  "retailPrice": 490,
+  "salePrice": null,
+  "priceStatus": "unverified",
+  "moq": 12,
+  "colors": [
+   "Black",
+   "White"
+  ],
+  "sizes": [
+   "One Size"
+  ],
+  "tags": [
+   "office"
+  ],
+  "flags": [],
+  "warranty": "3-day replacement"
+ },
+ {
+  "id": 188,
+  "sku": "SZS-DE12-008",
+  "slug": "acrylic-desk-calendar",
+  "name": "Acrylic Desk Calendar",
+  "nameBn": "অ্যাক্রিলিক ডেস্ক ক্যালেন্ডার",
+  "categorySlug": "desk-stationery",
+  "subcategory": "Desk",
+  "shortDescription": "Reusable acrylic block calendar with wooden base.",
+  "wholesaleCost": 280,
+  "retailPrice": 690,
+  "salePrice": null,
+  "priceStatus": "unverified",
+  "moq": 12,
+  "colors": [
+   "Sage",
+   "Terracotta",
+   "Grey"
+  ],
+  "sizes": [
+   "One Size"
+  ],
+  "tags": [
+   "office",
+   "gift"
+  ],
+  "flags": [],
+  "warranty": "3-day replacement"
+ },
+ {
+  "id": 189,
+  "sku": "SZS-DE12-009",
+  "slug": "leather-pen-holder",
+  "name": "Leather Pen Holder",
+  "nameBn": "লেদার পেন হোল্ডার",
+  "categorySlug": "desk-stationery",
+  "subcategory": "Desk",
+  "shortDescription": "Stitched leather cup that holds pens and a ruler.",
+  "wholesaleCost": 240,
+  "retailPrice": 650,
+  "salePrice": null,
+  "priceStatus": "unverified",
+  "moq": 12,
+  "colors": [
+   "Black",
+   "Tan",
+   "Brown",
+   "Charcoal"
+  ],
+  "sizes": [
+   "One Size"
+  ],
+  "tags": [
+   "office"
+  ],
+  "flags": [
+   "featured"
+  ],
+  "warranty": "3-day replacement"
+ },
+ {
+  "id": 190,
+  "sku": "SZS-DE12-010",
+  "slug": "a4-whiteboard",
+  "name": "A4 Whiteboard",
+  "nameBn": "এ৪ হোয়াইটবোর্ড",
+  "categorySlug": "desk-stationery",
+  "subcategory": "Desk",
+  "shortDescription": "Double-sided A4 whiteboard with a marker and eraser.",
+  "wholesaleCost": 480,
+  "retailPrice": 1150,
+  "salePrice": null,
+  "priceStatus": "unverified",
+  "moq": 6,
+  "colors": [
+   "White",
+   "Navy"
+  ],
+  "sizes": [
+   "One Size"
+  ],
+  "tags": [
+   "office",
+   "study"
+  ],
+  "flags": [
+   "bestseller"
+  ],
+  "warranty": "3-day replacement"
+ },
+ {
+  "id": 191,
+  "sku": "SZS-DE12-011",
+  "slug": "highlighter-set-6-piece",
+  "name": "Highlighter Set (6-Piece)",
+  "nameBn": "হাইলাইটার সেট",
+  "categorySlug": "desk-stationery",
+  "subcategory": "Pens",
+  "shortDescription": "Pastel chisel-tip highlighters that will not bleed through.",
+  "wholesaleCost": 160,
+  "retailPrice": 450,
+  "salePrice": 380,
+  "priceStatus": "unverified",
+  "moq": 12,
+  "colors": [
+   "Ivory",
+   "Sage",
+   "Terracotta"
+  ],
+  "sizes": [
+   "One Size"
+  ],
+  "tags": [
+   "school",
+   "office"
+  ],
+  "flags": [],
+  "warranty": "3-day replacement"
+ },
+ {
+  "id": 192,
+  "sku": "SZS-DE12-012",
+  "slug": "pocket-notebook-3-pack",
+  "name": "Pocket Notebook (3-Pack)",
+  "nameBn": "পকেট নোটবুক (৩ প্যাক)",
+  "categorySlug": "desk-stationery",
+  "subcategory": "Notebooks",
+  "shortDescription": "Three stitched pocket notebooks with dot-grid pages.",
+  "wholesaleCost": 170,
+  "retailPrice": 490,
+  "salePrice": null,
+  "priceStatus": "unverified",
+  "moq": 12,
+  "colors": [
+   "Black",
+   "Tan",
+   "Brown",
+   "Charcoal"
+  ],
+  "sizes": [
+   "One Size"
+  ],
+  "tags": [
+   "office",
+   "travel"
+  ],
+  "flags": [
+   "trending"
+  ],
+  "warranty": "3-day replacement"
+ },
+ {
+  "id": 193,
+  "sku": "SZS-DE12-013",
+  "slug": "stapler-and-staple-set",
+  "name": "Stapler & Staple Set",
+  "nameBn": "স্ট্যাপলার সেট",
+  "categorySlug": "desk-stationery",
+  "subcategory": "Desk",
+  "shortDescription": "Metal stapler with 1000 staples and a staple remover.",
+  "wholesaleCost": 210,
+  "retailPrice": 550,
+  "salePrice": null,
+  "priceStatus": "unverified",
+  "moq": 12,
+  "colors": [
+   "Gold",
+   "Silver"
+  ],
+  "sizes": [
+   "One Size"
+  ],
+  "tags": [
+   "office",
+   "school"
+  ],
+  "flags": [],
+  "warranty": "3-day replacement"
+ },
+ {
+  "id": 194,
+  "sku": "SZS-DE12-014",
+  "slug": "led-desk-lamp",
+  "name": "LED Desk Lamp",
+  "nameBn": "এলইডি ডেস্ক ল্যাম্প",
+  "categorySlug": "desk-stationery",
+  "subcategory": "Desk",
+  "shortDescription": "Three-temperature LED lamp with a USB charging port.",
+  "wholesaleCost": 950,
+  "retailPrice": 2190,
+  "salePrice": null,
+  "priceStatus": "unverified",
+  "moq": 6,
+  "colors": [
+   "Black",
+   "White",
+   "Navy"
+  ],
+  "sizes": [
+   "One Size"
+  ],
+  "tags": [
+   "office",
+   "study"
+  ],
+  "flags": [
+   "bestseller",
+   "newArrival"
+  ],
+  "warranty": "7-day replacement"
+ },
+ {
+  "id": 195,
+  "sku": "SZS-DE12-015",
+  "slug": "scissors-and-cutter-kit",
+  "name": "Scissors & Cutter Kit",
+  "nameBn": "সিজার ও কাটার কিট",
+  "categorySlug": "desk-stationery",
+  "subcategory": "Desk",
+  "shortDescription": "Stainless scissors, precision cutter and spare blades.",
+  "wholesaleCost": 230,
+  "retailPrice": 590,
+  "salePrice": null,
+  "priceStatus": "unverified",
+  "moq": 12,
+  "colors": [
+   "Gold",
+   "Silver",
+   "Rose Gold"
+  ],
+  "sizes": [
+   "One Size"
+  ],
+  "tags": [
+   "office"
+  ],
+  "flags": [
+   "newArrival"
+  ],
+  "warranty": "3-day replacement"
+ },
+ {
+  "id": 196,
+  "sku": "SZS-HO13-001",
+  "slug": "cotton-bedsheet-set-queen",
+  "name": "Cotton Bedsheet Set (Queen)",
+  "nameBn": "কটন বেডশিট সেট (কুইন)",
+  "categorySlug": "home-decor",
+  "subcategory": "Bedding",
+  "shortDescription": "Queen sheet, two pillow covers and a bolster cover in combed cotton.",
+  "wholesaleCost": 1150,
+  "retailPrice": 2590,
+  "salePrice": null,
+  "priceStatus": "unverified",
+  "moq": 6,
+  "colors": [
+   "Ivory",
+   "Sage"
+  ],
+  "sizes": [
+   "One Size"
+  ],
+  "tags": [
+   "home",
+   "cotton"
+  ],
+  "flags": [
+   "featured"
+  ],
+  "warranty": "7-day replacement"
+ },
+ {
+  "id": 197,
+  "sku": "SZS-HO13-002",
+  "slug": "cushion-cover-set-2-piece",
+  "name": "Cushion Cover Set (2-Piece)",
+  "nameBn": "কুশন কভার সেট",
+  "categorySlug": "home-decor",
+  "subcategory": "Cushions",
+  "shortDescription": "Two 16-inch covers with concealed zips and piped edges.",
+  "wholesaleCost": 380,
+  "retailPrice": 950,
+  "salePrice": null,
+  "priceStatus": "unverified",
+  "moq": 12,
+  "colors": [
+   "Sage",
+   "Terracotta",
+   "Grey"
+  ],
+  "sizes": [
+   "One Size"
+  ],
+  "tags": [
+   "home",
+   "decor"
+  ],
+  "flags": [
+   "trending"
+  ],
+  "warranty": "3-day replacement"
+ },
+ {
+  "id": 198,
+  "sku": "SZS-HO13-003",
+  "slug": "macrame-wall-hanging",
+  "name": "Macrame Wall Hanging",
+  "nameBn": "ম্যাক্রামে ওয়াল হ্যাঙ্গিং",
+  "categorySlug": "home-decor",
+  "subcategory": "Wall Decor",
+  "shortDescription": "Hand-knotted cotton macrame on a wooden dowel.",
+  "wholesaleCost": 540,
+  "retailPrice": 1290,
+  "salePrice": null,
+  "priceStatus": "unverified",
+  "moq": 6,
+  "colors": [
+   "Ivory",
+   "Sage",
+   "Terracotta",
+   "Grey"
+  ],
+  "sizes": [
+   "One Size"
+  ],
+  "tags": [
+   "handmade",
+   "decor"
+  ],
+  "flags": [],
+  "warranty": "3-day replacement"
+ },
+ {
+  "id": 199,
+  "sku": "SZS-HO13-004",
+  "slug": "ceramic-bud-vase",
+  "name": "Ceramic Bud Vase",
+  "nameBn": "সিরামিক বাড ভাস",
+  "categorySlug": "home-decor",
+  "subcategory": "Decor",
+  "shortDescription": "Wheel-thrown matte ceramic vase for a single stem.",
+  "wholesaleCost": 290,
+  "retailPrice": 750,
+  "salePrice": 640,
+  "priceStatus": "unverified",
+  "moq": 12,
+  "colors": [
+   "Terracotta",
+   "Grey"
+  ],
+  "sizes": [
+   "One Size"
+  ],
+  "tags": [
+   "decor",
+   "gift"
+  ],
+  "flags": [
+   "featured"
+  ],
+  "warranty": "3-day replacement"
+ },
+ {
+  "id": 200,
+  "sku": "SZS-HO13-005",
+  "slug": "table-runner",
+  "name": "Table Runner",
+  "nameBn": "টেবিল রানার",
+  "categorySlug": "home-decor",
+  "subcategory": "Dining",
+  "shortDescription": "Woven cotton runner with a hand-knotted fringe.",
+  "wholesaleCost": 320,
+  "retailPrice": 790,
+  "salePrice": null,
+  "priceStatus": "unverified",
+  "moq": 12,
+  "colors": [
+   "Ivory",
+   "Sage",
+   "Terracotta"
+  ],
+  "sizes": [
+   "One Size"
+  ],
+  "tags": [
+   "home",
+   "decor"
+  ],
+  "flags": [
+   "trending"
+  ],
+  "warranty": "3-day replacement"
+ },
+ {
+  "id": 201,
+  "sku": "SZS-HO13-006",
+  "slug": "scented-candle-jar",
+  "name": "Scented Candle Jar",
+  "nameBn": "সুগন্ধি ক্যান্ডেল জার",
+  "categorySlug": "home-decor",
+  "subcategory": "Fragrance",
+  "shortDescription": "Soy-wax candle in a reusable glass jar, 35-hour burn.",
+  "wholesaleCost": 460,
+  "retailPrice": 1150,
+  "salePrice": null,
+  "priceStatus": "unverified",
+  "moq": 6,
+  "colors": [
+   "Ivory",
+   "Sage",
+   "Terracotta",
+   "Grey"
+  ],
+  "sizes": [
+   "One Size"
+  ],
+  "tags": [
+   "home",
+   "gift"
+  ],
+  "flags": [
+   "bestseller"
+  ],
+  "warranty": "3-day replacement"
+ },
+ {
+  "id": 202,
+  "sku": "SZS-HO13-007",
+  "slug": "photo-frame-set-3-piece",
+  "name": "Photo Frame Set (3-Piece)",
+  "nameBn": "ফটো ফ্রেম সেট",
+  "categorySlug": "home-decor",
+  "subcategory": "Wall Decor",
+  "shortDescription": "Three wood frames with mounts for 4×6 and 5×7 prints.",
+  "wholesaleCost": 420,
+  "retailPrice": 1090,
+  "salePrice": null,
+  "priceStatus": "unverified",
+  "moq": 6,
+  "colors": [
+   "Ivory",
+   "Sage"
+  ],
+  "sizes": [
+   "One Size"
+  ],
+  "tags": [
+   "home",
+   "gift"
+  ],
+  "flags": [],
+  "warranty": "3-day replacement"
+ },
+ {
+  "id": 203,
+  "sku": "SZS-HO13-008",
+  "slug": "cotton-doormat",
+  "name": "Cotton Doormat",
+  "nameBn": "কটন ডোরম্যাট",
+  "categorySlug": "home-decor",
+  "subcategory": "Floor",
+  "shortDescription": "Machine-washable doormat with a non-slip backing.",
+  "wholesaleCost": 350,
+  "retailPrice": 890,
+  "salePrice": null,
+  "priceStatus": "unverified",
+  "moq": 12,
+  "colors": [
+   "Sage",
+   "Terracotta",
+   "Grey"
+  ],
+  "sizes": [
+   "One Size"
+  ],
+  "tags": [
+   "home"
+  ],
+  "flags": [],
+  "warranty": "3-day replacement"
+ },
+ {
+  "id": 204,
+  "sku": "SZS-HO13-009",
+  "slug": "kitchen-apron",
+  "name": "Kitchen Apron",
+  "nameBn": "কিচেন এপ্রন",
+  "categorySlug": "home-decor",
+  "subcategory": "Kitchen",
+  "shortDescription": "Heavy cotton apron with adjustable neck strap and two pockets.",
+  "wholesaleCost": 290,
+  "retailPrice": 750,
+  "salePrice": null,
+  "priceStatus": "unverified",
+  "moq": 12,
+  "colors": [
+   "Ivory",
+   "Sage",
+   "Terracotta",
+   "Grey"
+  ],
+  "sizes": [
+   "One Size"
+  ],
+  "tags": [
+   "kitchen",
+   "gift"
+  ],
+  "flags": [
+   "featured"
+  ],
+  "warranty": "3-day replacement"
+ },
+ {
+  "id": 205,
+  "sku": "SZS-HO13-010",
+  "slug": "prayer-mat-janamaz",
+  "name": "Prayer Mat (Janamaz)",
+  "nameBn": "জায়নামাজ",
+  "categorySlug": "home-decor",
+  "subcategory": "Prayer",
+  "shortDescription": "Padded prayer mat with a soft pile and a carry strap.",
+  "wholesaleCost": 450,
+  "retailPrice": 1150,
+  "salePrice": null,
+  "priceStatus": "unverified",
+  "moq": 6,
+  "colors": [
+   "Off-White",
+   "Mustard"
+  ],
+  "sizes": [
+   "One Size"
+  ],
+  "tags": [
+   "prayer",
+   "gift"
+  ],
+  "flags": [
+   "bestseller"
+  ],
+  "warranty": "3-day replacement"
+ },
+ {
+  "id": 206,
+  "sku": "SZS-HO13-011",
+  "slug": "batik-wall-art-panel",
+  "name": "Batik Wall Art Panel",
+  "nameBn": "বাটিক ওয়াল আর্ট",
+  "categorySlug": "home-decor",
+  "subcategory": "Wall Decor",
+  "shortDescription": "Hand-batiked cotton panel made by local artisans.",
+  "wholesaleCost": 620,
+  "retailPrice": 1490,
+  "salePrice": 1270,
+  "priceStatus": "unverified",
+  "moq": 6,
+  "colors": [
+   "Maroon",
+   "Deep Green",
+   "Royal Blue"
+  ],
+  "sizes": [
+   "One Size"
+  ],
+  "tags": [
+   "handmade",
+   "decor"
+  ],
+  "flags": [],
+  "warranty": "3-day replacement"
+ },
+ {
+  "id": 207,
+  "sku": "SZS-HO13-012",
+  "slug": "bedside-table-lamp",
+  "name": "Bedside Table Lamp",
+  "nameBn": "বেডসাইড টেবিল ল্যাম্প",
+  "categorySlug": "home-decor",
+  "subcategory": "Lighting",
+  "shortDescription": "Linen-shade lamp with a warm dimmable LED bulb.",
+  "wholesaleCost": 780,
+  "retailPrice": 1790,
+  "salePrice": null,
+  "priceStatus": "unverified",
+  "moq": 6,
+  "colors": [
+   "Ivory",
+   "Sage",
+   "Terracotta",
+   "Grey"
+  ],
+  "sizes": [
+   "One Size"
+  ],
+  "tags": [
+   "home",
+   "decor"
+  ],
+  "flags": [
+   "trending"
+  ],
+  "warranty": "7-day replacement"
+ },
+ {
+  "id": 208,
+  "sku": "SZS-HO13-013",
+  "slug": "curtain-panel-pair",
+  "name": "Curtain Panel Pair",
+  "nameBn": "কার্টেন পেয়ার",
+  "categorySlug": "home-decor",
+  "subcategory": "Window",
+  "shortDescription": "Two blackout-lined panels with rod-pocket stitching.",
+  "wholesaleCost": 890,
+  "retailPrice": 1990,
+  "salePrice": null,
+  "priceStatus": "unverified",
+  "moq": 6,
+  "colors": [
+   "Ivory",
+   "Sage"
+  ],
+  "sizes": [
+   "One Size"
+  ],
+  "tags": [
+   "home"
+  ],
+  "flags": [],
+  "warranty": "7-day replacement"
+ },
+ {
+  "id": 209,
+  "sku": "SZS-HO13-014",
+  "slug": "ceramic-coaster-set-4",
+  "name": "Ceramic Coaster Set (4)",
+  "nameBn": "সিরামিক কোস্টার সেট",
+  "categorySlug": "home-decor",
+  "subcategory": "Dining",
+  "shortDescription": "Four glazed coasters with a cork backing and holder.",
+  "wholesaleCost": 240,
+  "retailPrice": 650,
+  "salePrice": null,
+  "priceStatus": "unverified",
+  "moq": 12,
+  "colors": [
+   "Sage",
+   "Terracotta",
+   "Grey"
+  ],
+  "sizes": [
+   "One Size"
+  ],
+  "tags": [
+   "home",
+   "gift"
+  ],
+  "flags": [
+   "bestseller",
+   "newArrival"
+  ],
+  "warranty": "3-day replacement"
+ },
+ {
+  "id": 210,
+  "sku": "SZS-HO13-015",
+  "slug": "jute-storage-basket",
+  "name": "Jute Storage Basket",
+  "nameBn": "পাটের স্টোরেজ বাস্কেট",
+  "categorySlug": "home-decor",
+  "subcategory": "Storage",
+  "shortDescription": "Handwoven jute basket that holds throws or toys.",
+  "wholesaleCost": 420,
+  "retailPrice": 990,
+  "salePrice": null,
+  "priceStatus": "unverified",
+  "moq": 12,
+  "colors": [
+   "Ivory",
+   "Sage",
+   "Terracotta",
+   "Grey"
+  ],
+  "sizes": [
+   "One Size"
+  ],
+  "tags": [
+   "eco",
+   "home"
+  ],
+  "flags": [
+   "newArrival"
+  ],
+  "warranty": "3-day replacement"
+ },
+ {
+  "id": 211,
+  "sku": "SZS-SE14-001",
+  "slug": "winter-fleece-hoodie",
+  "name": "Winter Fleece Hoodie",
+  "nameBn": "শীতের ফ্লিস হুডি",
+  "categorySlug": "seasonal-collections",
+  "subcategory": "Winter",
+  "shortDescription": "High-pile fleece hoodie with a sherpa-lined hood.",
+  "wholesaleCost": 880,
+  "retailPrice": 1990,
+  "salePrice": null,
+  "priceStatus": "unverified",
+  "moq": 6,
+  "colors": [
+   "Black",
+   "White"
+  ],
+  "sizes": [
+   "S",
+   "M",
+   "L",
+   "XL",
+   "XXL"
+  ],
+  "tags": [
+   "winter",
+   "seasonal"
+  ],
+  "flags": [
+   "featured"
+  ],
+  "warranty": "7-day replacement"
+ },
+ {
+  "id": 212,
+  "sku": "SZS-SE14-002",
+  "slug": "thermal-inner-set",
+  "name": "Thermal Inner Set",
+  "nameBn": "থার্মাল ইনার সেট",
+  "categorySlug": "seasonal-collections",
+  "subcategory": "Winter",
+  "shortDescription": "Brushed thermal top and legging set for Dhaka winter nights.",
+  "wholesaleCost": 620,
+  "retailPrice": 1490,
+  "salePrice": null,
+  "priceStatus": "unverified",
+  "moq": 6,
+  "colors": [
+   "Tan",
+   "Brown",
+   "Charcoal"
+  ],
+  "sizes": [
+   "XS",
+   "S",
+   "M",
+   "L",
+   "XL"
+  ],
+  "tags": [
+   "winter"
+  ],
+  "flags": [
+   "trending"
+  ],
+  "warranty": "3-day replacement"
+ },
+ {
+  "id": 213,
+  "sku": "SZS-SE14-003",
+  "slug": "winter-muffler-scarf",
+  "name": "Winter Muffler Scarf",
+  "nameBn": "শীতের মাফলার স্কার্ফ",
+  "categorySlug": "seasonal-collections",
+  "subcategory": "Winter",
+  "shortDescription": "Chunky knit scarf long enough to loop twice.",
+  "wholesaleCost": 380,
+  "retailPrice": 890,
+  "salePrice": null,
+  "priceStatus": "unverified",
+  "moq": 12,
+  "colors": [
+   "Black",
+   "Tan",
+   "Brown",
+   "Charcoal"
+  ],
+  "sizes": [
+   "One Size"
+  ],
+  "tags": [
+   "winter",
+   "gift"
+  ],
+  "flags": [],
+  "warranty": "3-day replacement"
+ },
+ {
+  "id": 214,
+  "sku": "SZS-SE14-004",
+  "slug": "summer-straw-hat",
+  "name": "Summer Straw Hat",
+  "nameBn": "গ্রীষ্মের স্ট্র হ্যাট",
+  "categorySlug": "seasonal-collections",
+  "subcategory": "Summer",
+  "shortDescription": "Wide-brim straw hat with an inner size adjuster.",
+  "wholesaleCost": 320,
+  "retailPrice": 790,
+  "salePrice": 670,
+  "priceStatus": "unverified",
+  "moq": 12,
+  "colors": [
+   "Terracotta",
+   "Grey"
+  ],
+  "sizes": [
+   "One Size"
+  ],
+  "tags": [
+   "summer"
+  ],
+  "flags": [
+   "featured"
+  ],
+  "warranty": "3-day replacement"
+ },
+ {
+  "id": 215,
+  "sku": "SZS-SE14-005",
+  "slug": "eid-gift-box-deluxe",
+  "name": "Eid Gift Box Deluxe",
+  "nameBn": "ঈদ গিফট বক্স ডিলাক্স",
+  "categorySlug": "seasonal-collections",
+  "subcategory": "Eid",
+  "shortDescription": "Panjabi-ready gift box with prayer beads, attar and card.",
+  "wholesaleCost": 1450,
+  "retailPrice": 3290,
+  "salePrice": null,
+  "priceStatus": "unverified",
+  "moq": 3,
+  "colors": [
+   "Maroon",
+   "Deep Green",
+   "Royal Blue"
+  ],
+  "sizes": [
+   "One Size"
+  ],
+  "tags": [
+   "eid",
+   "gift"
+  ],
+  "flags": [
+   "trending"
+  ],
+  "warranty": "7-day replacement"
+ },
+ {
+  "id": 216,
+  "sku": "SZS-SE14-006",
+  "slug": "eid-home-decor-set",
+  "name": "Eid Home Decor Set",
+  "nameBn": "ঈদ হোম ডেকোর সেট",
+  "categorySlug": "seasonal-collections",
+  "subcategory": "Eid",
+  "shortDescription": "Lantern, bunting and a table runner for Eid hosting.",
+  "wholesaleCost": 890,
+  "retailPrice": 1990,
+  "salePrice": null,
+  "priceStatus": "unverified",
+  "moq": 6,
+  "colors": [
+   "Royal Blue",
+   "Black",
+   "Off-White",
+   "Mustard"
+  ],
+  "sizes": [
+   "One Size"
+  ],
+  "tags": [
+   "eid",
+   "home"
+  ],
+  "flags": [
+   "bestseller"
+  ],
+  "warranty": "7-day replacement"
+ },
+ {
+  "id": 217,
+  "sku": "SZS-SE14-007",
+  "slug": "ramadan-prayer-kit",
+  "name": "Ramadan Prayer Kit",
+  "nameBn": "রমজান প্রেয়ার কিট",
+  "categorySlug": "seasonal-collections",
+  "subcategory": "Eid",
+  "shortDescription": "Prayer mat, tasbih and a pocket Quran-cover in one set.",
+  "wholesaleCost": 980,
+  "retailPrice": 2290,
+  "salePrice": null,
+  "priceStatus": "unverified",
+  "moq": 6,
+  "colors": [
+   "Maroon",
+   "Deep Green"
+  ],
+  "sizes": [
+   "One Size"
+  ],
+  "tags": [
+   "ramadan",
+   "gift"
+  ],
+  "flags": [],
+  "warranty": "7-day replacement"
+ },
+ {
+  "id": 218,
+  "sku": "SZS-SE14-008",
+  "slug": "valentine-couple-gift-set",
+  "name": "Valentine Couple Gift Set",
+  "nameBn": "ভ্যালেন্টাইন কাপল গিফট",
+  "categorySlug": "seasonal-collections",
+  "subcategory": "Festive",
+  "shortDescription": "Mug pair, candles and a card in a heart-stamped box.",
+  "wholesaleCost": 890,
+  "retailPrice": 2190,
+  "salePrice": null,
+  "priceStatus": "unverified",
+  "moq": 6,
+  "colors": [
+   "Sage",
+   "Terracotta",
+   "Grey"
+  ],
+  "sizes": [
+   "One Size"
+  ],
+  "tags": [
+   "valentine",
+   "couple"
+  ],
+  "flags": [],
+  "warranty": "7-day replacement"
+ },
+ {
+  "id": 219,
+  "sku": "SZS-SE14-009",
+  "slug": "pohela-boishakh-festive-tee",
+  "name": "Pohela Boishakh Festive Tee",
+  "nameBn": "পহেলা বৈশাখ টি-শার্ট",
+  "categorySlug": "seasonal-collections",
+  "subcategory": "Festive",
+  "shortDescription": "Cotton tee with a hand-drawn Boishakh motif.",
+  "wholesaleCost": 420,
+  "retailPrice": 1050,
+  "salePrice": null,
+  "priceStatus": "unverified",
+  "moq": 6,
+  "colors": [
+   "Black",
+   "White",
+   "Navy",
+   "Olive"
+  ],
+  "sizes": [
+   "S",
+   "M",
+   "L",
+   "XL",
+   "XXL"
+  ],
+  "tags": [
+   "boishakh",
+   "festive"
+  ],
+  "flags": [
+   "featured"
+  ],
+  "warranty": "3-day replacement"
+ },
+ {
+  "id": 220,
+  "sku": "SZS-SE14-010",
+  "slug": "autumn-cotton-jacket",
+  "name": "Autumn Cotton Jacket",
+  "nameBn": "শরতের কটন জ্যাকেট",
+  "categorySlug": "seasonal-collections",
+  "subcategory": "Autumn",
+  "shortDescription": "Lightly padded cotton jacket for the post-monsoon chill.",
+  "wholesaleCost": 1250,
+  "retailPrice": 2790,
+  "salePrice": null,
+  "priceStatus": "unverified",
+  "moq": 6,
+  "colors": [
+   "Brown",
+   "Charcoal"
+  ],
+  "sizes": [
+   "S",
+   "M",
+   "L",
+   "XL",
+   "XXL"
+  ],
+  "tags": [
+   "autumn"
+  ],
+  "flags": [
+   "bestseller"
+  ],
+  "warranty": "7-day replacement"
+ },
+ {
+  "id": 221,
+  "sku": "SZS-SE14-011",
+  "slug": "monsoon-raincoat",
+  "name": "Monsoon Raincoat",
+  "nameBn": "বর্ষার রেইনকোট",
+  "categorySlug": "seasonal-collections",
+  "subcategory": "Monsoon",
+  "shortDescription": "Hooded raincoat with taped seams and reflective piping.",
+  "wholesaleCost": 1150,
+  "retailPrice": 2590,
+  "salePrice": 2200,
+  "priceStatus": "unverified",
+  "moq": 6,
+  "colors": [
+   "Black",
+   "White",
+   "Navy"
+  ],
+  "sizes": [
+   "S",
+   "M",
+   "L",
+   "XL",
+   "XXL"
+  ],
+  "tags": [
+   "monsoon"
+  ],
+  "flags": [],
+  "warranty": "7-day replacement"
+ },
+ {
+  "id": 222,
+  "sku": "SZS-SE14-012",
+  "slug": "eid-salami-card-set",
+  "name": "Eid Salami Card Set",
+  "nameBn": "ঈদ সালামি কার্ড সেট",
+  "categorySlug": "seasonal-collections",
+  "subcategory": "Eid",
+  "shortDescription": "Ten printed envelopes for Eid salami gifting.",
+  "wholesaleCost": 160,
+  "retailPrice": 490,
+  "salePrice": null,
+  "priceStatus": "unverified",
+  "moq": 12,
+  "colors": [
+   "Royal Blue",
+   "Black",
+   "Off-White",
+   "Mustard"
+  ],
+  "sizes": [
+   "One Size"
+  ],
+  "tags": [
+   "eid",
+   "stationery"
+  ],
+  "flags": [
+   "trending"
+  ],
+  "warranty": "3-day replacement"
+ },
+ {
+  "id": 223,
+  "sku": "SZS-SE14-013",
+  "slug": "wedding-season-jewellery-set",
+  "name": "Wedding Season Jewellery Set",
+  "nameBn": "বিয়ের সিজন জুয়েলারি সেট",
+  "categorySlug": "seasonal-collections",
+  "subcategory": "Wedding",
+  "shortDescription": "Necklace, earrings and tikka in a coordinated wedding finish.",
+  "wholesaleCost": 1150,
+  "retailPrice": 2690,
+  "salePrice": null,
+  "priceStatus": "unverified",
+  "moq": 6,
+  "colors": [
+   "Gold",
+   "Silver"
+  ],
+  "sizes": [
+   "One Size"
+  ],
+  "tags": [
+   "wedding",
+   "bridal"
+  ],
+  "flags": [],
+  "warranty": "7-day replacement"
+ },
+ {
+  "id": 224,
+  "sku": "SZS-SE14-014",
+  "slug": "new-year-party-props",
+  "name": "New Year Party Props",
+  "nameBn": "নতুন বছরের পার্টি প্রপস",
+  "categorySlug": "seasonal-collections",
+  "subcategory": "Festive",
+  "shortDescription": "Photo-booth props, hats and a banner for New Year gatherings.",
+  "wholesaleCost": 280,
+  "retailPrice": 750,
+  "salePrice": null,
+  "priceStatus": "unverified",
+  "moq": 12,
+  "colors": [
+   "Sage",
+   "Terracotta",
+   "Grey"
+  ],
+  "sizes": [
+   "One Size"
+  ],
+  "tags": [
+   "party"
+  ],
+  "flags": [
+   "bestseller",
+   "newArrival"
+  ],
+  "warranty": "3-day replacement"
+ },
+ {
+  "id": 225,
+  "sku": "SZS-SE14-015",
+  "slug": "silk-rose-gift-box",
+  "name": "Silk Rose Gift Box",
+  "nameBn": "সিল্ক রোজ গিফট বক্স",
+  "categorySlug": "seasonal-collections",
+  "subcategory": "Festive",
+  "shortDescription": "Nine hand-rolled silk roses in a presentation box.",
+  "wholesaleCost": 340,
+  "retailPrice": 890,
+  "salePrice": null,
+  "priceStatus": "unverified",
+  "moq": 12,
+  "colors": [
+   "Ivory",
+   "Sage",
+   "Terracotta",
+   "Grey"
+  ],
+  "sizes": [
+   "One Size"
+  ],
+  "tags": [
+   "gift",
+   "valentine"
+  ],
+  "flags": [
+   "newArrival"
+  ],
+  "warranty": "3-day replacement"
+ }
+]

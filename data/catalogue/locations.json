@@ -1,0 +1,75 @@
+{
+ "Dhaka": [
+  "Dhanmondi",
+  "Gulshan",
+  "Banani",
+  "Mirpur",
+  "Uttara",
+  "Mohammadpur",
+  "Bashundhara R/A",
+  "Old Dhaka",
+  "Motijheel",
+  "Badda"
+ ],
+ "Chattogram": [
+  "Agrabad",
+  "Nasirabad",
+  "Khulshi",
+  "Panchlaish",
+  "Halishahar",
+  "Pahartali"
+ ],
+ "Sylhet": [
+  "Zindabazar",
+  "Ambarkhana",
+  "Subid Bazar",
+  "Tilagor"
+ ],
+ "Rajshahi": [
+  "Boalia",
+  "Motihar",
+  "Shaheb Bazar",
+  "Kazla"
+ ],
+ "Khulna": [
+  "Sonadanga",
+  "Khalishpur",
+  "Daulatpur",
+  "Boyra"
+ ],
+ "Barishal": [
+  "Band Road",
+  "Natun Bazar",
+  "Rupatoli"
+ ],
+ "Rangpur": [
+  "Jahaj Company More",
+  "Dhap",
+  "Modern More"
+ ],
+ "Mymensingh": [
+  "Ganginarpar",
+  "Charpara",
+  "Kewatkhali"
+ ],
+ "Cumilla": [
+  "Kandirpar",
+  "Jhautala",
+  "Racecourse"
+ ],
+ "Narayanganj": [
+  "Chashara",
+  "Masdair",
+  "Fatullah"
+ ],
+ "Gazipur": [
+  "Chowrasta",
+  "Board Bazar",
+  "Tongi"
+ ],
+ "Bogura": [
+  "Satmatha",
+  "Jaleshwaritala",
+  "Sherpur Road"
+ ]
+}

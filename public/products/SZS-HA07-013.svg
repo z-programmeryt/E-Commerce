@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1000" width="800" height="1000" role="img" aria-label="Nail Care Kit (7-Piece) — studio illustration">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#F8F5F0"/><stop offset="1" stop-color="#EDE7DD"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="50%" cy="42%" r="52%">
+      <stop offset="0" stop-color="#FFFFFF" stop-opacity=".95"/>
+      <stop offset="1" stop-color="#FFFFFF" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="800" height="1000" fill="url(#bg)"/>
+  <rect width="800" height="1000" fill="url(#glow)"/>
+  <circle cx="400" cy="470" r="240" fill="#FFFFFF" opacity=".5"/>
+  <ellipse cx="400" cy="776" rx="196" ry="26" fill="#000000" opacity=".07"/>
+  <g><rect x="336" y="330" width="128" height="260" rx="54" fill="#B08A3E"/>
+<rect x="336" y="360" width="128" height="42" fill="#D6B366" opacity=".7"/>
+<rect x="376" y="590" width="48" height="70" rx="14" fill="#D6B366"/>
+<path d="M400 420 L400 560" stroke="#F6F3EE" stroke-width="6" opacity=".35"/></g>
+  <text x="64" y="892" font-family="Georgia, 'Times New Roman', serif" font-size="19" letter-spacing="4.5" fill="#8A8377">Care study</text>
+  <text x="64" y="926" font-family="Helvetica, Arial, sans-serif" font-size="14" letter-spacing="3" fill="#A9A296">SUPER Z SHOP</text>
+</svg>

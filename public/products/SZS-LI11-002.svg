@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1000" width="800" height="1000" role="img" aria-label="Resistance Band Set — studio illustration">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#F8F5F0"/><stop offset="1" stop-color="#EDE7DD"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="50%" cy="42%" r="52%">
+      <stop offset="0" stop-color="#FFFFFF" stop-opacity=".95"/>
+      <stop offset="1" stop-color="#FFFFFF" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="800" height="1000" fill="url(#bg)"/>
+  <rect width="800" height="1000" fill="url(#glow)"/>
+  <circle cx="400" cy="470" r="240" fill="#FFFFFF" opacity=".5"/>
+  <ellipse cx="400" cy="776" rx="196" ry="26" fill="#000000" opacity=".07"/>
+  <g><path d="M340 380 L340 660 Q340 704 400 704 Q460 704 460 660 L460 380 Z" fill="#2C2B29"/>
+<rect x="372" y="300" width="56" height="86" rx="16" fill="#454340"/>
+<rect x="360" y="286" width="80" height="26" rx="10" fill="#454340"/>
+<rect x="340" y="470" width="120" height="26" fill="#F6F3EE" opacity=".55"/></g>
+  <text x="64" y="892" font-family="Georgia, 'Times New Roman', serif" font-size="19" letter-spacing="4.5" fill="#8A8377">Everyday study</text>
+  <text x="64" y="926" font-family="Helvetica, Arial, sans-serif" font-size="14" letter-spacing="3" fill="#A9A296">SUPER Z SHOP</text>
+</svg>

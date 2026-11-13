@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1000" width="800" height="1000" role="img" aria-label="Couple Watch Pair — studio illustration">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#F8F5F0"/><stop offset="1" stop-color="#EDE7DD"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="50%" cy="42%" r="52%">
+      <stop offset="0" stop-color="#FFFFFF" stop-opacity=".95"/>
+      <stop offset="1" stop-color="#FFFFFF" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="800" height="1000" fill="url(#bg)"/>
+  <rect width="800" height="1000" fill="url(#glow)"/>
+  <circle cx="400" cy="470" r="240" fill="#FFFFFF" opacity=".5"/>
+  <ellipse cx="400" cy="776" rx="196" ry="26" fill="#000000" opacity=".07"/>
+  <g><rect x="352" y="250" width="96" height="180" rx="26" fill="#B08A3E"/>
+<rect x="352" y="600" width="96" height="180" rx="26" fill="#B08A3E"/>
+<circle cx="400" cy="510" r="128" fill="#D6B366"/>
+<circle cx="400" cy="510" r="112" fill="#F6F3EE"/>
+<circle cx="400" cy="510" r="112" fill="none" stroke="#B08A3E" stroke-width="4" opacity=".5"/>
+<path d="M400 510 L400 428" stroke="#2C2B29" stroke-width="7" stroke-linecap="round"/>
+<path d="M400 510 L456 546" stroke="#2C2B29" stroke-width="5" stroke-linecap="round"/>
+<circle cx="400" cy="510" r="7" fill="#B08A3E"/>
+<rect x="520" y="494" width="16" height="32" rx="5" fill="#D6B366"/></g>
+  <text x="64" y="892" font-family="Georgia, 'Times New Roman', serif" font-size="19" letter-spacing="4.5" fill="#8A8377">Watch study</text>
+  <text x="64" y="926" font-family="Helvetica, Arial, sans-serif" font-size="14" letter-spacing="3" fill="#A9A296">SUPER Z SHOP</text>
+</svg>
