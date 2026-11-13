@@ -64,6 +64,9 @@ SHEETS = {
 MIN_AREA_FRACTION = 0.004   # ignore anything under 0.4% of the sheet
 MAX_AREA_FRACTION = 0.22    # ignore anything that is clearly not one product
 MIN_SIDE = 60               # px, on the original sheet
+EDGE_MARGIN = 8             # px; a component this close to the sheet edge was
+                            # clipped when the sheet was drawn, so it is rejected
+                            # rather than shipped as a photo with a cut-off strap
 
 
 def background_colour(arr):
@@ -80,14 +83,21 @@ def background_colour(arr):
 
 
 def foreground_mask(arr, bg):
-    """Pixels meaningfully different from the background."""
+    """Pixels meaningfully different from the background.
+
+    Slightly permissive on purpose: a white shirt's collar sits only a few
+    colour steps from the paper it is drawn on, and a tight threshold cuts the
+    collar off. Everything that gets through is still clipped to a component's
+    own bounding box when it is cropped, so the permissive mask can never drag a
+    neighbouring product into the frame — it only makes each item's box a little
+    more generous. Shadows are grey and near the background colour, so they fall
+    below the threshold and stay out.
+    """
     dist = np.sqrt(((arr.astype(np.float32) - bg) ** 2).sum(axis=2))
-    mask = dist > 26.0
+    mask = dist > 18.0
     # close small holes so a product's pale interior stays attached
     mask = ndimage.binary_closing(mask, structure=np.ones((5, 5)), iterations=2)
     mask = ndimage.binary_opening(mask, structure=np.ones((3, 3)))
-    # drop shadows: a real product has saturated or dark pixels, a shadow is
-    # uniformly desaturated grey close to the background colour
     return mask
 
 
@@ -95,8 +105,7 @@ def find_items(path):
     img = Image.open(path).convert("RGB")
     arr = np.asarray(img)
     h, w = arr.shape[:2]
-    bg = background_colour(arr)
-    mask = foreground_mask(arr, bg)
+    mask = foreground_mask(arr, background_colour(arr))
 
     labelled, n = ndimage.label(mask)
     if n == 0:
@@ -117,31 +126,35 @@ def find_items(path):
         if bh < MIN_SIDE or bw < MIN_SIDE:
             continue
         fill = area / float(bh * bw)
-        if fill < 0.06:          # a thin stray line, not a product
+        if fill < 0.06:                       # a thin stray line, not a product
             continue
-        boxes.append((int(xs.start), int(ys.start), int(xs.stop), int(ys.stop), area, fill))
+        x0, y0, x1, y1 = int(xs.start), int(ys.start), int(xs.stop), int(ys.stop)
+        if (x0 <= EDGE_MARGIN or y0 <= EDGE_MARGIN
+                or x1 >= w - EDGE_MARGIN or y1 >= h - EDGE_MARGIN):
+            continue                          # cropped by the frame — never ship it
+        boxes.append((x0, y0, x1, y1, area, fill))
 
-    # If a component is suspiciously large it is probably two products touching.
-    # Split it by median-filtering the mask's column profile.
     boxes.sort(key=lambda b: (b[1] // 60, b[0]))
     return img, boxes
 
 
-def square_crop(img, box, size=900, pad_fraction=0.09):
+def square_crop(img, box, size=760, pad_fraction=0.09):
+    """Cut one item out of its sheet and centre it on a square white field.
+
+    Only the item's own bounding box is copied — never the whole sheet — so a
+    neighbouring product or its shadow can never leak into the finished photo.
+    The square is always at least as large as the item itself, so nothing is
+    ever clipped by the crop.
+    """
     x0, y0, x1, y1 = box[:4]
     bw, bh = x1 - x0, y1 - y0
     side = int(max(bw, bh) * (1 + pad_fraction * 2))
-    cx, cy = (x0 + x1) // 2, (y0 + y1) // 2
-    left, top = cx - side // 2, cy - side // 2
 
+    item = img.crop((x0, y0, x1, y1))
     canvas = Image.new("RGB", (side, side), (255, 255, 255))
-    # paste the whole sheet offset so the crop lands correctly, then crop
-    canvas.paste(img, (-left, -top))
-    crop = canvas
+    canvas.paste(item, ((side - bw) // 2, (side - bh) // 2))
 
-    # Resize with a high-quality filter, then emit on a pure white field.
-    crop = crop.resize((size, size), Image.LANCZOS)
-    # very light unsharp so fine texture survives the downscale
+    crop = canvas.resize((size, size), Image.LANCZOS)
     crop = crop.filter(ImageFilter.UnsharpMask(radius=1.2, percent=55, threshold=3))
     return crop
 
@@ -178,7 +191,8 @@ def main():
         _, boxes = find_items(path)
         items = [square_crop(img, b) for b in boxes]
         crops[sheet] = items
-        report.append(f"{sheet:14s} -> {len(items):2d} items")
+        report.append(f"{sheet:14s} -> {len(items):2d} usable items")
+
 
     # 2. assign a crop to every product, cycling within its category
     by_category = {}
@@ -194,7 +208,7 @@ def main():
         for i, p in enumerate(items):
             img = pool[i % len(pool)]
             out = os.path.join(OUT, f"{p['sku']}.jpg")
-            img.save(out, "JPEG", quality=88, optimize=True, progressive=True)
+            img.save(out, "JPEG", quality=82, optimize=True, progressive=True, mozjpeg=True)
             written += 1
 
     print("\n".join(report))
