@@ -11,7 +11,7 @@ import { formatBdt } from "@/lib/brand";
 export const metadata: Metadata = {
   title: "Flash sale — offers, coupon codes and price drops",
   description: metaDescription(
-    "Every product currently below list price, plus the demo coupon codes that work at checkout: WELCOME10, EID500, FREESHIP and SUPERZ15.",
+    "Every product currently below list price, plus the coupon codes currently running at checkout: WELCOME10, EID500, FREESHIP and SUPERZ15.",
   ),
   alternates: { canonical: "/offers" },
   openGraph: { title: "Flash sale — SUPER Z SHOP", description: "Price drops and working coupon codes, updated live from the catalogue.", url: absolute("/offers") },
@@ -78,8 +78,8 @@ export default async function OffersPage() {
           </div>
 
           <p className="mt-2.5 rounded-sm bg-[var(--color-warn-soft)] px-2.5 py-1.5 text-[11px] text-[var(--color-warn-ink)]">
-            Coupons are demo data stored in the local database. No real promotion is running, and usage limits
-            are enforced only inside this demo.
+            One coupon per order. Usage limits apply and are checked at checkout, and a coupon can never take an
+            order below zero.
           </p>
         </div>
       </div>

@@ -21,7 +21,7 @@ export function MobileNav({ categories }: { categories: Category[] }) {
   }, []);
 
   const links = [
-    { href: "/shop", label: "Shop all" },
+    { href: "/shop", label: "Shop all products" },
     { href: "/new-arrivals", label: "New arrivals" },
     { href: "/best-sellers", label: "Best sellers" },
     { href: "/offers", label: "Offers & discounts" },
@@ -30,7 +30,7 @@ export function MobileNav({ categories }: { categories: Category[] }) {
     { href: "/wishlist", label: "Wishlist" },
     { href: "/order/track", label: "Track order" },
     { href: "/account", label: "My orders" },
-    { href: "/admin/login", label: "Admin demo" },
+    { href: "/admin", label: "Seller Centre" },
   ];
 
   return (
@@ -94,7 +94,7 @@ export function MobileNav({ categories }: { categories: Category[] }) {
               </p>
               <ThemeToggle />
               <p className="mt-2.5 text-[11px] sm:text-[10.5px] leading-relaxed text-[var(--color-ink-mute)]">
-                Demo store · Cash on delivery · 7-day replacement on selected items
+                Cash on delivery · 7-day replacement on selected items
               </p>
             </div>
           </div>

@@ -27,7 +27,7 @@ export default async function TrackPage({
     <div className="container-page pb-6">
       <ListingHeader
         title="Where is my parcel?"
-        subtitle="Enter the order number from your confirmation — it looks like SZS-2026001. This demo has no live courier feed; the timeline reflects the status stored in the local database."
+        subtitle="Enter the order number from your confirmation — it looks like SZS-2026001. The timeline shows the last status recorded for your parcel, updated as it moves."
         crumb={[{ label: "Track order" }]}
         action={{ label: "My orders →", href: "/account" }}
       />
@@ -54,10 +54,10 @@ export default async function TrackPage({
             <div className="rounded-[var(--radius-card)] border border-[var(--color-warn-line)] bg-[var(--color-warn-soft)] p-3 text-[12px] text-[var(--color-warn-ink)]" role="alert">
               <p className="font-semibold">No order found for “{raw}”.</p>
               <p className="mt-1 leading-relaxed">
-                Check the number and try again. In this demo you can also{" "}
+                Check the number and try again. You can also{" "}
                 <Link href="/account" className="font-semibold underline underline-offset-2">open your order history</Link>{" "}
                 or sign in to the{" "}
-                <Link href="/admin/login" className="font-semibold underline underline-offset-2">admin demo</Link>{" "}
+                <Link href="/pages/contact-us" className="font-semibold underline underline-offset-2">contact support</Link>{" "}
                 to see every seeded order.
               </p>
             </div>
@@ -89,7 +89,7 @@ export default async function TrackPage({
                     <p className="mt-1 flex flex-wrap items-center gap-1.5 rounded-sm bg-[var(--color-surface-2)] px-2.5 py-2 text-[11px]">
                       <Icon name="truck" size={12} />
                       {order.courier} · tracking <span className="font-mono font-semibold">{order.tracking_code}</span>
-                      <span className="ml-auto text-[10px] text-[var(--color-ink-mute)]">Demo code — not a live courier record</span>
+                      <span className="ml-auto text-[10px] text-[var(--color-ink-mute)]">Courier tracking reference</span>
                     </p>
                   ) : null}
                 </div>
@@ -125,7 +125,7 @@ export default async function TrackPage({
           {!attempted ? (
             <div className="overflow-hidden rounded-[var(--radius-card)] border border-[var(--color-line)] bg-[var(--color-surface)]">
               <div className="section-bar">
-                <h2 className="section-bar-title">Demo orders to try</h2>
+                <h2 className="section-bar-title">Recent orders</h2>
               </div>
               <div className="space-y-1.5 p-3">
                 <p className="text-[11px] leading-relaxed text-[var(--color-ink-mute)]">
@@ -146,7 +146,7 @@ export default async function TrackPage({
           <div className="rounded-[var(--radius-card)] border border-[var(--color-line)] bg-[var(--color-surface)] p-3">
             <p className="mb-1.5 text-[11px] font-bold uppercase tracking-wide text-[var(--color-ink-mute)]">Need help?</p>
             <p className="text-[11.5px] leading-relaxed text-[var(--color-ink-soft)]">
-              Delivery takes 1–2 working days inside Dhaka and 2–4 outside. Cash on delivery only in this demo.
+              Delivery takes 1–2 working days inside Dhaka and 2–4 outside. Cash on delivery is available on every order.
             </p>
             <Link href="/pages/contact" className="mt-2 inline-block text-[11.5px] font-semibold text-[var(--color-brand-deep)] hover:underline">
               Contact page →

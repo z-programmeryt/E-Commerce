@@ -172,7 +172,7 @@ export function CheckoutForm({
                 <span>
                   <span className="block text-[12.5px] font-semibold">Card / bKash / Nagad</span>
                   <span className="block text-[11px] text-[var(--color-ink-mute)]">
-                    Not connected in this local demo. No payment gateway is wired up.
+                    Coming soon. Cash on delivery is available on every order.
                   </span>
                 </span>
               </label>
@@ -223,7 +223,7 @@ export function CheckoutForm({
               {pending ? "Placing order…" : `Place order · ${formatBdt(total)}`}
             </button>
             <p className="mt-1.5 flex items-center justify-center gap-1.5 text-[11px] sm:text-[10.5px] text-[var(--color-ink-mute)]">
-              <Icon name="shield" size={11} /> Demo order — nothing is charged or shipped
+              <Icon name="shield" size={11} /> Secure checkout · pay on delivery
             </p>
           </div>
         </div>

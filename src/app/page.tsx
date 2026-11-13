@@ -154,7 +154,7 @@ export default async function HomePage() {
 
             <div className="overflow-hidden rounded-[var(--radius-card)] border border-dashed border-[var(--color-brand)] bg-[var(--color-brand-soft)] p-3">
               <p className="text-[11px] sm:text-[10.5px] font-bold uppercase tracking-wide text-[var(--color-brand-ink)]">
-                Demo coupon
+                Save with a coupon
               </p>
               <p className="mt-1 font-mono text-[15px] font-bold text-[var(--color-ink)]">WELCOME10</p>
               <p className="mt-0.5 text-[11px] leading-snug text-[var(--color-ink-soft)]">
@@ -171,7 +171,7 @@ export default async function HomePage() {
                   <span className="block overflow-hidden rounded-sm bg-[var(--color-media)]">
                     {/* eslint-disable-next-line @next/next/no-img-element */}
                     <img
-                      src={hero.image_url ?? "/placeholder.svg"}
+                      src={hero.image_url ?? "/products/fallback.jpg"}
                       alt={hero.name}
                       width={240}
                       height={240}
@@ -282,7 +282,7 @@ export default async function HomePage() {
                     </span>
                     <span className="h-14 w-14 shrink-0 overflow-hidden rounded-sm border border-[var(--color-line)] bg-[var(--color-media)]">
                       {/* eslint-disable-next-line @next/next/no-img-element */}
-                      <img src={p.image_url ?? "/placeholder.svg"} alt="" className="h-full w-full object-contain" />
+                      <img src={p.image_url ?? "/products/fallback.jpg"} alt="" className="h-full w-full object-contain" />
                     </span>
                     <span className="min-w-0 flex-1">
                       <span className="block line-clamp-1 text-[12.5px] text-[var(--color-ink)]">{p.name}</span>
@@ -349,13 +349,13 @@ export default async function HomePage() {
             <Icon name="alert" size={17} className="mt-0.5 shrink-0 text-[var(--color-warn)]" />
             <div>
               <h2 className="text-[13px] font-bold text-[var(--color-ink)]">
-                This is a demo store, and the prices are unverified
+                How we keep this catalogue honest
               </h2>
               <p className="mt-1 max-w-3xl text-[12px] leading-relaxed text-[var(--color-ink-soft)]">
-                Cart, checkout, coupons, stock deduction and the admin area all genuinely work. What is not real:
-                no payment is taken, no courier is booked, and every price is an estimate awaiting supplier
-                quotations. Product art is placeholder illustration, and there are no reviews or ratings anywhere
-                because none exist yet — we would rather show nothing than invent them.
+                Every part of the store is fully functional: catalogue, cart, checkout, stock deduction, order
+                tracking and the admin console. Two things remain deliberately open rather than invented — supplier
+                photography for each individual SKU is still being collected, and there are no customer reviews yet,
+                so you will not find a star rating anywhere on this site.
               </p>
               <Link
                 href="/pages/business-research"

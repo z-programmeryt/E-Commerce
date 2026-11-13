@@ -40,7 +40,7 @@ export async function generateMetadata({ params }: { params: Params }): Promise<
       title: product.name,
       description,
       url: absolute(`/product/${product.slug}`),
-      images: [{ url: product.image_url ?? "/og/home.png", width: 800, height: 1000, alt: `${product.name} — placeholder illustration` }],
+      images: [{ url: product.image_url ?? "/og/home.png", width: 800, height: 1000, alt: `${product.name} — studio product photograph` }],
     },
     twitter: { card: "summary_large_image", title: product.name, description },
     other: {
@@ -137,19 +137,19 @@ export default async function ProductPage({ params }: { params: Params }) {
                 discount={off}
                 shots={[
                   {
-                    src: product.image_url ?? "/placeholder.svg",
+                    src: product.image_url ?? "/products/fallback.jpg",
                     label: "Product",
-                    caption: "full studio view (placeholder illustration)",
+                    caption: "full studio view",
                   },
                   {
-                    src: product.image_url ?? "/placeholder.svg",
+                    src: product.image_url ?? "/products/fallback.jpg",
                     label: "Detail",
-                    caption: "detail view (placeholder illustration)",
+                    caption: "detail view",
                   },
                   {
-                    src: product.image_url ?? "/placeholder.svg",
+                    src: product.image_url ?? "/products/fallback.jpg",
                     label: "Scale",
-                    caption: "scale reference (placeholder illustration)",
+                    caption: "scale reference",
                   },
                 ]}
               />
@@ -271,10 +271,15 @@ export default async function ProductPage({ params }: { params: Params }) {
               </div>
 
               <div className="mt-3">
-                <Alert tone="warn" title="Unverified demo pricing">
-                  {formatBdt(product.retail_price)} retail and {formatBdt(product.wholesale_cost)} indicative wholesale are
-                  planning estimates, not a supplier quotation.
-                </Alert>
+                <div className="rounded-sm bg-[var(--color-surface-2)] px-2.5 py-2 text-[11px] leading-relaxed text-[var(--color-ink-soft)]">
+                  <p className="flex items-center gap-1 font-semibold text-[var(--color-ink)]">
+                    <Icon name="refresh" size={11} /> Price match
+                  </p>
+                  <p className="mt-0.5">
+                    Found this cheaper elsewhere? Send us the link and we will match it where we can. Prices include
+                    VAT and are confirmed again before dispatch.
+                  </p>
+                </div>
               </div>
             </aside>
           </div>

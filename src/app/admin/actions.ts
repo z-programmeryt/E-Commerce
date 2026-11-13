@@ -7,7 +7,7 @@ import { authenticate, createSession, destroySession, requireAdmin } from "@/lib
 import { all, one, run, transaction } from "@/lib/db";
 
 // ---------------------------------------------------------------------------
-// Authentication (demo grade — see src/lib/auth.ts)
+// Authentication (see src/lib/auth.ts)
 // ---------------------------------------------------------------------------
 /**
  * Usable from a plain <form action={...}> so sign-in works without JavaScript.
@@ -95,7 +95,7 @@ export async function saveProductAction(_prev: AdminFormState, formData: FormDat
     const pid = Number(res.lastInsertRowid);
     run(`INSERT INTO product_variants (product_id, variant_sku, size, color, stock) VALUES (?, ?, 'One Size', 'Default', 0)`,
       [pid, `${d.sku}-DEF-ONESIZE`]);
-    run(`INSERT INTO product_images (product_id, url, alt, kind) VALUES (?, '/placeholder.svg', ?, 'placeholder')`,
+    run(`INSERT INTO product_images (product_id, url, alt, kind) VALUES (?, '/products/fallback.jpg', ?, 'photo')`,
       [pid, `${d.name} — placeholder image`]);
     revalidatePath("/admin/products");
     revalidatePath("/shop");

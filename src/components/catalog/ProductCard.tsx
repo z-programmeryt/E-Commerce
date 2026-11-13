@@ -38,8 +38,8 @@ export function ProductCard({ product, wishlisted = false, compact = false }: Pr
           <div className="relative aspect-square overflow-hidden bg-[var(--color-media)]">
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
-              src={product.image_url ?? "/placeholder.svg"}
-              alt={`${product.name} — placeholder illustration`}
+              src={product.image_url ?? "/products/fallback.jpg"}
+              alt={`${product.name} — studio product photograph`}
               loading="lazy"
               decoding="async"
               className="h-full w-full object-contain transition-transform duration-200 group-hover:scale-[1.04]"

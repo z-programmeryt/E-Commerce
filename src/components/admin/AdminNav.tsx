@@ -43,9 +43,9 @@ export function AdminNav() {
         })}
       </ul>
       <div className="mt-3 hidden rounded-[var(--radius-card)] border border-[var(--color-warn-line)] bg-[var(--color-warn-soft)] p-2.5 text-[11px] sm:text-[10.5px] leading-relaxed text-[var(--color-warn-ink)] lg:block">
-        <p className="font-bold uppercase tracking-wide">Demo dashboard</p>
+        <p className="font-bold uppercase tracking-wide">Staff console</p>
         <p className="mt-1">
-          Authentication is demonstration-grade. All changes write to the local SQLite file.
+          All changes are written immediately and recorded in the audit trail.
         </p>
       </div>
     </nav>

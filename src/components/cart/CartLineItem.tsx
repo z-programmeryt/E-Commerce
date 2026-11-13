@@ -31,7 +31,7 @@ export function CartLineItem({ line }: { line: CartLine }) {
         className="h-[88px] w-[88px] shrink-0 overflow-hidden rounded border border-[var(--color-line)] bg-[var(--color-surface)]"
       >
         {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img src={line.image_url ?? "/placeholder.svg"} alt={line.name} className="h-full w-full object-contain" />
+        <img src={line.image_url ?? "/products/fallback.jpg"} alt={line.name} className="h-full w-full object-contain" />
       </Link>
 
       <div className="min-w-0 flex-1">

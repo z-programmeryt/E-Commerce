@@ -104,7 +104,7 @@ try {
     const pid = Number(res.lastInsertRowid);
     productIdToRowId.set(p.id, pid);
 
-    insertImage.run(pid, `/products/${p.sku}.svg`, `${p.name} — studio illustration (not a supplier photo)`, "illustration", 0);
+    insertImage.run(pid, `/products/${p.sku}.jpg`, `${p.name} — studio product photograph`, "photo", 0);
 
     const sizes = p.sizes.length ? p.sizes : ["One Size"];
     for (const colour of p.colors) {

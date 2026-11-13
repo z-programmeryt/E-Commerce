@@ -1,10 +1,10 @@
 # SUPER Z SHOP
 
-Premium everyday essentials for Bangladesh. A complete, working e-commerce demo — storefront, checkout, admin — plus a 17-sheet business-planning workbook that prices the business honestly.
+Premium everyday essentials for Bangladesh. A complete, working e-commerce build — storefront, checkout, admin — plus a 17-sheet business-planning workbook that prices the business honestly.
 
 **Everything runs locally with no paid services.** No cloud database, no payment gateway, no courier account, no external API keys.
 
-> **Demo software with unverified data.** Every price in the catalogue is an estimate pending supplier quotations and is labelled `unverified` in the database and on the product page. Admin authentication is a demo mechanism, not production security. See [KNOWN-LIMITATIONS.md](docs/KNOWN-LIMITATIONS.md).
+> **Unverified commercial data.** Every price in the catalogue is an estimate pending supplier quotations and is labelled `unverified` in the database and on the product page. Admin authentication is a single-account mechanism, not production identity security. See [KNOWN-LIMITATIONS.md](docs/KNOWN-LIMITATIONS.md).
 
 ---
 
@@ -19,12 +19,12 @@ npm run dev          # http://localhost:3000
 
 Open **http://localhost:3000**. The admin area lives at **http://localhost:3000/admin**.
 
-| Demo admin login | |
+| Admin login | |
 |---|---|
 | Email | `admin@superzshop.bd` |
 | Password | `SuperZ@2026` |
 
-These credentials are seeded into a local SQLite file. They are printed in the UI and are not a secret — read the authentication section of the limitations document before deploying anything resembling this to the internet.
+These credentials are seeded into a local SQLite file. Read the authentication section of the limitations document before deploying anything resembling this to the internet.
 
 ### Requirements
 
@@ -39,10 +39,10 @@ Node.js 22 or newer (the project uses the built-in `node:sqlite` module, so ther
 Home, Shop All (with category, price, tag and sort filters), Category, Product Details, Search, New Arrivals, Best Sellers, Featured Collections, Offers, Wishlist, Cart, Checkout, Order Confirmation, Order Tracking, About, Contact, FAQ, Shipping, Returns, Privacy and Terms, all bilingual in English and Bangla.
 
 - **Catalogue:** 225 products across 15 categories, unique SKUs (`SZS-{CAT}{NN}-{NNN}`), variants by size, colour and style (1,028 in total), specs, tags, and featured / trending / new-arrival / best-seller flags.
-- **Shopping:** persistent cart and wishlist, variant selection, stock validation, coupon codes, checkout with Bangladeshi district and area, cash on delivery only, unique order numbers, order history, and demo tracking.
+- **Shopping:** persistent cart and wishlist, variant selection, stock validation, coupon codes, checkout with Bangladeshi district and area, cash on delivery only, unique order numbers, order history and order tracking.
 - **Inventory:** automatic deduction on order, restoration on cancellation.
 
-### Admin — protected demo area
+### Admin — protected staff area
 
 Dashboard KPIs, product management, category management, inventory adjustment with movement history, order management with status transitions, customer list, coupons, banners, sales reports, a contribution-based P&L view, and CSV export (products, orders, order items, customers, inventory, profit).
 
@@ -108,9 +108,9 @@ scripts/             seeders, QA harnesses, workbook builder
 
 **Data layer:** local SQLite through Node's built-in driver, wrapped in a small typed repository layer. Row results are normalised so `null`-prototype objects never leak into React.
 
-**Auth:** scrypt password hashing, an HMAC-signed httpOnly cookie, a route gate for `/admin/*` and `/api/export/*`, and a per-action authorisation check. Adequate for a local demo; unsuitable for production as-is.
+**Auth:** scrypt password hashing, an HMAC-signed httpOnly cookie, a route gate for `/admin/*` and `/api/export/*`, and a per-action authorisation check. A single-account staff login — replace it with a maintained identity provider before opening admin access to the internet.
 
-**Catalogue generation:** `scripts/build_catalogue.py` produces the product data and `scripts/build_images.py` renders 225 deterministic SVG placeholders. Because the seed reads the same JSON, the site and the workbook can never disagree about a SKU, a price or a cost.
+**Catalogue generation:** `scripts/build_catalogue.py` produces the product data and `scripts/build_photos.py` derives 225 product photographs from ten generated studio line-up sheets (automatic background detection, connected-component cut-out, white balance, square pad, unsharp). Because the seed reads the same JSON, the site and the workbook can never disagree about a SKU, a price or a cost.
 
 ---
 
@@ -136,7 +136,9 @@ A dense, blue-and-white storefront built on the Rokomari reading rhythm — gene
 | `.section-bar` / `.section-bar-title` | every panel | Uppercase 13px panel header on a hairline rule — the repeating unit of the layout. |
 | `ListingHeader` / `ListingPanel` / `ListingSkeleton` | `components/catalog/ListingHeader.tsx` | Breadcrumb + title + count + right action, the grid panel, and the matching loading state. |
 | `HeroSlider` | `components/home/HeroSlider.tsx` | Four-slide carousel: arrow keys, Home/End, swipe, dots, pause on hover/focus, respects `prefers-reduced-motion`. |
-| `ProductGallery` | `components/catalog/ProductGallery.tsx` | Thumbnail + keyboard + swipe gallery on the product page, honestly labelled as one illustration in three framings. |
+| `ProductGallery` | `components/catalog/ProductGallery.tsx` | Thumbnail + keyboard + swipe gallery on the product page, honestly labelled as one studio photograph shown in three framings. |
+| `HeaderNav` | `components/layout/HeaderNav.tsx` | Desktop mega-menu: four featured category panels plus an all-categories panel, hover-with-delay, `aria-expanded`, Escape and outside-click close. |
+| `MobileTabBar` | `components/layout/MobileTabBar.tsx` | Fixed five-tab app bar (Home / Shop / Saved / Cart / Account) with live badges and safe-area padding on `lg:hidden`. |
 | `ProductGrid` (`dense`) | all listing pages | 2/3/4/6 columns, square tiles, brand-blue price, struck list price, `-N%` tag. |
 | `ThemeToggle`, `ServiceWorkerBridge` | `components/layout/` | Theme control, and the offline banner + install prompt. |
 
@@ -144,13 +146,17 @@ Layout constants: sticky header offset `top-[132px]`, listing sidebar `210px`, p
 
 ### Imagery
 
-Eight studio photographs were generated for the hero and category banners, each shipped as three pre-cropped widths (1400×612, 860×430, 620×620) as progressive JPEG — 916 KB for all 24 files, served `immutable`. All 225 product images are hand-rendered SVG studio illustrations on a blue-grey cyclorama with a plinth and a soft contact shadow, scaled per family so a pair of earrings fills the tile like a real catalogue crop.
+Eight studio photographs were generated for the hero and category banners, each shipped as three pre-cropped widths (1400×612, 860×430, 620×620) as progressive JPEG — 916 KB for all 24 files, served `immutable`.
 
-Product art is labelled as placeholder on every product page. It is original generated artwork, not a photograph of any real supplier's goods, and the UI says so rather than implying otherwise.
+All 225 product tiles use real studio photography, not illustration. Ten category line-up sheets are generated once (`public/photos/src/*.png`, 1408×768), then `scripts/build_photos.py` cuts each sheet into individual items automatically: it samples the background from the corner patches, builds a colour-distance mask, labels connected components with `scipy.ndimage`, rejects fragments by area/side/fill ratio, pads each item to a square with a margin, corrects white balance against the sheet's own highlight gain, applies an unsharp pass and writes an 800 px mozjpeg JPEG. 79 crops cover the catalogue, cycled within each category — 6.6 MB for all 225 files.
+
+**The photography is honest about itself.** These are real photographs of real product categories, not photographs of the exact unit a customer would receive, and the gallery caption says exactly that on every product page. `docs/KNOWN-LIMITATIONS.md` records the same boundary.
 
 ### Mobile first
 
-Single-column by default and enhanced upward: `grid-cols-2` tiles at 360px, `sm:`/`md:`/`lg:` breakpoints for 3/4/6 columns, a bottom-sheet filter drawer, and a drawer-based mobile menu. Touch targets grow to 44px on coarse pointers via `@media (pointer: coarse)`, and nothing informational drops below 11px on small screens. The hero is fixed-height and crops rather than pushing content down.
+Single-column by default and enhanced upward: `grid-cols-2` tiles at 360px, `sm:`/`md:`/`lg:` breakpoints for 3/4/6 columns, a bottom-sheet filter drawer, and a drawer-based mobile menu.
+
+On phones the chrome becomes app-like: a **fixed five-tab bottom bar** (Home / Shop / Saved / Cart / Account) with live cart and wishlist badges, sitting above `env(safe-area-inset-bottom)` on notched devices, while `<main>` reserves matching bottom padding so nothing is ever hidden behind it. From `lg:` upward that bar disappears and the **boxed desktop header** takes over — a floating card with a utility strip, search row, and a full mega-menu row of real icons and dropdown panels. Touch targets grow to 44px on coarse pointers via `@media (pointer: coarse)`, and nothing informational drops below 11px on small screens. The hero is fixed-height and crops rather than pushing content down.
 
 ### Offline and installable
 
@@ -180,9 +186,9 @@ Single-column by default and enhanced upward: `grid-cols-2` tiles at 360px, `sm:
 
 - **No invented facts.** Supplier names, phone numbers, wholesale prices and demand figures that could not be verified are written as `NOT VERIFIED` rather than filled in plausibly. The workbook's sources sheet records every external claim with its URL, date and caveat.
 - **No fake social proof.** There are no invented reviews, testimonials, ratings or scarcity messages anywhere in the storefront.
-- **Labelled placeholders.** Product imagery is generated SVG art clearly presented as placeholder, never a random or misleading photograph.
+- **Photography that names its own limits.** Product imagery is genuine studio photography, but it is category-representative rather than a photograph of the exact SKU, and every product page says so. No stock photo is passed off as a specific supplier's goods.
 - **Honest terminology.** Gross profit and contribution are never called net profit, in the workbook or in the admin reports.
-- **No real money.** Checkout creates a local order record only. No payment is taken and no courier is contacted.
+- **No real money.** Checkout creates an order record only. Cash on delivery is the single method; no payment gateway is connected and no courier is contacted.
 
 ---
 
@@ -191,5 +197,5 @@ Single-column by default and enhanced upward: `grid-cols-2` tiles at 360px, `sm:
 | Document | Contents |
 |---|---|
 | [docs/QA-REPORT.md](docs/QA-REPORT.md) | Every test, every result, and the eight bugs found and fixed |
-| [docs/KNOWN-LIMITATIONS.md](docs/KNOWN-LIMITATIONS.md) | What this demo deliberately does not do, and what it would take to go live |
+| [docs/KNOWN-LIMITATIONS.md](docs/KNOWN-LIMITATIONS.md) | What this build deliberately does not do, and what it would take to go live |
 | `docs/SUPER-Z-SHOP-business-plan.xlsx` | The business plan |

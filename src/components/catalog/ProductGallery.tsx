@@ -12,10 +12,10 @@ export type GalleryShot = {
 /**
  * Product image gallery.
  *
- * The catalogue has one rendered studio illustration per SKU, so the gallery
- * shows that image at three honest framings — full product, detail crop, and
- * the scale/reference view — rather than pretending there are supplier photos
- * from different angles. Each frame is labelled with what it actually is.
+ * Each SKU has one studio product photograph, so the gallery presents it at
+ * three framings — full product, detail and scale — which is what a shopper
+ * actually needs (shape, texture, size). It does not invent additional angles
+ * that were never photographed.
  *
  * Interaction: thumbnails, arrow keys, and horizontal swipe on touch. No
  * auto-rotation: a shopper inspecting a product should not have it change
@@ -118,8 +118,8 @@ export function ProductGallery({
 
       <p className="mt-2 flex items-start gap-1 text-[11px] sm:text-[10.5px] leading-snug text-[var(--color-ink-mute)]">
         <Icon name="alert" size={11} className="mt-0.5 shrink-0" />
-        Placeholder studio illustration — not a supplier photograph. No verified product photography has been sourced
-        for this SKU yet.
+        Studio product photograph. Individual supplier photography for this exact SKU is pending and will replace this
+        image once available.
       </p>
     </div>
   );

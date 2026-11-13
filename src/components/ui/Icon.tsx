@@ -8,7 +8,8 @@ type IconName =
   | "facebook" | "instagram" | "youtube" | "tiktok" | "whatsapp" | "arrow-right" | "alert"
   | "flame" | "lightning" | "chevron-up" | "location" | "cart-plus" | "sort" | "sliders"
   | "badge-check" | "cash" | "clock" | "ruler" | "moon" | "monitor" | "wifi-off"
-  | "share" | "copy" | "zoom" | "image";
+  | "share" | "copy" | "zoom" | "image" | "home-nav" | "grid-nav" | "heart-nav" | "bag-nav"
+  | "user-nav" | "sparkle" | "chevron-slim" | "tag-nav" | "fire" | "sort-asc";
 
 const paths: Record<string, string> = {
   search: "M21 21l-4.35-4.35M17 10.5a6.5 6.5 0 11-13 0 6.5 6.5 0 0113 0z",
@@ -30,6 +31,17 @@ const paths: Record<string, string> = {
   copy: "M9 9h10v12H9V9zm-4 6V3h10",
   zoom: "M11 18a7 7 0 100-14 7 7 0 000 14zm10 3l-5-5M8 11h6",
   image: "M3 5h18v14H3V5zm0 10l5-4 4 3 3-3 6 5M8.5 9.5h.01",
+  /* bottom navigation set — chunkier geometry so they read at 22px */
+  "home-nav": "M4 11.2L12 4l8 7.2V20a1 1 0 01-1 1h-4.5v-6h-5v6H5a1 1 0 01-1-1v-8.8z",
+  "grid-nav": "M4 4h6.2v6.2H4V4zm9.8 0H20v6.2h-6.2V4zM4 13.8h6.2V20H4v-6.2zm9.8 0H20V20h-6.2v-6.2z",
+  "heart-nav": "M12 20.5s-8-4.9-8-10.2A4.6 4.6 0 0112 7a4.6 4.6 0 018 3.3c0 5.3-8 10.2-8 10.2z",
+  "bag-nav": "M6.5 8h11l1 12.5h-13L6.5 8zm3.2 0V6a2.3 2.3 0 014.6 0v2",
+  "user-nav": "M12 12.2a3.9 3.9 0 100-7.8 3.9 3.9 0 000 7.8zM4.6 20.4a7.4 7.4 0 0114.8 0",
+  sparkle: "M12 3l1.9 5.1L19 10l-5.1 1.9L12 17l-1.9-5.1L5 10l5.1-1.9L12 3zM18.5 15.5l.8 2.2 2.2.8-2.2.8-.8 2.2-.8-2.2-2.2-.8 2.2-.8.8-2.2z",
+  "chevron-slim": "M9 5l7 7-7 7",
+  "tag-nav": "M4.5 4.5h7l8 8-7 7-8-8v-7zm3.2 3.2h.01",
+  fire: "M12 3c2.7 3.2 1 4.9 1 4.9s2.6-.5 3.7 1.6c1.3 2.6-.5 4.3-2.1 4.9 1.6-2.2-.6-3.8-.6-3.8S13 12 12 14.1s-2.1 3.2-4.3 2.6C5 16.1 5 11.9 6.6 9.7c1.1-1.4 3.2-1.6 3.2-1.6S8 6.8 12 3z",
+  "sort-asc": "M4 6h9M4 12h6M4 18h4M17 5v14m0 0l3.2-3.2M17 19l-3.2-3.2",
   bag: "M6 8h12l1 12H5L6 8zm3 0V6a3 3 0 016 0v2",
   heart: "M12 20s-7-4.35-7-9a4 4 0 017-2.65A4 4 0 0119 11c0 4.65-7 9-7 9z",
   user: "M12 12a4 4 0 100-8 4 4 0 000 8zm-8 8a8 8 0 0116 0",

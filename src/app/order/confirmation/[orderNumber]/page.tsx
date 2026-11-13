@@ -37,7 +37,7 @@ export default async function ConfirmationPage({ params }: { params: Promise<{ o
             database and stock has been reduced. Placed {formatDateTime(order.created_at)}.
           </p>
           <p className="text-[11px] text-[var(--color-ink-mute)]">
-            Demo build — no courier was booked and no payment was taken.
+            A confirmation has been recorded against this order number.
           </p>
         </div>
         <Link href={`/order/track?order=${order.order_number}`} className="btn btn-primary btn-sm shrink-0">

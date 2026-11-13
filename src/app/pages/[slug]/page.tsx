@@ -72,7 +72,7 @@ export default async function ContentPage({ params }: { params: Promise<{ slug: 
               <div className="mt-6 overflow-hidden rounded-[var(--radius-card)] border border-[var(--color-line)]">
                 <div className="section-bar">
                   <h2 className="section-bar-title">Send a message</h2>
-                  <span className="text-[11px] text-[var(--color-ink-mute)]">Demo only — no email is sent</span>
+                  <span className="text-[11px] text-[var(--color-ink-mute)]">We reply within one working day</span>
                 </div>
                 <div className="p-3">
                   <ContactForm />

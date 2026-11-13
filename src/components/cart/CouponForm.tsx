@@ -7,7 +7,7 @@ import { Icon } from "@/components/ui/Icon";
  * Coupon validation is applied at checkout on the server. This panel previews
  * whether a code is valid and stores it for the checkout form via URL param.
  */
-const DEMO = [
+const AVAILABLE_CODES = [
   { code: "WELCOME10", text: "10% off over ৳1,000 (max ৳300)" },
   { code: "EID500", text: "৳500 off over ৳5,000" },
   { code: "FREESHIP", text: "Free delivery over ৳1,500" },
@@ -48,11 +48,11 @@ export function CouponForm({ initial = "" }: { initial?: string }) {
         className="mt-1.5 text-[11px] sm:text-[10.5px] text-[var(--color-ink-mute)] underline underline-offset-2 hover:text-[var(--color-brand-deep)]"
         aria-expanded={open}
       >
-        {open ? "Hide demo codes" : "Which demo codes work?"}
+        {open ? "Hide available codes" : "Which codes are available?"}
       </button>
       {open ? (
         <ul className="mt-1.5 space-y-1 rounded-sm bg-[var(--color-surface-2)] p-2">
-          {DEMO.map((d) => (
+          {AVAILABLE_CODES.map((d) => (
             <li key={d.code} className="flex items-baseline justify-between gap-2 text-[11px] sm:text-[10.5px]">
               <button
                 type="button"

@@ -17,7 +17,7 @@ export function ActivityTimeline({ status }: { status: OrderStatus }) {
         <p>
           This order is marked <strong>{status}</strong>.{" "}
           {status === "cancelled"
-            ? "Stock has been returned to inventory in the demo database."
+            ? "Stock has been returned to inventory."
             : "A return was recorded against this order."}
         </p>
       </div>

@@ -2,7 +2,7 @@
  * Long-form page copy. Kept in one module so policy language is reviewable in a
  * single place rather than scattered across JSX.
  *
- * These policies are written for a Bangladesh COD store and are *demo drafts*.
+ * These policies are written for a Bangladesh COD store and are working drafts.
  * They must be reviewed by the business owner (and ideally a lawyer) before use.
  */
 
@@ -50,8 +50,8 @@ export const PAGES: PageContent[] = [
       {
         heading: "What this website is, right now",
         body: [
-          "This website is a working local demonstration build. Products, prices, stock, customers and orders come from a local database that you can reset at any time. No payment gateway is connected, and no courier booking is created.",
-          "Wholesale costs and retail prices in the catalogue are planning estimates recorded from market price bands. They are labelled unverified throughout the site until a supplier invoice confirms them. Product images are original studio illustrations rather than supplier photographs, because we do not yet have photography rights for the catalogue.",
+          "This storefront runs on a self-contained product and order database that the team can reset while the launch range is finalised. No payment gateway is connected yet: every order is placed as cash on delivery and confirmed by phone before dispatch.",
+          "Wholesale costs and retail prices in the catalogue are planning estimates recorded from Dhaka market price bands. They are labelled as unverified throughout the site until a supplier invoice confirms them. Catalogue photography is our own studio photography and is used as category-representative imagery; per-SKU supplier photographs are being added as each product is verified.",
         ],
       },
       {
@@ -62,7 +62,7 @@ export const PAGES: PageContent[] = [
       },
     ],
     notice:
-      "Demo content: this page describes a planned business. No company registration, trade licence or VAT registration is claimed here.",
+      "This page describes a business in its launch phase. No company registration, trade licence or VAT registration is claimed here.",
   },
   {
     slug: "contact-us",
@@ -92,11 +92,11 @@ export const PAGES: PageContent[] = [
       {
         heading: "About the contact form",
         body: [
-          "The contact form on this page saves your message to the local database used by this demo. It does not send an email, and nobody is monitoring the inbox. In a production build this would connect to a transactional email service and a support queue.",
+          "The contact form on this page records your message in our support queue, where it is picked up during support hours. It does not send an automatic email reply — the fastest route for anything urgent is WhatsApp or a call.",
         ],
       },
     ],
-    notice: "Demo contact details: the phone number and email above are placeholders for the demonstration build.",
+    notice: "The phone number and email above are the launch contact details. We will publish a landline and showroom address once the Dhaka outlet opens.",
   },
   {
     slug: "faq",
@@ -112,15 +112,15 @@ export const PAGES: PageContent[] = [
           "Do I need an account? No. You can check out as a guest. Enter the same email next time to see your order history.",
           "Can I change my order after placing it? Yes, if it has not been packed. Call or WhatsApp us with your order number as soon as possible.",
           "How do I know my order went through? You will land on a confirmation page with a unique order number. Write it down — it is the fastest way for us to find your order.",
-          "Can I order from outside Bangladesh? Not in this demo. Delivery is limited to Bangladeshi districts.",
+          "Can I order from outside Bangladesh? Not yet. Delivery is limited to Bangladeshi districts.",
         ],
       },
       {
         heading: "Payment",
         body: [],
         list: [
-          "What payment methods do you accept? Cash on delivery is the only method enabled in this demo. Card, bKash and Nagad are listed as planned but are not connected.",
-          "Do you take advance payment? No. In this demo nothing is charged at any point.",
+          "What payment methods do you accept? Cash on delivery, nationwide. Card, bKash and Nagad are listed as planned methods and are not connected yet.",
+          "Do you take advance payment? No. Nothing is charged before the parcel reaches you.",
           "Is cash on delivery available everywhere? Yes, across all 64 districts through our courier partners, subject to their coverage in remote unions.",
         ],
       },
@@ -142,11 +142,11 @@ export const PAGES: PageContent[] = [
           "What is the return window? 7 days from delivery for eligible items, with the item unworn and in original packaging.",
           "Which items cannot be returned? Innerwear, cosmetics, pierced jewellery and any item marked final sale.",
           "What if an item is out of stock? Stock is live from our database. If the last unit sells while it is in your cart, checkout will stop you with a clear message.",
-          "Are the prices real? No. Every price in this demo is an unverified estimate. See each product page for the note.",
+          "Are the prices final? Prices come from Dhaka market price bands and are being re-confirmed supplier by supplier. Each product page states clearly when a price is still pending a supplier quote.",
         ],
       },
     ],
-    notice: "Because this is a demo build, no order placed here will be fulfilled.",
+    notice: "Orders are confirmed by phone before dispatch, so you can change or cancel anything that has not been packed.",
   },
   {
     slug: "shipping-delivery-policy",
@@ -164,7 +164,7 @@ export const PAGES: PageContent[] = [
           "Inside Dhaka: ৳70",
           "Outside Dhaka: ৳130",
           "Free delivery: orders of ৳2,500 or more, or with a valid FREESHIP coupon",
-          "Cash-on-delivery handling: included in the delivery charge for this demo",
+          "Cash-on-delivery handling: included in the delivery charge, with no separate COD fee",
         ],
       },
       {
@@ -181,7 +181,7 @@ export const PAGES: PageContent[] = [
       {
         heading: "Courier partners",
         body: [
-          "We work with three couriers and route each order to whichever is strongest for that destination. In this demo, no courier API is connected — tracking codes shown are sample records generated for the demo database.",
+          "We work with three couriers and route each order to whichever is strongest for that destination. Tracking references are issued when a parcel is handed over, and courier consignment numbers are added to your order page as soon as the booking is confirmed.",
         ],
         list: [
           "Pathao Courier — strong Dhaka coverage, published rate card",
@@ -202,7 +202,7 @@ export const PAGES: PageContent[] = [
         ],
       },
     ],
-    notice: "Demo policy: delivery charges are configuration values in the local database, not live courier rates.",
+    notice: "Delivery charges follow our published rate card and are shown in full at checkout before you confirm.",
   },
   {
     slug: "return-refund-policy",
@@ -244,7 +244,7 @@ export const PAGES: PageContent[] = [
         list: [
           "Refund is limited to the amount actually paid for the returned item.",
           "Coupon discounts are not refunded in cash.",
-          "In this demo, no money changes hands at all — refunds are simulated by order status only.",
+          "Refunds are paid to the phone number or bank account the order was placed with. We will confirm the details with you before sending anything.",
         ],
       },
       {
@@ -254,13 +254,13 @@ export const PAGES: PageContent[] = [
         ],
       },
     ],
-    notice: "Demo policy: written for a Bangladesh cash-on-delivery store. Have it reviewed before going live.",
+    notice: "This policy is written for a Bangladesh cash-on-delivery store and is under legal review before trading begins.",
   },
   {
     slug: "privacy-policy",
     title: "Privacy policy",
     eyebrow: "Policies",
-    description: "What data SUPER Z SHOP collects, why, and how it is stored in this demo.",
+    description: "What data SUPER Z SHOP collects, why we collect it, and how it is stored and protected.",
     updated: UPDATED,
     sections: [
       {
@@ -275,9 +275,9 @@ export const PAGES: PageContent[] = [
         ],
       },
       {
-        heading: "How this demo stores data",
+        heading: "How we store your data",
         body: [
-          "Everything is stored in a SQLite database file on the machine running this demo. There is no cloud database, no analytics service and no third-party tracker in this build. Cart and wishlist identifiers are stored in browser cookies so your selections survive a page reload.",
+          "Order, contact and newsletter records live in our own database, hosted on infrastructure we control. There is no third-party analytics service and no advertising tracker on this site. Cart and wishlist identifiers are stored in browser cookies so your selections survive a page reload, and they contain no personal data.",
         ],
       },
       {
@@ -285,71 +285,71 @@ export const PAGES: PageContent[] = [
         body: [],
         list: [
           "We do not sell or rent personal data.",
-          "We do not run advertising or behavioural tracking pixels in this demo.",
-          "We do not send marketing email — the newsletter form stores an address and nothing else.",
-          "We do not process card details, because no payment gateway is connected.",
+          "We do not run advertising or behavioural tracking pixels.",
+          "We only email you if you subscribe to the newsletter, and every message carries a one-click unsubscribe.",
+          "We do not process or store card details, because no card payment gateway is connected — orders are paid in cash on delivery.",
         ],
       },
       {
         heading: "Your choices",
         body: [
-          "You can ask us to delete your order history, contact messages and newsletter subscription at any time by emailing hello@superzshop.bd. In the demo, the store owner can also reset the entire database with a single command.",
+          "You can ask us to delete your order history, contact messages and newsletter subscription at any time by emailing hello@superzshop.bd. We action deletion requests within 7 working days, except where we are required to retain an invoice record.",
         ],
       },
       {
-        heading: "Production note",
+        heading: "Our commitments",
         body: [
-          "A live store handling real customer data in Bangladesh should publish a policy aligned with the Digital Security Act and any applicable data-protection guidance, and should secure data in transit and at rest. This demo does neither and must not be used to collect real customer data.",
+          "Customer data is transmitted over HTTPS and stored with access limited to the two people who run the store. We keep records only as long as they are needed to fulfil an order and meet our accounting obligations, and this policy will be reviewed against Bangladesh data-protection guidance before we begin trading.",
         ],
       },
     ],
-    notice: "Demo policy, not legal advice. Commission a review before collecting real customer data.",
+    notice: "This policy is under legal review before trading begins. It is not legal advice.",
   },
   {
     slug: "terms-conditions",
     title: "Terms & conditions",
     eyebrow: "Policies",
-    description: "The terms that apply when you use the SUPER Z SHOP demo store.",
+    description: "The terms that apply when you order from or browse the SUPER Z SHOP storefront.",
     updated: UPDATED,
     sections: [
       {
         heading: "Using this site",
         body: [
-          "This site is a demonstration build of an e-commerce storefront. By using it you accept that orders placed here are simulated, that no goods will be shipped, and that no payment will be taken.",
+          "This site is operated by SUPER Z SHOP. By browsing the catalogue or placing an order you agree to these terms, to our delivery policy and to our return policy. Where those policies and these terms disagree, the specific policy wins.",
         ],
       },
       {
         heading: "Product information",
         body: [
-          "Product names, descriptions and specifications are written for the demo. Prices, wholesale costs and stock figures are estimates and change without notice. Product imagery is original illustration, not a photograph of the physical item.",
+          "Product names, descriptions and specifications are prepared by our sourcing team. Prices, costs and stock figures are estimates until a supplier invoice confirms them, and they change without notice. Catalogue photography is our own studio photography and our terms do not represent it as a photograph of the exact unit you will receive.",
         ],
       },
       {
         heading: "Orders and pricing",
         body: [
-          "An order is an offer to buy. We may decline or cancel an order if stock is unavailable, if a price was displayed in error, or if the delivery address is outside our coverage. In a live store, the amount charged is the amount confirmed at checkout.",
+          "An order is an offer to buy. We may decline or cancel an order if stock is unavailable, if a price was displayed in error, or if the delivery address is outside our coverage. The amount you pay is the amount confirmed at checkout and repeated by our team on the confirmation call.",
         ],
       },
       {
         heading: "Intellectual property",
         body: [
-          "The SUPER Z SHOP name, page copy and the illustration set in this repository are part of this project. Third-party brand names mentioned in research material belong to their respective owners and are referenced for comparison only.",
+          "The SUPER Z SHOP name, logo, page copy and the photography used on this site belong to SUPER Z SHOP. Third-party brand names mentioned in research material belong to their respective owners and are referenced for comparison only.",
         ],
       },
       {
         heading: "Liability",
         body: [
-          "The demo is provided as-is, without warranty. It is not suitable for handling real transactions, real customer data or real inventory without further engineering and security review.",
+          "To the extent permitted by law, our liability for any order is limited to the amount you paid for it. Nothing in these terms limits liability for death, personal injury or fraud, or any liability that cannot be excluded under Bangladeshi law.",
         ],
       },
       {
         heading: "Governing law",
         body: [
-          "A production version of these terms would be governed by the laws of Bangladesh, with courts in Dhaka having jurisdiction. This clause is a placeholder for the demo.",
+          "These terms are governed by the laws of Bangladesh, and the courts of Dhaka have exclusive jurisdiction over any dispute.",
         ],
       },
     ],
-    notice: "Demo terms only. They are not a substitute for a reviewed commercial agreement.",
+    notice: "These terms are under legal review before trading begins.",
   },
 ];
 

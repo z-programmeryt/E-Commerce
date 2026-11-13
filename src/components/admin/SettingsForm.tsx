@@ -12,7 +12,7 @@ const FIELDS: { key: string; label: string; type?: string }[] = [
   { key: "free_delivery_threshold", label: "Free delivery threshold (৳)", type: "number" },
   { key: "support_phone", label: "Support phone" },
   { key: "support_email", label: "Support email" },
-  { key: "demo_mode", label: "Demo mode flag" },
+  { key: "maintenance_mode", label: "Maintenance mode" },
 ];
 
 export function SettingsForm({ settings }: { settings: Record<string, string> }) {

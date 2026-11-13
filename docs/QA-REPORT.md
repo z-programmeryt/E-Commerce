@@ -211,7 +211,7 @@ The original shortlist asked for 220 units costing **৳30,193** — more than t
 
 ## 7. Known limitations
 
-See `docs/KNOWN-LIMITATIONS.md`. In summary: no real payment gateway, no real courier integration, demo-only admin authentication, local SQLite rather than a production database, and every price, cost and demand figure unverified pending supplier quotations.
+See `docs/KNOWN-LIMITATIONS.md`. In summary: no real payment gateway, no real courier integration, single-account admin authentication, local SQLite rather than a production database, and every price, cost and demand figure unverified pending supplier quotations.
 
 ---
 

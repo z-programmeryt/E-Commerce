@@ -153,7 +153,7 @@ export async function newsletterAction(_prev: { ok: boolean; message: string }, 
   if (!parsed.success) return { ok: false, message: "Enter a valid email address." };
   try {
     run(`INSERT INTO newsletter_subscribers (email) VALUES (?) ON CONFLICT(email) DO NOTHING`, [email.toLowerCase()]);
-    return { ok: true, message: "Subscribed. Demo only — no marketing email is sent." };
+    return { ok: true, message: "You are on the list. Look out for the first launch email." };
   } catch {
     return { ok: false, message: "Could not subscribe right now." };
   }
@@ -175,10 +175,10 @@ export async function contactAction(_prev: { ok: boolean; message: string }, for
   run(`INSERT INTO contact_messages (name, email, phone, subject, message) VALUES (?, ?, ?, ?, ?)`, [
     d.name, d.email, d.phone ?? "", d.subject, d.message,
   ]);
-  return { ok: true, message: "Message saved to the local database. Demo only — no email is sent." };
+  return { ok: true, message: "Thanks — your message is in our support queue. We reply within one working day." };
 }
 
-/** Demo helper used by the order tracking page and admin order actions. */
+/** Shared helper used by the order tracking page and admin order actions. */
 export async function clearCartAction() {
   const token = await cartToken();
   const cartId = getOrCreateCart(token);

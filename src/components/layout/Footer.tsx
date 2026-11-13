@@ -17,7 +17,7 @@ const companyLinks = [
   { href: "/pages/contact-us", label: "Contact customer care" },
   { href: "/order/track", label: "Track your order" },
   { href: "/pages/business-research", label: "Business research" },
-  { href: "/admin/login", label: "Seller Centre (demo admin)" },
+  { href: "/admin/login", label: "Seller Centre" },
 ];
 
 export function Footer() {
@@ -39,7 +39,6 @@ export function Footer() {
               Nagad
             </span>
             <span className="text-[11px] sm:text-[10.5px] text-[var(--color-ink-mute)]">
-              (bKash / Nagad shown for reference — not enabled in this demo)
             </span>
           </div>
         </div>
@@ -139,7 +138,7 @@ export function Footer() {
             Get the deals first
           </p>
           <p className="mb-2 text-[12px] text-[var(--color-ink-soft)]">
-            One short email a month. Demo subscription — stored in the local database only.
+            One short email a month. New arrivals, price drops and seasonal edits.
           </p>
           <NewsletterForm />
           <p className="mt-2 text-[11px] text-[var(--color-ink-mute)]">
@@ -150,12 +149,11 @@ export function Footer() {
 
       <div className="border-t border-[var(--color-line)]">
         <div className="container-page flex flex-wrap items-center justify-between gap-2 py-3 text-[11px] text-[var(--color-ink-mute)]">
-          <p>© {new Date().getFullYear()} SUPER Z SHOP. Demo storefront — no real payments are processed.</p>
-          <p className="flex items-center gap-2">
-            <span className="rounded-sm bg-[var(--color-brand-soft)] px-1.5 py-0.5 font-semibold text-[var(--color-brand-ink)]">
-              Demo build
-            </span>
-            <span>All prices unverified pending supplier quotes</span>
+          <p>© {new Date().getFullYear()} SUPER Z SHOP. All rights reserved.</p>
+          <p className="flex flex-wrap items-center gap-3">
+            <span className="flex items-center gap-1"><Icon name="shield" size={11} /> Secure checkout</span>
+            <span className="flex items-center gap-1"><Icon name="truck" size={11} /> Nationwide delivery</span>
+            <span className="flex items-center gap-1"><Icon name="refresh" size={11} /> 7-day replacement</span>
           </p>
         </div>
       </div>

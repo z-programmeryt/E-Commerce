@@ -143,7 +143,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         </a>
         <ServiceWorkerBridge />
         <Header />
-        <main id="main" className="flex-1">
+        {/* pb on mobile clears the fixed bottom tab bar */}
+        <main id="main" className="flex-1 pb-[calc(56px+env(safe-area-inset-bottom))] lg:pb-0">
           {children}
         </main>
         <Footer />

@@ -112,7 +112,7 @@ export default async function CartPage() {
                 Proceed to checkout
               </Link>
               <p className="mt-1.5 flex items-center justify-center gap-1.5 text-[11px] sm:text-[10.5px] text-[var(--color-ink-mute)]">
-                <Icon name="shield" size={11} /> Demo checkout — no payment is taken
+                <Icon name="shield" size={11} /> Secure checkout · cash on delivery
               </p>
 
               <ul className="mt-3 space-y-1.5 border-t border-[var(--color-line)] pt-2.5 text-[11px] text-[var(--color-ink-mute)]">

@@ -10,7 +10,7 @@ import { Countdown } from "./Countdown";
  * deadline, horizontally scrollable discounted tiles.
  *
  * The deals are real records in the local database and the discounts are
- * genuinely applied at checkout. The countdown is the demo's own 24-hour
+ * genuinely applied at checkout. This is a fixed 24-hour
  * cycle, not a manufactured "only 3 minutes left" pressure device, and it
  * resets predictably rather than pretending stock is about to vanish.
  */
@@ -42,7 +42,7 @@ export function FlashSaleRail({ products, wishlistedIds = [] }: { products: Prod
             >
               <span className="relative block aspect-square overflow-hidden rounded border border-[var(--color-line)] bg-[var(--color-surface)]">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img src={p.image_url ?? "/placeholder.svg"} alt={p.name} className="h-full w-full object-contain" />
+                <img src={p.image_url ?? "/products/fallback.jpg"} alt={p.name} className="h-full w-full object-contain" />
                 {off ? <span className="tile-discount">-{off}%</span> : null}
               </span>
               <span className="mt-1.5 block line-clamp-2 text-[11.5px] leading-tight text-[var(--color-ink-soft)]">

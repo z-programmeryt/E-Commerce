@@ -32,7 +32,7 @@ export default async function AccountPage({
       <ListingHeader
         title="My orders"
         count={customer ? `${orders.length} order${orders.length === 1 ? "" : "s"}` : undefined}
-        subtitle="This local demo has no passwords or accounts. Enter the email you used at checkout to see the orders tied to it — a demo-only shortcut, not how a production store should authenticate users."
+        subtitle="Enter the email address you used at checkout to see the orders tied to it."
         crumb={[{ label: "My orders" }]}
         action={{ label: "Continue shopping →", href: "/shop" }}
       />
@@ -50,7 +50,7 @@ export default async function AccountPage({
             <ListingPanel className="p-6">
               <EmptyState
                 title={`No account found for ${email}`}
-                subtitle="Try one of the seeded demo emails on the right, or place a demo order first."
+                subtitle="Check the spelling, or place an order first and it will appear here."
                 action={{ label: "Shop now", href: "/shop" }}
               />
             </ListingPanel>
@@ -110,7 +110,7 @@ export default async function AccountPage({
         <aside className="space-y-3 lg:sticky lg:top-[132px] lg:self-start">
           <div className="overflow-hidden rounded-[var(--radius-card)] border border-[var(--color-line)] bg-[var(--color-surface)]">
             <div className="section-bar">
-              <h2 className="section-bar-title">Demo accounts</h2>
+              <h2 className="section-bar-title">Sign in</h2>
             </div>
             <div className="space-y-1.5 p-3">
               <p className="text-[11.5px] leading-relaxed text-[var(--color-ink-soft)]">
@@ -132,7 +132,7 @@ export default async function AccountPage({
               Need help?
             </p>
             <p className="text-[11.5px] leading-relaxed text-[var(--color-ink-soft)]">
-              This is a demo build — no real orders ship. Use the order number to check the tracking timeline.
+              Use your order number to check the tracking timeline at any time.
             </p>
             <Link href="/pages/contact" className="mt-2 inline-block text-[11.5px] font-semibold text-[var(--color-brand-deep)] hover:underline">
               Contact page →

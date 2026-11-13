@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 
 /**
- * Countdown to the end of the current 24-hour demo cycle.
+ * Countdown to the end of the current 24-hour cycle.
  *
  * Rendered empty on the server and filled on the client, so the markup is
  * stable and there is no hydration mismatch. A missing countdown degrades to

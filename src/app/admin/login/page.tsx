@@ -25,12 +25,12 @@ export default async function AdminLoginPage({
           <p className="eyebrow mb-1">Admin</p>
           <h1 className="font-display text-2xl">Sign in to the dashboard</h1>
           <p className="mt-2 text-sm text-[var(--color-ink-soft)]">
-            Local demo administration for products, orders, inventory and reports.
+            Administration for products, orders, inventory and reports.
           </p>
 
           <div className="mt-4 rounded-lg border border-[var(--color-warn-line)] bg-[var(--color-warn-soft)] p-3 text-xs text-[var(--color-warn-ink)]">
             <p className="flex items-center gap-1.5 font-semibold">
-              <Icon name="alert" size={13} /> Demo authentication
+              <Icon name="shield" size={13} /> Restricted access
             </p>
             <p className="mt-1">
               Credentials are seeded into the local database and the session is a signed cookie. There is no

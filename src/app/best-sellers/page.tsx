@@ -29,7 +29,7 @@ export default async function BestSellersPage() {
       <ListingHeader
         title="Best sellers"
         count={`${best.length} products`}
-        subtitle="Flagged by the buying team as the strongest repeat-purchase candidates. This is a merchandising label, not a sales-volume claim — the demo has no live sales history yet."
+        subtitle="Flagged by the buying team as the strongest repeat-purchase candidates. This is a merchandising label rather than a sales-volume claim, so you always know why a product is here."
         crumb={[{ label: "Best sellers" }]}
         action={{ label: "Browse new arrivals →", href: "/new-arrivals" }}
       />
@@ -53,7 +53,7 @@ export default async function BestSellersPage() {
                     </span>
                     <span className="h-11 w-11 shrink-0 overflow-hidden rounded border border-[var(--color-line)] bg-[var(--color-surface)]">
                       {/* eslint-disable-next-line @next/next/no-img-element */}
-                      <img src={p.image_url ?? "/placeholder.svg"} alt="" className="h-full w-full object-contain" />
+                      <img src={p.image_url ?? "/products/fallback.jpg"} alt="" className="h-full w-full object-contain" />
                     </span>
                     <span className="min-w-0 flex-1">
                       <span className="block line-clamp-1 text-[11.5px] leading-tight">{p.name}</span>

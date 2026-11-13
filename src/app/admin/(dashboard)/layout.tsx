@@ -20,7 +20,7 @@ export default async function AdminLayout({ children }: { children: React.ReactN
             <Link href="/admin" className="text-[13px] font-extrabold tracking-[0.1em]">SUPER Z SHOP</Link>
             <span className="rounded bg-[var(--color-surface)]/12 px-1.5 py-0.5 text-[0.5625rem] uppercase tracking-[0.14em]">Admin</span>
             <span className="hidden rounded bg-[#8a6516]/30 px-1.5 py-0.5 text-[0.5625rem] uppercase tracking-[0.1em] text-[#f0d9a8] sm:inline">
-              Demo auth
+              Staff only
             </span>
           </div>
           <div className="flex items-center gap-3 text-xs">

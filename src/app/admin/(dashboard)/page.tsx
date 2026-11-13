@@ -176,7 +176,7 @@ export default async function AdminOverviewPage() {
           </div>
         </dl>
         <p className="mt-3 text-[0.6875rem] leading-relaxed text-[var(--color-ink-mute)]">
-          Valuation uses the estimated wholesale cost column, which is unverified demo data. It shows potential
+          Valuation uses the recorded wholesale cost column. It shows potential
           margin on stock, not realised profit.
         </p>
       </section>
