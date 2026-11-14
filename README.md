@@ -61,6 +61,52 @@ npm run workbook
 
 ---
 
+## Deploying to Vercel
+
+Read this before pointing a Vercel project at this repository — there are two
+things that will bite, and both have a documented answer.
+
+**1. Deploy the right branch.** This project lives on `arena/42d55d38-e-commerce`,
+not on `main`. `main` is still the initial commit. A Vercel project left on
+`main` builds a repository with no application in it and every URL answers
+`404 NOT_FOUND`. Set **Settings → Git → Production Branch** to the branch above
+(or merge it into `main`) — that single change is usually the whole fix.
+
+**2. A serverless filesystem is read-only, so the database is built at build time.**
+`npm run build` now runs `node scripts/ensure-db.mjs` first, which creates and
+seeds `db/super-z-shop.db` if it is missing. Next traces that file into the
+server bundle (`outputFileTracingIncludes`), and at runtime `src/lib/db.ts`
+copies it into `os.tmpdir()` because SQLite cannot write to the bundle. No
+database configuration, no environment variables and no native modules are
+needed.
+
+What that means in practice, stated plainly:
+
+- **Reads** (browsing, searching, filters, product pages) work normally.
+- **Writes** (placing an order, adjusting stock in admin) land in that serverless
+  instance's own copy. Another instance will not see them, and they are lost when
+  the instance recycles. This build is a demonstration of the storefront, not a
+  shop that can take real orders — see
+  [KNOWN-LIMITATIONS.md](docs/KNOWN-LIMITATIONS.md), which has always said a real
+  database is required before trading.
+- Builds are reproducible: every deploy reseeds from the same catalogue JSON, so
+  no deployment drifts from another.
+
+For a deployment that genuinely persists writes, replace `src/lib/db.ts` and
+`src/lib/repo.ts` with a managed Postgres instance. Nothing else in the app
+touches SQLite directly.
+
+### Environment variables (all optional)
+
+| Variable | Default | Purpose |
+|---|---|---|
+| `DATABASE_PATH` | `db/super-z-shop.db` | Where the seeded file lives in the bundle |
+| `DATABASE_WRITABLE_PATH` | `os.tmpdir()/super-z-shop/` | Where the writable copy is made (set this to a mounted volume if you have one) |
+| `ADMIN_SESSION_SECRET` | insecure local default | **Set this in production.** Signs the admin session cookie |
+| `NEXT_PUBLIC_SITE_URL` | `http://localhost:3000` | Origin used for canonical URLs, the sitemap and OG images — set it to the deployment URL or SEO metadata will point at localhost |
+
+---
+
 ## Commands
 
 | Command | What it does |

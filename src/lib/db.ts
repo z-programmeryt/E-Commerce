@@ -4,15 +4,62 @@
  * Uses Node's built-in `node:sqlite` (Node >= 22.5) so the demo needs no native
  * build step and no paid database service. Swapping to Prisma/Postgres later
  * means replacing this module and `src/lib/repo.ts` only.
+ *
+ * Deployment note — serverless filesystems are read-only.
+ *
+ * On Vercel the deployment bundle is immutable at runtime: only `os.tmpdir()`
+ * accepts writes. The database file is therefore created and seeded at *build*
+ * time (`npm run db:seed` runs as part of `npm run build`) and traced into the
+ * bundle. At runtime `fs.copyFileSync` is the one call that is guaranteed to
+ * work, so the seeded file is copied into a writable directory once per warm
+ * instance. Reads work as-is; writes then land in that instance's copy.
+ *
+ * The consequence is honest and documented: in a serverless deployment each
+ * instance has its own copy, so an order placed on one instance is not visible
+ * on another. A shop taking real orders needs a real database — see
+ * docs/KNOWN-LIMITATIONS.md.
  */
 import { DatabaseSync } from "node:sqlite";
 import fs from "node:fs";
+import os from "node:os";
 import path from "node:path";
 
-const DB_PATH = path.resolve(
+const SEEDED_PATH = path.resolve(
   process.cwd(),
   process.env.DATABASE_PATH || "db/super-z-shop.db",
 );
+
+/**
+ * A read-only filesystem (Vercel, most container platforms) cannot open the
+ * bundled file for writing, so it is copied into a temp directory first.
+ * `DB_PATH` always names the file the process actually uses.
+ */
+function resolveWritableDbPath(): string {
+  const target = process.env.DATABASE_WRITABLE_PATH
+    ? path.resolve(process.env.DATABASE_WRITABLE_PATH)
+    : path.join(os.tmpdir(), "super-z-shop", "super-z-shop.db");
+
+  // Local dev and `next start` on a real disk: keep the file where it is, so
+  // `npm run db:reset` and the admin actions operate on the same database.
+  if (!process.env.VERCEL && !process.env.DATABASE_WRITABLE_PATH) return SEEDED_PATH;
+
+  try {
+    fs.mkdirSync(path.dirname(target), { recursive: true });
+    if (!fs.existsSync(target) && fs.existsSync(SEEDED_PATH)) {
+      fs.copyFileSync(SEEDED_PATH, target);
+      // copyFileSync copies the source's mode, and the bundled file is read-only.
+      // SQLite cannot even switch on WAL for a read-only file, so claim the copy.
+      fs.chmodSync(target, 0o644);
+    }
+    return target;
+  } catch {
+    // Copy failed (no bundle, no permission): fall back to the bundled path and
+    // let the normal error surface if it is genuinely unusable.
+    return SEEDED_PATH;
+  }
+}
+
+const DB_PATH = resolveWritableDbPath();
 
 let cached: DatabaseSync | null = null;
 
@@ -49,7 +96,11 @@ export function applyMigrations(database: DatabaseSync): string[] {
  */
 export function getDb(): DatabaseSync {
   if (cached) return cached;
-  fs.mkdirSync(path.dirname(DB_PATH), { recursive: true });
+  try {
+    fs.mkdirSync(path.dirname(DB_PATH), { recursive: true });
+  } catch {
+    // read-only filesystem and the directory already exists — nothing to do
+  }
   const database = new DatabaseSync(DB_PATH);
   database.exec("PRAGMA journal_mode = WAL");
   database.exec("PRAGMA foreign_keys = ON");

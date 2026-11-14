@@ -57,6 +57,8 @@ Before this touches a real customer, replace authentication entirely — use a m
 
 ## 4. Infrastructure
 
+**Serverless deployments get a per-instance copy of the database.** On Vercel (or any platform with a read-only filesystem) the seeded SQLite file is copied into the instance's temp directory at first use so SQLite can open it read-write. Browsing works normally, but an order placed on one instance is invisible to another and is discarded when the instance recycles. That is acceptable for a storefront demonstration and unacceptable for a shop taking real orders — swapping `src/lib/db.ts` and `src/lib/repo.ts` for a managed Postgres instance is the only fix, and nothing else in the app touches SQLite.
+
 **SQLite, not a server database.** Fine for one process and a single-store deployment. It will not survive multiple app instances, has no connection pooling, no replication and no point-in-time recovery. `node:sqlite` is also marked experimental in Node — acceptable here because the alternative was a native module that would not build without a toolchain.
 
 **No migrations runner.** `db/migrations/001_init.sql` is applied by `db:reset`, which drops everything and rebuilds. There is no versioned, incremental, non-destructive migration path. Adding a column means editing the init file and re-seeding.

@@ -265,4 +265,17 @@ console.log(`  customers: ${customers.length}, orders: ${statuses.length}, coupo
 const check = db.prepare("SELECT COUNT(*) AS n FROM products").get();
 console.log(`\nSeed complete. Products in DB: ${check.n}. Database: ${DB_PATH}`);
 console.log(`Demo admin login: ${adminEmail} / ${adminPassword}`);
+
+// The connection runs in WAL mode, so the last committed pages can still live in
+// the -wal sidecar. Checkpoint them into the main file and switch back to
+// journal_mode=DELETE before closing: a deployment only ever copies the .db
+// file into the build bundle, and it must be complete on its own.
+try {
+  db.exec("PRAGMA wal_checkpoint(TRUNCATE)");
+  db.exec("PRAGMA journal_mode = DELETE");
+} catch {
+  // Another process (a running dev server) has the file open, so the mode
+  // switch is refused. Harmless locally: the seed data is committed either way.
+  console.warn("  note: left the database in WAL mode (file in use by another process)");
+}
 db.close();
