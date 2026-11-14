@@ -1,0 +1,53 @@
+"use client";
+
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+import { Icon } from "@/components/ui/Icon";
+
+const LINKS = [
+  { href: "/admin", label: "Overview", icon: "chart" },
+  { href: "/admin/orders", label: "Orders", icon: "box" },
+  { href: "/admin/products", label: "Products", icon: "tag" },
+  { href: "/admin/inventory", label: "Inventory", icon: "grid" },
+  { href: "/admin/categories", label: "Categories", icon: "filter" },
+  { href: "/admin/customers", label: "Customers", icon: "users" },
+  { href: "/admin/coupons", label: "Coupons", icon: "gift" },
+  { href: "/admin/banners", label: "Banners", icon: "sun" },
+  { href: "/admin/reports", label: "Reports", icon: "chart" },
+  { href: "/admin/settings", label: "Settings", icon: "settings" },
+];
+
+export function AdminNav() {
+  const pathname = usePathname();
+  return (
+    <nav aria-label="Admin sections" className="lg:sticky lg:top-6 lg:self-start">
+      <ul className="flex gap-1 overflow-x-auto pb-2 lg:flex-col lg:overflow-visible lg:pb-0">
+        {LINKS.map((l) => {
+          const active = l.href === "/admin" ? pathname === "/admin" : pathname.startsWith(l.href);
+          return (
+            <li key={l.href} className="shrink-0">
+              <Link
+                href={l.href}
+                aria-current={active ? "page" : undefined}
+                className={`flex items-center gap-2 whitespace-nowrap rounded-sm px-2.5 py-1.5 text-[12px] font-medium transition-colors ${
+                  active
+                    ? "bg-[var(--color-brand)] text-white"
+                    : "text-[var(--color-ink-soft)] hover:bg-[var(--color-surface)] hover:text-[var(--color-brand-deep)]"
+                }`}
+              >
+                <Icon name={l.icon} size={14} />
+                {l.label}
+              </Link>
+            </li>
+          );
+        })}
+      </ul>
+      <div className="mt-3 hidden rounded-[var(--radius-card)] border border-[var(--color-warn-line)] bg-[var(--color-warn-soft)] p-2.5 text-[11px] sm:text-[10.5px] leading-relaxed text-[var(--color-warn-ink)] lg:block">
+        <p className="font-bold uppercase tracking-wide">Staff console</p>
+        <p className="mt-1">
+          All changes are written immediately and recorded in the audit trail.
+        </p>
+      </div>
+    </nav>
+  );
+}
