@@ -63,8 +63,12 @@ npm run workbook
 
 ## Deploying to Vercel
 
-Read this before pointing a Vercel project at this repository — there are two
-things that will bite, and both have a documented answer.
+Read this before pointing a Vercel project at this repository — there are three
+things that will bite, and all have a documented answer.
+
+**0. A 404 on a deployment URL while `/manifest.webmanifest` works is a build-output problem, not a code problem.** If the deployment serves `public/` files but answers `404 NOT_FOUND` for every Next.js route (`/`, `/shop`, `/robots.txt`, `/_next/static/*`), the platform has no server entrypoint to route to. `vercel.json` now pins `framework: nextjs` and a `vercel-build` script, and `next.config.ts` switches to `output: "standalone"` when `VERCEL` is set, so a self-contained `.next/standalone/server.js` is always produced — an explicit entrypoint rather than one a preset has to infer. Check **Deployment → Build & Development Settings** in the dashboard too: an override of "Output Directory" or "Framework Preset" there wins over `vercel.json` and will reproduce this exact symptom.
+
+A separate, unrelated 404: URLs of the form `<project>-<hash>-<team>.vercel.app` are **preview** deployments and are protected by Vercel Deployment Protection by default. They redirect to a Vercel login page ("Protected Deployment") for anyone not signed in, which is correct behaviour rather than a fault — use the production domain, or disable protection for that environment if the preview should be public.
 
 **1. Deploy the right branch.** This project lives on `arena/42d55d38-e-commerce`,
 not on `main`. `main` is still the initial commit. A Vercel project left on

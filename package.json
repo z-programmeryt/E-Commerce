@@ -9,6 +9,7 @@
   "scripts": {
     "dev": "next dev -H 0.0.0.0 -p 3000",
     "build": "node scripts/ensure-db.mjs && next build",
+    "vercel-build": "npm run build",
     "start": "next start -H 0.0.0.0 -p 3000",
     "lint": "tsc --noEmit",
     "db:reset": "node scripts/db-reset.mjs",
